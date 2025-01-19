@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Sat Jan 18 22:40:32 2025
+# Process ID: 13876
+# Log file: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/impl_1/zynq_interrupt_system_wrapper.vdi
+# Journal file: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source zynq_interrupt_system_wrapper.tcl -notrace
+Command: open_checkpoint zynq_interrupt_system_wrapper_routed.dcp
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/impl_1/.Xil/Vivado-13876-DESKTOP-VA1U3VE/dcp/zynq_interrupt_system_wrapper_early.xdc]
+Finished Parsing XDC File [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/impl_1/.Xil/Vivado-13876-DESKTOP-VA1U3VE/dcp/zynq_interrupt_system_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.259 . Memory (MB): peak = 497.441 ; gain = 0.648
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.259 . Memory (MB): peak = 497.441 ; gain = 0.648
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 1215546
+open_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 497.445 ; gain = 304.648
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./zynq_interrupt_system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 846.543 ; gain = 349.098
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 18 22:40:57 2025...

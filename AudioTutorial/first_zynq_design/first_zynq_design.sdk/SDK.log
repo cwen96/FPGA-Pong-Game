@@ -1,0 +1,12 @@
+21:11:15 INFO  : Processing command line option -hwspec C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.sdk/first_zynq_system_wrapper.hdf.
+21:11:23 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+21:11:24 INFO  : XSDB server has started successfully.
+21:13:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469116" && level==0} -index 1' command is executed.
+21:13:45 INFO  : FPGA configured successfully with bitstream "C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.sdk/first_zynq_system_wrapper_hw_platform_0/first_zynq_system_wrapper.bit"
+21:14:02 INFO  : ps7_init is completed.
+21:14:02 INFO  : ps7_post_config is completed.
+21:14:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:04:26 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:58:57 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2478
+22:58:58 INFO  : XSDB server has started successfully.
