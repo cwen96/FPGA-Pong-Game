@@ -1,3 +1,0 @@
-22:37:05 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
-22:37:06 INFO  : XSDB server has started successfully.
-22:39:28 ERROR : The Hardware Project referenced by this BSP (interrupt_counter_bsp) was not found in this workspace. As a result, this BSP will not build properly. To fix this error, please import the associated hardware project or recreate a new BSP targeting an existing hardware platform.

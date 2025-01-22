@@ -1,10 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2015.1 (64-bit)
-# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
-# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Sat Jan 18 22:18:32 2025
-# Process ID: 17800
-# Log file: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1/zynq_interrupt_system_wrapper.vds
-# Journal file: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1\vivado.jou
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jan 21 21:13:59 2025
+# Process ID: 22976
+# Current directory: C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1
+# Command line: vivado.exe -log zynq_interrupt_system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zynq_interrupt_system_wrapper.tcl
+# Log file: C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1/zynq_interrupt_system_wrapper.vds
+# Journal file: C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source zynq_interrupt_system_wrapper.tcl -notrace
