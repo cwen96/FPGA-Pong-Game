@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -88,7 +87,7 @@ set_property ip_output_repo c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/hdl/zynq_interrupt_system_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/hdl/zynq_interrupt_system_wrapper.vhd
 add_files C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system.bd
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_processing_system7_0_0/zynq_interrupt_system_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1_board.xdc]
@@ -98,10 +97,10 @@ set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_xbar_0/zynq_interrupt_system_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_auto_pc_0/zynq_interrupt_system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_auto_pc_0/zynq_interrupt_system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

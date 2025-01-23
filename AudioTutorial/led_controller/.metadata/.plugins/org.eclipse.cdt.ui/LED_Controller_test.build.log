@@ -1,0 +1,33 @@
+19:18:31 **** Incremental Build of configuration Debug for project LED_Controller_test ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/led_controller_test_tut_4A.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_controller_test_tut_4A.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/led_controller/led_test_system_wrapper/export/led_test_system_wrapper/sw/led_test_system_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/led_controller_test_tut_4A.d" -MT"src/led_controller_test_tut_4A.o" -o "src/led_controller_test_tut_4A.o" "../src/led_controller_test_tut_4A.c"
+../src/led_controller_test_tut_4A.c: In function 'main':
+../src/led_controller_test_tut_4A.c:29:2: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+   29 |  xil_printf("led_controller IP test begin.\r\n");
+      |  ^~~~~~~~~~
+In file included from ../src/led_controller_test_tut_4A.c:12:
+C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/led_controller/led_test_system_wrapper/export/led_test_system_wrapper/sw/led_test_system_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/led_controller.h:35:4: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+   35 |    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+      |    ^~~~~~~~~
+../src/led_controller_test_tut_4A.c:38:5: note: in expansion of macro 'LED_CONTROLLER_mWriteReg'
+   38 |     LED_CONTROLLER_mWriteReg(LED_BASE, 0, led_val);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/led_controller_test_tut_4A.c'
+' '
+'Building target: LED_Controller_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/led_controller/led_test_system_wrapper/export/led_test_system_wrapper/sw/led_test_system_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "LED_Controller_test.elf"  ./src/led_controller_test_tut_4A.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ./src/led_controller_test_tut_4A.o: in function `main':
+C:\Users\cjw18\Desktop\GitHub\ensc-452\AudioTutorial\led_controller\LED_Controller_test\Debug/../src/led_controller_test_tut_4A.c:38: undefined reference to `Xil_Out32'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:43: LED_Controller_test.elf] Error 1
+make: *** [makefile:34: all] Error 2
+
+19:18:32 Build Finished (took 1s.134ms)
+

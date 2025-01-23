@@ -1,0 +1,10 @@
+14:40:23 **** Build of configuration Debug for project interrupt_counter_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 41484 C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupt_system_wrapper/export/zynq_interrupt_system_wrapper/zynq_interrupt_system_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/interrupt_counter_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupt_system_wrapper/export/zynq_interrupt_system_wrapper/zynq_interrupt_system_wrapper.xpfm --sys_config zynq_interrupt_system_wrapper --bif C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/interrupt_counter_system/Debug/system.bif --bitstream C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/interrupt_counter/_ide/bitstream/zynq_interrupt_system_wrapper.bit --elf C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/interrupt_counter/Debug/interrupt_counter.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/interrupt_counter/_ide/bitstream/zynq_interrupt_system_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/interrupt_counter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:40:34 Build Finished (took 10s.881ms)
+

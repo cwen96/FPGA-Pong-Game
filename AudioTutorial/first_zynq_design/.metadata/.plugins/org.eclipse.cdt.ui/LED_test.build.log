@@ -1,4 +1,4 @@
-20:56:12 **** Build of configuration Debug for project LED_test ****
+17:18:05 **** Incremental Build of configuration Debug for project LED_test ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -21,5 +21,5 @@ arm-none-eabi-size LED_test.elf  |tee "LED_test.elf.size"
 'Finished building: LED_test.elf.size'
 ' '
 
-20:56:14 Build Finished (took 1s.640ms)
+17:18:07 Build Finished (took 1s.738ms)
 
