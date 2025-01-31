@@ -25,4 +25,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zynq_interr
 # IP: bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zynq_interrupt_system_rst_ps7_0_100M_0 || ORIG_REF_NAME==zynq_interrupt_system_rst_ps7_0_100M_0} -quiet] -quiet
 
-# XDC: c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system_ooc.xdc
+# XDC: c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system_ooc.xdc

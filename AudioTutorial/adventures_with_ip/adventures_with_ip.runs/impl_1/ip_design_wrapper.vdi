@@ -1,0 +1,311 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jan 31 02:09:44 2025
+# Process ID: 12836
+# Current directory: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1
+# Command line: vivado.exe -log ip_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ip_design_wrapper.tcl -notrace
+# Log file: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper.vdi
+# Journal file: C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ip_design_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/ip 
+Command: link_design -top ip_design_wrapper -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_0_0/ip_design_axi_gpio_0_0.dcp' for cell 'ip_design_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_1_0/ip_design_axi_gpio_1_0.dcp' for cell 'ip_design_i/axi_gpio_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_led_controller_0_0/ip_design_led_controller_0_0.dcp' for cell 'ip_design_i/led_controller_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.dcp' for cell 'ip_design_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0.dcp' for cell 'ip_design_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_zed_audio_ctrl_0_0/ip_design_zed_audio_ctrl_0_0.dcp' for cell 'ip_design_i/zed_audio_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0.dcp' for cell 'ip_design_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0.dcp' for cell 'ip_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1126.484 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc] for cell 'ip_design_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc] for cell 'ip_design_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_board.xdc] for cell 'ip_design_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_board.xdc] for cell 'ip_design_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0.xdc] for cell 'ip_design_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0.xdc] for cell 'ip_design_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_0_0/ip_design_axi_gpio_0_0_board.xdc] for cell 'ip_design_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_0_0/ip_design_axi_gpio_0_0_board.xdc] for cell 'ip_design_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_0_0/ip_design_axi_gpio_0_0.xdc] for cell 'ip_design_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_0_0/ip_design_axi_gpio_0_0.xdc] for cell 'ip_design_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_1_0/ip_design_axi_gpio_1_0_board.xdc] for cell 'ip_design_i/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_1_0/ip_design_axi_gpio_1_0_board.xdc] for cell 'ip_design_i/axi_gpio_1/U0'
+Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_1_0/ip_design_axi_gpio_1_0.xdc] for cell 'ip_design_i/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_gpio_1_0/ip_design_axi_gpio_1_0.xdc] for cell 'ip_design_i/axi_gpio_1/U0'
+Parsing XDC File [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc]
+WARNING: [Vivado 12-584] No ports matched 'iic_0_scl_io'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'iic_0_scl_io'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'iic_0_sda_io'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'iic_0_sda_io'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_tri_io[0]'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_tri_io[0]'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_tri_io[1]'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_tri_io[1]'. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1126.484 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+
+18 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1126.484 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.908 . Memory (MB): peak = 1129.020 ; gain = 2.535
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1c7132ce8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.570 ; gain = 536.551
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 23ab465c6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 10 cells and removed 41 cells
+INFO: [Opt 31-1021] In phase Retarget, 16 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 22885703a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 4 cells and removed 8 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 249e02455
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.292 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 8 cells and removed 67 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 249e02455
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.327 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 249e02455
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.333 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1b397629c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.346 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              10  |              41  |                                             16  |
+|  Constant propagation         |               4  |               8  |                                              0  |
+|  Sweep                        |               8  |              67  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1877.051 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 19b15e8eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.421 . Memory (MB): peak = 1877.051 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 19b15e8eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1877.051 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 19b15e8eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1877.051 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1877.051 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 19b15e8eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+36 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1877.051 ; gain = 750.566
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1877.051 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file ip_design_wrapper_drc_opted.rpt -pb ip_design_wrapper_drc_opted.pb -rpx ip_design_wrapper_drc_opted.rpx
+Command: report_drc -file ip_design_wrapper_drc_opted.rpt -pb ip_design_wrapper_drc_opted.pb -rpx ip_design_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1924.180 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 132956504
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1924.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1924.180 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (4) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  BiDi RangeId: 1 Drv: 12  has only 0 sites available on device, but needs 4 sites.
+	Term: GPIO_tri_io[0]
+	Term: GPIO_tri_io[1]
+	Term: IIC_0_scl_io
+	Term: IIC_0_sda_io
+
+
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (4) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  BiDi RangeId: 1 Drv: 12  has only 0 sites available on device, but needs 4 sites.
+	Term: GPIO_tri_io[0]
+	Term: GPIO_tri_io[1]
+	Term: IIC_0_scl_io
+	Term: IIC_0_sda_io
+
+
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 13 |    50 |     5 | LVCMOS33(5)                                                            |                                          |        |  +3.30 |    YES |     |
+| 33 |    50 |     8 | LVCMOS33(8)                                                            |                                          |        |  +3.30 |    YES |     |
+| 34 |    50 |     6 | LVCMOS25(6)                                                            |                                          |        |  +2.50 |    YES |     |
+| 35 |    50 |     7 | LVCMOS25(7)                                                            |                                          |        |  +2.50 |    YES |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   200 |    26 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 13     | BCLK                 | LVCMOS33        | IOB_X0Y21            | AA6                  |                      |
+|        | FCLK_CLK1            | LVCMOS33        | IOB_X0Y20            | AB2                  |                      |
+|        | LRCLK                | LVCMOS33        | IOB_X0Y24            | Y6                   |                      |
+|        | SDATA_I              | LVCMOS33        | IOB_X0Y22            | AA7                  |                      |
+|        | SDATA_O              | LVCMOS33        | IOB_X0Y25            | Y8                   |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 33     | LEDs_out[0]          | LVCMOS33        | IOB_X1Y46            | T22                  |                      |
+|        | LEDs_out[1]          | LVCMOS33        | IOB_X1Y48            | T21                  |                      |
+|        | LEDs_out[2]          | LVCMOS33        | IOB_X1Y45            | U22                  |                      |
+|        | LEDs_out[3]          | LVCMOS33        | IOB_X1Y47            | U21                  |                      |
+|        | LEDs_out[4]          | LVCMOS33        | IOB_X1Y44            | V22                  |                      |
+|        | LEDs_out[5]          | LVCMOS33        | IOB_X1Y43            | W22                  |                      |
+|        | LEDs_out[6]          | LVCMOS33        | IOB_X1Y49            | U19                  |                      |
+|        | LEDs_out[7]          | LVCMOS33        | IOB_X1Y0             | U14                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 34     | btns_5bits_tri_i[0]  | LVCMOS25        | IOB_X1Y52            | P16                  |                      |
+|        | btns_5bits_tri_i[1]  | LVCMOS25        | IOB_X1Y51            | R16                  |                      |
+|        | btns_5bits_tri_i[2]  | LVCMOS25        | IOB_X1Y62            | N15                  |                      |
+|        | btns_5bits_tri_i[3]  | LVCMOS25        | IOB_X1Y54            | R18                  |                      |
+|        | btns_5bits_tri_i[4]  | LVCMOS25        | IOB_X1Y53            | T18                  |                      |
+|        | sws_8bits_tri_i[7]   | LVCMOS25        | IOB_X1Y88            | M15                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 35     | sws_8bits_tri_i[0]   | LVCMOS25        | IOB_X1Y103           | F22                  |                      |
+|        | sws_8bits_tri_i[1]   | LVCMOS25        | IOB_X1Y101           | G22                  |                      |
+|        | sws_8bits_tri_i[2]   | LVCMOS25        | IOB_X1Y102           | H22                  |                      |
+|        | sws_8bits_tri_i[3]   | LVCMOS25        | IOB_X1Y104           | F21                  |                      |
+|        | sws_8bits_tri_i[4]   | LVCMOS25        | IOB_X1Y112           | H19                  |                      |
+|        | sws_8bits_tri_i[5]   | LVCMOS25        | IOB_X1Y100           | H18                  |                      |
+|        | sws_8bits_tri_i[6]   | LVCMOS25        | IOB_X1Y149           | H17                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 14f8707ad
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.419 . Memory (MB): peak = 1924.180 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 14f8707ad
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.420 . Memory (MB): peak = 1924.180 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 14f8707ad
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.422 . Memory (MB): peak = 1924.180 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 9 Warnings, 8 Critical Warnings and 5 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 31 02:10:17 2025...

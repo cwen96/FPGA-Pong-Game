@@ -19,4 +19,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==first_zynq_
 # IP: bd/first_zynq_system/ip/first_zynq_system_rst_ps7_0_100M_0/first_zynq_system_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==first_zynq_system_rst_ps7_0_100M_0 || ORIG_REF_NAME==first_zynq_system_rst_ps7_0_100M_0} -quiet] -quiet
 
-# XDC: c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.gen/sources_1/bd/first_zynq_system/first_zynq_system_ooc.xdc
+# XDC: c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.gen/sources_1/bd/first_zynq_system/first_zynq_system_ooc.xdc

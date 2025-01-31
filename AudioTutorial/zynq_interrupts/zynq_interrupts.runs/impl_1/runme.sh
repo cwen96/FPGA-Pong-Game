@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/impl_1'
+HD_PWD='C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

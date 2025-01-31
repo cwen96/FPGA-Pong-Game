@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1/zynq_interrupt_system_wrapper.tcl"
+  variable script "C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.runs/synth_1/zynq_interrupt_system_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,31 +77,31 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.cache/wt [current_project]
-set_property parent.project_path C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.cache/wt [current_project]
+set_property parent.project_path C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_output_repo c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/hdl/zynq_interrupt_system_wrapper.vhd
-add_files C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system.bd
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_processing_system7_0_0/zynq_interrupt_system_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_xbar_0/zynq_interrupt_system_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_auto_pc_0/zynq_interrupt_system_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/hdl/zynq_interrupt_system_wrapper.vhd
+add_files C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system.bd
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_processing_system7_0_0/zynq_interrupt_system_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_0_1/zynq_interrupt_system_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_axi_gpio_1_0/zynq_interrupt_system_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_xbar_0/zynq_interrupt_system_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_auto_pc_0/zynq_interrupt_system_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/ip/zynq_interrupt_system_rst_ps7_0_100M_0/zynq_interrupt_system_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/zynq_interrupts/zynq_interrupts.gen/sources_1/bd/zynq_interrupt_system/zynq_interrupt_system_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

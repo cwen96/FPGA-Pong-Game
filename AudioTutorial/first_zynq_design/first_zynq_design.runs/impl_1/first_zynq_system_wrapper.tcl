@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.runs/impl_1/first_zynq_system_wrapper.tcl"
+  variable script "C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.runs/impl_1/first_zynq_system_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,7 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 3
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -130,17 +130,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.cache/wt [current_project]
-  set_property parent.project_path C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.xpr [current_project]
-  set_property ip_output_repo C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.xpr [current_project]
+  set_property ip_output_repo C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.runs/synth_1/first_zynq_system_wrapper.dcp
+  add_files -quiet C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.runs/synth_1/first_zynq_system_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.srcs/sources_1/bd/first_zynq_system/first_zynq_system.bd
+  add_files C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/first_zynq_design/first_zynq_design.srcs/sources_1/bd/first_zynq_system/first_zynq_system.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }
