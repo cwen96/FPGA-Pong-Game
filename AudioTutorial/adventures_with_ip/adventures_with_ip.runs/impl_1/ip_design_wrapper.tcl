@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper.tcl"
+  variable script "C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,7 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 4
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -130,22 +130,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.xpr [current_project]
-  set_property ip_repo_paths c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/ip_repo [current_project]
+  set_property webtalk.parent_dir C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
+  set_property parent.project_path C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.xpr [current_project]
+  set_property ip_repo_paths C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/ip_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/synth_1/ip_design_wrapper.dcp
+  add_files -quiet C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/synth_1/ip_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
+  add_files C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc
+  read_xdc C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -305,4 +305,35 @@ if {$rc} {
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  catch { write_mem_info -force -no_partial_mmi ip_design_wrapper.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force ip_design_wrapper.bit 
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -quiet -force ip_design_wrapper}
+  catch {file copy -force ip_design_wrapper.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }
