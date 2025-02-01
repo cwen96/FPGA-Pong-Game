@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Fri Jan 31 13:04:24 2025
+--Date        : Fri Jan 31 18:40:12 2025
 --Host        : ensc-pit-w34 running 64-bit major release  (build 9200)
 --Command     : generate_target ip_design.bd
 --Design      : ip_design
@@ -1705,6 +1705,7 @@ architecture STRUCTURE of ip_design is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 0 to 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_CLK1 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
@@ -1819,6 +1820,7 @@ architecture STRUCTURE of ip_design is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
+    ip2intc_irpt : out STD_LOGIC;
     gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     gpio2_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
@@ -1830,6 +1832,7 @@ architecture STRUCTURE of ip_design is
   signal axi_gpio_0_GPIO_TRI_T : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_gpio_1_GPIO2_TRI_I : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_gpio_1_GPIO_TRI_I : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal axi_gpio_1_ip2intc_irpt : STD_LOGIC;
   signal led_controller_0_LEDs_out : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -2066,6 +2069,7 @@ axi_gpio_1: component ip_design_axi_gpio_1_0
      port map (
       gpio2_io_i(7 downto 0) => axi_gpio_1_GPIO2_TRI_I(7 downto 0),
       gpio_io_i(4 downto 0) => axi_gpio_1_GPIO_TRI_I(4 downto 0),
+      ip2intc_irpt => axi_gpio_1_ip2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M03_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -2139,6 +2143,7 @@ processing_system7_0: component ip_design_processing_system7_0_0
       I2C0_SDA_I => processing_system7_0_IIC_0_SDA_I,
       I2C0_SDA_O => processing_system7_0_IIC_0_SDA_O,
       I2C0_SDA_T => processing_system7_0_IIC_0_SDA_T,
+      IRQ_F2P(0) => axi_gpio_1_ip2intc_irpt,
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),

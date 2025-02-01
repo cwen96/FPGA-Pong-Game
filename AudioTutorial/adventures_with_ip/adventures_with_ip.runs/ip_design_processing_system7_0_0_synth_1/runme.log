@@ -11,10 +11,10 @@
 
 source ip_design_processing_system7_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/ip 
+Current IP cache path is c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/ip 
 Command: synth_design -top ip_design_processing_system7_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -22,12 +22,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15416
+INFO: [Synth 8-7075] Helper process launched with PID 17632
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1181.352 ; gain = 64.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1107.875 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'ip_design_processing_system7_0_0' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+INFO: [Synth 8-6157] synthesizing module 'ip_design_processing_system7_0_0' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -90,71 +90,71 @@ INFO: [Synth 8-6157] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2020.2/script
 INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (2#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:730]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:62034]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (3#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:62034]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:351]
-INFO: [Synth 8-6155] done synthesizing module 'ip_design_processing_system7_0_0' (5#1) [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'ip_design_processing_system7_0_0' (5#1) [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/synth/ip_design_processing_system7_0_0.v:60]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1245.816 ; gain = 128.863
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1108.102 ; gain = 0.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1245.816 ; gain = 128.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1108.102 ; gain = 0.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1245.816 ; gain = 128.863
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1108.102 ; gain = 0.227
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1245.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1108.102 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ip_design_processing_system7_0_0_propImpl.xdc].
+Parsing XDC File [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ip_design_processing_system7_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/ip_design_processing_system7_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1281.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1140.887 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1284.316 ; gain = 2.930
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1144.973 ; gain = 4.086
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1284.316 ; gain = 167.363
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1144.973 ; gain = 37.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1284.316 ; gain = 167.363
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1144.973 ; gain = 37.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1284.316 ; gain = 167.363
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1144.973 ; gain = 37.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1284.316 ; gain = 167.363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1144.973 ; gain = 37.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -176,25 +176,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1284.316 ; gain = 167.363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1144.973 ; gain = 37.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.688 ; gain = 354.734
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1328.973 ; gain = 221.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1491.406 ; gain = 374.453
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1348.957 ; gain = 241.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1502.738 ; gain = 385.785
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1360.254 ; gain = 252.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -212,37 +212,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -264,26 +264,26 @@ Report Cell Usage:
 |4     |PS7   |     1|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 1508.684 ; gain = 353.230
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1508.684 ; gain = 391.730
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1367.012 ; gain = 222.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.012 ; gain = 259.137
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1508.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1367.012 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1532.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1391.258 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 26 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1532.742 ; gain = 415.789
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/ip_design_processing_system7_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1391.258 ; gain = 283.383
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/ip_design_processing_system7_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ip_design_processing_system7_0_0, cache-ID = 1fecc2c4e8f0cd4b
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/ip_design_processing_system7_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ip_design_processing_system7_0_0, cache-ID = 22e18a3f9bc021f1
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cjw18/Desktop/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_processing_system7_0_0_synth_1/ip_design_processing_system7_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ip_design_processing_system7_0_0_utilization_synth.rpt -pb ip_design_processing_system7_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 31 02:00:05 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 31 18:41:19 2025...

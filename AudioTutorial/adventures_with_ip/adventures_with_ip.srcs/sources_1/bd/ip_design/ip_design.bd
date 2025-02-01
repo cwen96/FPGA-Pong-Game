@@ -327,7 +327,7 @@
             "value": "10.000000"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "50.000000"
+            "value": "50"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -358,6 +358,9 @@
           },
           "PCW_I2C_RESET_SELECT": {
             "value": "Share reset pin"
+          },
+          "PCW_IRQ_F2P_INTR": {
+            "value": "1"
           },
           "PCW_MIO_0_IOTYPE": {
             "value": "LVCMOS 3.3V"
@@ -858,7 +861,7 @@
             "value": "1"
           },
           "PCW_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "200"
           },
           "PCW_QSPI_QSPI_IO": {
             "value": "MIO 1 .. 6"
@@ -982,6 +985,9 @@
           },
           "PCW_USB_RESET_SELECT": {
             "value": "Share reset pin"
+          },
+          "PCW_USE_FABRIC_INTERRUPT": {
+            "value": "1"
           },
           "preset": {
             "value": "ZedBoard"
@@ -1343,16 +1349,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1595,16 +1601,28 @@
               "s00_couplers/S_AXI"
             ]
           },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
               "m00_couplers/S_AXI"
             ]
           },
-          "m01_couplers_to_ps7_0_axi_periph": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
             ]
           },
           "m00_couplers_to_ps7_0_axi_periph": {
@@ -1619,28 +1637,16 @@
               "xbar/S00_AXI"
             ]
           },
-          "m02_couplers_to_ps7_0_axi_periph": {
+          "m03_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
+              "M03_AXI",
+              "m03_couplers/M_AXI"
             ]
           },
           "xbar_to_m02_couplers": {
             "interface_ports": [
               "xbar/M02_AXI",
               "m02_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "m03_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
             ]
           },
           "xbar_to_m03_couplers": {
@@ -1764,6 +1770,9 @@
         "xci_path": "ip\\ip_design_axi_gpio_1_0\\ip_design_axi_gpio_1_0.xci",
         "inst_hier_path": "axi_gpio_1",
         "parameters": {
+          "C_INTERRUPT_PRESENT": {
+            "value": "1"
+          },
           "GPIO2_BOARD_INTERFACE": {
             "value": "sws_8bits"
           },
@@ -1777,12 +1786,6 @@
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "zed_audio_ctrl_0/S_AXI"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
@@ -1795,34 +1798,10 @@
           "processing_system7_0/DDR"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
+      "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
-      "processing_system7_0_IIC_0": {
-        "interface_ports": [
-          "IIC_0",
-          "processing_system7_0/IIC_0"
-        ]
-      },
-      "axi_gpio_1_GPIO2": {
-        "interface_ports": [
-          "sws_8bits",
-          "axi_gpio_1/GPIO2"
-        ]
-      },
-      "ps7_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M02_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "led_controller_0/S00_AXI"
+          "ps7_0_axi_periph/M01_AXI",
+          "zed_audio_ctrl_0/S_AXI"
         ]
       },
       "axi_gpio_0_GPIO": {
@@ -1831,16 +1810,46 @@
           "axi_gpio_0/GPIO"
         ]
       },
+      "ps7_0_axi_periph_M03_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M03_AXI",
+          "axi_gpio_1/S_AXI"
+        ]
+      },
+      "processing_system7_0_IIC_0": {
+        "interface_ports": [
+          "IIC_0",
+          "processing_system7_0/IIC_0"
+        ]
+      },
+      "ps7_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M02_AXI",
+          "axi_gpio_0/S_AXI"
+        ]
+      },
       "axi_gpio_1_GPIO": {
         "interface_ports": [
           "btns_5bits",
           "axi_gpio_1/GPIO"
         ]
       },
-      "ps7_0_axi_periph_M03_AXI": {
+      "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
-          "ps7_0_axi_periph/M03_AXI",
-          "axi_gpio_1/S_AXI"
+          "ps7_0_axi_periph/M00_AXI",
+          "led_controller_0/S00_AXI"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "axi_gpio_1_GPIO2": {
+        "interface_ports": [
+          "sws_8bits",
+          "axi_gpio_1/GPIO2"
         ]
       }
     },
@@ -1922,6 +1931,12 @@
         "ports": [
           "rst_ps7_0_100M/interconnect_aresetn",
           "ps7_0_axi_periph/ARESETN"
+        ]
+      },
+      "axi_gpio_1_ip2intc_irpt": {
+        "ports": [
+          "axi_gpio_1/ip2intc_irpt",
+          "processing_system7_0/IRQ_F2P"
         ]
       }
     },

@@ -22,3 +22,7 @@ platform generate -quick
 bsp reload
 bsp write
 platform generate
+platform active {adventures_with_ip_design_wrapper}
+platform clean
+platform generate
+platform write

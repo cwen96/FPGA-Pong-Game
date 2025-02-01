@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Fri Jan 31 13:04:25 2025
+--Date        : Fri Jan 31 18:40:12 2025
 --Host        : ensc-pit-w34 running 64-bit major release  (build 9200)
 --Command     : generate_target ip_design_wrapper.bd
 --Design      : ip_design_wrapper
@@ -59,6 +59,8 @@ architecture STRUCTURE of ip_design_wrapper is
     SDATA_I : in STD_LOGIC;
     LEDs_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
     FCLK_CLK1 : out STD_LOGIC;
+    I2C0_SCL_I : in STD_LOGIC;
+    I2C0_SDA_I : in STD_LOGIC;
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
@@ -86,13 +88,11 @@ architecture STRUCTURE of ip_design_wrapper is
     IIC_0_scl_i : in STD_LOGIC;
     IIC_0_scl_o : out STD_LOGIC;
     IIC_0_scl_t : out STD_LOGIC;
+    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     GPIO_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     GPIO_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     GPIO_tri_t : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    I2C0_SCL_I : in STD_LOGIC;
-    I2C0_SDA_I : in STD_LOGIC
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component ip_design;
   component IOBUF is
