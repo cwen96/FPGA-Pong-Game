@@ -1,0 +1,12 @@
+{"includePath": [
+
+                "${workspaceFolder}/**",
+
+                "/usr/include",
+
+                "/usr/local/include"
+
+            ],
+
+  "C_Cpp.default.compilerPath": ""
+}

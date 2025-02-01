@@ -15,41 +15,45 @@
  *
  * The main menu can be accessed by entering 'q' on the keyboard.
  * ---------------------------------------------------------------------------- */
-void audio_stream(){
-	u32  in_left, in_right;
+void audio_stream() {
+    u32 in_left, in_right;
 
-	while (!XUartPs_IsReceiveData(UART_BASEADDR)){
-		// Read audio input from codec
-		in_left = Xil_In32(I2S_DATA_RX_L_REG);
-		in_right = Xil_In32(I2S_DATA_RX_R_REG);
-		// Write audio output to codec
-		Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-		Xil_Out32(I2S_DATA_TX_R_REG, in_right);
-	}
+    while (!XUartPs_IsReceiveData(UART_BASEADDR)) {
+        // Read audio input from codec
+        in_left = Xil_In32(I2S_DATA_RX_L_REG);
+        in_right = Xil_In32(I2S_DATA_RX_R_REG);
+        // Write audio output to codec
+        Xil_Out32(I2S_DATA_TX_L_REG, in_left);
+        Xil_Out32(I2S_DATA_TX_R_REG, in_right);
+    }
 
-	/* If input from the terminal is 'q', then return to menu.
-	 * Else, continue streaming. */
-	if(XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q') menu();
-	else audio_stream();
-} // audio_stream()
-
+    /* If input from the terminal is 'q', then return to menu.
+     * Else, continue streaming. */
+    if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q')
+        menu();
+    else
+        audio_stream();
+}  // audio_stream()
 
 /* ---------------------------------------------------------------------------- *
  * 								gpio_initi()									*
  * ---------------------------------------------------------------------------- *
  * Initialises the GPIO driver for the push buttons and switches.
  * ---------------------------------------------------------------------------- */
-unsigned char gpio_init()
-{
-	int Status;
+unsigned char gpio_init() {
+    int status;
 
-	Status = XGpio_Initialize(&Gpio, BUTTON_SWITCH_ID);
-	if(Status != XST_SUCCESS) return XST_FAILURE;
+    // Initialise Push Buttons
+    status = XGpio_Initialize(&Gpio, BUTTON_SWITCH_ID);
+    if (status != XST_SUCCESS) return XST_FAILURE;
 
-	XGpio_SetDataDirection(&Gpio, SWITCH_CHANNEL, 0xFF);
-	XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
+    // Set all switches direction to inputs
+    XGpio_SetDataDirection(&Gpio, SWITCH_CHANNEL, 0xFF);
 
-	return XST_SUCCESS;
+    // Set all buttons direction to inputs
+    XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
+
+    return XST_SUCCESS;
 }
 
 /* ---------------------------------------------------------------------------- *
@@ -70,20 +74,109 @@ Remember, the use of interrupts is a requirement for your final project, so it
 would be good if at least one of you could use this as the basis of for one of your
 project milestones to help you succeed with your final project deliverables.
  * ---------------------------------------------------------------------------- */
-void lab_test(){
-	u32  in_left, in_right;
+int lab_test() {
+    // Initialize interrupt controller
+    int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
+    if (status != XST_SUCCESS) return XST_FAILURE;
 
-	while (!XUartPs_IsReceiveData(UART_BASEADDR)){
-		// Read audio input from codec
-		in_left = Xil_In32(I2S_DATA_RX_L_REG);
-		in_right = Xil_In32(I2S_DATA_RX_R_REG);
-		// Write audio output to codec
-		Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-		Xil_Out32(I2S_DATA_TX_R_REG, in_right);
-	}
+    /* If input from the terminal is 'q', then return to menu.
+     * Else, continue. */
+    while (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) != 'q') {
+        if (recordStatus == 1) {
+            recordAudio();
+        }
 
-	/* If input from the terminal is 'x', then return to menu.
-	 * Else, continue streaming. */
-	if(XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'x') menu();
-	else audio_stream();
+        if (recordStatus == 2) {
+            playAudio();
+        }
+    }
+
+    menu();
+}
+
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
+    XScuGic_Config *IntcConfig;
+    int status;
+
+    // Interrupt controller initialisation
+    IntcConfig = XScuGic_LookupConfig(DeviceId);
+    status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    // Call to interrupt setup
+    status = InterruptSystemSetup(&INTCInst);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    // Connect GPIO interrupt to handler
+    status = XScuGic_Connect(&INTCInst,
+                             INTC_GPIO_INTERRUPT_ID,
+                             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                             (void *)GpioInstancePtr);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    // Enable GPIO interrupts interrupt
+    XGpio_InterruptEnable(GpioInstancePtr, 1);
+    XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+    // Enable GPIO and timer interrupts in the controller
+    XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
+
+    return XST_SUCCESS;
+}
+
+//----------------------------------------------------
+// INTERRUPT INITIAL SETUP FUNCTIONS
+//----------------------------------------------------
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr) {
+    // Enable interrupt
+    XGpio_InterruptEnable(&Gpio, BTN_INT);
+    XGpio_InterruptGlobalEnable(&Gpio);
+
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+                                 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+                                 XScuGicInstancePtr);
+    Xil_ExceptionEnable();
+
+    return XST_SUCCESS;
+}
+
+//----------------------------------------------------
+// INTERRUPT HANDLER FUNCTIONS
+// Called by the timer, button interrupt, performs
+// audio recording and playback
+//----------------------------------------------------
+void BTN_Intr_Handler(void *InstancePtr) {
+    // Disable GPIO interrupts
+    XGpio_InterruptDisable(&Gpio, BTN_INT);
+    // Ignore additional button presses
+    if ((XGpio_InterruptGetStatus(&Gpio) & BTN_INT) !=
+        BTN_INT) {
+        return;
+    }
+    btn_value = XGpio_DiscreteRead(&Gpio, 1);
+    int new_btn_value = XGpio_DiscreteRead(&Gpio, 1);
+
+    // Start recording when non centre button is pressed
+    if (btn_value != 1) {
+        recordStatus = 1;
+    } else {  // Play recording when middle button is pressed
+        recordStatus = 2;
+    }
+
+    (void)XGpio_InterruptClear(&Gpio, BTN_INT);
+    // Enable GPIO interrupts
+    XGpio_InterruptEnable(&Gpio, BTN_INT);
+}
+
+void recordAudio() {
+    // Read audio input from codec
+    in_left = Xil_In32(I2S_DATA_RX_L_REG);
+    in_right = Xil_In32(I2S_DATA_RX_R_REG);
+}
+
+void playAudio() {
+    // Write audio output to codec
+	//put delay before each play
+    Xil_Out32(I2S_DATA_TX_L_REG, in_left);
+    Xil_Out32(I2S_DATA_TX_R_REG, in_right);
 }

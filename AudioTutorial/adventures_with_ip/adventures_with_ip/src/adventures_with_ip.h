@@ -10,15 +10,16 @@
 /* ---------------------------------------------------------------------------- *
  * 								Header Files									*
  * ---------------------------------------------------------------------------- */
+#include <sleep.h>
 #include <stdio.h>
 #include <xil_io.h>
-#include <sleep.h>
-#include "xiicps.h"
 #include <xil_printf.h>
 #include <xparameters.h>
-#include "xgpio.h"
-#include "xuartps.h"
+
 #include "stdlib.h"
+#include "xgpio.h"
+#include "xiicps.h"
+#include "xuartps.h"
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*
@@ -31,7 +32,8 @@
 void menu();
 void audio_stream();
 unsigned char gpio_init();
-void lab_test();
+int lab_test();
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
@@ -40,6 +42,7 @@ void lab_test();
 #define BUTTON_SWITCH_BASE XPAR_GPIO_1_BASEADDR
 #define LED_BASE XPAR_LED_CONTROLLER_0_S00_AXI_BASEADDR
 #define BUTTON_SWITCH_ID XPAR_GPIO_1_DEVICE_ID
+#define INTC_DEVICE_ID XPAR_PS7_SCUGIC_0_DEVICE_ID
 
 /* ---------------------------------------------------------------------------- *
  * 							Define GPIO Channels								*
@@ -55,8 +58,14 @@ void lab_test();
 /* ---------------------------------------------------------------------------- *
  * 							Global Variables									*
  * ---------------------------------------------------------------------------- */
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
 XIicPs Iic;
-XGpio Gpio; // Gpio instance for buttons and switches
+XGpio Gpio;        // Gpio instance for buttons and switches
+XScuGic INTCInst;  // Interrupt Controller instance
+static int recordStatus;
+static int btn_value;
+u32 in_left, in_right;
 
+#define BTN_INT XGPIO_IR_CH1_MASK
 
 #endif /* ADVENTURES_WITH_IP_H_ */
