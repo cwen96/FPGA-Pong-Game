@@ -78,11 +78,18 @@ would be good if at least one of you could use this as the basis of for one of y
 project milestones to help you succeed with your final project deliverables.
  * ---------------------------------------------------------------------------- */
 int lab_test() {
-	u32 in_left, in_right;
+	u32 audio_buffer_left[BUFFER_SIZE];
+	u32 audio_buffer_right[BUFFER_SIZE];
+	int buffer_index = 0;
+    u32 in_left;
+	u32 in_right;
+
 	if (interruptInit == 0) {
 		// Initialize interrupt controller
 		int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
-		if (status != XST_SUCCESS) return XST_FAILURE;
+		if (status != XST_SUCCESS){
+			return XST_FAILURE;
+		}
 		interruptInit = 1;
 	}
 
@@ -90,32 +97,29 @@ int lab_test() {
      * Else, continue. */
     while (!XUartPs_IsReceiveData(UART_BASEADDR)) {
         if (recordStatus == 1) {
-        	if (prevStatus != 1) {
-        		xil_printf("Recording audio...\r\n");
-        		prevStatus = 1;
-        	}
-            // Write audio output to codec
-        	//put delay before each play
-        	usleep(2000);
-            Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-            Xil_Out32(I2S_DATA_TX_R_REG, in_right);
-        } else if (recordStatus == 2) {
-        	if (prevStatus != 2) {
-        		xil_printf("Playing audio...\r\n");
-        		 prevStatus = 2;
-        	}
             // Read audio input from codec
             in_left = Xil_In32(I2S_DATA_RX_L_REG);
+            audio_buffer_left[buffer_index] = in_left;
             in_right = Xil_In32(I2S_DATA_RX_R_REG);
+            audio_buffer_right[buffer_index] = in_right;
+            buffer_index++;
+        } else if (recordStatus == 2) {
+            // Write audio output to codec
+        	for (int i = 0; i < buffer_index; i++) {
+                Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
+                Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
+        	}
         }
     }
 
     /* If input from the terminal is 'q', then return to menu.
          * Else, continue streaming. */
-	if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q')
+	if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q') {
 		menu();
-	else
+	}
+	else {
 		lab_test();
+	}
 	return XST_SUCCESS;
 }
 

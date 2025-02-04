@@ -65,6 +65,7 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
  * 							Global Variables									*
  * ---------------------------------------------------------------------------- */
 #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define BUFFER_SIZE 4000
 XIicPs Iic;
 XGpio Gpio;        // Gpio instance for buttons and switches
 XScuGic INTCInst;  // Interrupt Controller instance
