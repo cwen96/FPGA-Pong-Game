@@ -4041,3 +4041,262 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-51: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 21:55:24.091
 !MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-51: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:02.714
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-402
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:02.718
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-402
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:13.789
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/system.mss ], Thread: Worker-52: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:13.796
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-52: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:13.797
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-52: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:13.803
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-52: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-02-03 22:06:13.804
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Documents\ensc-452\AudioTutorial\adventures_with_ip\ip_design_wrapper\export\ip_design_wrapper\sw\ip_design_wrapper\standalone_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:13.806
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-52: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:13.809
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-52: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:19.337
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2025-02-03 22:06:21.471
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.524
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.525
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.650
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.651
+!MESSAGE XSCT Command: [version -server], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.654
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.655
+!MESSAGE XSCT Command: [version], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.656
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.657
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.665
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.666
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.692
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.693
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.700
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.701
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.723
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.724
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.731
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.732
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.754
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.755
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.762
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.763
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.783
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.784
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.791
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.792
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.812
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.812
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.820
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.820
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.842
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.842
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.865
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.866
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.866
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.867
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.877
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.878
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.970
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:21.970
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:24.985
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.009
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.016
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.017
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.038
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.039
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.087
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:25.088
+!MESSAGE XSCT Command: [fpga -file C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/bitstream/ip_design_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.446
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/bitstream/ip_design_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.480
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.502
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.502
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.520
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, ip_design_wrapper_1]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.521
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.522
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.523
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.537
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.537
+!MESSAGE XSCT Command: [source C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/psinit/ps7_init.tcl], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.541
+!MESSAGE XSCT command with result: [source C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.541
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.891
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.892
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.899
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.900
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.911
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:27.912
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/Debug/adventures_with_ip.elf], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:28.190
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/Debug/adventures_with_ip.elf], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:28.191
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-02-03 22:06:28.229
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-48: Launching Debugger_adventures_with_ip-GDB

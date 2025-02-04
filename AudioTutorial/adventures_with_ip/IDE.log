@@ -56,3 +56,42 @@ dow C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventure
 configparams force-mem-access 0
 ----------------End of Script----------------
 
+22:06:02 INFO  : Disconnected from the channel tcfchan#2.
+22:06:13 INFO  : Checking for BSP changes to sync application flags for project 'adventures_with_ip'...
+22:06:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:06:21 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+22:06:21 INFO  : 'jtag frequency' command is executed.
+22:06:21 INFO  : Context for 'APU' is selected.
+22:06:21 INFO  : System reset is completed.
+22:06:24 INFO  : 'after 3000' command is executed.
+22:06:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+22:06:27 INFO  : Device configured successfully with "C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/bitstream/ip_design_wrapper.bit"
+22:06:27 INFO  : Context for 'APU' is selected.
+22:06:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa'.
+22:06:27 INFO  : 'configparams force-mem-access 1' command is executed.
+22:06:27 INFO  : Context for 'APU' is selected.
+22:06:27 INFO  : Sourcing of 'C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/psinit/ps7_init.tcl' is done.
+22:06:27 INFO  : 'ps7_init' command is executed.
+22:06:27 INFO  : 'ps7_post_config' command is executed.
+22:06:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:06:28 INFO  : The application 'C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/Debug/adventures_with_ip.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:06:28 INFO  : 'configparams force-mem-access 0' command is executed.
+22:06:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip/Debug/adventures_with_ip.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+

@@ -104,6 +104,7 @@ int lab_test() {
         	}
             // Write audio output to codec
         	//put delay before each play
+        	usleep(2000);
             Xil_Out32(I2S_DATA_TX_L_REG, in_left);
             Xil_Out32(I2S_DATA_TX_R_REG, in_right);
         }

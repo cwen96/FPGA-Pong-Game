@@ -1,6 +1,6 @@
 Nothing to build in platform 'ip_design_wrapper'
 
-21:54:25 **** Incremental Build of configuration Debug for project adventures_with_ip ****
+22:06:13 **** Incremental Build of configuration Debug for project adventures_with_ip ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -19,10 +19,6 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cor
 'Building file: ../src/ip_functions.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
-../src/ip_functions.c: In function 'IntcInitFunction':
-../src/ip_functions.c:131:14: warning: implicit declaration of function 'InterruptSystemSetup' [-Wimplicit-function-declaration]
-  131 |     status = InterruptSystemSetup(&INTCInst);
-      |              ^~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/ip_functions.c'
 ' '
 'Building target: adventures_with_ip.elf'
@@ -33,6 +29,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size adventures_with_ip.elf  |tee "adventures_with_ip.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  36040	   1960	  22696	  60696	   ed18	adventures_with_ip.elf
+  36168	   1960	  22696	  60824	   ed98	adventures_with_ip.elf
 'Finished building: adventures_with_ip.elf.size'
 ' '

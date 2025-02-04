@@ -2,9 +2,13 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
     <instance id="xilinx.gnu.armv7.exe.debug.1015617813;xilinx.gnu.armv7.exe.debug.1015617813.">
         <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+            <includePath path="#undef __ARM_FEATURE_DSP" removed="true"/>
             <includePath path="c:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\x86_64-oesdk-mingw32\usr\bin\arm-xilinx-eabi\../../lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/include"/>
+            <includePath path="#undef __ARM_FEATURE_QBIT" removed="true"/>
             <includePath path="c:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\x86_64-oesdk-mingw32\usr\bin\arm-xilinx-eabi\../../lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/include-fixed"/>
+            <includePath path="#undef __ARM_FEATURE_SAT" removed="true"/>
             <includePath path="C:\Xilinx\Vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\\..\aarch32-xilinx-eabi/usr/include"/>
+            <includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
             <definedSymbol symbol="__STDC__=1"/>
             <definedSymbol symbol="__STDC_VERSION__=201710L"/>
             <definedSymbol symbol="__STDC_UTF_16__=1"/>

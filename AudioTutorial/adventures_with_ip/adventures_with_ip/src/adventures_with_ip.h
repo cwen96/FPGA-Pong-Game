@@ -39,6 +39,7 @@ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
 void BTN_Intr_Handler(void *InstancePtr);
 void recordAudio();
 void playAudio();
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
