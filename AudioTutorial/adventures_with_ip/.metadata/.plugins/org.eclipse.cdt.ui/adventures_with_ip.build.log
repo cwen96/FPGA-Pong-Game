@@ -1,19 +1,9 @@
-22:06:13 **** Incremental Build of configuration Debug for project adventures_with_ip ****
+22:29:03 **** Incremental Build of configuration Debug for project adventures_with_ip ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/adventures_with_ip.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
-'Finished building: ../src/adventures_with_ip.c'
-' '
-'Building file: ../src/audio.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/audio.d" -MT"src/audio.o" -o "src/audio.o" "../src/audio.c"
-'Finished building: ../src/audio.c'
-' '
 'Building file: ../src/ip_functions.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
@@ -31,5 +21,5 @@ arm-none-eabi-size adventures_with_ip.elf  |tee "adventures_with_ip.elf.size"
 'Finished building: adventures_with_ip.elf.size'
 ' '
 
-22:06:15 Build Finished (took 1s.569ms)
+22:29:04 Build Finished (took 1s.69ms)
 

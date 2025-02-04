@@ -94,19 +94,19 @@ int lab_test() {
         		xil_printf("Recording audio...\r\n");
         		prevStatus = 1;
         	}
-            // Write audio output to codec
-        	//put delay before each play
-        	usleep(2000);
-            Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-            Xil_Out32(I2S_DATA_TX_R_REG, in_right);
+            // Read audio input from codec
+            in_left = Xil_In32(I2S_DATA_RX_L_REG);
+            in_right = Xil_In32(I2S_DATA_RX_R_REG);
         } else if (recordStatus == 2) {
         	if (prevStatus != 2) {
         		xil_printf("Playing audio...\r\n");
         		 prevStatus = 2;
         	}
-            // Read audio input from codec
-            in_left = Xil_In32(I2S_DATA_RX_L_REG);
-            in_right = Xil_In32(I2S_DATA_RX_R_REG);
+            // Write audio output to codec
+        	//put delay before each play
+        	usleep(2000);
+            Xil_Out32(I2S_DATA_TX_L_REG, in_left);
+            Xil_Out32(I2S_DATA_TX_R_REG, in_right);
         }
     }
 
