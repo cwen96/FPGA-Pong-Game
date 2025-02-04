@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_led_controller_0_0_synth_1'
+HD_PWD='C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.runs/ip_design_led_controller_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

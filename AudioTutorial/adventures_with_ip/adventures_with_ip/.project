@@ -3,7 +3,7 @@
 	<name>adventures_with_ip</name>
 	<comment>Created by Vitis v2020.2</comment>
 	<projects>
-		<project>adventures_with_ip_design_wrapper</project>
+		<project>ip_design_wrapper</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

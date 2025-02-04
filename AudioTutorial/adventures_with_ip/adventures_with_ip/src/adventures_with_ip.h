@@ -20,6 +20,8 @@
 #include "xgpio.h"
 #include "xiicps.h"
 #include "xuartps.h"
+#include "xscugic.h"
+#include "xil_exception.h"
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*
@@ -34,6 +36,9 @@ void audio_stream();
 unsigned char gpio_init();
 int lab_test();
 int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+void BTN_Intr_Handler(void *InstancePtr);
+void recordAudio();
+void playAudio();
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
@@ -58,13 +63,14 @@ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
 /* ---------------------------------------------------------------------------- *
  * 							Global Variables									*
  * ---------------------------------------------------------------------------- */
-#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
 XIicPs Iic;
 XGpio Gpio;        // Gpio instance for buttons and switches
 XScuGic INTCInst;  // Interrupt Controller instance
-static int recordStatus;
-static int btn_value;
-u32 in_left, in_right;
+int recordStatus;
+int prevStatus;
+int btn_value;
+int interruptInit;
 
 #define BTN_INT XGPIO_IR_CH1_MASK
 

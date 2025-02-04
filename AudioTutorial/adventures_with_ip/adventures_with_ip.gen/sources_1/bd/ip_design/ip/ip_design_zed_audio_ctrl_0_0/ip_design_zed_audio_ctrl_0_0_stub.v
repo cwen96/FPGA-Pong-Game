@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Fri Jan 31 02:00:01 2025
-// Host        : DESKTOP-VA1U3VE running 64-bit major release  (build 9200)
+// Date        : Mon Feb  3 16:57:37 2025
+// Host        : DESKTOP-NJF4991 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Chris/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_zed_audio_ctrl_0_0/ip_design_zed_audio_ctrl_0_0_stub.v
+//               c:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_zed_audio_ctrl_0_0/ip_design_zed_audio_ctrl_0_0_stub.v
 // Design      : ip_design_zed_audio_ctrl_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

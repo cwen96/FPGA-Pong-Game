@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCCD592326CC67035",
+      "boundary_crc": "0x63FCB55A7C1DF917",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../adventures_with_ip.gen/sources_1/bd/ip_design",
       "name": "ip_design",
@@ -111,22 +111,22 @@
       }
     },
     "ports": {
-      "SDATA_O": {
+      "LEDs_out": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "SDATA_I": {
+        "direction": "I"
+      },
+      "BCLK": {
         "direction": "O"
       },
       "LRCLK": {
         "direction": "O"
       },
-      "BCLK": {
+      "SDATA_O": {
         "direction": "O"
-      },
-      "SDATA_I": {
-        "direction": "I"
-      },
-      "LEDs_out": {
-        "direction": "O",
-        "left": "7",
-        "right": "0"
       },
       "FCLK_CLK1": {
         "type": "clk",
@@ -152,12 +152,6 @@
             "value_src": "default"
           }
         }
-      },
-      "I2C0_SCL_I": {
-        "direction": "I"
-      },
-      "I2C0_SDA_I": {
-        "direction": "I"
       }
     },
     "components": {
@@ -324,10 +318,10 @@
             "value": "100.000000"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "10"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "50"
+            "value": "50.000000"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -861,7 +855,7 @@
             "value": "1"
           },
           "PCW_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200"
+            "value": "200.000000"
           },
           "PCW_QSPI_QSPI_IO": {
             "value": "MIO 1 .. 6"
@@ -1349,16 +1343,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1595,10 +1589,28 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "m01_couplers_to_ps7_0_axi_periph": {
@@ -1613,28 +1625,10 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "xbar_to_m01_couplers": {
+          "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "m02_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
-            ]
-          },
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "m03_couplers_to_ps7_0_axi_periph": {
@@ -1661,7 +1655,12 @@
             "ports": [
               "ACLK",
               "xbar/aclk",
+              "s00_couplers/S_ACLK",
               "s00_couplers/M_ACLK",
+              "m00_couplers/M_ACLK",
+              "m01_couplers/M_ACLK",
+              "m02_couplers/M_ACLK",
+              "m03_couplers/M_ACLK",
               "m00_couplers/S_ACLK",
               "m01_couplers/S_ACLK",
               "m02_couplers/S_ACLK",
@@ -1672,71 +1671,16 @@
             "ports": [
               "ARESETN",
               "xbar/aresetn",
+              "s00_couplers/S_ARESETN",
               "s00_couplers/M_ARESETN",
+              "m00_couplers/M_ARESETN",
+              "m01_couplers/M_ARESETN",
+              "m02_couplers/M_ARESETN",
+              "m03_couplers/M_ARESETN",
               "m00_couplers/S_ARESETN",
               "m01_couplers/S_ARESETN",
               "m02_couplers/S_ARESETN",
               "m03_couplers/S_ARESETN"
-            ]
-          },
-          "S00_ACLK_1": {
-            "ports": [
-              "S00_ACLK",
-              "s00_couplers/S_ACLK"
-            ]
-          },
-          "S00_ARESETN_1": {
-            "ports": [
-              "S00_ARESETN",
-              "s00_couplers/S_ARESETN"
-            ]
-          },
-          "M00_ACLK_1": {
-            "ports": [
-              "M00_ACLK",
-              "m00_couplers/M_ACLK"
-            ]
-          },
-          "M00_ARESETN_1": {
-            "ports": [
-              "M00_ARESETN",
-              "m00_couplers/M_ARESETN"
-            ]
-          },
-          "M01_ACLK_1": {
-            "ports": [
-              "M01_ACLK",
-              "m01_couplers/M_ACLK"
-            ]
-          },
-          "M01_ARESETN_1": {
-            "ports": [
-              "M01_ARESETN",
-              "m01_couplers/M_ARESETN"
-            ]
-          },
-          "M02_ACLK_1": {
-            "ports": [
-              "M02_ACLK",
-              "m02_couplers/M_ACLK"
-            ]
-          },
-          "M02_ARESETN_1": {
-            "ports": [
-              "M02_ARESETN",
-              "m02_couplers/M_ARESETN"
-            ]
-          },
-          "M03_ACLK_1": {
-            "ports": [
-              "M03_ACLK",
-              "m03_couplers/M_ACLK"
-            ]
-          },
-          "M03_ARESETN_1": {
-            "ports": [
-              "M03_ARESETN",
-              "m03_couplers/M_ARESETN"
             ]
           }
         }
@@ -1786,10 +1730,10 @@
       }
     },
     "interface_nets": {
-      "processing_system7_0_FIXED_IO": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1798,16 +1742,10 @@
           "processing_system7_0/DDR"
         ]
       },
-      "ps7_0_axi_periph_M01_AXI": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "zed_audio_ctrl_0/S_AXI"
-        ]
-      },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "GPIO",
-          "axi_gpio_0/GPIO"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "ps7_0_axi_periph_M03_AXI": {
@@ -1816,22 +1754,16 @@
           "axi_gpio_1/S_AXI"
         ]
       },
-      "processing_system7_0_IIC_0": {
-        "interface_ports": [
-          "IIC_0",
-          "processing_system7_0/IIC_0"
-        ]
-      },
       "ps7_0_axi_periph_M02_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M02_AXI",
           "axi_gpio_0/S_AXI"
         ]
       },
-      "axi_gpio_1_GPIO": {
+      "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
-          "btns_5bits",
-          "axi_gpio_1/GPIO"
+          "ps7_0_axi_periph/M01_AXI",
+          "zed_audio_ctrl_0/S_AXI"
         ]
       },
       "ps7_0_axi_periph_M00_AXI": {
@@ -1840,16 +1772,28 @@
           "led_controller_0/S00_AXI"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
+      "axi_gpio_1_GPIO": {
         "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
+          "btns_5bits",
+          "axi_gpio_1/GPIO"
         ]
       },
       "axi_gpio_1_GPIO2": {
         "interface_ports": [
           "sws_8bits",
           "axi_gpio_1/GPIO2"
+        ]
+      },
+      "processing_system7_0_IIC_0": {
+        "interface_ports": [
+          "IIC_0",
+          "processing_system7_0/IIC_0"
+        ]
+      },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "GPIO",
+          "axi_gpio_0/GPIO"
         ]
       }
     },
@@ -1883,6 +1827,7 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "led_controller_0/s00_axi_aresetn",
           "ps7_0_axi_periph/M00_ARESETN",
+          "ps7_0_axi_periph/ARESETN",
           "zed_audio_ctrl_0/S_AXI_ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
           "axi_gpio_0/s_axi_aresetn",
@@ -1891,22 +1836,10 @@
           "ps7_0_axi_periph/M03_ARESETN"
         ]
       },
-      "zed_audio_ctrl_0_SDATA_O": {
+      "led_controller_0_LEDs_out": {
         "ports": [
-          "zed_audio_ctrl_0/SDATA_O",
-          "SDATA_O"
-        ]
-      },
-      "zed_audio_ctrl_0_LRCLK": {
-        "ports": [
-          "zed_audio_ctrl_0/LRCLK",
-          "LRCLK"
-        ]
-      },
-      "zed_audio_ctrl_0_BCLK": {
-        "ports": [
-          "zed_audio_ctrl_0/BCLK",
-          "BCLK"
+          "led_controller_0/LEDs_out",
+          "LEDs_out"
         ]
       },
       "SDATA_I_0_1": {
@@ -1915,22 +1848,28 @@
           "zed_audio_ctrl_0/SDATA_I"
         ]
       },
-      "led_controller_0_LEDs_out": {
+      "zed_audio_ctrl_0_BCLK": {
         "ports": [
-          "led_controller_0/LEDs_out",
-          "LEDs_out"
+          "zed_audio_ctrl_0/BCLK",
+          "BCLK"
+        ]
+      },
+      "zed_audio_ctrl_0_LRCLK": {
+        "ports": [
+          "zed_audio_ctrl_0/LRCLK",
+          "LRCLK"
+        ]
+      },
+      "zed_audio_ctrl_0_SDATA_O": {
+        "ports": [
+          "zed_audio_ctrl_0/SDATA_O",
+          "SDATA_O"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
         "ports": [
           "processing_system7_0/FCLK_CLK1",
           "FCLK_CLK1"
-        ]
-      },
-      "ARESETN_1": {
-        "ports": [
-          "rst_ps7_0_100M/interconnect_aresetn",
-          "ps7_0_axi_periph/ARESETN"
         ]
       },
       "axi_gpio_1_ip2intc_irpt": {

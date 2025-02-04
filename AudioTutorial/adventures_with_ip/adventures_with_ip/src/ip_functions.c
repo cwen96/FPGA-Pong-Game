@@ -53,6 +53,9 @@ unsigned char gpio_init() {
     // Set all buttons direction to inputs
     XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
 
+    interruptInit = 0;
+    prevStatus = 0;
+
     return XST_SUCCESS;
 }
 
@@ -75,23 +78,44 @@ would be good if at least one of you could use this as the basis of for one of y
 project milestones to help you succeed with your final project deliverables.
  * ---------------------------------------------------------------------------- */
 int lab_test() {
-    // Initialize interrupt controller
-    int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
-    if (status != XST_SUCCESS) return XST_FAILURE;
+	u32 in_left, in_right;
+	if (interruptInit == 0) {
+		// Initialize interrupt controller
+		int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
+		if (status != XST_SUCCESS) return XST_FAILURE;
+		interruptInit = 1;
+	}
 
     /* If input from the terminal is 'q', then return to menu.
      * Else, continue. */
-    while (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) != 'q') {
+    while (!XUartPs_IsReceiveData(UART_BASEADDR)) {
         if (recordStatus == 1) {
-            recordAudio();
-        }
-
-        if (recordStatus == 2) {
-            playAudio();
+        	if (prevStatus != 1) {
+        		xil_printf("Recording audio...\r\n");
+        		prevStatus = 1;
+        	}
+            // Read audio input from codec
+            in_left = Xil_In32(I2S_DATA_RX_L_REG);
+            in_right = Xil_In32(I2S_DATA_RX_R_REG);
+        } else if (recordStatus == 2) {
+        	if (prevStatus != 2) {
+        		xil_printf("Playing audio...\r\n");
+        		 prevStatus = 2;
+        	}
+            // Write audio output to codec
+        	//put delay before each play
+            Xil_Out32(I2S_DATA_TX_L_REG, in_left);
+            Xil_Out32(I2S_DATA_TX_R_REG, in_right);
         }
     }
 
-    menu();
+    /* If input from the terminal is 'q', then return to menu.
+         * Else, continue streaming. */
+	if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q')
+		menu();
+	else
+		lab_test();
+	return XST_SUCCESS;
 }
 
 int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
@@ -154,29 +178,15 @@ void BTN_Intr_Handler(void *InstancePtr) {
         return;
     }
     btn_value = XGpio_DiscreteRead(&Gpio, 1);
-    int new_btn_value = XGpio_DiscreteRead(&Gpio, 1);
 
-    // Start recording when non centre button is pressed
-    if (btn_value != 1) {
+    // Start recording when bottom button is pressed
+    if (btn_value == 2) {
         recordStatus = 1;
-    } else {  // Play recording when middle button is pressed
+    } else if (btn_value == 1) {  // Play recording when middle button is pressed
         recordStatus = 2;
     }
 
     (void)XGpio_InterruptClear(&Gpio, BTN_INT);
     // Enable GPIO interrupts
     XGpio_InterruptEnable(&Gpio, BTN_INT);
-}
-
-void recordAudio() {
-    // Read audio input from codec
-    in_left = Xil_In32(I2S_DATA_RX_L_REG);
-    in_right = Xil_In32(I2S_DATA_RX_R_REG);
-}
-
-void playAudio() {
-    // Write audio output to codec
-	//put delay before each play
-    Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-    Xil_Out32(I2S_DATA_TX_R_REG, in_right);
 }

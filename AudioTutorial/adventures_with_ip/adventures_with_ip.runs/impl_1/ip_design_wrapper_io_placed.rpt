@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date                      : Fri Jan 31 18:42:53 2025
-| Host                      : ensc-pit-w34 running 64-bit major release  (build 9200)
+| Date                      : Mon Feb  3 16:59:57 2025
+| Host                      : DESKTOP-NJF4991 running 64-bit major release  (build 9200)
 | Command                   : report_io -file ip_design_wrapper_io_placed.rpt
 | Design                    : ip_design_wrapper
 | Device                    : xc7z020
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           162 |
+|           160 |
 +---------------+
 
 
