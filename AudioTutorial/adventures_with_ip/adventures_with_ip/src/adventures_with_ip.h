@@ -19,9 +19,9 @@
 #include "stdlib.h"
 #include "xgpio.h"
 #include "xiicps.h"
-#include "xuartps.h"
-#include "xscugic.h"
 #include "xil_exception.h"
+#include "xscugic.h"
+#include "xuartps.h"
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*

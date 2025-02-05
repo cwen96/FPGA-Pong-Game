@@ -78,49 +78,83 @@ would be good if at least one of you could use this as the basis of for one of y
 project milestones to help you succeed with your final project deliverables.
  * ---------------------------------------------------------------------------- */
 int lab_test() {
-	u32 audio_buffer_left[BUFFER_SIZE];
-	u32 audio_buffer_right[BUFFER_SIZE];
-	int buffer_index = 0;
+    u32 audio_buffer_left[BUFFER_SIZE];
+    u32 audio_buffer_right[BUFFER_SIZE];
+    int buffer_index = 0;
     u32 in_left;
-	u32 in_right;
+    u32 in_right;
+    int print_record_status = 0;
+    int print_play_status = 0;
+    int print_standby_status = 0;
 
-	if (interruptInit == 0) {
-		// Initialize interrupt controller
-		int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
-		if (status != XST_SUCCESS){
-			return XST_FAILURE;
-		}
-		interruptInit = 1;
-	}
+    if (interruptInit == 0) {
+        // Initialize interrupt controller
+        int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
+        if (status != XST_SUCCESS) {
+            return XST_FAILURE;
+        }
+        interruptInit = 1;
+    }
 
     /* If input from the terminal is 'q', then return to menu.
      * Else, continue. */
     while (!XUartPs_IsReceiveData(UART_BASEADDR)) {
+        // Recording mode
         if (recordStatus == 1) {
+            if (print_record_status == 0) {
+                xil_printf("Recording...\r\n");
+                print_record_status = 1;
+            }
             // Read audio input from codec
             in_left = Xil_In32(I2S_DATA_RX_L_REG);
             audio_buffer_left[buffer_index] = in_left;
             in_right = Xil_In32(I2S_DATA_RX_R_REG);
             audio_buffer_right[buffer_index] = in_right;
-            buffer_index++;
-        } else if (recordStatus == 2) {
             // Write audio output to codec
-        	for (int i = 0; i < buffer_index; i++) {
+            Xil_Out32(I2S_DATA_TX_L_REG, in_left);
+            Xil_Out32(I2S_DATA_TX_R_REG, in_right);
+            buffer_index++;
+            if (buffer_index >= BUFFER_SIZE) {
+                recordStatus = 3;
+            }
+            print_play_status = 0;
+            print_standby_status = 0;
+
+        }
+        // Playback mode
+        else if (recordStatus == 2) {
+            if (print_play_status == 0) {
+                xil_printf("Playing...\r\n");
+                print_play_status = 1;
+            }
+            // Write audio output to codec
+            for (int i = 0; i < buffer_index; i++) {
                 Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
                 Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
-        	}
+            }
+            print_record_status = 0;
+            print_standby_status = 0;
+        }
+        // Standby mode
+        else if (recordStatus == 3) {
+            if (print_standby_status == 0) {
+                xil_printf("Standby...\r\n");
+                print_standby_status = 1;
+            }
+            print_record_status = 0;
+            print_play_status = 0;
+            continue;  // Do nothing
         }
     }
 
     /* If input from the terminal is 'q', then return to menu.
-         * Else, continue streaming. */
-	if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q') {
-		menu();
-	}
-	else {
-		lab_test();
-	}
-	return XST_SUCCESS;
+     * Else, continue streaming. */
+    if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q') {
+        menu();
+    } else {
+        lab_test();
+    }
+    return XST_SUCCESS;
 }
 
 int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
