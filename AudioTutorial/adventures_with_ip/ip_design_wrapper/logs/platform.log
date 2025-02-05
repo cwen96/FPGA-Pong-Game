@@ -2594,3 +2594,514 @@ TRACE::2025-02-03.21:36:06::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documen
 C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2025-02-03.21:36:06::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:15::SCWPlatform::Clearing the existing platform
+TRACE::2025-02-04.19:39:15::SCWSystem::Clearing the existing sysconfig
+TRACE::2025-02-04.19:39:15::SCWBDomain::clearing the fsbl build
+TRACE::2025-02-04.19:39:15::SCWMssOS::Removing the swdes entry for  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:15::SCWMssOS::Removing the swdes entry for  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:15::SCWSystem::Clearing the domains completed.
+TRACE::2025-02-04.19:39:15::SCWPlatform::Clearing the opened hw db.
+TRACE::2025-02-04.19:39:15::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform:: Platform location is C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:15::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:15::SCWPlatform::Removing the HwDB with name C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:15::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:15::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:15::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened new HwDB with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWReader::Active system found as  ip_design_wrapper
+TRACE::2025-02-04.19:39:22::SCWReader::Handling sysconfig ip_design_wrapper
+TRACE::2025-02-04.19:39:22::SCWDomain::checking for install qemu data   : 
+TRACE::2025-02-04.19:39:22::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-02-04.19:39:22::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-02-04.19:39:22::SCWMssOS::No sw design opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::mss exists loading the mss file  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Opened the sw design from mss  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Adding the swdes entry C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-02-04.19:39:22::SCWMssOS::updating the scw layer about changes
+TRACE::2025-02-04.19:39:22::SCWMssOS::Opened the sw design.  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:22::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:22::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-02-04.19:39:22::SCWMssOS::Saving the mss changes C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-02-04.19:39:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-02-04.19:39:22::SCWMssOS::Commit changes completed.
+TRACE::2025-02-04.19:39:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-02-04.19:39:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:22::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWReader::No isolation master present  
+TRACE::2025-02-04.19:39:22::SCWDomain::checking for install qemu data   : 
+TRACE::2025-02-04.19:39:22::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-02-04.19:39:22::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:22::SCWMssOS::No sw design opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::mss exists loading the mss file  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Opened the sw design from mss  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Adding the swdes entry C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2025-02-04.19:39:22::SCWMssOS::updating the scw layer about changes
+TRACE::2025-02-04.19:39:22::SCWMssOS::Opened the sw design.  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Saving the mss changes C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-02-04.19:39:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-02-04.19:39:22::SCWMssOS::Commit changes completed.
+TRACE::2025-02-04.19:39:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-02-04.19:39:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:22::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWReader::No isolation master present  
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:22::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:22::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:22::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:22::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::In reload Mss file.
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2025-02-04.19:39:23::SCWMssOS::Could not open the swdb for system_0
+KEYINFO::2025-02-04.19:39:23::SCWMssOS::Could not open the sw design at  system_0
+ERROR: [Hsi 55-1558] Software Design system_0 is not found
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-02-04.19:39:23::SCWMssOS::No sw design opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::mss exists loading the mss file  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Opened the sw design from mss  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Adding the swdes entry C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2025-02-04.19:39:23::SCWMssOS::updating the scw layer about changes
+TRACE::2025-02-04.19:39:23::SCWMssOS::Opened the sw design.  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Saving the mss changes C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-02-04.19:39:23::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-02-04.19:39:23::SCWMssOS::Commit changes completed.
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Removing the swdes entry for  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::In reload Mss file.
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2025-02-04.19:39:23::SCWMssOS::Could not open the swdb for system
+KEYINFO::2025-02-04.19:39:23::SCWMssOS::Could not open the sw design at  system
+ERROR: [Hsi 55-1558] Software Design system is not found
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-02-04.19:39:23::SCWMssOS::No sw design opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::mss exists loading the mss file  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Opened the sw design from mss  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Adding the swdes entry C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-02-04.19:39:23::SCWMssOS::updating the scw layer about changes
+TRACE::2025-02-04.19:39:23::SCWMssOS::Opened the sw design.  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-02-04.19:39:23::SCWMssOS::Saving the mss changes C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-02-04.19:39:23::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-02-04.19:39:23::SCWMssOS::Commit changes completed.
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:39:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:39:23::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:39:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:39:23::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-02-04.19:39:23::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:39:23::SCWMssOS::Removing the swdes entry for  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+LOG::2025-02-04.19:40:13::SCWPlatform::Started generating the artifacts platform ip_design_wrapper
+TRACE::2025-02-04.19:40:13::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-02-04.19:40:14::SCWPlatform::Started generating the artifacts for system configuration ip_design_wrapper
+LOG::2025-02-04.19:40:14::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-02-04.19:40:14::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-02-04.19:40:14::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-02-04.19:40:14::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-02-04.19:40:14::SCWSystem::Checking the domain standalone_ps7_cortexa9_0
+LOG::2025-02-04.19:40:14::SCWSystem::Not a boot domain 
+LOG::2025-02-04.19:40:14::SCWSystem::Started Processing the domain standalone_ps7_cortexa9_0
+TRACE::2025-02-04.19:40:14::SCWDomain::Generating domain artifcats
+TRACE::2025-02-04.19:40:14::SCWMssOS::Generating standalone artifcats
+TRACE::2025-02-04.19:40:14::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt To C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/qemu/
+TRACE::2025-02-04.19:40:14::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt To C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/qemu/
+TRACE::2025-02-04.19:40:14::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:40:14::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-02-04.19:40:14::SCWMssOS::No sw design opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::mss exists loading the mss file  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::Opened the sw design from mss  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::Adding the swdes entry C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss with des name system
+TRACE::2025-02-04.19:40:14::SCWMssOS::updating the scw layer about changes
+TRACE::2025-02-04.19:40:14::SCWMssOS::Opened the sw design.  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::Completed writing the mss file at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+TRACE::2025-02-04.19:40:14::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-02-04.19:40:14::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-02-04.19:40:14::SCWDomain::Skipping the build for domain :  standalone_ps7_cortexa9_0
+TRACE::2025-02-04.19:40:14::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-02-04.19:40:14::SCWMssOS::Copying to export directory.
+TRACE::2025-02-04.19:40:14::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-02-04.19:40:14::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-02-04.19:40:14::SCWSystem::Completed Processing the domain standalone_ps7_cortexa9_0
+LOG::2025-02-04.19:40:14::SCWSystem::Completed Processing the sysconfig ip_design_wrapper
+LOG::2025-02-04.19:40:14::SCWPlatform::Completed generating the artifacts for system configuration ip_design_wrapper
+TRACE::2025-02-04.19:40:14::SCWPlatform::Started preparing the platform 
+TRACE::2025-02-04.19:40:14::SCWSystem::Writing the bif file for system config ip_design_wrapper
+TRACE::2025-02-04.19:40:14::SCWSystem::dir created 
+TRACE::2025-02-04.19:40:14::SCWSystem::Writing the bif 
+TRACE::2025-02-04.19:40:14::SCWPlatform::Started writing the spfm file 
+TRACE::2025-02-04.19:40:14::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-02-04.19:40:14::SCWPlatform::Completed generating the platform
+TRACE::2025-02-04.19:40:14::SCWMssOS::Saving the mss changes C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_0
+TRACE::2025-02-04.19:40:14::SCWMssOS::Writing the mss file completed C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::Commit changes completed.
+TRACE::2025-02-04.19:40:14::SCWMssOS::Saving the mss changes C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-02-04.19:40:14::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-02-04.19:40:14::SCWMssOS::Commit changes completed.
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:40:14::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-02-04.19:40:14::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:40:14::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-02-04.19:40:14::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWWriter::formatted JSON is {
+	"platformName":	"ip_design_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"ip_design_wrapper",
+	"platHandOff":	"<platformDir>.xsa",
+	"platIntHandOff":	"<platformDir>/hw/ip_design_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"ip_design_wrapper",
+	"systems":	[{
+			"systemName":	"ip_design_wrapper",
+			"systemDesc":	"ip_design_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"ip_design_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"standalone_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"bb9422ca4661c0d72a706780c18adf65",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_ps7_cortexa9_0",
+					"domainDispName":	"standalone_ps7_cortexa9_0",
+					"domainDesc":	"standalone_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"6fd3af81905e11c61c6e296496a78770",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-02-04.19:40:14::SCWPlatform::updated the xpfm file.
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to open the hw design at C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA given C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA absoulate path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform::DSA directory C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Platform Path C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/hw/ip_design_wrapper.xsa
+TRACE::2025-02-04.19:40:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2025-02-04.19:40:14::SCWPlatform::Trying to set the existing hwdb with name ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Opened existing hwdb ip_design_wrapper_2
+TRACE::2025-02-04.19:40:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-02-04.19:40:14::SCWMssOS::Checking the sw design at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-02-04.19:40:14::SCWMssOS::DEBUG:  swdes dump  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system||
+C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-02-04.19:40:14::SCWMssOS::Sw design exists and opened at  C:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss

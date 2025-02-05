@@ -78,14 +78,15 @@ would be good if at least one of you could use this as the basis of for one of y
 project milestones to help you succeed with your final project deliverables.
  * ---------------------------------------------------------------------------- */
 int lab_test() {
-    u32 audio_buffer_left[BUFFER_SIZE];
-    u32 audio_buffer_right[BUFFER_SIZE];
-    int buffer_index = 0;
+    u32 audio_buffer_left[BUFFER_SIZE*sizeof(u32)];
+    u32 audio_buffer_right[BUFFER_SIZE*sizeof(u32)];
+    int buffer_index = 1;
     u32 in_left;
     u32 in_right;
     int print_record_status = 0;
     int print_play_status = 0;
     int print_standby_status = 0;
+    int i = 0;
 
     if (interruptInit == 0) {
         // Initialize interrupt controller
@@ -111,29 +112,25 @@ int lab_test() {
             in_right = Xil_In32(I2S_DATA_RX_R_REG);
             audio_buffer_right[buffer_index] = in_right;
             // Write audio output to codec
-            Xil_Out32(I2S_DATA_TX_L_REG, in_left);
-            Xil_Out32(I2S_DATA_TX_R_REG, in_right);
+            Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[buffer_index]);
+            Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[buffer_index]);
             buffer_index++;
-            if (buffer_index >= BUFFER_SIZE) {
-                recordStatus = 3;
-            }
             print_play_status = 0;
             print_standby_status = 0;
-
         }
         // Playback mode
-        else if (recordStatus == 2) {
+        else if (recordStatus == 2 && i < buffer_index) {
             if (print_play_status == 0) {
                 xil_printf("Playing...\r\n");
                 print_play_status = 1;
+                print_record_status = 0;
+                print_standby_status = 0;
             }
             // Write audio output to codec
-            for (int i = 0; i < buffer_index; i++) {
-                Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
-                Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
-            }
-            print_record_status = 0;
-            print_standby_status = 0;
+			Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
+			Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
+
+            i++;
         }
         // Standby mode
         else if (recordStatus == 3) {
@@ -143,7 +140,6 @@ int lab_test() {
             }
             print_record_status = 0;
             print_play_status = 0;
-            continue;  // Do nothing
         }
     }
 
@@ -223,6 +219,8 @@ void BTN_Intr_Handler(void *InstancePtr) {
         recordStatus = 1;
     } else if (btn_value == 1) {  // Play recording when middle button is pressed
         recordStatus = 2;
+    } else if (btn_value == 4) { // Standby when left button is pressed
+    	recordStatus = 3;
     }
 
     (void)XGpio_InterruptClear(&Gpio, BTN_INT);
