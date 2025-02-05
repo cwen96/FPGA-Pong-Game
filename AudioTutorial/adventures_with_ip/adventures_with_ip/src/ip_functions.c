@@ -127,6 +127,10 @@ int lab_test() {
                 print_standby_status = 0;
             }
             // Write audio output to codec
+            if (i % 3 == 0) {
+            	usleep(1);
+            }
+
 			Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
 			Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
 
