@@ -24,3 +24,17 @@ bsp reload
 domain active {zynq_fsbl}
 bsp reload
 platform generate -domains 
+platform active {ip_design_wrapper}
+domain create -name {ps7_cortexa9_1} -os {standalone} -proc {ps7_cortexa9_1} -arch {32-bit} -display-name {ps7_cortexa9_1} -desc {} -runtime {cpp}
+platform generate -domains 
+platform write
+domain -report -json
+domain active {standalone_ps7_cortexa9_0}
+bsp reload
+domain active {ps7_cortexa9_1}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform active {ip_design_wrapper}

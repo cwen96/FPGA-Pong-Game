@@ -68,3 +68,10 @@ timestamp=[2025-02-04 20:19:25], mode=BUILD, duration=0:00:01.510, duration_ms=1
 timestamp=[2025-02-04 20:21:58], mode=BUILD, duration=0:00:01.285, duration_ms=1285, data={name=adventures_with_ip, configuration=Debug, clean_build=false}
 timestamp=[2025-02-04 20:23:21], mode=BUILD, duration=0:00:01.367, duration_ms=1367, data={name=adventures_with_ip, configuration=Debug, clean_build=false}
 timestamp=[2025-02-04 20:24:28], mode=BUILD, duration=0:00:01.223, duration_ms=1223, data={name=adventures_with_ip, configuration=Debug, clean_build=false}
+timestamp=[2025-02-18 14:20:27], mode=WORKBENCH_START, duration=0:00:10.538, duration_ms=10538, data={}
+timestamp=[2025-02-18 14:20:29], mode=WORKBENCH_UI_INIT, duration=0:00:01.802, duration_ms=1802, data={editors_count=5, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,adventures_with_ip,adventures_with_ip_system,ip_design_wrapper}
+timestamp=[2025-02-18 14:20:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.046, duration_ms=46, data={}
+timestamp=[2025-02-18 14:24:42], mode=APP_CREATION, duration=0:00:06.507, duration_ms=6507, data={name=arm_core_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=ip_design_wrapper, application_type=application}
+timestamp=[2025-02-18 14:35:06], mode=WORKBENCH_START, duration=0:00:09.209, duration_ms=9209, data={}
+timestamp=[2025-02-18 14:35:07], mode=WORKBENCH_UI_INIT, duration=0:00:00.778, duration_ms=778, data={editors_count=5, platform_editors_count=1, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,adventures_with_ip,adventures_with_ip_system,arm_core_1,arm_core_1_system,ip_design_wrapper}
+timestamp=[2025-02-18 14:35:07], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.081, duration_ms=81, data={}
