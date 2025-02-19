@@ -45,3 +45,67 @@ domain active {standalone_ps7_cortexa9_0}
 bsp reload
 domain active {zynq_fsbl}
 bsp reload
+platform active {ip_design_wrapper}
+platform create -name {ip_design_wrapper}\
+-hw {C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\ip_design_wrapper.xsa}\
+-fsbl-target {psu_cortexa53_0} -out {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip}
+
+platform write
+domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_cortexa9_0} -os {standalone} -proc {ps7_cortexa9_0} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
+platform generate -domains 
+platform active {ip_design_wrapper}
+domain active {zynq_fsbl}
+domain active {standalone_ps7_cortexa9_0}
+platform generate -quick
+domain create -name {vga} -os {standalone} -proc {ps7_cortexa9_1} -arch {32-bit} -display-name {vga} -desc {} -runtime {cpp}
+platform generate -domains 
+platform write
+domain -report -json
+bsp reload
+domain active {standalone_ps7_cortexa9_0}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+bsp reload
+platform write
+platform create -name {ip_design_wrapper}\
+-hw {C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\ip_design_wrapper.xsa}\
+-fsbl-target {psu_cortexa53_0} -out {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip}
+
+platform write
+domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_cortexa9_0} -os {standalone} -proc {ps7_cortexa9_0} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
+platform generate -domains 
+platform active {ip_design_wrapper}
+domain active {zynq_fsbl}
+domain active {standalone_ps7_cortexa9_0}
+platform generate -quick
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+domain create -name {vga} -os {standalone} -proc {ps7_cortexa9_1} -arch {32-bit} -display-name {vga} -desc {} -runtime {cpp}
+domain create -name {vga4} -os {standalone} -proc {ps7_cortexa9_1} -arch {32-bit} -display-name {vga4} -desc {} -runtime {cpp}
+platform generate -domains 
+platform write
+domain -report -json
+domain remove vga
+platform generate -domains 
+platform write
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+catch {platform remove ip_design_wrapper}
+platform create -name {ip_design_wrapper}\
+-hw {C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\ip_design_wrapper.xsa}\
+-fsbl-target {psu_cortexa53_0} -out {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip}
+
+platform write
+domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_cortexa9_0} -os {standalone} -proc {ps7_cortexa9_0} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
+platform generate -domains 
+platform active {ip_design_wrapper}
+domain active {zynq_fsbl}
+domain active {standalone_ps7_cortexa9_0}
+platform generate -quick
+catch {platform remove ip_design_wrapper}
+catch {platform remove multicore_platform}
+platform write

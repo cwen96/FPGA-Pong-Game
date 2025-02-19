@@ -179,6 +179,11 @@ proc create_root_design { parentCell } {
   set LRCLK [ create_bd_port -dir O LRCLK ]
   set SDATA_I [ create_bd_port -dir I SDATA_I ]
   set SDATA_O [ create_bd_port -dir O SDATA_O ]
+  set VGA_B [ create_bd_port -dir O -from 3 -to 0 VGA_B ]
+  set VGA_G [ create_bd_port -dir O -from 3 -to 0 VGA_G ]
+  set VGA_HS [ create_bd_port -dir O VGA_HS ]
+  set VGA_R [ create_bd_port -dir O -from 3 -to 0 VGA_R ]
+  set VGA_VS [ create_bd_port -dir O VGA_VS ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
@@ -196,20 +201,38 @@ proc create_root_design { parentCell } {
    CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_gpio_1
 
+  # Create instance: axi_timer_0, and set properties
+  set axi_timer_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0 ]
+
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+  set_property -dict [ list \
+   CONFIG.CLKOUT1_JITTER {209.236} \
+   CONFIG.CLKOUT1_PHASE_ERROR {234.038} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {108} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {40.500} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.375} \
+   CONFIG.RESET_PORT {resetn} \
+   CONFIG.RESET_TYPE {ACTIVE_LOW} \
+ ] $clk_wiz_0
+
   # Create instance: led_controller_0, and set properties
   set led_controller_0 [ create_bd_cell -type ip -vlnv ac.uk:user:led_controller:1.0 led_controller_0 ]
+
+  # Create instance: proc_sys_reset_0, and set properties
+  set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
-   CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} \
+   CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {200.000000} \
    CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} \
-   CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {125.000000} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
    CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {200.000000} \
@@ -217,25 +240,25 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} \
-   CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {33.333336} \
    CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {50.000000} \
-   CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_APU_PERIPHERAL_FREQMHZ {666.666667} \
-   CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} \
+   CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_APU_PERIPHERAL_FREQMHZ {200} \
+   CONFIG.PCW_ARMPLL_CTRL_FBDIV {48} \
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_CLK0_FREQ {100000000} \
    CONFIG.PCW_CLK1_FREQ {10000000} \
-   CONFIG.PCW_CLK2_FREQ {10000000} \
+   CONFIG.PCW_CLK2_FREQ {125000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
-   CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} \
-   CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} \
+   CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1600.000} \
+   CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {8} \
    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} \
    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} \
    CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} \
@@ -256,6 +279,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ENET_RESET_ENABLE {1} \
    CONFIG.PCW_ENET_RESET_SELECT {Share reset pin} \
    CONFIG.PCW_EN_CLK1_PORT {1} \
+   CONFIG.PCW_EN_CLK2_PORT {1} \
    CONFIG.PCW_EN_EMIO_I2C0 {1} \
    CONFIG.PCW_EN_EMIO_TTC0 {1} \
    CONFIG.PCW_EN_ENET0 {1} \
@@ -270,17 +294,18 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {2} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {10} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {10} \
-   CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {8} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK_CLK1_BUF {TRUE} \
+   CONFIG.PCW_FCLK_CLK2_BUF {TRUE} \
    CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {10} \
-   CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50.000000} \
+   CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {120.0000} \
    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
    CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
-   CONFIG.PCW_FPGA_FCLK2_ENABLE {0} \
+   CONFIG.PCW_FPGA_FCLK2_ENABLE {1} \
    CONFIG.PCW_FPGA_FCLK3_ENABLE {0} \
    CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} \
    CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} \
@@ -290,7 +315,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {1} \
    CONFIG.PCW_I2C0_RESET_ENABLE {0} \
    CONFIG.PCW_I2C1_RESET_ENABLE {0} \
-   CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {33.333332} \
    CONFIG.PCW_I2C_RESET_ENABLE {1} \
    CONFIG.PCW_I2C_RESET_SELECT {Share reset pin} \
    CONFIG.PCW_IOPLL_CTRL_FBDIV {30} \
@@ -534,7 +559,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} \
    CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {5} \
    CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} \
-   CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200.000000} \
+   CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} \
    CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} \
    CONFIG.PCW_SD0_GRP_CD_ENABLE {1} \
    CONFIG.PCW_SD0_GRP_CD_IO {MIO 47} \
@@ -600,6 +625,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_USB_RESET_ENABLE {1} \
    CONFIG.PCW_USB_RESET_SELECT {Share reset pin} \
    CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
+   CONFIG.PCW_USE_M_AXI_GP1 {1} \
+   CONFIG.PCW_USE_S_AXI_HP0 {1} \
    CONFIG.preset {ZedBoard} \
  ] $processing_system7_0
 
@@ -612,6 +639,28 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
+  # Create instance: smartconnect_0, and set properties
+  set smartconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0 ]
+
+  # Create instance: vga_controller_0, and set properties
+  set vga_controller_0 [ create_bd_cell -type ip -vlnv user.org:user:vga_controller:1.0 vga_controller_0 ]
+  set_property -dict [ list \
+   CONFIG.h_back_porch {248} \
+   CONFIG.h_front_porch {48} \
+   CONFIG.h_sync_polarity {"1"} \
+   CONFIG.h_sync_pulse {112} \
+   CONFIG.horizontal_length {1280} \
+   CONFIG.image_buffer1_baseaddr {0x00900000} \
+   CONFIG.v_back_porch {38} \
+   CONFIG.v_front_porch {1} \
+   CONFIG.v_sync_polarity {"1"} \
+   CONFIG.v_sync_pulse {3} \
+   CONFIG.vertical_length {1024} \
+ ] $vga_controller_0
+
+  # Create instance: xlconcat_0, and set properties
+  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+
   # Create instance: zed_audio_ctrl_0, and set properties
   set zed_audio_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:zed_audio_ctrl:1.0 zed_audio_ctrl_0 ]
 
@@ -623,19 +672,35 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_IIC_0 [get_bd_intf_ports IIC_0] [get_bd_intf_pins processing_system7_0/IIC_0]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP1 [get_bd_intf_pins processing_system7_0/M_AXI_GP1] [get_bd_intf_pins smartconnect_0/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins led_controller_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins ps7_0_axi_periph/M01_AXI] [get_bd_intf_pins zed_audio_ctrl_0/S_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_gpio_1/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M00_AXI [get_bd_intf_pins axi_timer_0/S_AXI] [get_bd_intf_pins smartconnect_0/M00_AXI]
+  connect_bd_intf_net -intf_net vga_controller_0_M_AXI [get_bd_intf_pins processing_system7_0/S_AXI_HP0] [get_bd_intf_pins vga_controller_0/M_AXI]
 
   # Create port connections
   connect_bd_net -net SDATA_I_0_1 [get_bd_ports SDATA_I] [get_bd_pins zed_audio_ctrl_0/SDATA_I]
-  connect_bd_net -net axi_gpio_1_ip2intc_irpt [get_bd_pins axi_gpio_1/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
+  connect_bd_net -net axi_gpio_1_ip2intc_irpt [get_bd_pins axi_gpio_1/ip2intc_irpt] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net axi_timer_0_interrupt [get_bd_pins axi_timer_0/interrupt] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins vga_controller_0/pixel_clk]
   connect_bd_net -net led_controller_0_LEDs_out [get_bd_ports LEDs_out] [get_bd_pins led_controller_0/LEDs_out]
+  connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins smartconnect_0/aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins vga_controller_0/pixel_rstn] [get_bd_pins vga_controller_0/rstn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_reset [get_bd_pins proc_sys_reset_0/peripheral_reset] [get_bd_pins vga_controller_0/fifo_rst]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins led_controller_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins zed_audio_ctrl_0/S_AXI_ACLK]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_ports FCLK_CLK1] [get_bd_pins processing_system7_0/FCLK_CLK1]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
+  connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK2] [get_bd_pins processing_system7_0/M_AXI_GP1_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins smartconnect_0/aclk] [get_bd_pins vga_controller_0/clk]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clk_wiz_0/resetn] [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
+  connect_bd_net -net processing_system7_0_S_AXI_HP0_RCOUNT [get_bd_pins processing_system7_0/S_AXI_HP0_RCOUNT] [get_bd_pins vga_controller_0/rfifo_count]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins led_controller_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins zed_audio_ctrl_0/S_AXI_ARESETN]
+  connect_bd_net -net vga_controller_0_VGA_B [get_bd_ports VGA_B] [get_bd_pins vga_controller_0/VGA_B]
+  connect_bd_net -net vga_controller_0_VGA_G [get_bd_ports VGA_G] [get_bd_pins vga_controller_0/VGA_G]
+  connect_bd_net -net vga_controller_0_VGA_HS [get_bd_ports VGA_HS] [get_bd_pins vga_controller_0/VGA_HS]
+  connect_bd_net -net vga_controller_0_VGA_R [get_bd_ports VGA_R] [get_bd_pins vga_controller_0/VGA_R]
+  connect_bd_net -net vga_controller_0_VGA_VS [get_bd_ports VGA_VS] [get_bd_pins vga_controller_0/VGA_VS]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net zed_audio_ctrl_0_BCLK [get_bd_ports BCLK] [get_bd_pins zed_audio_ctrl_0/BCLK]
   connect_bd_net -net zed_audio_ctrl_0_LRCLK [get_bd_ports LRCLK] [get_bd_pins zed_audio_ctrl_0/LRCLK]
   connect_bd_net -net zed_audio_ctrl_0_SDATA_O [get_bd_ports SDATA_O] [get_bd_pins zed_audio_ctrl_0/SDATA_O]
@@ -643,8 +708,10 @@ proc create_root_design { parentCell } {
   # Create address segments
   assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x41210000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_1/S_AXI/Reg] -force
+  assign_bd_address -offset 0x82800000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_timer_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x43C00000 -range 0x00001000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs led_controller_0/S00_AXI/S00_AXI_reg] -force
   assign_bd_address -offset 0x43C10000 -range 0x00004000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs zed_audio_ctrl_0/S_AXI/reg0] -force
+  assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces vga_controller_0/M_AXI] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
 
 
   # Restore current instance

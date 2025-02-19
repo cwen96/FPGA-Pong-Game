@@ -1,0 +1,10 @@
+19:22:31 **** Incremental Build of configuration Debug for project audio11_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 38252 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm standalone_ps7_cortexa9_0 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm --sys_config multicore1 --bif C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11_system/Debug/system.bif --bitstream C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit --elf C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/Debug/audio11.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+19:22:40 Build Finished (took 8s.501ms)
+

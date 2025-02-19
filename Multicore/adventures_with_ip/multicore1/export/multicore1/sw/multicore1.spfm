@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="multicore1"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+multicore1
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="multicore1">
+        <sdx:configuration sdx:name="multicore1"
+                           sdx:displayName="multicore1"
+                           sdx:defaultProcessorGroup="audio11"
+                           sdx:runtimes="cpp">
+            <sdx:description>multicore1</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="multicore1/boot/multicore1.bif"
+                            sdx:readme="multicore1/boot/generic.readme"
+                            sdx:qemuArguments="multicore1/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_ps7_cortexa9_0"
+                            sdx:bif="multicore1/boot/multicore1.bif"
+                            sdx:readme="multicore1/boot/generic.readme"
+                            sdx:qemuArguments="multicore1/standalone_ps7_cortexa9_0/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="vga10"
+                            sdx:bif="multicore1/boot/multicore1.bif"
+                            sdx:readme="multicore1/boot/generic.readme"
+                            sdx:qemuArguments="multicore1/vga10/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="audio11"
+                            sdx:bif="multicore1/boot/multicore1.bif"
+                            sdx:readme="multicore1/boot/generic.readme"
+                            sdx:qemuArguments="multicore1/audio11/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_ps7_cortexa9_0"
+                                sdx:displayName="standalone_ps7_cortexa9_0"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="multicore1/standalone_ps7_cortexa9_0/bsplib/lib"
+                        sdx:bspIncludePaths="multicore1/standalone_ps7_cortexa9_0/bspinclude/include"
+                        sdx:bspConfig="multicore1/standalone_ps7_cortexa9_0/system.mss"
+                />
+            </sdx:processorGroup>
+            <sdx:processorGroup sdx:name="vga10"
+                                sdx:displayName="vga10"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_1">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="multicore1/vga10/bsplib/lib"
+                        sdx:bspIncludePaths="multicore1/vga10/bspinclude/include"
+                        sdx:bspConfig="multicore1/vga10/system.mss"
+                />
+            </sdx:processorGroup>
+            <sdx:processorGroup sdx:name="audio11"
+                                sdx:displayName="audio11"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="multicore1/audio11/bsplib/lib"
+                        sdx:bspIncludePaths="multicore1/audio11/bspinclude/include"
+                        sdx:bspConfig="multicore1/audio11/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

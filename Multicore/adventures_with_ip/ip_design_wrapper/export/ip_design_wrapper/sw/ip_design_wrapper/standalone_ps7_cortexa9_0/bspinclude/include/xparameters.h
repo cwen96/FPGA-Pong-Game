@@ -5,13 +5,13 @@
 #define XPAR_CPU_ID 0U
 
 /* Definitions for peripheral PS7_CORTEXA9_0 */
-#define XPAR_PS7_CORTEXA9_0_CPU_CLK_FREQ_HZ 666666687
+#define XPAR_PS7_CORTEXA9_0_CPU_CLK_FREQ_HZ 200000000
 
 
 /******************************************************************/
 
 /* Canonical definitions for peripheral PS7_CORTEXA9_0 */
-#define XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ 666666687
+#define XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ 200000000
 
 
 /******************************************************************/
@@ -289,7 +289,7 @@
 #define XPAR_PS7_I2C_0_DEVICE_ID 0
 #define XPAR_PS7_I2C_0_BASEADDR 0xE0004000
 #define XPAR_PS7_I2C_0_HIGHADDR 0xE0004FFF
-#define XPAR_PS7_I2C_0_I2C_CLK_FREQ_HZ 111111115
+#define XPAR_PS7_I2C_0_I2C_CLK_FREQ_HZ 33333332
 
 
 /******************************************************************/
@@ -298,7 +298,7 @@
 #define XPAR_XIICPS_0_DEVICE_ID XPAR_PS7_I2C_0_DEVICE_ID
 #define XPAR_XIICPS_0_BASEADDR 0xE0004000
 #define XPAR_XIICPS_0_HIGHADDR 0xE0004FFF
-#define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 111111115
+#define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 33333332
 
 
 /******************************************************************/
@@ -341,7 +341,8 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR 61U
+#define XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR 61U
+#define XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR 62U
 
 /******************************************************************/
 
@@ -448,15 +449,15 @@
 /* Definitions for peripheral PS7_TTC_0 */
 #define XPAR_PS7_TTC_0_DEVICE_ID 0U
 #define XPAR_PS7_TTC_0_BASEADDR 0XF8001000U
-#define XPAR_PS7_TTC_0_TTC_CLK_FREQ_HZ 111111115U
+#define XPAR_PS7_TTC_0_TTC_CLK_FREQ_HZ 33333336U
 #define XPAR_PS7_TTC_0_TTC_CLK_CLKSRC 0U
 #define XPAR_PS7_TTC_1_DEVICE_ID 1U
 #define XPAR_PS7_TTC_1_BASEADDR 0XF8001004U
-#define XPAR_PS7_TTC_1_TTC_CLK_FREQ_HZ 111111115U
+#define XPAR_PS7_TTC_1_TTC_CLK_FREQ_HZ 33333336U
 #define XPAR_PS7_TTC_1_TTC_CLK_CLKSRC 0U
 #define XPAR_PS7_TTC_2_DEVICE_ID 2U
 #define XPAR_PS7_TTC_2_BASEADDR 0XF8001008U
-#define XPAR_PS7_TTC_2_TTC_CLK_FREQ_HZ 111111115U
+#define XPAR_PS7_TTC_2_TTC_CLK_FREQ_HZ 33333336U
 #define XPAR_PS7_TTC_2_TTC_CLK_CLKSRC 0U
 
 
@@ -465,17 +466,17 @@
 /* Canonical definitions for peripheral PS7_TTC_0 */
 #define XPAR_XTTCPS_0_DEVICE_ID XPAR_PS7_TTC_0_DEVICE_ID
 #define XPAR_XTTCPS_0_BASEADDR 0xF8001000U
-#define XPAR_XTTCPS_0_TTC_CLK_FREQ_HZ 111111115U
+#define XPAR_XTTCPS_0_TTC_CLK_FREQ_HZ 33333336U
 #define XPAR_XTTCPS_0_TTC_CLK_CLKSRC 0U
 
 #define XPAR_XTTCPS_1_DEVICE_ID XPAR_PS7_TTC_1_DEVICE_ID
 #define XPAR_XTTCPS_1_BASEADDR 0xF8001004U
-#define XPAR_XTTCPS_1_TTC_CLK_FREQ_HZ 111111115U
+#define XPAR_XTTCPS_1_TTC_CLK_FREQ_HZ 33333336U
 #define XPAR_XTTCPS_1_TTC_CLK_CLKSRC 0U
 
 #define XPAR_XTTCPS_2_DEVICE_ID XPAR_PS7_TTC_2_DEVICE_ID
 #define XPAR_XTTCPS_2_BASEADDR 0xF8001008U
-#define XPAR_XTTCPS_2_TTC_CLK_FREQ_HZ 111111115U
+#define XPAR_XTTCPS_2_TTC_CLK_FREQ_HZ 33333336U
 #define XPAR_XTTCPS_2_TTC_CLK_CLKSRC 0U
 
 

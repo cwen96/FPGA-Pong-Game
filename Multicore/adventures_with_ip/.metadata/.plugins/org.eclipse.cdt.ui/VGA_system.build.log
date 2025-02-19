@@ -1,0 +1,10 @@
+15:35:42 **** Incremental Build of configuration Debug for project VGA_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 64841 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_1 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/VGA_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/VGA_system/Debug/system.bif --bitstream C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/VGA/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/VGA/Debug/VGA.elf,ps7_cortexa9_1
+creating BOOT.BIN using C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/VGA/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/VGA_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+15:35:51 Build Finished (took 8s.434ms)
+

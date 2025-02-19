@@ -16,11 +16,11 @@ OUTS = *.o
 libs:
 	echo "Compiling led_controller..."
 	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) $(LIBSOURCES)
-	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${$OUTS}
+	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${OUTS}
 	make clean
 
 include:
 	${CP} $(INCLUDEFILES) $(INCLUDEDIR)
 
 clean:
-	rm -rf ${$OUTS}
+	rm -rf ${OUTS}

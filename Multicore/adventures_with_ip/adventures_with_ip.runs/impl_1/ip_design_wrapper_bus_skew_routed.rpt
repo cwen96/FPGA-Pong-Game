@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Feb  3 17:00:34 2025
-| Host         : DESKTOP-NJF4991 running 64-bit major release  (build 9200)
+| Date         : Tue Feb 18 18:07:20 2025
+| Host         : ensc-pit-w18 running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file ip_design_wrapper_bus_skew_routed.rpt -pb ip_design_wrapper_bus_skew_routed.pb -rpx ip_design_wrapper_bus_skew_routed.rpx
 | Design       : ip_design_wrapper
 | Device       : 7z020-clg484
@@ -11,5 +11,312 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 Bus Skew Report
 
-No bus skew constraints
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   52        [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow              8.000       1.198      6.802
+2   54        [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[12]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]}]]
+                                              [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]}]]
+                                                                              Slow              8.000       1.248      6.752
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 8.000
+Requirement: 8.000ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_fpga_2            clk_out1_ip_design_clk_wiz_0_0
+                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                                                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         1.198      6.802
+
+
+Slack (MET) :             6.802ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_2)
+  Endpoint Destination:   ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
+  Reference Source:       ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_2)
+  Reference Destination:  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.767ns
+  Reference Relative Delay:   1.549ns
+  Relative CRPR:              0.418ns
+  Uncertainty:                0.397ns
+  Actual Bus Skew:            1.198ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_2 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
+                         net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.754     3.048    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X14Y38         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y38         FDRE (Prop_fdre_C_Q)         0.478     3.526 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/Q
+                         net (fo=1, routed)           0.606     4.132    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[7]
+    SLICE_X14Y39         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_ip_design_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y17       BUFG                         0.000     0.000 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.612     1.612    ip_design_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.425    -1.813 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.725    -0.088    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=188, routed)         1.575     1.578    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X14Y39         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
+                         clock pessimism              0.000     1.578    
+    SLICE_X14Y39         FDRE (Setup_fdre_C_D)       -0.214     1.364    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+  -------------------------------------------------------------------
+                         data arrival                           4.132    
+                         clock arrival                          1.364    
+  -------------------------------------------------------------------
+                         relative delay                         2.767    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_2 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
+                         net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.576     2.755    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X13Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y37         FDRE (Prop_fdre_C_Q)         0.367     3.122 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.410     3.533    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[4]
+    SLICE_X12Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_ip_design_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y17       BUFG                         0.000     0.000 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.806     1.806    ip_design_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.793    -1.987 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.889    -0.098    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=188, routed)         1.750     1.753    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X12Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism              0.000     1.753    
+    SLICE_X12Y37         FDRE (Hold_fdre_C_D)         0.231     1.984    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
+  -------------------------------------------------------------------
+                         data arrival                           3.533    
+                         clock arrival                          1.984    
+  -------------------------------------------------------------------
+                         relative delay                         1.549    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[12]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]}]] -to [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]}]] 8.000
+Requirement: 8.000ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_ip_design_clk_wiz_0_0
+                      clk_fpga_2            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
+                                                                                                            Slow         1.248      6.752
+
+
+Slack (MET) :             6.752ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
+  Endpoint Destination:   ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_2)
+  Reference Source:       ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
+  Reference Destination:  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_2)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    0.270ns
+  Reference Relative Delay:  -0.924ns
+  Relative CRPR:              0.344ns
+  Uncertainty:                0.397ns
+  Actual Bus Skew:            1.248ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_ip_design_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y17       BUFG                         0.000     0.000 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.806     1.806    ip_design_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.793    -1.987 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.889    -0.098    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=188, routed)         1.749     1.752    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X19Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y37         FDRE (Prop_fdre_C_Q)         0.419     2.171 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.587     2.758    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[5]
+    SLICE_X17Y36         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_2 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
+                         net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.575     2.754    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X17Y36         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism              0.000     2.754    
+    SLICE_X17Y36         FDRE (Setup_fdre_C_D)       -0.267     2.487    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
+  -------------------------------------------------------------------
+                         data arrival                           2.758    
+                         clock arrival                          2.487    
+  -------------------------------------------------------------------
+                         relative delay                         0.270    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_ip_design_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y17       BUFG                         0.000     0.000 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.612     1.612    ip_design_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.425    -1.813 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.725    -0.088    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=188, routed)         1.577     1.580    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X15Y44         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y44         FDRE (Prop_fdre_C_Q)         0.367     1.947 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[12]/Q
+                         net (fo=1, routed)           0.410     2.358    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[12]
+    SLICE_X14Y44         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_2 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
+                         net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
+                         net (fo=992, routed)         1.757     3.051    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X14Y44         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/C
+                         clock pessimism              0.000     3.051    
+    SLICE_X14Y44         FDRE (Hold_fdre_C_D)         0.231     3.282    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]
+  -------------------------------------------------------------------
+                         data arrival                           2.358    
+                         clock arrival                          3.282    
+  -------------------------------------------------------------------
+                         relative delay                        -0.924    
+
+
 

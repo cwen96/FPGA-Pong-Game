@@ -1,0 +1,301 @@
+
+//Empty C++ Application
+#include <stdio.h>
+#include "xil_types.h"
+#include "xtmrctr.h"
+#include "xgpio.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include <cstdlib>
+
+#include <xil_cache.h>
+
+#define BLACK 	0x000000
+#define WHITE 	0xF0F0F0
+#define RED 	0x0000F0
+#define GREEN	0x00F000
+#define BLUE	0xF00000
+#define SCREEN_HIGHT 1024
+#define SCREEN_WIDTH 1280
+#define BALL_DIAMETER 40
+#define PADDLE_WIDTH 40
+#define PADDLE_HEIGHT 250
+
+// Parameter definitions
+#define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+
+#define BTN_INT 			XGPIO_IR_CH1_MASK
+
+volatile bool FLAG;
+XScuGic InterruptController; /* Instance of the Interrupt Controller */
+static XScuGic_Config *GicConfig;/* The configuration parameters of thecontroller */
+int NUM_BYTES_BUFFER = 5242880;
+
+XGpio LEDInst, BTNInst;
+XScuGic INTCInst;
+
+static int btn_value;
+//----------------------------------------------------
+// PROTOTYPE FUNCTIONS
+//----------------------------------------------------
+static void BTN_Intr_Handler(void *baseaddr_p);
+static int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+static int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+
+
+
+
+
+void BTN_Intr_Handler(void *InstancePtr)
+{
+	// Disable GPIO interrupts
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+	// Ignore additional button presses
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=
+			BTN_INT) {
+			return;
+		}
+	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+	// Increment counter based on button value
+	// Reset if centre button pressed
+	if(btn_value != 1){
+		xil_printf("button pressed");
+		FLAG = true;
+	}
+    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+    // Enable GPIO interrupts
+    XGpio_InterruptEnable(&BTNInst, BTN_INT);
+}
+
+void Timer_InterruptHandler(XTmrCtr *data, u8 TmrCtrNumber)
+{
+	XTmrCtr_Stop(data,TmrCtrNumber);
+	XTmrCtr_Reset(data,TmrCtrNumber);
+	//Update Stuff
+	FLAG = true;
+}
+
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr){
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+	(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+	XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+	return XST_SUCCESS;
+}
+
+/*Setup all interrupts of the system*/
+int ScuGicInterrupt_Init(u16 DeviceId,XTmrCtr *TimerInstancePtr)
+{
+	int Status;
+	GicConfig = XScuGic_LookupConfig(DeviceId);
+	if (NULL == GicConfig) {
+		return XST_FAILURE;
+	}
+	Status = XScuGic_CfgInitialize(&InterruptController, GicConfig,
+	GicConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = SetUpInterruptSystem(&InterruptController);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	/*Connect a device driver handler that will be called when an interrupt for the device occurs, the device driver handler performs the specific interrupt processing for the device*/
+	Status = XScuGic_Connect(&InterruptController,
+	61,
+	(Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
+	(void *)TimerInstancePtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+void writeGameScreen(int* baseAddr, int playerOnePaddleLoc, int playerTwoPaddleLoc, int ballLocX, int ballLocY){
+	for (int i=0;i<SCREEN_HIGHT;i++){
+				for(int j=0; j<SCREEN_WIDTH;j++){
+					if(i>playerOnePaddleLoc && i<playerOnePaddleLoc+PADDLE_HEIGHT && j>50 && j < 50+PADDLE_WIDTH){
+						baseAddr[i*SCREEN_WIDTH+j]= WHITE;
+					}else if(i>playerTwoPaddleLoc && i<playerTwoPaddleLoc+PADDLE_HEIGHT && j<1230 && j > 1230-PADDLE_WIDTH){
+						baseAddr[i*SCREEN_WIDTH+j]= WHITE;
+					}else if(i>ballLocY && i<ballLocY+BALL_DIAMETER && j>ballLocX && j<ballLocX+BALL_DIAMETER){
+							baseAddr[i*SCREEN_WIDTH+j]= WHITE;
+					}else{
+						baseAddr[i*SCREEN_WIDTH+j]= BLACK;
+					}
+
+				}
+	}
+}
+void writeBarsToScreen(int loopNum, int* baseAddr){
+	int COLOURS[]={BLACK,WHITE,RED,GREEN,BLUE};
+	for (int i=0;i<SCREEN_HIGHT;i++){
+			for(int j=0; j<SCREEN_WIDTH;j++){
+				if(j<256){
+					baseAddr[i*SCREEN_WIDTH+j]=COLOURS[loopNum%5];
+				}
+				else if (j<512){
+					baseAddr[i*SCREEN_WIDTH+j]=COLOURS[(loopNum+1)%5];
+				}
+				else if (j<768){
+					baseAddr[i*SCREEN_WIDTH+j]=COLOURS[(loopNum+2)%5];
+				}
+				else if (j<1024){
+					baseAddr[i*SCREEN_WIDTH+j]=COLOURS[(loopNum+3)%5];
+				}else
+				{
+					baseAddr[i*SCREEN_WIDTH+j]=COLOURS[(loopNum+4)%5];
+				}
+			}
+		}
+}
+
+int main()
+{
+	XTmrCtr TimerInstancePtr;
+	int xStatus;
+	//-----------Setup Timer Interrupt---------------------------------------
+
+	xStatus = XTmrCtr_Initialize(&TimerInstancePtr,XPAR_AXI_TIMER_0_DEVICE_ID);
+
+	XTmrCtr_SetHandler(&TimerInstancePtr,
+	(XTmrCtr_Handler)Timer_InterruptHandler,
+	&TimerInstancePtr);
+
+	//Reset Values
+	XTmrCtr_SetResetValue(&TimerInstancePtr,
+	0, //Change with generic value
+	//0xFFF0BDC0);
+	//0x23C34600);
+	0xFFE4888D);
+	//Interrupt Mode and Auto reload
+	XTmrCtr_SetOptions(&TimerInstancePtr,
+	XPAR_AXI_TIMER_0_DEVICE_ID,
+	(XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION ));
+
+	xStatus=ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID,&TimerInstancePtr);
+
+
+	/*Enable the interrupt for the device and then cause (simulate) an interrupt so the handlers will be called*/
+	XScuGic_Enable(&InterruptController, 61);
+	XScuGic_SetPriorityTriggerType(&InterruptController, 61, 0xa0, 3);
+
+	int status;
+	//----------------------------------------------------
+	// INITIALIZE THE PERIPHERALS & SET DIRECTIONS OF GPIO
+	//----------------------------------------------------
+
+	// Initialise Push Buttons
+//	status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+//	if(status != XST_SUCCESS) return XST_FAILURE;
+//
+//	// Set all buttons direction to inputs
+//	XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+//
+//	// Initialize interrupt controller
+//	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
+	if(xStatus != XST_SUCCESS) return XST_FAILURE;
+	int loop = 0;
+	int * image_buffer_pointer = (int *)0x00900000;
+	int * image1_pointer = (int *)0x018D2008;
+	int * image2_pointer = (int *)0x020BB00C;
+	int * image3_pointer = (int *)0x028A4010;
+	int * image4_pointer = (int *)0x0308D014;
+	int * image5_pointer = (int *)0x03876018;
+
+
+
+
+
+	while(1) {
+		XTmrCtr_Start(&TimerInstancePtr,0);
+		while(FLAG == false){
+			Xil_DCacheFlush();
+		}
+
+		FLAG = false;
+
+		if(loop == 0){
+
+			writeGameScreen(image1_pointer, 50, 400, 200, 600);
+			memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
+		}
+		else if(loop==1){
+			writeGameScreen(image2_pointer, 300, 500, 0, 0);
+			memcpy(image_buffer_pointer, image2_pointer, NUM_BYTES_BUFFER);
+		}
+		else if(loop==2){
+			writeGameScreen(image3_pointer, 250, 550, 1200, 950);
+			memcpy(image_buffer_pointer, image3_pointer, NUM_BYTES_BUFFER);
+		}
+		else if(loop==3){
+			writeGameScreen(image4_pointer, 200, 600, 240, 300);
+			memcpy(image_buffer_pointer, image4_pointer, NUM_BYTES_BUFFER);
+		}
+		else if(loop==4){
+			writeGameScreen(image5_pointer, 600, 650, 500, 600);
+			memcpy(image_buffer_pointer, image5_pointer, NUM_BYTES_BUFFER);
+		}
+		loop++;
+		loop = loop % 5;
+	}
+	return 0;
+}
+
+//----------------------------------------------------
+// INITIAL SETUP FUNCTIONS
+//----------------------------------------------------
+
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+{
+	// Enable interrupt
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+	XGpio_InterruptGlobalEnable(&BTNInst);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			 	 	 	 	 	 XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+
+
+	return XST_SUCCESS;
+
+}
+
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
+{
+	XScuGic_Config *IntcConfig;
+	int status;
+
+	// Interrupt controller initialisation
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Call to interrupt setup
+	status = InterruptSystemSetup(&INTCInst);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Connect GPIO interrupt to handler
+	status = XScuGic_Connect(&INTCInst,
+					  	  	 INTC_GPIO_INTERRUPT_ID,
+					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
+					  	  	 (void *)GpioInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Enable GPIO interrupts interrupt
+	XGpio_InterruptEnable(GpioInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+	// Enable GPIO and timer interrupts in the controller
+	XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
+
+	return XST_SUCCESS;
+}
+
+

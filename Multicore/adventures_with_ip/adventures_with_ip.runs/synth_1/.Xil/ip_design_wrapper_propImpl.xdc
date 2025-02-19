@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/cryst/Documents/ensc-452/AudioTutorial/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc rfile:../../../../The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc rfile:../../../../The_Zynq_Book_Tutorial_Sources_Aug_15/sources/zedboard/adventures_with_ip_integrator/constraints/adventures_with_ip.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T22 [get_ports {LEDs_out[0]}]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
@@ -33,3 +33,39 @@ set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN AB1 [get_ports {GPIO_tri_io[0]}]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y5 [get_ports {GPIO_tri_io[1]}]
+set_property src_info {type:XDC file:1 line:234 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y21  [get_ports {VGA_B[0]}];  # "VGA-B1"
+set_property src_info {type:XDC file:1 line:235 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y20  [get_ports {VGA_B[1]}];  # "VGA-B2"
+set_property src_info {type:XDC file:1 line:236 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB20 [get_ports {VGA_B[2]}];  # "VGA-B3"
+set_property src_info {type:XDC file:1 line:237 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB19 [get_ports {VGA_B[3]}];  # "VGA-B4"
+set_property src_info {type:XDC file:1 line:238 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB22 [get_ports {VGA_G[0]}];  # "VGA-G1"
+set_property src_info {type:XDC file:1 line:239 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA22 [get_ports {VGA_G[1]}];  # "VGA-G2"
+set_property src_info {type:XDC file:1 line:240 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB21 [get_ports {VGA_G[2]}];  # "VGA-G3"
+set_property src_info {type:XDC file:1 line:241 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA21 [get_ports {VGA_G[3]}];  # "VGA-G4"
+set_property src_info {type:XDC file:1 line:242 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA19 [get_ports {VGA_HS}];  # "VGA-HS"
+set_property src_info {type:XDC file:1 line:243 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V20  [get_ports {VGA_R[0]}];  # "VGA-R1"
+set_property src_info {type:XDC file:1 line:244 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U20  [get_ports {VGA_R[1]}];  # "VGA-R2"
+set_property src_info {type:XDC file:1 line:245 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V19  [get_ports {VGA_R[2]}];  # "VGA-R3"
+set_property src_info {type:XDC file:1 line:246 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V18  [get_ports {VGA_R[3]}];  # "VGA-R4"
+set_property src_info {type:XDC file:1 line:247 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y19  [get_ports {VGA_VS}];  # "VGA-VS"
+set_property src_info {type:XDC file:1 line:409 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 33]];
+set_property src_info {type:XDC file:1 line:414 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
+set_property src_info {type:XDC file:1 line:419 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
+set_property src_info {type:XDC file:1 line:422 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];

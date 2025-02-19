@@ -2383,3 +2383,1285 @@ Reason: No Platforms Found.
 14:20:29 INFO  : Registering command handlers for Vitis TCF services
 14:22:47 INFO  : Result from executing command 'getProjects': ip_design_wrapper
 14:22:47 INFO  : Result from executing command 'getPlatforms': 
+14:49:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+14:49:52 INFO  : XSCT server has started successfully.
+14:49:52 INFO  : plnx-install-location is set to ''
+14:49:52 INFO  : Successfully done setting XSCT server connection channel  
+14:49:52 INFO  : Successfully done setting workspace for the tool. 
+14:49:56 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+14:49:56 INFO  : Platform repository initialization has completed.
+14:49:56 INFO  : Successfully done query RDI_DATADIR 
+14:49:56 INFO  : Registering command handlers for Vitis TCF services
+14:57:22 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper
+14:57:22 INFO  : Result from executing command 'getPlatforms': 
+14:57:23 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:57:23 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+14:57:32 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:05:27 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper
+15:05:27 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+15:05:28 INFO  : Checking for BSP changes to sync application flags for project 'VGA'...
+15:05:28 INFO  : Updating application flags with new BSP settings...
+15:05:28 INFO  : Successfully updated application flags for project VGA.
+15:05:33 INFO  : Checking for BSP changes to sync application flags for project 'VGA'...
+15:06:01 INFO  : Checking for BSP changes to sync application flags for project 'adventures_with_ip'...
+15:06:01 ERROR : Failed to get platform details for the project 'adventures_with_ip'. Cannot sync application flags.
+15:28:41 INFO  : Checking for BSP changes to sync application flags for project 'VGA'...
+15:29:06 INFO  : Checking for BSP changes to sync application flags for project 'adventures_with_ip'...
+15:29:06 ERROR : Failed to get platform details for the project 'adventures_with_ip'. Cannot sync application flags.
+15:32:04 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper;ip_design_wrapper_1
+15:32:04 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+15:32:06 INFO  : Platform 'ip_design_wrapper_1' is added to custom repositories.
+15:32:14 INFO  : Platform 'ip_design_wrapper_1' is added to custom repositories.
+15:33:10 ERROR : An unexpected exception occurred in the module 'reading platform'
+15:34:17 INFO  : Checking for BSP changes to sync application flags for project 'VGA'...
+15:34:46 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper_1
+15:34:46 INFO  : Result from executing command 'getPlatforms': 
+15:34:47 INFO  : Checking for BSP changes to sync application flags for project 'audio_core_1'...
+15:35:41 INFO  : Checking for BSP changes to sync application flags for project 'VGA'...
+15:38:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:38:36 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+15:38:36 INFO  : 'jtag frequency' command is executed.
+15:38:36 INFO  : Context for 'APU' is selected.
+15:38:37 INFO  : System reset is completed.
+15:38:40 INFO  : 'after 3000' command is executed.
+15:38:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+15:38:42 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio_core_1/_ide/bitstream/ip_design_wrapper.bit"
+15:38:42 INFO  : Context for 'APU' is selected.
+15:38:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa'.
+15:38:42 INFO  : 'configparams force-mem-access 1' command is executed.
+15:38:42 INFO  : Context for 'APU' is selected.
+15:38:42 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio_core_1/_ide/psinit/ps7_init.tcl' is done.
+15:38:42 INFO  : 'ps7_init' command is executed.
+15:38:42 INFO  : 'ps7_post_config' command is executed.
+15:38:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:38:43 INFO  : The application 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio_core_1/Debug/audio_core_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:38:43 INFO  : 'configparams force-mem-access 0' command is executed.
+15:38:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio_core_1/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio_core_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio_core_1/Debug/audio_core_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:38:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:38:43 INFO  : 'con' command is executed.
+15:38:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:38:43 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\audio_core_1_system\_ide\scripts\debugger_audio_core_1-default.tcl'
+15:39:52 INFO  : Disconnected from the channel tcfchan#10.
+15:44:17 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper_1
+15:44:17 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+15:48:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+15:48:49 INFO  : XSCT server has started successfully.
+15:48:49 INFO  : plnx-install-location is set to ''
+15:48:49 INFO  : Successfully done setting XSCT server connection channel  
+15:48:49 INFO  : Successfully done setting workspace for the tool. 
+15:48:50 INFO  : Successfully done query RDI_DATADIR 
+15:48:53 INFO  : Registering command handlers for Vitis TCF services
+15:48:54 INFO  : Platform repository initialization has completed.
+15:51:54 INFO  : No changes in MSS file content so sources will not be generated.
+15:54:59 ERROR : An unexpected exception occurred in the module 'reading platform'
+15:56:21 ERROR : An unexpected exception occurred in the module 'reading platform'
+15:57:48 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:57:48 INFO  : Result from executing command 'getPlatforms': 
+15:57:50 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:57:58 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+16:00:50 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:00:50 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:00:52 INFO  : Checking for BSP changes to sync application flags for project 'vga_1'...
+16:01:39 ERROR : An unexpected exception occurred in the module 'reading platform'
+16:02:28 INFO  : Result from executing command 'getProjects': ip_design_wrapper
+16:02:28 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:02:30 INFO  : Platform 'ip_design_wrapper' is added to custom repositories.
+16:05:17 INFO  : Result from executing command 'getProjects': ip_design_wrapper
+16:05:17 INFO  : Result from executing command 'getPlatforms': C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\ip_design_wrapper\export\ip_design_wrapper\ip_design_wrapper.xpfm|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:07:27 INFO  : No changes in MSS file content so sources will not be generated.
+16:10:37 INFO  : Result from executing command 'getProjects': ip_design_wrapper;ip_design_wrapper_1
+16:10:37 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:10:39 INFO  : Platform 'ip_design_wrapper_1' is added to custom repositories.
+16:12:32 ERROR : An unexpected exception occurred in the module 'reading platform'
+16:13:55 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:13:55 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+16:13:56 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:14:45 INFO  : No changes in MSS file content so sources will not be generated.
+16:15:28 ERROR : (XSDB Server)led_controller_selftest.c: In function 'LED_CONTROLLER_Reg_SelfTest':
+
+16:15:28 ERROR : (XSDB Server)led_controller_selftest.c:52:63: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( LED_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                               ^~
+led_controller_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+
+16:15:28 ERROR : (XSDB Server)arm-none-eabi-ar: creating ../../../lib/libxil.a
+arm-none-eabi-ar: *.o: Invalid argument
+
+16:15:28 ERROR : (XSDB Server)make[2]: *** [Makefile:19: libs] Error 1
+
+16:15:28 ERROR : (XSDB Server)make[1]: *** [Makefile:46: ps7_cortexa9_0/libsrc/led_controller_v1_0/src/make.libs] Error 2
+
+16:15:28 ERROR : (XSDB Server)make: *** [Makefile:18: all] Error 2
+
+16:15:28 ERROR : (XSDB Server)Failed to build  the bsp sources for domain - audio
+
+16:15:37 ERROR : Failed to create domain 'audio'. Click on details for more information.
+16:16:11 ERROR : (XSDB Server)led_controller_selftest.c: In function 'LED_CONTROLLER_Reg_SelfTest':
+
+16:16:11 ERROR : (XSDB Server)led_controller_selftest.c:52:63: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( LED_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                               ^~
+led_controller_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+
+16:16:11 ERROR : (XSDB Server)arm-none-eabi-ar: creating ../../../lib/libxil.a
+arm-none-eabi-ar: *.o: Invalid argument
+
+16:16:11 ERROR : (XSDB Server)make[2]: *** [Makefile:19: libs] Error 1
+
+16:16:11 ERROR : (XSDB Server)make[1]: *** [Makefile:46: ps7_cortexa9_1/libsrc/led_controller_v1_0/src/make.libs] Error 2
+
+16:16:11 ERROR : (XSDB Server)make: *** [Makefile:18: all] Error 2
+
+16:16:11 ERROR : (XSDB Server)Failed to build  the bsp sources for domain - audio
+
+16:16:15 ERROR : Failed to create domain 'vga_1'. Click on details for more information.
+16:16:46 ERROR : Failed to create domain 'vga_1'. Click on details for more information.
+16:17:09 ERROR : Failed to create domain 'vga_1'. Click on details for more information.
+16:18:33 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:18:33 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:19:09 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:19:09 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:19:14 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:19:14 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:23:05 INFO  : No changes in MSS file content so sources will not be generated.
+16:23:40 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:23:40 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:40 ERROR : Failed to update application flags from BSP for 'audio_2'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:61)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+16:23:41 ERROR : Failed to compute checksum of hardware specification file used by project 'audio_2'
+16:23:41 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:41 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:41 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:43 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+16:23:43 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:43 ERROR : Failed to update application flags from BSP for 'vga_2'. Reason: Failed to call write_mss 
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+java.lang.RuntimeException: Failed to call write_mss 
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.handleResult(XsdbCommandUtils.java:389)
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:327)
+	at com.xilinx.sdk.sw.SwPlatformUtils.createDefaultMss(SwPlatformUtils.java:73)
+	at com.xilinx.sdx.sdk.core.util.BspCreationHelper.generateMssFile(BspCreationHelper.java:46)
+	at com.xilinx.sdx.sdk.core.util.BspCreationHelper.create(BspCreationHelper.java:38)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.createSwPlatform(SdkMakefileGenerationListener.java:150)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:82)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+16:23:44 ERROR : Failed to compute checksum of hardware specification file used by project 'vga_2'
+16:23:44 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:44 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:23:44 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:25:18 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:25:18 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:25:19 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:25:21 INFO  : Updating application flags with new BSP settings...
+16:25:22 INFO  : Successfully updated application flags for project audio_2.
+16:25:31 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+16:25:31 INFO  : Updating application flags with new BSP settings...
+16:25:31 INFO  : Successfully updated application flags for project vga_2.
+16:32:57 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper_1
+16:32:57 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:33:00 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+16:33:02 ERROR : 
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.updateSwBuildOptions(ManagedAppCreator.java:82)
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.create(ManagedAppCreator.java:54)
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:235)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:374)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+16:33:02 ERROR : Failed to create application project
+org.eclipse.core.runtime.CoreException: Unexpected error occurred. Please check log for further details.
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:150)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:235)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:374)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+16:33:36 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:33:46 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:34:32 INFO  : Result from executing command 'getProjects': design_1_wrapper;ip_design_wrapper_1
+16:34:32 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:34:35 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+16:34:37 ERROR : 
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.updateSwBuildOptions(ManagedAppCreator.java:82)
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.create(ManagedAppCreator.java:54)
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:235)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:374)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+16:34:37 ERROR : Failed to create application project
+org.eclipse.core.runtime.CoreException: Unexpected error occurred. Please check log for further details.
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:150)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:235)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:374)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+16:35:20 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+16:37:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+16:37:49 INFO  : XSCT server has started successfully.
+16:37:49 INFO  : Successfully done setting XSCT server connection channel  
+16:37:49 INFO  : plnx-install-location is set to ''
+16:37:49 INFO  : Successfully done setting workspace for the tool. 
+16:37:53 INFO  : Successfully done query RDI_DATADIR 
+16:37:53 INFO  : Registering command handlers for Vitis TCF services
+16:37:54 INFO  : Platform repository initialization has completed.
+16:38:47 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:38:47 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:38:48 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:38:59 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+16:41:16 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+16:41:18 INFO  : XSCT server has started successfully.
+16:41:18 INFO  : plnx-install-location is set to ''
+16:41:18 INFO  : Successfully done setting XSCT server connection channel  
+16:41:18 INFO  : Successfully done setting workspace for the tool. 
+16:41:22 INFO  : Successfully done query RDI_DATADIR 
+16:41:22 INFO  : Registering command handlers for Vitis TCF services
+16:41:23 INFO  : Platform repository initialization has completed.
+16:41:39 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:41:48 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa is already opened
+
+16:41:54 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+16:41:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/hw/ip_design_wrapper.xsa is already opened
+
+16:43:56 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:43:56 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:43:57 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:44:07 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+16:45:27 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+16:45:29 INFO  : XSCT server has started successfully.
+16:45:29 INFO  : plnx-install-location is set to ''
+16:45:29 INFO  : Successfully done setting XSCT server connection channel  
+16:45:29 INFO  : Successfully done setting workspace for the tool. 
+16:45:33 INFO  : Successfully done query RDI_DATADIR 
+16:45:33 INFO  : Registering command handlers for Vitis TCF services
+16:45:34 INFO  : Platform repository initialization has completed.
+16:45:52 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:45:52 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:45:54 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:46:05 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+16:47:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+16:47:30 INFO  : XSCT server has started successfully.
+16:47:30 INFO  : Successfully done setting XSCT server connection channel  
+16:47:30 INFO  : plnx-install-location is set to ''
+16:47:30 INFO  : Successfully done setting workspace for the tool. 
+16:47:33 INFO  : Successfully done query RDI_DATADIR 
+16:47:34 INFO  : Registering command handlers for Vitis TCF services
+16:47:34 INFO  : Platform repository initialization has completed.
+16:47:53 INFO  : Result from executing command 'getProjects': ip_design_wrapper_1
+16:47:53 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+16:47:54 INFO  : Checking for BSP changes to sync application flags for project 'audio_2'...
+16:48:06 INFO  : Checking for BSP changes to sync application flags for project 'vga_2'...
+18:10:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+18:10:30 INFO  : XSCT server has started successfully.
+18:10:30 INFO  : plnx-install-location is set to ''
+18:10:30 INFO  : Successfully done setting XSCT server connection channel  
+18:10:30 INFO  : Successfully done setting workspace for the tool. 
+18:10:34 INFO  : Successfully done query RDI_DATADIR 
+18:10:34 INFO  : Registering command handlers for Vitis TCF services
+18:10:36 INFO  : Platform repository initialization has completed.
+18:10:51 ERROR : Unexpected error while reading linker script.
+org.eclipse.core.internal.resources.ResourceException(/audio_2/src/lscript.ld)[368]: java.lang.Exception: Resource '/audio_2/src/lscript.ld' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:273)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.initLscriptEditorPage(LscriptEditor.java:142)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.setInput(LscriptEditor.java:134)
+	at org.eclipse.ui.forms.editor.FormEditor.init(FormEditor.java:132)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.init(LscriptEditor.java:60)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1297)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:75)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1386)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1544)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1496)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1466)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1590)
+	at com.xilinx.sdx.core.ui.editor.GenericSettingsEditor$2.run(GenericSettingsEditor.java:199)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+18:12:03 INFO  : Result from executing command 'getProjects': ip_design_wrapper
+18:12:03 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+18:12:04 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:12:05 INFO  : Platform 'ip_design_wrapper' is added to custom repositories.
+18:13:14 ERROR : (XSDB Server)led_controller_selftest.c: In function 'LED_CONTROLLER_Reg_SelfTest':
+
+18:13:14 ERROR : (XSDB Server)led_controller_selftest.c:52:63: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( LED_CONTROLLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                               ^~
+led_controller_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+
+18:13:14 ERROR : (XSDB Server)arm-none-eabi-ar: creating ../../../lib/libxil.a
+arm-none-eabi-ar: *.o: Invalid argument
+
+18:13:14 ERROR : (XSDB Server)make[2]: *** [Makefile:19: libs] Error 1
+
+18:13:14 ERROR : (XSDB Server)make[1]: *** [Makefile:46: ps7_cortexa9_0/libsrc/led_controller_v1_0/src/make.libs] Error 2
+
+18:13:14 ERROR : (XSDB Server)make: *** [Makefile:18: all] Error 2
+
+18:13:14 ERROR : (XSDB Server)Failed to build  the bsp sources for domain - vga
+
+18:13:19 ERROR : Failed to create domain 'vga'. Click on details for more information.
+18:14:26 INFO  : Result from executing command 'getProjects': ip_design_wrapper
+18:14:26 INFO  : Result from executing command 'getPlatforms': C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\ip_design_wrapper\export\ip_design_wrapper\ip_design_wrapper.xpfm|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+18:14:49 INFO  : Result from executing command 'getProjects': ip_design_wrapper
+18:14:49 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm
+18:19:32 INFO  : Checking for BSP changes to sync application flags for project 'multicore'...
+18:19:32 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:32 ERROR : Failed to update application flags from BSP for 'multicore'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:61)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+18:19:33 ERROR : Failed to compute checksum of hardware specification file used by project 'multicore'
+18:19:33 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:33 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:33 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:35 INFO  : Checking for BSP changes to sync application flags for project 'vga4'...
+18:19:35 ERROR : Failed to call write_mss 
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:35 ERROR : Failed to update application flags from BSP for 'vga4'. Reason: Failed to call write_mss 
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+java.lang.RuntimeException: Failed to call write_mss 
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.handleResult(XsdbCommandUtils.java:389)
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:327)
+	at com.xilinx.sdk.sw.SwPlatformUtils.createDefaultMss(SwPlatformUtils.java:73)
+	at com.xilinx.sdx.sdk.core.util.BspCreationHelper.generateMssFile(BspCreationHelper.java:46)
+	at com.xilinx.sdx.sdk.core.util.BspCreationHelper.create(BspCreationHelper.java:38)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.createSwPlatform(SdkMakefileGenerationListener.java:150)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:82)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+18:19:36 ERROR : Failed to compute checksum of hardware specification file used by project 'vga4'
+18:19:36 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:36 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:19:36 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:27 INFO  : Checking for BSP changes to sync application flags for project 'multicore'...
+18:20:27 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:27 ERROR : Failed to update application flags from BSP for 'multicore'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:61)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+18:20:31 ERROR : Failed to compute checksum of hardware specification file used by project 'multicore'
+18:20:31 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:31 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:31 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:32 INFO  : Checking for BSP changes to sync application flags for project 'vga4'...
+18:20:32 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:32 ERROR : Failed to update application flags from BSP for 'vga4'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214)
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:61)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+18:20:33 ERROR : Failed to compute checksum of hardware specification file used by project 'vga4'
+18:20:33 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:33 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:20:33 ERROR : Failed to openhw "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/hw/ip_design_wrapper.xsa"
+Reason: ERROR: [Common 17-39] 'hsi::open_hw_design' failed due to earlier errors.
+
+18:21:53 ERROR : An unexpected exception occurred in the module 'reading platform'
+18:23:33 INFO  : Result from executing command 'getProjects': multicore_platform
+18:23:33 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+18:24:00 INFO  : Result from executing command 'getProjects': multicore_platform
+18:24:00 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;multicore_platform|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore_platform/export/multicore_platform/multicore_platform.xpfm
+18:24:27 INFO  : Checking for BSP changes to sync application flags for project 'multicore'...
+18:24:27 ERROR : Failed to get platform details for the project 'multicore'. Cannot sync application flags.
+18:24:40 INFO  : Checking for BSP changes to sync application flags for project 'vga4'...
+18:24:40 ERROR : Failed to get platform details for the project 'vga4'. Cannot sync application flags.
+18:26:23 INFO  : Result from executing command 'getProjects': ip_design_wrapper;multicore_platform
+18:26:23 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;multicore_platform|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore_platform/export/multicore_platform/multicore_platform.xpfm
+18:26:25 INFO  : Platform 'ip_design_wrapper' is added to custom repositories.
+18:26:58 ERROR : An unexpected exception occurred in the module 'reading platform'
+18:27:01 ERROR : An unexpected exception occurred in the module 'reading platform'
+18:27:52 INFO  : Result from executing command 'getProjects': 
+18:27:52 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm
+18:27:54 INFO  : Platform 'multicore' is added to custom repositories.
+18:29:35 ERROR : Failed to create platform for application project
+Reason: Failed to create platform.
+18:29:35 INFO  : Platform creation cancelled by the user.
+18:30:03 ERROR : Unexpected error while reading linker script.
+org.eclipse.core.internal.resources.ResourceException(/audio_2/src/lscript.ld)[368]: java.lang.Exception: Resource '/audio_2/src/lscript.ld' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:273)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.initLscriptEditorPage(LscriptEditor.java:142)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.setInput(LscriptEditor.java:134)
+	at org.eclipse.ui.forms.editor.FormEditor.init(FormEditor.java:132)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.init(LscriptEditor.java:60)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1297)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+18:30:05 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+18:30:06 INFO  : Registering command handlers for Vitis TCF services
+18:30:07 INFO  : XSCT server has started successfully.
+18:30:07 INFO  : Successfully done setting XSCT server connection channel  
+18:30:07 ERROR : Unexpected error while reading linker script.
+org.eclipse.core.internal.resources.ResourceException(/vga_2/src/lscript.ld)[368]: java.lang.Exception: Resource '/vga_2/src/lscript.ld' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:273)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.initLscriptEditorPage(LscriptEditor.java:142)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.setInput(LscriptEditor.java:134)
+	at org.eclipse.ui.forms.editor.FormEditor.init(FormEditor.java:132)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.init(LscriptEditor.java:60)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1386)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1336)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1270)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1256)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1128)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1955)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3922)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3524)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+18:30:07 INFO  : plnx-install-location is set to ''
+18:30:07 INFO  : Successfully done setting workspace for the tool. 
+18:30:07 INFO  : Successfully done query RDI_DATADIR 
+18:30:09 INFO  : Platform repository initialization has completed.
+18:30:54 INFO  : Result from executing command 'getProjects': multicore1
+18:30:54 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm
+18:30:56 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:30:57 INFO  : Platform 'multicore1' is added to custom repositories.
+18:32:16 INFO  : Result from executing command 'getProjects': multicore1
+18:32:16 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+18:35:29 INFO  : No changes in MSS file content so sources will not be generated.
+18:41:48 INFO  : Result from executing command 'getProjects': multicore1
+18:41:49 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+18:42:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:42:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+18:42:25 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit"
+18:45:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:45:07 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+18:45:07 INFO  : 'jtag frequency' command is executed.
+18:45:07 INFO  : Context for 'APU' is selected.
+18:45:07 INFO  : System reset is completed.
+18:45:10 INFO  : 'after 3000' command is executed.
+18:45:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+18:45:12 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit"
+18:45:12 INFO  : Context for 'APU' is selected.
+18:45:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+18:45:12 INFO  : 'configparams force-mem-access 1' command is executed.
+18:45:12 INFO  : Context for 'APU' is selected.
+18:45:12 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl' is done.
+18:45:13 INFO  : 'ps7_init' command is executed.
+18:45:13 INFO  : 'ps7_post_config' command is executed.
+18:45:13 INFO  : 'configparams force-mem-access 0' command is executed.
+18:45:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:45:13 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\audio10_system\_ide\scripts\systemdebugger_audio10_system_standalone.tcl'
+18:45:54 INFO  : Disconnected from the channel tcfchan#6.
+18:45:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:45:55 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+18:45:55 INFO  : 'jtag frequency' command is executed.
+18:45:55 INFO  : Context for 'APU' is selected.
+18:45:55 INFO  : System reset is completed.
+18:45:58 INFO  : 'after 3000' command is executed.
+18:45:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+18:46:01 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit"
+18:46:01 INFO  : Context for 'APU' is selected.
+18:46:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+18:46:01 INFO  : 'configparams force-mem-access 1' command is executed.
+18:46:01 INFO  : Context for 'APU' is selected.
+18:46:01 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl' is done.
+18:46:01 INFO  : 'ps7_init' command is executed.
+18:46:01 INFO  : 'ps7_post_config' command is executed.
+18:46:01 INFO  : 'configparams force-mem-access 0' command is executed.
+18:46:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:46:01 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\audio10_system\_ide\scripts\systemdebugger_audio10_system_standalone.tcl'
+18:47:55 INFO  : Disconnected from the channel tcfchan#7.
+18:47:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:47:57 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+18:47:57 INFO  : 'jtag frequency' command is executed.
+18:47:57 INFO  : Context for 'APU' is selected.
+18:47:57 INFO  : System reset is completed.
+18:48:00 INFO  : 'after 3000' command is executed.
+18:48:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+18:48:03 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit"
+18:48:03 INFO  : Context for 'APU' is selected.
+18:48:03 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+18:48:03 INFO  : 'configparams force-mem-access 1' command is executed.
+18:48:03 INFO  : Context for 'APU' is selected.
+18:48:03 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl' is done.
+18:48:03 INFO  : 'ps7_init' command is executed.
+18:48:03 INFO  : 'ps7_post_config' command is executed.
+18:48:03 INFO  : 'configparams force-mem-access 0' command is executed.
+18:48:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:48:03 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\audio10_system\_ide\scripts\systemdebugger_audio10_system_standalone.tcl'
+18:49:11 INFO  : Disconnected from the channel tcfchan#8.
+18:57:04 INFO  : Invoking Bootgen: bootgen -image multicore1.bif -arch zynq -o C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/sw/multicore1/boot/BOOT.bin
+18:57:04 INFO  : Overwriting existing bif file C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\multicore1\export\multicore1\sw\multicore1\boot\multicore1.bif
+18:57:05 INFO  : Bootgen command execution is done.
+18:57:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:46 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+18:57:46 INFO  : 'jtag frequency' command is executed.
+18:57:46 INFO  : Context for 'APU' is selected.
+18:57:46 INFO  : System reset is completed.
+18:57:49 INFO  : 'after 3000' command is executed.
+18:57:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+18:57:51 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit"
+18:57:51 INFO  : Context for 'APU' is selected.
+18:57:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+18:57:51 INFO  : 'configparams force-mem-access 1' command is executed.
+18:57:51 INFO  : Context for 'APU' is selected.
+18:57:51 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl' is done.
+18:57:52 INFO  : 'ps7_init' command is executed.
+18:57:52 INFO  : 'ps7_post_config' command is executed.
+18:57:52 INFO  : 'configparams force-mem-access 0' command is executed.
+18:57:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio10/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:57:52 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\audio10_system\_ide\scripts\systemdebugger_audio10_system_standalone.tcl'
+18:58:17 INFO  : Disconnected from the channel tcfchan#9.
+18:59:21 INFO  : Result from executing command 'getProjects': multicore1
+18:59:21 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+18:59:43 INFO  : Result from executing command 'getProjects': multicore1
+18:59:43 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+18:59:49 INFO  : Result from executing command 'getProjects': multicore1
+18:59:49 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+19:04:25 INFO  : No changes in MSS file content so sources will not be generated.
+19:06:24 INFO  : Result from executing command 'getProjects': multicore1
+19:06:24 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+19:06:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:06:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+19:06:53 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit"
+19:07:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:07:24 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+19:07:24 INFO  : 'jtag frequency' command is executed.
+19:07:24 INFO  : Context for 'APU' is selected.
+19:07:24 INFO  : System reset is completed.
+19:07:27 INFO  : 'after 3000' command is executed.
+19:07:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+19:07:29 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit"
+19:07:29 INFO  : Context for 'APU' is selected.
+19:07:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+19:07:29 INFO  : 'configparams force-mem-access 1' command is executed.
+19:07:29 INFO  : Context for 'APU' is selected.
+19:07:29 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/psinit/ps7_init.tcl' is done.
+19:07:29 INFO  : 'ps7_init' command is executed.
+19:07:29 INFO  : 'ps7_post_config' command is executed.
+19:07:29 INFO  : 'configparams force-mem-access 0' command is executed.
+19:07:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:12:17 INFO  : Disconnected from the channel tcfchan#14.
+19:17:21 INFO  : Checking for BSP changes to sync application flags for project 'audio11'...
+19:17:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:17:35 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+19:17:35 INFO  : 'jtag frequency' command is executed.
+19:17:35 INFO  : Context for 'APU' is selected.
+19:17:35 INFO  : System reset is completed.
+19:17:38 INFO  : 'after 3000' command is executed.
+19:17:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+19:17:41 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit"
+19:17:41 INFO  : Context for 'APU' is selected.
+19:17:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+19:17:41 INFO  : 'configparams force-mem-access 1' command is executed.
+19:17:41 INFO  : Context for 'APU' is selected.
+19:17:41 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/psinit/ps7_init.tcl' is done.
+19:17:41 INFO  : 'ps7_init' command is executed.
+19:17:41 INFO  : 'ps7_post_config' command is executed.
+19:17:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:41 INFO  : The application 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/Debug/audio11.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:17:41 INFO  : 'configparams force-mem-access 0' command is executed.
+19:17:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/Debug/audio11.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:18:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+19:18:50 INFO  : XSCT server has started successfully.
+19:18:50 INFO  : plnx-install-location is set to ''
+19:18:50 INFO  : Successfully done setting XSCT server connection channel  
+19:18:50 INFO  : Successfully done setting workspace for the tool. 
+19:18:51 INFO  : Successfully done query RDI_DATADIR 
+19:18:55 INFO  : Registering command handlers for Vitis TCF services
+19:18:56 INFO  : Platform repository initialization has completed.
+19:19:30 INFO  : Result from executing command 'getProjects': multicore1
+19:19:30 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+19:19:32 INFO  : Checking for BSP changes to sync application flags for project 'audio11'...
+19:19:44 INFO  : Checking for BSP changes to sync application flags for project 'vga10'...
+19:19:44 INFO  : Updating application flags with new BSP settings...
+19:19:44 INFO  : Successfully updated application flags for project vga10.
+19:20:34 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+19:20:36 INFO  : XSCT server has started successfully.
+19:20:36 INFO  : Successfully done setting XSCT server connection channel  
+19:20:36 INFO  : plnx-install-location is set to ''
+19:20:36 INFO  : Successfully done setting workspace for the tool. 
+19:20:37 INFO  : Successfully done query RDI_DATADIR 
+19:20:40 INFO  : Registering command handlers for Vitis TCF services
+19:20:41 INFO  : Platform repository initialization has completed.
+19:21:39 INFO  : Result from executing command 'getProjects': multicore1
+19:21:39 INFO  : Result from executing command 'getPlatforms': ip_design_wrapper_1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper_1/export/ip_design_wrapper_1/ip_design_wrapper_1.xpfm;ip_design_wrapper|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm;multicore1|C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/multicore1.xpfm
+19:21:41 INFO  : Checking for BSP changes to sync application flags for project 'audio11'...
+19:21:56 INFO  : Checking for BSP changes to sync application flags for project 'vga10'...
+19:22:31 INFO  : Checking for BSP changes to sync application flags for project 'audio11'...
+19:22:40 INFO  : Checking for BSP changes to sync application flags for project 'vga10'...
+19:23:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:23:26 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+19:23:26 INFO  : 'jtag frequency' command is executed.
+19:23:26 INFO  : Context for 'APU' is selected.
+19:23:26 INFO  : System reset is completed.
+19:23:29 INFO  : 'after 3000' command is executed.
+19:23:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+19:23:32 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit"
+19:23:32 INFO  : Context for 'APU' is selected.
+19:23:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa'.
+19:23:32 INFO  : 'configparams force-mem-access 1' command is executed.
+19:23:32 INFO  : Context for 'APU' is selected.
+19:23:32 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/psinit/ps7_init.tcl' is done.
+19:23:32 INFO  : 'ps7_init' command is executed.
+19:23:32 INFO  : 'ps7_post_config' command is executed.
+19:23:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:23:32 INFO  : The application 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/Debug/audio11.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:23:32 INFO  : 'configparams force-mem-access 0' command is executed.
+19:23:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/bitstream/multicore.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/hw/multicore.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio11/Debug/audio11.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:23:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:23:33 INFO  : 'con' command is executed.
+19:23:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:23:33 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\audio11_system\_ide\scripts\systemdebugger_audio11_system_standalone.tcl'
+19:24:05 INFO  : Disconnected from the channel tcfchan#7.
