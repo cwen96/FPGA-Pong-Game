@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -79,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
 set_property parent.project_path C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -96,6 +98,10 @@ read_vhdl -library xil_defaultlib C:/Users/dumpherv/Desktop/452Project/ensc-452/
 add_files C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_cc_0/ip_design_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_cc_0/ip_design_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_cc_0/ip_design_auto_cc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_ooc.xdc]
@@ -111,41 +117,13 @@ set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desk
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_proc_sys_reset_0_0/ip_design_proc_sys_reset_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_proc_sys_reset_0_0/ip_design_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_proc_sys_reset_0_0/ip_design_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_1/bd_09e1_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_1/bd_09e1_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_2/bd_09e1_arinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_3/bd_09e1_rinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_4/bd_09e1_awinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_5/bd_09e1_winsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_6/bd_09e1_binsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_7/bd_09e1_aroutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_8/bd_09e1_routsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_9/bd_09e1_awoutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_10/bd_09e1_woutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_11/bd_09e1_boutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_12/bd_09e1_arni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_13/bd_09e1_rni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_14/bd_09e1_awni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_15/bd_09e1_wni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_16/bd_09e1_bni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_20/bd_09e1_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_21/bd_09e1_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_22/bd_09e1_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_23/bd_09e1_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_24/bd_09e1_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_25/bd_09e1_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_26/bd_09e1_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_27/bd_09e1_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_28/bd_09e1_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_29/bd_09e1_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_30/bd_09e1_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/bd_0/ip/ip_31/bd_09e1_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_smartconnect_0_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_timer_0_0/ip_design_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_axi_timer_0_0/ip_design_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/fifo_generator_0/fifo_generator_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/fifo_generator_0/fifo_generator_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_125M_0/ip_design_rst_ps7_0_125M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_125M_0/ip_design_rst_ps7_0_125M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_125M_0/ip_design_rst_ps7_0_125M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip_design_ooc.xdc]
 
 OPTRACE "Adding files" END { }

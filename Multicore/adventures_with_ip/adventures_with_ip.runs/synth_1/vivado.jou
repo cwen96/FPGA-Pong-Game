@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Feb 18 18:02:31 2025
-# Process ID: 23112
+# Start of session at: Thu Feb 20 14:16:48 2025
+# Process ID: 25064
 # Current directory: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/synth_1
 # Command line: vivado.exe -log ip_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_design_wrapper.tcl
 # Log file: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/synth_1/ip_design_wrapper.vds

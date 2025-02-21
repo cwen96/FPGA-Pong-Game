@@ -1,10 +1,24 @@
-15:35:41 **** Incremental Build of configuration Debug for project VGA ****
+15:43:22 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:164:31: error: invalid conversion from 'void (*)(void*)' to 'XTmrCtr_Handler' {aka 'void (*)(void*, unsigned char)'} [-fpermissive]
+  164 |  XTmrCtr_SetHandler(&TMRInst, TMR_Intr_Handler, &TMRInst);
+      |                               ^~~~~~~~~~~~~~~~
+      |                               |
+      |                               void (*)(void*)
+In file included from ../src/main.cc:4:
+C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include/xtmrctr.h:298:64: note:   initializing argument 2 of 'void XTmrCtr_SetHandler(XTmrCtr*, XTmrCtr_Handler, void*)'
+  298 | void XTmrCtr_SetHandler(XTmrCtr * InstancePtr, XTmrCtr_Handler FuncPtr,
+      |                                                ~~~~~~~~~~~~~~~~^~~~~~~
+make[1]: *** [src/subdir.mk:23: src/main.o] Error 1
+make: *** [makefile:46: all] Error 2
 
-15:35:42 Build Finished (took 443ms)
+15:43:23 Build Finished (took 635ms)
 

@@ -1,83 +1,84 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.63469",
-   "Default View_TopLeft":"-71,-328",
+   "Default View_ScaleFactor":"0.413178",
+   "Default View_TopLeft":"-312,-327",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 6 -x 1770 -y 20 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 6 -x 1770 -y 0 -defaultsOSRD
-preplace port IIC_0 -pg 1 -lvl 6 -x 1770 -y 140 -defaultsOSRD
-preplace port GPIO -pg 1 -lvl 6 -x 1770 -y 560 -defaultsOSRD
-preplace port btns_5bits -pg 1 -lvl 6 -x 1770 -y 700 -defaultsOSRD
-preplace port sws_8bits -pg 1 -lvl 6 -x 1770 -y 720 -defaultsOSRD
-preplace port SDATA_I -pg 1 -lvl 0 -x -300 -y 860 -defaultsOSRD
-preplace port BCLK -pg 1 -lvl 6 -x 1770 -y 850 -defaultsOSRD
-preplace port LRCLK -pg 1 -lvl 6 -x 1770 -y 870 -defaultsOSRD
-preplace port SDATA_O -pg 1 -lvl 6 -x 1770 -y 890 -defaultsOSRD
-preplace port FCLK_CLK1 -pg 1 -lvl 6 -x 1770 -y 250 -defaultsOSRD
-preplace port VGA_HS -pg 1 -lvl 6 -x 1770 -y 100 -defaultsOSRD
-preplace port VGA_VS -pg 1 -lvl 6 -x 1770 -y 120 -defaultsOSRD
-preplace portBus LEDs_out -pg 1 -lvl 6 -x 1770 -y 420 -defaultsOSRD
-preplace portBus VGA_R -pg 1 -lvl 6 -x 1770 -y 40 -defaultsOSRD
-preplace portBus VGA_G -pg 1 -lvl 6 -x 1770 -y 60 -defaultsOSRD
-preplace portBus VGA_B -pg 1 -lvl 6 -x 1770 -y 80 -defaultsOSRD
-preplace inst led_controller_0 -pg 1 -lvl 5 -x 1370 -y 420 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1370 -y 170 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 620 -y 530 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 150 -y 460 -defaultsOSRD
-preplace inst zed_audio_ctrl_0 -pg 1 -lvl 5 -x 1370 -y 870 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1370 -y 560 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 5 -x 1370 -y 720 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -180 -y 130 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 620 -y 70 -defaultsOSRD
-preplace inst smartconnect_0 -pg 1 -lvl 2 -x 150 -y 250 -defaultsOSRD
-preplace inst axi_timer_0 -pg 1 -lvl 3 -x 620 -y -170 -defaultsOSRD
-preplace inst vga_controller_0 -pg 1 -lvl 2 -x 150 -y 60 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 4 -x 920 -y 270 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 5 -30 570 430 350 N 350 1060 -10 1630
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 -270 440 -70 560 370J -330 NJ -330 N -330 1670
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 3 440 340 N 340 1010
-preplace netloc led_controller_0_LEDs_out 1 5 1 NJ 420
+preplace port DDR -pg 1 -lvl 7 -x 2300 -y 20 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 2300 -y 0 -defaultsOSRD
+preplace port IIC_0 -pg 1 -lvl 7 -x 2300 -y 140 -defaultsOSRD
+preplace port GPIO -pg 1 -lvl 7 -x 2300 -y 560 -defaultsOSRD
+preplace port btns_5bits -pg 1 -lvl 7 -x 2300 -y 700 -defaultsOSRD
+preplace port sws_8bits -pg 1 -lvl 7 -x 2300 -y 720 -defaultsOSRD
+preplace port SDATA_I -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port BCLK -pg 1 -lvl 7 -x 2300 -y 850 -defaultsOSRD
+preplace port LRCLK -pg 1 -lvl 7 -x 2300 -y 870 -defaultsOSRD
+preplace port SDATA_O -pg 1 -lvl 7 -x 2300 -y 890 -defaultsOSRD
+preplace port FCLK_CLK1 -pg 1 -lvl 7 -x 2300 -y 250 -defaultsOSRD
+preplace port VGA_HS -pg 1 -lvl 7 -x 2300 -y 100 -defaultsOSRD
+preplace port VGA_VS -pg 1 -lvl 7 -x 2300 -y 120 -defaultsOSRD
+preplace portBus LEDs_out -pg 1 -lvl 7 -x 2300 -y 420 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -lvl 7 -x 2300 -y 40 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -lvl 7 -x 2300 -y 60 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -lvl 7 -x 2300 -y 80 -defaultsOSRD
+preplace inst led_controller_0 -pg 1 -lvl 5 -x 1560 -y 420 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1560 -y 170 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 870 -y 530 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 410 -y 460 -defaultsOSRD
+preplace inst zed_audio_ctrl_0 -pg 1 -lvl 5 -x 1560 -y 870 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1560 -y 560 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 5 -x 1560 -y 720 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 130 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 870 -y 70 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -x 870 -y -170 -defaultsOSRD
+preplace inst vga_controller_0 -pg 1 -lvl 2 -x 410 -y 60 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1180 -y 270 -defaultsOSRD
+preplace inst rst_ps7_0_125M -pg 1 -lvl 6 -x 2040 -y 490 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 5 240 360 660 320 1080 340 1310 -10 1800
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 220 220 220 620J 180 NJ 180 1290 0 1830
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 3 670 330 1070 350 1280
+preplace netloc led_controller_0_LEDs_out 1 5 2 1860J 380 2260
 preplace netloc SDATA_I_0_1 1 0 5 NJ 860 N 860 NJ 860 NJ 860 N
-preplace netloc zed_audio_ctrl_0_BCLK 1 5 1 NJ 850
-preplace netloc zed_audio_ctrl_0_LRCLK 1 5 1 NJ 870
-preplace netloc zed_audio_ctrl_0_SDATA_O 1 5 1 NJ 890
-preplace netloc processing_system7_0_FCLK_CLK1 1 5 1 NJ 250
-preplace netloc processing_system7_0_FCLK_CLK2 1 0 6 -280 60 -90 -60 390 -60 N -60 1020 -20 1650
-preplace netloc clk_wiz_0_clk_out1 1 1 2 -80 340 400J
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 3 -40 350 420J 330 790
-preplace netloc proc_sys_reset_0_peripheral_reset 1 1 3 -70 -340 NJ -340 800
-preplace netloc processing_system7_0_S_AXI_HP0_RCOUNT 1 1 4 -30 360 410J 320 800 80 N
-preplace netloc vga_controller_0_VGA_R 1 2 4 340J -280 NJ -280 1040 -40 1730J
-preplace netloc vga_controller_0_VGA_G 1 2 4 330J -290 NJ -290 1050 -50 1740J
-preplace netloc vga_controller_0_VGA_B 1 2 4 320J -310 NJ -310 1070 -70 1750J
-preplace netloc vga_controller_0_VGA_HS 1 2 4 350J -300 NJ -300 1060 -60 1720J
-preplace netloc vga_controller_0_VGA_VS 1 2 4 390J -40 NJ -40 1030 -30 1690J
-preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 3 -50 -70 400 -50 790
-preplace netloc axi_gpio_1_ip2intc_irpt 1 3 3 810 640 NJ 640 1630
-preplace netloc xlconcat_0_dout 1 4 1 1020 270n
-preplace netloc axi_timer_0_interrupt 1 3 1 810 -140n
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 4 450 -350 NJ -350 N -350 1660
-preplace netloc processing_system7_0_DDR 1 5 1 1710J 20n
-preplace netloc processing_system7_0_FIXED_IO 1 5 1 1700J 0n
-preplace netloc ps7_0_axi_periph_M03_AXI 1 3 2 N 560 1020
-preplace netloc ps7_0_axi_periph_M02_AXI 1 3 2 N 540 N
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 2 N 520 1040
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 2 790 400 N
-preplace netloc axi_gpio_1_GPIO 1 5 1 NJ 700
-preplace netloc axi_gpio_1_GPIO2 1 5 1 NJ 720
-preplace netloc processing_system7_0_IIC_0 1 5 1 1680J 90n
-preplace netloc axi_gpio_0_GPIO 1 5 1 NJ 560
-preplace netloc vga_controller_0_M_AXI 1 2 3 360J -30 N -30 1010
-preplace netloc smartconnect_0_M00_AXI 1 2 1 380 -220n
-preplace netloc processing_system7_0_M_AXI_GP1 1 1 5 -60 -320 NJ -320 NJ -320 NJ -320 1640
-levelinfo -pg 1 -300 -180 150 620 920 1370 1770
-pagesize -pg 1 -db -bbox -sgen -410 -570 1910 1720
+preplace netloc zed_audio_ctrl_0_BCLK 1 5 2 NJ 850 N
+preplace netloc zed_audio_ctrl_0_LRCLK 1 5 2 NJ 870 N
+preplace netloc zed_audio_ctrl_0_SDATA_O 1 5 2 NJ 890 N
+preplace netloc processing_system7_0_FCLK_CLK1 1 5 2 NJ 240 2250
+preplace netloc processing_system7_0_FCLK_CLK2 1 0 6 20 0 210 -60 650 220 1080 200 1280 -20 1850
+preplace netloc clk_wiz_0_clk_out1 1 1 2 210 180 600J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 3 220 200 NJ 200 1040
+preplace netloc proc_sys_reset_0_peripheral_reset 1 1 3 230 210 NJ 210 1050
+preplace netloc processing_system7_0_S_AXI_HP0_RCOUNT 1 1 4 240 190 NJ 190 1080 140 N
+preplace netloc vga_controller_0_VGA_R 1 2 5 640J 170 NJ 170 1320 340 1840J 90 2250
+preplace netloc vga_controller_0_VGA_G 1 2 5 580J -320 NJ -320 N -320 NJ -320 2280
+preplace netloc vga_controller_0_VGA_B 1 2 5 590J -290 NJ -290 N -290 NJ -290 2270
+preplace netloc vga_controller_0_VGA_HS 1 2 5 610J -50 NJ -50 N -50 NJ -50 2260
+preplace netloc vga_controller_0_VGA_VS 1 2 5 630J -40 NJ -40 N -40 NJ -40 2240
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 2 2 700 -60 1040
+preplace netloc axi_gpio_1_ip2intc_irpt 1 3 3 1090 640 NJ 640 1800
+preplace netloc xlconcat_0_dout 1 4 1 1280 220n
+preplace netloc axi_timer_0_interrupt 1 3 1 1090 -140n
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 2 5 690 -300 NJ -300 NJ -300 NJ -300 2210
+preplace netloc processing_system7_0_FIXED_IO 1 5 2 1820J 50 2220
+preplace netloc processing_system7_0_IIC_0 1 5 2 NJ 100 2220
+preplace netloc axi_gpio_0_GPIO 1 5 2 1870J 390 2230
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 4 680 -310 NJ -310 N -310 1810
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 2 1080 400 N
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 2 N 510 1290
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 2 N 550 1270
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 2 N 530 1300
+preplace netloc axi_gpio_1_GPIO 1 5 2 NJ 700 N
+preplace netloc processing_system7_0_DDR 1 5 2 NJ 60 2230
+preplace netloc axi_gpio_1_GPIO2 1 5 2 NJ 720 N
+preplace netloc vga_controller_0_M_AXI 1 2 3 600J -30 N -30 1320
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 2 700 -280 1060
+levelinfo -pg 1 0 120 410 870 1180 1560 2040 2300
+pagesize -pg 1 -db -bbox -sgen -110 -570 2440 1720
 "
 }
 {
    "da_axi4_cnt":"4",
    "da_board_cnt":"2",
+   "da_clkrst_cnt":"1",
    "da_ps7_cnt":"1"
 }

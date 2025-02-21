@@ -1,4 +1,4 @@
-19:22:40 **** Incremental Build of configuration Debug for project vga10 ****
+13:38:36 **** Incremental Build of configuration Debug for project vga10 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -7,14 +7,6 @@ make --no-print-directory main-build
 'Building file: ../src/main.cc'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/multicore1/export/multicore1/sw/multicore1/vga10/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:188:6: warning: unused variable 'status' [-Wunused-variable]
-  188 |  int status;
-      |      ^~~~~~
-../src/main.cc: At global scope:
-../src/main.cc:270:5: warning: 'int IntcInitFunction(u16, XGpio*)' defined but not used [-Wunused-function]
-  270 | int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
-      |     ^~~~~~~~~~~~~~~~
 'Finished building: ../src/main.cc'
 ' '
 'Building target: vga10.elf'
@@ -25,9 +17,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size vga10.elf  |tee "vga10.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  43996	   2984	  22704	  69684	  11034	vga10.elf
+  43616	   3016	  22704	  69336	  10ed8	vga10.elf
 'Finished building: vga10.elf.size'
 ' '
 
-19:22:41 Build Finished (took 1s.557ms)
+13:38:38 Build Finished (took 1s.580ms)
 

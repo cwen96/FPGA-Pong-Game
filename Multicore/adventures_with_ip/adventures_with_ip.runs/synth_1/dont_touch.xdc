@@ -15,6 +15,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_p
 # IP: bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_xbar_0 || ORIG_REF_NAME==ip_design_xbar_0} -quiet] -quiet
 
+# IP: bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_auto_pc_0 || ORIG_REF_NAME==ip_design_auto_pc_0} -quiet] -quiet
+
+# IP: bd/ip_design/ip/ip_design_auto_cc_0/ip_design_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_auto_cc_0 || ORIG_REF_NAME==ip_design_auto_cc_0} -quiet] -quiet
+
 # IP: bd/ip_design/ip/ip_design_ps7_0_axi_periph_0/ip_design_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_ps7_0_axi_periph_0 || ORIG_REF_NAME==ip_design_ps7_0_axi_periph_0} -quiet] -quiet
 
@@ -36,9 +42,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_c
 # IP: bd/ip_design/ip/ip_design_proc_sys_reset_0_0/ip_design_proc_sys_reset_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_proc_sys_reset_0_0 || ORIG_REF_NAME==ip_design_proc_sys_reset_0_0} -quiet] -quiet
 
-# IP: bd/ip_design/ip/ip_design_smartconnect_0_0/ip_design_smartconnect_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_smartconnect_0_0 || ORIG_REF_NAME==ip_design_smartconnect_0_0} -quiet] -quiet
-
 # IP: bd/ip_design/ip/ip_design_axi_timer_0_0/ip_design_axi_timer_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_axi_timer_0_0 || ORIG_REF_NAME==ip_design_axi_timer_0_0} -quiet] -quiet
 
@@ -48,7 +51,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_v
 # IP: bd/ip_design/ip/ip_design_xlconcat_0_1/ip_design_xlconcat_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_xlconcat_0_1 || ORIG_REF_NAME==ip_design_xlconcat_0_1} -quiet] -quiet
 
-# IP: bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_auto_pc_0 || ORIG_REF_NAME==ip_design_auto_pc_0} -quiet] -quiet
+# IP: bd/ip_design/ip/ip_design_rst_ps7_0_125M_0/ip_design_rst_ps7_0_125M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ip_design_rst_ps7_0_125M_0 || ORIG_REF_NAME==ip_design_rst_ps7_0_125M_0} -quiet] -quiet
 
 # XDC: c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip_design_ooc.xdc
