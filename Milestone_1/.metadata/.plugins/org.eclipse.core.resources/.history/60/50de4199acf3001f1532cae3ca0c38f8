@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Dualcore_project" location="C:/Users/dumpherv/Desktop/452_Milestone1/Dualcore_project" platform="C:/Users/dumpherv/Desktop/452_Milestone1/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="Dualcore_project_system" sysConfig="MulticorePlatform" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="baad552c0d55821c6f76b5ca23ee2ced">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.642385213" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1937721539" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>
