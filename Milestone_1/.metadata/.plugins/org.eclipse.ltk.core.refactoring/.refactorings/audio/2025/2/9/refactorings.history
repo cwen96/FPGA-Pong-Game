@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;audio/src/beep-6-96243.mp3&apos; to &apos;beep.mp3&apos;" description="Rename resource &apos;beep-6-96243.mp3&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/beep-6-96243.mp3" name="beep.mp3" stamp="1740541503932" updateReferences="true"/>
+</session>

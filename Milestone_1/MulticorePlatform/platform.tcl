@@ -52,3 +52,13 @@ platform clean
 platform generate
 platform clean
 platform generate
+platform generate
+platform active {MulticorePlatform}
+domain active {zynq_fsbl}
+bsp reload
+bsp reload
+platform generate -domains 
+domain active {ps7_cortex9_1}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp reload
