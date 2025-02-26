@@ -1,0 +1,10 @@
+#include "game.h"
+
+Game::Game(mode){
+	score[2]= {0,0};
+	ballLocationX = 620;
+	ballLocatoinY = 492;
+	ballXVelocity = 10;
+	ballYVelocity = 5;
+}
+

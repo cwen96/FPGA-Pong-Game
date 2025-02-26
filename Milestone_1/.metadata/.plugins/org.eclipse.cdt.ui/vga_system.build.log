@@ -1,10 +1,10 @@
-20:04:42 **** Incremental Build of configuration Debug for project vga_system ****
+11:49:19 **** Incremental Build of configuration Debug for project vga_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 15262 C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/dumpherv/Desktop/Milestone_1/vga_system/Debug/system.bif
+generate_system_bif.bat 64904 C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/dumpherv/Desktop/Milestone_1/vga_system/Debug/system.bif
 sdcard_gen --xpfm C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm --sys_config MulticorePlatform --bif C:/Users/dumpherv/Desktop/Milestone_1/vga_system/Debug/system.bif --bitstream C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit --elf C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf,ps7_cortexa9_0 --elf C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf,ps7_cortexa9_1
 creating BOOT.BIN using C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
 Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/dumpherv/Desktop/Milestone_1/vga_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-20:04:51 Build Finished (took 8s.792ms)
+11:49:27 Build Finished (took 8s.327ms)
 

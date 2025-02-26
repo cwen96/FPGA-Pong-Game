@@ -2230,3 +2230,194 @@ con
 
 20:05:12 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
 20:36:17 INFO  : Disconnected from the channel tcfchan#32.
+11:12:40 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\Milestone_1\temp_xsdb_launch_script.tcl
+11:12:43 INFO  : XSCT server has started successfully.
+11:12:43 INFO  : plnx-install-location is set to ''
+11:12:43 INFO  : Successfully done setting XSCT server connection channel  
+11:12:43 INFO  : Successfully done setting workspace for the tool. 
+11:12:47 INFO  : Platform repository initialization has completed.
+11:12:48 INFO  : Registering command handlers for Vitis TCF services
+11:12:48 INFO  : Successfully done query RDI_DATADIR 
+11:40:12 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+11:40:40 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+11:40:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:14 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+11:41:14 INFO  : 'jtag frequency' command is executed.
+11:41:14 INFO  : Context for 'APU' is selected.
+11:41:14 INFO  : System reset is completed.
+11:41:17 INFO  : 'after 3000' command is executed.
+11:41:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+11:41:19 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+11:41:19 INFO  : Context for 'APU' is selected.
+11:41:19 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+11:41:19 INFO  : 'configparams force-mem-access 1' command is executed.
+11:41:19 INFO  : Context for 'APU' is selected.
+11:41:19 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+11:41:20 INFO  : 'ps7_init' command is executed.
+11:41:20 INFO  : 'ps7_post_config' command is executed.
+11:41:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:41:20 INFO  : The application 'C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:41:20 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+11:41:20 INFO  : The application 'C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+11:41:20 INFO  : 'configparams force-mem-access 0' command is executed.
+11:41:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:41:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:41:20 INFO  : 'con' command is executed.
+11:41:20 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+11:41:20 INFO  : 'con' command is executed.
+11:41:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+11:41:20 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+11:47:14 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+11:47:28 INFO  : Disconnected from the channel tcfchan#1.
+11:47:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:47:28 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+11:47:28 INFO  : 'jtag frequency' command is executed.
+11:47:28 INFO  : Context for 'APU' is selected.
+11:47:28 INFO  : System reset is completed.
+11:47:31 INFO  : 'after 3000' command is executed.
+11:47:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+11:47:34 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+11:47:34 INFO  : Context for 'APU' is selected.
+11:47:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+11:47:36 INFO  : 'configparams force-mem-access 1' command is executed.
+11:47:36 INFO  : Context for 'APU' is selected.
+11:47:36 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+11:47:36 INFO  : 'ps7_init' command is executed.
+11:47:36 INFO  : 'ps7_post_config' command is executed.
+11:47:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:47:36 INFO  : The application 'C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:47:36 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+11:47:36 INFO  : The application 'C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+11:47:36 INFO  : 'configparams force-mem-access 0' command is executed.
+11:47:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:47:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:47:36 INFO  : 'con' command is executed.
+11:47:36 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+11:47:36 INFO  : 'con' command is executed.
+11:47:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+11:47:36 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+11:48:19 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+11:48:22 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+11:48:26 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa is already opened
+
+11:49:16 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+11:49:18 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+11:49:20 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa is already opened
+
+11:49:41 INFO  : Disconnected from the channel tcfchan#2.
+11:49:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:49:41 INFO  : Jtag cable 'Digilent Zed 210248469787' is selected.
+11:49:41 INFO  : 'jtag frequency' command is executed.
+11:49:41 INFO  : Context for 'APU' is selected.
+11:49:41 INFO  : System reset is completed.
+11:49:44 INFO  : 'after 3000' command is executed.
+11:49:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}' command is executed.
+11:49:47 INFO  : Device configured successfully with "C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+11:49:47 INFO  : Context for 'APU' is selected.
+11:49:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+11:49:49 INFO  : 'configparams force-mem-access 1' command is executed.
+11:49:49 INFO  : Context for 'APU' is selected.
+11:49:49 INFO  : Sourcing of 'C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+11:49:49 INFO  : 'ps7_init' command is executed.
+11:49:49 INFO  : 'ps7_post_config' command is executed.
+11:49:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:49 INFO  : The application 'C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:49:49 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+11:49:49 INFO  : The application 'C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+11:49:49 INFO  : 'configparams force-mem-access 0' command is executed.
+11:49:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
+fpga -file C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dumpherv/Desktop/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:49:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:50 INFO  : 'con' command is executed.
+11:49:50 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+11:49:50 INFO  : 'con' command is executed.
+11:49:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+11:49:50 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+15:13:06 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:14:22 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:14:49 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:15:59 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:16:37 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:16:55 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:19:01 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:20:48 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:21:07 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:23:20 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+15:24:30 INFO  : Checking for BSP changes to sync application flags for project 'vga'...

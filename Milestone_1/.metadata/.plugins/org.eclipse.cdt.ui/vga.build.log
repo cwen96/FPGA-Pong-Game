@@ -1,10 +1,44 @@
-20:04:41 **** Incremental Build of configuration Debug for project vga ****
+15:24:30 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:207:7: error: no matching function for call to 'Game::Game()'
+  207 |  Game currentGame;
+      |       ^~~~~~~~~~~
+In file included from ../src/main.cc:13:
+../src/game.h:27:2: note: candidate: 'Game::Game(int)'
+   27 |  Game(int mode);
+      |  ^~~~
+../src/game.h:27:2: note:   candidate expects 1 argument, 0 provided
+../src/game.h:11:7: note: candidate: 'constexpr Game::Game(const Game&)'
+   11 | class Game{
+      |       ^~~~
+../src/game.h:11:7: note:   candidate expects 1 argument, 0 provided
+../src/game.h:11:7: note: candidate: 'constexpr Game::Game(Game&&)'
+../src/game.h:11:7: note:   candidate expects 1 argument, 0 provided
+../src/main.cc:200:6: warning: unused variable 'loop' [-Wunused-variable]
+  200 |  int loop = 0;
+      |      ^~~~
+../src/main.cc:203:8: warning: unused variable 'image2_pointer' [-Wunused-variable]
+  203 |  int * image2_pointer = (int *)0x020BB00C;
+      |        ^~~~~~~~~~~~~~
+../src/main.cc:204:8: warning: unused variable 'image3_pointer' [-Wunused-variable]
+  204 |  int * image3_pointer = (int *)0x028A4010;
+      |        ^~~~~~~~~~~~~~
+../src/main.cc:205:8: warning: unused variable 'image4_pointer' [-Wunused-variable]
+  205 |  int * image4_pointer = (int *)0x0308D014;
+      |        ^~~~~~~~~~~~~~
+../src/main.cc:206:8: warning: unused variable 'image5_pointer' [-Wunused-variable]
+  206 |  int * image5_pointer = (int *)0x03876018;
+      |        ^~~~~~~~~~~~~~
+make[1]: *** [src/subdir.mk:37: src/main.o] Error 1
+make: *** [makefile:46: all] Error 2
 
-20:04:42 Build Finished (took 437ms)
+15:24:30 Build Finished (took 704ms)
 

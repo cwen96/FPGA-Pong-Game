@@ -88,7 +88,7 @@ int lab_test() {
     COMM_VAL = 0;
 
 
-    buffer = load_audio_file("beep.mp3");
+    //buffer = load_audio_file("beep.mp3");
 
     /* If input from the terminal is 'q', then return to menu.
      * Else, continue. */

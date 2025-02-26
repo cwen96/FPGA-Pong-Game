@@ -1,0 +1,34 @@
+#include "game.h"
+
+class game{
+private:
+	int ballLocationX;
+	int ballLocationY;
+	int leftPaddleLocation;
+	int rightPaddleLocation;
+	int score{};
+	int ballXVelocity;
+	int ballYVelocity;
+
+
+public:
+	Game(mode);
+
+	int getBallLocationX(){
+		return ballLocationX;
+	}
+
+	int getBallLocationY(){
+		return ballLocationY;
+	}
+
+	int getLeftPaddleLocation(){
+		return leftPaddleLocation;
+	}
+
+	int getRightPaddleLocation(){
+		return rightPaddleLocation;
+	}
+	void updateGameState();
+
+};

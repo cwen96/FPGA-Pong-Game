@@ -10,7 +10,7 @@
 #include "xscugic.h"
 #include <cstdlib>
 #include "xil_mmu.h"
-
+#include "game.h"
 
 #include <xil_cache.h>
 
@@ -19,11 +19,15 @@
 #define RED 	0x0000F0
 #define GREEN	0x00F000
 #define BLUE	0xF00000
-#define SCREEN_HIGHT 1024
+#define SCREEN_HEIGHT 1024
 #define SCREEN_WIDTH 1280
 #define BALL_DIAMETER 40
 #define PADDLE_WIDTH 40
 #define PADDLE_HEIGHT 250
+#define sev() __asm__("sev")
+#define ARM1_STARTADR 0xFFFFFFF0
+#define ARM1_BASEADDR 0x10080000
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 
 // Parameter definitions
 #define BTNS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
@@ -38,8 +42,6 @@
 #define BTN_INT 			XGPIO_IR_CH1_MASK
 #define TMR_LOAD			0xF8000000
 
-#define ARM1_STARTADR 0xFFFFFFF0
-#define ARM1_BASEADDR 0x10080000
 
 XGpio LEDInst, BTNInst;
 XScuGic INTCInst;
@@ -48,7 +50,7 @@ XTmrCtr TMRInst;
 static int btn_value;
 static int tmr_count;
 int recordStatus;
-#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+
 
 
 volatile bool TIMER_INTR_FLG;
@@ -115,12 +117,14 @@ void TMR_Intr_Handler(void *data)
 	}
 }
 void writeGameScreen(int* baseAddr, int playerOnePaddleLoc, int playerTwoPaddleLoc, int ballLocX, int ballLocY){
-	for (int i=0;i<SCREEN_HIGHT;i++){
+	for (int i=0;i<SCREEN_HEIGHT;i++){
 				for(int j=0; j<SCREEN_WIDTH;j++){
-					if(i>playerOnePaddleLoc && i<playerOnePaddleLoc+PADDLE_HEIGHT && j>50 && j < 50+PADDLE_WIDTH){
+					if(i<4 || i>SCREEN_HEIGHT-4){
+						baseAddr[i*SCREEN_WIDTH+j] = WHITE;
+					}else if(i>playerOnePaddleLoc && i<playerOnePaddleLoc+PADDLE_HEIGHT && j>50 && j < 50+PADDLE_WIDTH){
 						baseAddr[i*SCREEN_WIDTH+j]= WHITE;
 					}else if(i>playerTwoPaddleLoc && i<playerTwoPaddleLoc+PADDLE_HEIGHT && j<1230 && j > 1230-PADDLE_WIDTH){
-						baseAddr[i*SCREEN_WIDTH+j]= WHITE;
+						baseAddr[i*SCREEN_WIDTH+j] = WHITE;
 					}else if(i>ballLocY && i<ballLocY+BALL_DIAMETER && j>ballLocX && j<ballLocX+BALL_DIAMETER){
 							baseAddr[i*SCREEN_WIDTH+j]= WHITE;
 					}else{
@@ -132,7 +136,7 @@ void writeGameScreen(int* baseAddr, int playerOnePaddleLoc, int playerTwoPaddleL
 }
 void writeBarsToScreen(int loopNum, int* baseAddr){
 	int COLOURS[]={BLACK,WHITE,RED,GREEN,BLUE};
-	for (int i=0;i<SCREEN_HIGHT;i++){
+	for (int i=0;i<SCREEN_HEIGHT;i++){
 			for(int j=0; j<SCREEN_WIDTH;j++){
 				if(j<256){
 					baseAddr[i*SCREEN_WIDTH+j]=COLOURS[loopNum%5];
@@ -157,10 +161,10 @@ int main()
 {
 	xil_printf("Entering Main in core 0\r\n");
 	int status;
-	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
+	Xil_SetTlbAttributes(0x10080000,0x14de2);
     Xil_Out32(ARM1_STARTADR, ARM1_BASEADDR);
     dmb();
-
+    sev();
 	//----------------------------------------------------
 	// INITIALIZE THE PERIPHERALS & SET DIRECTIONS OF GPIO
 	//----------------------------------------------------
@@ -200,7 +204,7 @@ int main()
 	int * image3_pointer = (int *)0x028A4010;
 	int * image4_pointer = (int *)0x0308D014;
 	int * image5_pointer = (int *)0x03876018;
-
+	Game currentGame;
 
 
 	while(1) {
@@ -211,29 +215,32 @@ int main()
 //		xil_printf("in the original while loop\n");
 		TIMER_INTR_FLG = false;
 
-		if(loop == 0){
-
-			writeGameScreen(image1_pointer, 50, 400, 200, 600);
-			memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
-		}
-		else if(loop==1){
-			writeGameScreen(image2_pointer, 300, 500, 0, 0);
-			memcpy(image_buffer_pointer, image2_pointer, NUM_BYTES_BUFFER);
-		}
-		else if(loop==2){
-			writeGameScreen(image3_pointer, 250, 550, 1200, 950);
-			memcpy(image_buffer_pointer, image3_pointer, NUM_BYTES_BUFFER);
-		}
-		else if(loop==3){
-			writeGameScreen(image4_pointer, 200, 600, 240, 300);
-			memcpy(image_buffer_pointer, image4_pointer, NUM_BYTES_BUFFER);
-		}
-		else if(loop==4){
-			writeGameScreen(image5_pointer, 600, 650, 500, 600);
-			memcpy(image_buffer_pointer, image5_pointer, NUM_BYTES_BUFFER);
-		}
-		loop++;
-		loop = loop % 5;
+		writeGameScreen(image1_pointer, currentGame.getLeftPaddleLocation(), currentGame.getRightPaddleLocation(), currentGame.getBallLocationX(), currentGame.getBallLocationY());
+		memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
+		currentGame.updateGameState();
+//		if(loop == 0){
+//
+//			writeGameScreen(image1_pointer, 50, 400, 200, 600);
+//			memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
+//		}
+//		else if(loop==1){
+//			writeGameScreen(image2_pointer, 300, 500, 0, 0);
+//			memcpy(image_buffer_pointer, image2_pointer, NUM_BYTES_BUFFER);
+//		}
+//		else if(loop==2){
+//			writeGameScreen(image3_pointer, 250, 550, 1200, 950);
+//			memcpy(image_buffer_pointer, image3_pointer, NUM_BYTES_BUFFER);
+//		}
+//		else if(loop==3){
+//			writeGameScreen(image4_pointer, 200, 600, 240, 300);
+//			memcpy(image_buffer_pointer, image4_pointer, NUM_BYTES_BUFFER);
+//		}
+//		else if(loop==4){
+//			writeGameScreen(image5_pointer, 600, 650, 500, 600);
+//			memcpy(image_buffer_pointer, image5_pointer, NUM_BYTES_BUFFER);
+//		}
+//		loop++;
+//		loop = loop % 5;
 	}
 	return 0;
 }
