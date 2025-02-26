@@ -35,11 +35,8 @@ void menu();
 void audio_stream();
 unsigned char gpio_init();
 int lab_test();
-int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
-void BTN_Intr_Handler(void *InstancePtr);
 void recordAudio();
 void playAudio();
-int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
@@ -48,7 +45,6 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 #define BUTTON_SWITCH_BASE XPAR_GPIO_1_BASEADDR
 #define LED_BASE XPAR_LED_CONTROLLER_0_S00_AXI_BASEADDR
 #define BUTTON_SWITCH_ID XPAR_GPIO_1_DEVICE_ID
-#define INTC_DEVICE_ID XPAR_PS7_SCUGIC_0_DEVICE_ID
 
 /* ---------------------------------------------------------------------------- *
  * 							Define GPIO Channels								*
@@ -64,15 +60,11 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 /* ---------------------------------------------------------------------------- *
  * 							Global Variables									*
  * ---------------------------------------------------------------------------- */
-#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
 #define BUFFER_SIZE 8000
 XIicPs Iic;
-XGpio Gpio;        // Gpio instance for buttons and switches
-XScuGic INTCInst;  // Interrupt Controller instance
+XGpio Gpio;  // Gpio instance for buttons and switches
 int recordStatus;
-int prevStatus;
 int btn_value;
-int interruptInit;
 
 #define BTN_INT XGPIO_IR_CH1_MASK
 

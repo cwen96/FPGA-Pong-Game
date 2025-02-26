@@ -53,9 +53,6 @@ unsigned char gpio_init() {
     // Set all buttons direction to inputs
     XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
 
-    interruptInit = 0;
-    prevStatus = 0;
-
     return XST_SUCCESS;
 }
 
@@ -78,8 +75,8 @@ would be good if at least one of you could use this as the basis of for one of y
 project milestones to help you succeed with your final project deliverables.
  * ---------------------------------------------------------------------------- */
 int lab_test() {
-    u32 audio_buffer_left[BUFFER_SIZE*sizeof(u32)];
-    u32 audio_buffer_right[BUFFER_SIZE*sizeof(u32)];
+    u32 audio_buffer_left[BUFFER_SIZE * sizeof(u32)];
+    u32 audio_buffer_right[BUFFER_SIZE * sizeof(u32)];
     int buffer_index = 1;
     u32 in_left;
     u32 in_right;
@@ -87,15 +84,6 @@ int lab_test() {
     int print_play_status = 0;
     int print_standby_status = 0;
     int i = 0;
-
-    if (interruptInit == 0) {
-        // Initialize interrupt controller
-        int status = IntcInitFunction(INTC_DEVICE_ID, &Gpio);
-        if (status != XST_SUCCESS) {
-            return XST_FAILURE;
-        }
-        interruptInit = 1;
-    }
 
     /* If input from the terminal is 'q', then return to menu.
      * Else, continue. */
@@ -128,11 +116,11 @@ int lab_test() {
             }
             // Write audio output to codec
             if (i % 3 == 0) {
-            	usleep(1);
+                usleep(1);
             }
 
-			Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
-			Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
+            Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
+            Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
 
             i++;
         }
@@ -155,79 +143,4 @@ int lab_test() {
         lab_test();
     }
     return XST_SUCCESS;
-}
-
-int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
-    XScuGic_Config *IntcConfig;
-    int status;
-
-    // Interrupt controller initialisation
-    IntcConfig = XScuGic_LookupConfig(DeviceId);
-    status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
-    if (status != XST_SUCCESS) return XST_FAILURE;
-
-    // Call to interrupt setup
-    status = InterruptSystemSetup(&INTCInst);
-    if (status != XST_SUCCESS) return XST_FAILURE;
-
-    // Connect GPIO interrupt to handler
-    status = XScuGic_Connect(&INTCInst,
-                             INTC_GPIO_INTERRUPT_ID,
-                             (Xil_ExceptionHandler)BTN_Intr_Handler,
-                             (void *)GpioInstancePtr);
-    if (status != XST_SUCCESS) return XST_FAILURE;
-
-    // Enable GPIO interrupts interrupt
-    XGpio_InterruptEnable(GpioInstancePtr, 1);
-    XGpio_InterruptGlobalEnable(GpioInstancePtr);
-
-    // Enable GPIO and timer interrupts in the controller
-    XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
-
-    return XST_SUCCESS;
-}
-
-//----------------------------------------------------
-// INTERRUPT INITIAL SETUP FUNCTIONS
-//----------------------------------------------------
-int InterruptSystemSetup(XScuGic *XScuGicInstancePtr) {
-    // Enable interrupt
-    XGpio_InterruptEnable(&Gpio, BTN_INT);
-    XGpio_InterruptGlobalEnable(&Gpio);
-
-    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-                                 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
-                                 XScuGicInstancePtr);
-    Xil_ExceptionEnable();
-
-    return XST_SUCCESS;
-}
-
-//----------------------------------------------------
-// INTERRUPT HANDLER FUNCTIONS
-// Called by the timer, button interrupt, performs
-// audio recording and playback
-//----------------------------------------------------
-void BTN_Intr_Handler(void *InstancePtr) {
-    // Disable GPIO interrupts
-    XGpio_InterruptDisable(&Gpio, BTN_INT);
-    // Ignore additional button presses
-    if ((XGpio_InterruptGetStatus(&Gpio) & BTN_INT) !=
-        BTN_INT) {
-        return;
-    }
-    btn_value = XGpio_DiscreteRead(&Gpio, 1);
-
-    // Start recording when bottom button is pressed
-    if (btn_value == 2) {
-        recordStatus = 1;
-    } else if (btn_value == 1) {  // Play recording when middle button is pressed
-        recordStatus = 2;
-    } else if (btn_value == 4) { // Standby when left button is pressed
-    	recordStatus = 3;
-    }
-
-    (void)XGpio_InterruptClear(&Gpio, BTN_INT);
-    // Enable GPIO interrupts
-    XGpio_InterruptEnable(&Gpio, BTN_INT);
 }
