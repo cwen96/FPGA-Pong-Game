@@ -1,4 +1,4 @@
-13:53:43 **** Incremental Build of configuration Debug for project vga ****
+14:12:07 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -17,9 +17,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size vga.elf  |tee "vga.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  48356	   3008	  22752	  74116	  12184	vga.elf
+  48420	   3008	  22752	  74180	  121c4	vga.elf
 'Finished building: vga.elf.size'
 ' '
 
-13:53:45 Build Finished (took 1s.433ms)
+14:12:08 Build Finished (took 1s.439ms)
 

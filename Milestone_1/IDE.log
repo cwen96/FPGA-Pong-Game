@@ -9016,3 +9016,412 @@ Reason: No Platforms Found.
 13:17:25 INFO  : Platform repository initialization has completed.
 13:17:25 INFO  : Successfully done query RDI_DATADIR 
 13:17:25 INFO  : Registering command handlers for Vitis TCF services
+13:18:07 INFO  : Result from executing command 'getProjects': MulticorePlatform
+13:18:07 INFO  : Result from executing command 'getPlatforms': 
+13:18:07 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:18:13 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:21:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:21:43 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:21:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:52 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:21:52 INFO  : 'jtag frequency' command is executed.
+13:21:52 INFO  : Context for 'APU' is selected.
+13:21:52 INFO  : System reset is completed.
+13:21:55 INFO  : 'after 3000' command is executed.
+13:21:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:21:57 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:21:57 INFO  : Context for 'APU' is selected.
+13:21:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:21:58 INFO  : 'configparams force-mem-access 1' command is executed.
+13:21:58 INFO  : Context for 'APU' is selected.
+13:21:58 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:21:58 INFO  : 'ps7_init' command is executed.
+13:21:58 INFO  : 'ps7_post_config' command is executed.
+13:21:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:58 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:21:58 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:21:58 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:21:58 INFO  : 'configparams force-mem-access 0' command is executed.
+13:21:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:21:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:58 INFO  : 'con' command is executed.
+13:21:58 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:21:58 INFO  : 'con' command is executed.
+13:21:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:21:58 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+13:22:53 INFO  : Disconnected from the channel tcfchan#3.
+13:23:41 INFO  : Result from executing command 'getProjects': MulticorePlatform
+13:23:41 INFO  : Result from executing command 'getPlatforms': MulticorePlatform|C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm
+13:23:41 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:23:42 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:24:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:24:23 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:24:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:31 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:24:31 INFO  : 'jtag frequency' command is executed.
+13:24:31 INFO  : Context for 'APU' is selected.
+13:24:31 INFO  : System reset is completed.
+13:24:34 INFO  : 'after 3000' command is executed.
+13:24:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:24:37 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:24:37 INFO  : Context for 'APU' is selected.
+13:24:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:24:37 INFO  : 'configparams force-mem-access 1' command is executed.
+13:24:37 INFO  : Context for 'APU' is selected.
+13:24:37 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:24:37 INFO  : 'ps7_init' command is executed.
+13:24:37 INFO  : 'ps7_post_config' command is executed.
+13:24:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:24:37 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:24:37 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:24:37 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:24:37 INFO  : 'configparams force-mem-access 0' command is executed.
+13:24:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:24:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:24:37 INFO  : 'con' command is executed.
+13:24:37 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:24:37 INFO  : 'con' command is executed.
+13:24:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:24:37 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+13:27:00 INFO  : Disconnected from the channel tcfchan#7.
+13:27:06 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:27:07 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:27:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:27:31 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:27:31 INFO  : 'jtag frequency' command is executed.
+13:27:31 INFO  : Context for 'APU' is selected.
+13:27:31 INFO  : System reset is completed.
+13:27:34 INFO  : 'after 3000' command is executed.
+13:27:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:27:37 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:27:37 INFO  : Context for 'APU' is selected.
+13:27:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:27:37 INFO  : 'configparams force-mem-access 1' command is executed.
+13:27:37 INFO  : Context for 'APU' is selected.
+13:27:37 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:27:37 INFO  : 'ps7_init' command is executed.
+13:27:37 INFO  : 'ps7_post_config' command is executed.
+13:27:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:27:37 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:27:37 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:27:38 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:27:38 INFO  : 'configparams force-mem-access 0' command is executed.
+13:27:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:27:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:27:38 INFO  : 'con' command is executed.
+13:27:38 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:27:38 INFO  : 'con' command is executed.
+13:27:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:27:38 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+13:31:18 INFO  : Disconnected from the channel tcfchan#9.
+13:31:22 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:31:23 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:31:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:31:50 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:31:50 INFO  : 'jtag frequency' command is executed.
+13:31:50 INFO  : Context for 'APU' is selected.
+13:31:50 INFO  : System reset is completed.
+13:31:53 INFO  : 'after 3000' command is executed.
+13:31:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:31:56 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:31:56 INFO  : Context for 'APU' is selected.
+13:31:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:31:56 INFO  : 'configparams force-mem-access 1' command is executed.
+13:31:56 INFO  : Context for 'APU' is selected.
+13:31:56 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:31:56 INFO  : 'ps7_init' command is executed.
+13:31:56 INFO  : 'ps7_post_config' command is executed.
+13:31:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:56 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:31:56 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:31:56 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:31:56 INFO  : 'configparams force-mem-access 0' command is executed.
+13:31:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:31:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:57 INFO  : 'con' command is executed.
+13:31:57 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:31:57 INFO  : 'con' command is executed.
+13:31:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:31:57 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+13:34:06 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:34:07 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:35:17 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:35:17 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:35:32 INFO  : Disconnected from the channel tcfchan#11.
+13:35:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:32 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:35:32 INFO  : 'jtag frequency' command is executed.
+13:35:32 INFO  : Context for 'APU' is selected.
+13:35:32 INFO  : System reset is completed.
+13:35:35 INFO  : 'after 3000' command is executed.
+13:35:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:35:37 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:35:37 INFO  : Context for 'APU' is selected.
+13:35:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:35:37 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:37 INFO  : Context for 'APU' is selected.
+13:35:37 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:35:38 INFO  : 'ps7_init' command is executed.
+13:35:38 INFO  : 'ps7_post_config' command is executed.
+13:35:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:38 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:38 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:35:38 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:35:38 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:38 INFO  : 'con' command is executed.
+13:35:38 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:35:38 INFO  : 'con' command is executed.
+13:35:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:35:38 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+13:50:25 INFO  : Result from executing command 'getProjects': MulticorePlatform
+13:50:25 INFO  : Result from executing command 'getPlatforms': MulticorePlatform|C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm
+13:50:25 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:50:26 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:50:50 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:50:51 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:51:20 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:51:21 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:51:41 INFO  : Disconnected from the channel tcfchan#14.
+13:51:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:51:41 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:51:42 INFO  : 'jtag frequency' command is executed.
+13:51:42 INFO  : Context for 'APU' is selected.
+13:51:42 INFO  : System reset is completed.
+13:51:45 INFO  : 'after 3000' command is executed.
+13:51:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:51:47 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:51:47 INFO  : Context for 'APU' is selected.
+13:51:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:51:47 INFO  : 'configparams force-mem-access 1' command is executed.
+13:51:47 INFO  : Context for 'APU' is selected.
+13:51:47 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:51:47 INFO  : 'ps7_init' command is executed.
+13:51:47 INFO  : 'ps7_post_config' command is executed.
+13:51:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:51:47 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:51:48 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:51:48 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:51:48 INFO  : 'configparams force-mem-access 0' command is executed.
+13:51:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:51:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:51:48 INFO  : 'con' command is executed.
+13:51:48 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:51:48 INFO  : 'con' command is executed.
+13:51:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:51:48 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+13:53:40 INFO  : Disconnected from the channel tcfchan#19.
+13:53:43 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:53:43 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:54:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:54:04 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:54:04 INFO  : 'jtag frequency' command is executed.
+13:54:04 INFO  : Context for 'APU' is selected.
+13:54:04 INFO  : System reset is completed.
+13:54:07 INFO  : 'after 3000' command is executed.
+13:54:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:54:10 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:54:10 INFO  : Context for 'APU' is selected.
+13:54:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:54:10 INFO  : 'configparams force-mem-access 1' command is executed.
+13:54:10 INFO  : Context for 'APU' is selected.
+13:54:10 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl' is done.
+13:54:10 INFO  : 'ps7_init' command is executed.
+13:54:10 INFO  : 'ps7_post_config' command is executed.
+13:54:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:54:10 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:54:10 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:54:10 INFO  : The application 'C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:54:10 INFO  : 'configparams force-mem-access 0' command is executed.
+13:54:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/ensc-452/Milestone_1/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:54:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:54:10 INFO  : 'con' command is executed.
+13:54:10 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:54:10 INFO  : 'con' command is executed.
+13:54:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:54:10 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\ensc-452\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'

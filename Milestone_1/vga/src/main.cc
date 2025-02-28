@@ -41,7 +41,7 @@
 #define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 
 #define BTN_INT XGPIO_IR_CH1_MASK
-#define TMR_LOAD 0xF8000000
+#define TMR_LOAD 0xFFFF0000
 
 XGpio LEDInst, BTNInst;
 XScuGic INTCInst;
@@ -109,11 +109,11 @@ void TMR_Intr_Handler(void *data) {
     if (XTmrCtr_IsExpired(&TMRInst, 0)) {
         // Once timer has expired 3 times, stop, increment counter
         // reset timer and start running again
-        if (tmr_count == 3) {
+        if (tmr_count == 1) {
             XTmrCtr_Stop(&TMRInst, 0);
             tmr_count = 0;
             // xil_printf("interrupt called");
-            // TIMER_INTR_FLG=true;
+            //TIMER_INTR_FLG=true;
             XTmrCtr_Reset(&TMRInst, 0);
             XTmrCtr_Start(&TMRInst, 0);
 
