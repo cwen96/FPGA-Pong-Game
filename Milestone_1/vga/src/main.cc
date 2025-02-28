@@ -197,14 +197,14 @@ int main()
 
 	XTmrCtr_Start(&TMRInst, 0);
 
-	int loop = 0;
+	//int loop = 0;
 	int * image_buffer_pointer = (int *)0x00900000;
 	int * image1_pointer = (int *)0x018D2008;
-	int * image2_pointer = (int *)0x020BB00C;
-	int * image3_pointer = (int *)0x028A4010;
-	int * image4_pointer = (int *)0x0308D014;
-	int * image5_pointer = (int *)0x03876018;
-	Game currentGame;
+//	int * image2_pointer = (int *)0x020BB00C;
+//	int * image3_pointer = (int *)0x028A4010;
+//	int * image4_pointer = (int *)0x0308D014;
+//	int * image5_pointer = (int *)0x03876018;
+	Game currentGame(0);
 
 
 	while(1) {

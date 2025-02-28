@@ -1,12 +1,12 @@
 #ifndef GAME_H
 #define GAME_H
-
+#include "xil_printf.h"
 #define SCREEN_HEIGHT 1024
 #define SCREEN_WIDTH 1280
 #define BALL_DIAMETER 40
 #define PADDLE_WIDTH 40
 #define PADDLE_HEIGHT 250
-#define RIGHT_PADDLE_SURFACE
+#define PADDLE_GAP_FROM_EDGE 50
 
 class Game{
 private:
@@ -34,12 +34,7 @@ public:
 
 	int getRightPaddleLocation(){ return rightPaddleLocation; }
 
-	void updateGameState(){
-		checkWallCollision();
-		checkPaddleCollision();
-		ballLocationX = ballLocationX+ballXVelocity;
-		ballLocationY = ballLocationY+ballYVelocity;
-	}
+	void updateGameState();
 
 
 };
