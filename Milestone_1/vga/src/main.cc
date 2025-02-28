@@ -84,12 +84,16 @@ void BTN_Intr_Handler(void *InstancePtr) {
     // Right button (val == 16): move right paddle (player 2) down (+1)
     if (btn_value == 4) {
         PLAYER_1_MOVEMENT = -1;  // move player 1 up
+        TIMER_INTR_FLG = false;
     } else if (btn_value == 2) {
         PLAYER_1_MOVEMENT = 1;  // move player 1 down
+        TIMER_INTR_FLG = false;
     } else if (btn_value == 8) {
         PLAYER_2_MOVEMENT = -1;  // move player 2 up
+        TIMER_INTR_FLG = false;
     } else if (btn_value == 16) {
         PLAYER_2_MOVEMENT = 1;  // move player 2 down
+        TIMER_INTR_FLG = false;
     } else {
         // If none of these buttons are pressed, stop paddle movement.
         PLAYER_1_MOVEMENT = 0;
@@ -212,7 +216,7 @@ int main() {
 
         // Process paddle movement from buttons
         currentGame.paddleMovementHandler();
-		
+
         currentGame.updateGameState();
         writeGameScreen(image1_pointer, currentGame.getLeftPaddleLocation(), currentGame.getRightPaddleLocation(), currentGame.getBallLocationX(), currentGame.getBallLocationY());
 
