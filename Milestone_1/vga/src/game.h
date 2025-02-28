@@ -7,8 +7,9 @@
 #define PADDLE_WIDTH 40
 #define PADDLE_HEIGHT 250
 #define PADDLE_GAP_FROM_EDGE 50
-#define PLAYER_1_MOVEMENT (*(volatile unsigned long *)(0xFFFF1000))
-#define PLAYER_2_MOVEMENT (*(volatile unsigned long *)(0xFFFF2000))
+#define PLAYER_1_VELOCITY (*(volatile unsigned long *)(0xFFFF1000))
+#define PLAYER_2_VELOCITY (*(volatile unsigned long *)(0xFFFF2000))
+#define PADDLE_SPEED 10
 
 class Game {
    private:

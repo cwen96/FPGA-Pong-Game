@@ -9004,3 +9004,15 @@ con
 
 11:53:08 INFO  : Launch script is exported to file 'C:\Users\dumpherv\Desktop\Milestone_1\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
 12:00:52 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:17:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\cjw18\Desktop\ensc-452\Milestone_1\temp_xsdb_launch_script.tcl
+13:17:21 INFO  : XSCT server has started successfully.
+13:17:21 INFO  : plnx-install-location is set to ''
+13:17:21 INFO  : Successfully done setting XSCT server connection channel  
+13:17:21 INFO  : Successfully done setting workspace for the tool. 
+13:17:25 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+13:17:25 INFO  : Platform repository initialization has completed.
+13:17:25 INFO  : Successfully done query RDI_DATADIR 
+13:17:25 INFO  : Registering command handlers for Vitis TCF services

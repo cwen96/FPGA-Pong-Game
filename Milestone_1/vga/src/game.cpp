@@ -140,10 +140,10 @@ void Game::movePaddle(int player, int velocity) {
 }
 
 void Game::paddleMovementHandler() {
-    if (PLAYER_1_MOVEMENT != 0) {
-        movePaddle(0, 1);
+    if (PLAYER_1_VELOCITY != 0) {
+        movePaddle(0, PLAYER_1_VELOCITY);
     }
-    if (PLAYER_2_MOVEMENT != 0) {
-        movePaddle(1, 1);
+    if (PLAYER_2_VELOCITY != 0) {
+        movePaddle(1, PLAYER_2_VELOCITY);
     }
 }

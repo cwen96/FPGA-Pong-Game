@@ -72,3 +72,8 @@ bsp reload
 platform generate -domains 
 platform clean
 platform generate
+platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 
+platform clean
+platform generate
+platform active {MulticorePlatform}
+platform generate -domains 
