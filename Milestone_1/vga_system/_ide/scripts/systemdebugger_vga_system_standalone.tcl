@@ -27,4 +27,7 @@ dow C:/Users/dumpherv/Desktop/Milestone_1/vga/Debug/vga.elf
 targets -set -nocase -filter {name =~ "*A9*#1"}
 dow C:/Users/dumpherv/Desktop/Milestone_1/audio/Debug/audio.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con

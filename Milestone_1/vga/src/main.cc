@@ -214,10 +214,10 @@ int main()
 
 //		xil_printf("in the original while loop\n");
 		TIMER_INTR_FLG = false;
-
-		writeGameScreen(image1_pointer, currentGame.getLeftPaddleLocation(), currentGame.getRightPaddleLocation(), currentGame.getBallLocationX(), currentGame.getBallLocationY());
 		memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
 		currentGame.updateGameState();
+		writeGameScreen(image1_pointer, currentGame.getLeftPaddleLocation(), currentGame.getRightPaddleLocation(), currentGame.getBallLocationX(), currentGame.getBallLocationY());
+
 //		if(loop == 0){
 //
 //			writeGameScreen(image1_pointer, 50, 400, 200, 600);

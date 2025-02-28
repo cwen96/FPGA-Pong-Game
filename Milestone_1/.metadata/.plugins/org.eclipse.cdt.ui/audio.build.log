@@ -1,25 +1,10 @@
-11:49:16 **** Incremental Build of configuration Debug for project audio ****
+17:15:41 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/ip_functions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
-'Finished building: ../src/ip_functions.c'
-' '
-'Building target: audio.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/dumpherv/Desktop/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bsplib/lib -o "audio.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: audio.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size audio.elf  |tee "audio.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  33696	   1192	 559240	 594128	  910d0	audio.elf
-'Finished building: audio.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-11:49:18 Build Finished (took 1s.582ms)
+17:15:42 Build Finished (took 453ms)
 

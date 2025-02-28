@@ -1,0 +1,74 @@
+#include "game.h"
+
+Game::Game(int mode){
+	score[0]=0;
+	score[1]=0;
+	ballLocationX = 620;
+	ballLocationY = 640;
+	ballXVelocity = 20;
+	ballYVelocity = 0;
+	leftPaddleLocation = 400;
+	rightPaddleLocation = 400;
+	if(mode == 1){
+		//initialize computer player
+	}
+}
+
+void Game::resetBall(){
+	ballLocationX = 620;
+	ballLocationY = 492;
+}
+
+void Game::awardPoint(int player){
+	score[player]++;
+	//check victory condition
+	if(score[player] == 11){
+		//display Player x wins to screen, record and end game
+	}
+}
+
+void Game::checkWallCollision(){//check if on next frame ball will contact wall, then handle if so
+	if(ballYVelocity>0){//ball velocity is positive i.e moving down
+		// If the velocity of the ball is greater than the distance from the bottom of the ball to the bottom of the screen, collision next frame
+		if(SCREEN_HEIGHT-BALL_DIAMETER-ballLocationY < ballYVelocity){
+			ballYVelocity = ballYVelocity*(-1);
+			//TODO:write collision flag to shared memory for sound to play
+		}
+	}else{
+		//ball velocity is negative. If |ball velocity| > distance of ball to wall, collision next frame
+		if((-1)*ballYVelocity > ballLocationY) {
+			ballYVelocity = ballYVelocity*(-1);
+			//TODO:write collision flag to shared memory for sound to play
+		}
+	}
+}
+
+void Game::checkPaddleCollision(){
+	if(ballXVelocity > 0){//moving right, check collision with right paddle
+		//ball velocity means that in the next frame the ball will contact the paddle
+		if(ballXVelocity > (SCREEN_WIDTH-PADDLE_WIDTH-PADDLE_GAP_FROM_EDGE-(ballLocationX+BALL_DIAMETER))){
+			if(ballLocationY > rightPaddleLocation-BALL_DIAMETER && ballLocationY < rightPaddleLocation+PADDLE_HEIGHT){
+				ballXVelocity= (ballXVelocity+2)*(-1);
+				//when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
+				//as if the paddle were actually a convex surface
+				ballYVelocity=(ballLocationY+(BALL_DIAMETER/2)-(rightPaddleLocation+(PADDLE_HEIGHT/2)))/3;
+			}
+		}
+	}else{
+		if(ballXVelocity < ((PADDLE_WIDTH+PADDLE_GAP_FROM_EDGE)-ballLocationX)){//ball velocity is higher than distance to paddle i.e. will contact in next frame
+			xil_printf("collision next frame\r\n");
+			if(ballLocationY > leftPaddleLocation-BALL_DIAMETER && ballLocationY < leftPaddleLocation+PADDLE_HEIGHT){
+				ballXVelocity = (ballXVelocity+2)*(-1);//increase x velocity and invert direction
+
+				//TODO:adjust Y velocity depending on where the ball contacted paddle
+			}
+		}
+	}
+}
+void Game::updateGameState(){
+		checkWallCollision();
+		checkPaddleCollision();
+		ballLocationX = ballLocationX+ballXVelocity;
+		ballLocationY = ballLocationY+ballYVelocity;
+
+	}

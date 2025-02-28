@@ -62,3 +62,13 @@ domain active {ps7_cortex9_1}
 bsp reload
 bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
 bsp reload
+platform clean
+platform generate
+platform active {MulticorePlatform}
+domain active {ps7_cortex9_1}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform generate -domains 
+platform clean
+platform generate

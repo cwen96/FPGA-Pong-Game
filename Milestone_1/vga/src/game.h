@@ -8,6 +8,8 @@
 #define PADDLE_HEIGHT 250
 #define PADDLE_GAP_FROM_EDGE 50
 
+
+
 class Game{
 private:
 	int ballLocationX;
@@ -17,11 +19,15 @@ private:
 	int score[2];
 	int ballXVelocity;
 	int ballYVelocity;
+	int rightPaddleVelocity;
+	int leftPaddleVelocity;
+	int checkPoint();
 	void awardPoint(int player);
 	void resetBall();
 	void checkWallCollision();
 	void checkPaddleCollision();
 	bool checkScoreCondition();
+	int checkWinner();
 
 public:
 	Game(int mode);
