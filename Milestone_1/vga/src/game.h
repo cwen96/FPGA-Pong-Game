@@ -7,41 +7,43 @@
 #define PADDLE_WIDTH 40
 #define PADDLE_HEIGHT 250
 #define PADDLE_GAP_FROM_EDGE 50
+#define PLAYER_1_MOVEMENT (*(volatile unsigned long *)(0xFFFF1000))
+#define PLAYER_2_MOVEMENT (*(volatile unsigned long *)(0xFFFF2000))
 
+class Game {
+   private:
+    int ballLocationX;
+    int ballLocationY;
+    int leftPaddleLocation;
+    int rightPaddleLocation;
+    int score[2];
+    int ballXVelocity;
+    int ballYVelocity;
+    int rightPaddleVelocity;
+    int leftPaddleVelocity;
+    int checkPoint();
+    void awardPoint(int player);
+    void resetBall();
+    void checkWallCollision();
+    void checkPaddleCollision();
+    bool checkScoreCondition();
+    int checkWinner();
 
+   public:
+    Game(int mode);
 
-class Game{
-private:
-	int ballLocationX;
-	int ballLocationY;
-	int leftPaddleLocation;
-	int rightPaddleLocation;
-	int score[2];
-	int ballXVelocity;
-	int ballYVelocity;
-	int rightPaddleVelocity;
-	int leftPaddleVelocity;
-	int checkPoint();
-	void awardPoint(int player);
-	void resetBall();
-	void checkWallCollision();
-	void checkPaddleCollision();
-	bool checkScoreCondition();
-	int checkWinner();
+    int getBallLocationX() const { return ballLocationX; }
 
-public:
-	Game(int mode);
+    int getBallLocationY() { return ballLocationY; }
 
-	int getBallLocationX()const{ return ballLocationX; }
+    int getLeftPaddleLocation() { return leftPaddleLocation; }
 
-	int getBallLocationY(){ return ballLocationY; }
+    int getRightPaddleLocation() { return rightPaddleLocation; }
 
-	int getLeftPaddleLocation(){ return leftPaddleLocation; }
+    void updateGameState();
 
-	int getRightPaddleLocation(){ return rightPaddleLocation; }
+    void movePaddle(int player, int velocity);
 
-	void updateGameState();
-
-
+    void paddleMovementHandler();
 };
 #endif

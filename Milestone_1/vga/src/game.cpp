@@ -1,129 +1,149 @@
 #include "game.h"
 
-Game::Game(int mode){
-	score[0]=0;
-	score[1]=0;
-	ballLocationX = 500;
-	ballLocationY = 500;
-	ballXVelocity = -20;
-	ballYVelocity = 0;
-	leftPaddleLocation = 400;
-	rightPaddleLocation = 400;
-	rightPaddleVelocity = 0;
-	leftPaddleVelocity = 0;
-	if(mode == 1){
-		//initialize computer player
-	}
+Game::Game(int mode) {
+    score[0] = 0;
+    score[1] = 0;
+    ballLocationX = 500;
+    ballLocationY = 500;
+    ballXVelocity = -20;
+    ballYVelocity = 0;
+    leftPaddleLocation = 400;
+    rightPaddleLocation = 400;
+    rightPaddleVelocity = 0;
+    leftPaddleVelocity = 0;
+    if (mode == 1) {
+        // initialize computer player
+    }
 }
 
-int Game::checkWinner(){
-	if(score[0]==11){
-		xil_printf("player 1 wins!\n\r");
-	}else if(score[1]==11){
-		xil_printf("player 2 wins!\n\r");
-	}
-	//TODO:end the game
-}
-int Game::checkPoint(){
-	if(ballLocationX > 1300){
-		return 1;
-	}else if(ballLocationX < -50){
-		return 0;
-	}else{
-		return -1;
-	}
-}
-void Game::resetBall(){
-	ballLocationX = 620;
-	ballLocationY = 492;
-	ballXVelocity = 10;
-	ballYVelocity = 0;
+int Game::checkWinner() {
+    if (score[0] == 11) {
+        xil_printf("player 1 wins!\n\r");
+    } else if (score[1] == 11) {
+        xil_printf("player 2 wins!\n\r");
+    }
+    // TODO:end the game
 }
 
-void Game::awardPoint(int player){
-	score[player]++;
-	//check victory condition
-	if(score[player] == 11){
-		//display Player x wins to screen, record and end game
-	}
+int Game::checkPoint() {
+    if (ballLocationX > 1300) {
+        return 1;
+    } else if (ballLocationX < -50) {
+        return 0;
+    } else {
+        return -1;
+    }
+}
+void Game::resetBall() {
+    ballLocationX = 620;
+    ballLocationY = 492;
+    ballXVelocity = 10;
+    ballYVelocity = 0;
 }
 
-void Game::checkWallCollision(){//check if on next frame ball will contact wall, then handle if so
-	if(ballYVelocity>0){//ball velocity is positive i.e moving down
-		// If the velocity of the ball is greater than the distance from the bottom of the ball to the bottom of the screen, collision next frame
-		if(SCREEN_HEIGHT-BALL_DIAMETER-ballLocationY < ballYVelocity){
-			ballYVelocity = ballYVelocity*(-1);
-			//TODO:write collision flag to shared memory for sound to play
-		}
-	}else{
-		//ball velocity is negative. If |ball velocity| > distance of ball to wall, collision next frame
-		if((-1)*ballYVelocity > ballLocationY) {
-			ballYVelocity = ballYVelocity*(-1);
-			//TODO:write collision flag to shared memory for sound to play
-		}
-	}
+void Game::awardPoint(int player) {
+    score[player]++;
+    // check victory condition
+    if (score[player] == 11) {
+        // display Player x wins to screen, record and end game
+    }
 }
 
-void Game::checkPaddleCollision(){//TODO:fix collision for top and bottom of paddles
-
-	if(ballXVelocity >= 0){//moving right, check collision with right paddle
-		//check for collision with top of paddle
-		//check if right side of ball has passed the face of the paddle
-		if(ballLocationX + BALL_DIAMETER > (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH) ){
-			//if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
-			if(ballYVelocity > 0 && (rightPaddleLocation - (ballLocationY + BALL_DIAMETER)) < (ballYVelocity-rightPaddleVelocity) && ballLocationY+BALL_DIAMETER <= rightPaddleLocation){
-				ballYVelocity = ballYVelocity*(-1);
-			}
-			//moving up and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
-			else if (ballYVelocity < 0 && (rightPaddleLocation + PADDLE_HEIGHT - ballLocationY) < (ballYVelocity*(-1)+rightPaddleVelocity) && ballLocationY <= rightPaddleLocation+PADDLE_HEIGHT){
-				ballYVelocity = ballYVelocity*(-1);
-			}
-			//ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle
-		}else if(ballXVelocity >= (SCREEN_WIDTH - PADDLE_WIDTH - PADDLE_GAP_FROM_EDGE-(ballLocationX + BALL_DIAMETER))){
-			//xil_printf("passing return threshold\r\n");
-			if( (ballLocationY+BALL_DIAMETER > rightPaddleLocation) && (ballLocationY < rightPaddleLocation + PADDLE_HEIGHT) ){
-				//xil_printf("returning ball\r\n");
-				ballXVelocity = (ballXVelocity+2)*(-1);
-				//when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
-				//(with the paddle simulating a convex surface), as well as the current velocity of the ball and the speed of the paddle.
-				ballYVelocity+=((rightPaddleVelocity/4) + (ballLocationY+(BALL_DIAMETER/2) - (rightPaddleLocation+(PADDLE_HEIGHT/2)))/5);
-				//TODO:set flag to play sound for collision
-			}
-		}
-	//ball moving left, check for collision with left paddle
-	}else{
-		if(ballLocationX < (PADDLE_GAP_FROM_EDGE + PADDLE_WIDTH) ){
-					xil_printf("past first if left side \r\n");
-					//if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
-					if(ballYVelocity > 0 && (leftPaddleLocation - (ballLocationY + BALL_DIAMETER)) < (ballYVelocity-leftPaddleVelocity) && ballLocationY+BALL_DIAMETER <= leftPaddleLocation){
-						ballYVelocity = ballYVelocity*(-1);
-					}
-					//moving up and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
-					else if (ballYVelocity < 0 && (leftPaddleLocation + PADDLE_HEIGHT - ballLocationY) < (ballYVelocity*(-1)+leftPaddleVelocity) && ballLocationY <= leftPaddleLocation+PADDLE_HEIGHT){
-						ballYVelocity = ballYVelocity*(-1);
-					}
-		//ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle
-		}else if(ballXVelocity*(-1) >= ( ballLocationX - (PADDLE_WIDTH + PADDLE_GAP_FROM_EDGE))){//ball velocity is higher than distance to paddle i.e. will contact in next frame
-			xil_printf("collision left next frame\r\n");
-			if(ballLocationY > (leftPaddleLocation-BALL_DIAMETER) && ballLocationY < leftPaddleLocation+PADDLE_HEIGHT){
-				ballXVelocity = (ballXVelocity-2)*(-1);//increase x velocity and invert direction
-				ballYVelocity += ((leftPaddleVelocity/4) + (ballLocationY+(BALL_DIAMETER/2) - (leftPaddleLocation+(PADDLE_HEIGHT/2)))/5);
-				//TODO:set flag to play sound for collision
-			}
-		}
-	}
+void Game::checkWallCollision() {  // check if on next frame ball will contact wall, then handle if so
+    if (ballYVelocity > 0) {       // ball velocity is positive i.e moving down
+        // If the velocity of the ball is greater than the distance from the bottom of the ball to the bottom of the screen, collision next frame
+        if (SCREEN_HEIGHT - BALL_DIAMETER - ballLocationY < ballYVelocity) {
+            ballYVelocity = ballYVelocity * (-1);
+            // TODO:write collision flag to shared memory for sound to play
+        }
+    } else {
+        // ball velocity is negative. If |ball velocity| > distance of ball to wall, collision next frame
+        if ((-1) * ballYVelocity > ballLocationY) {
+            ballYVelocity = ballYVelocity * (-1);
+            // TODO:write collision flag to shared memory for sound to play
+        }
+    }
 }
-void Game::updateGameState(){
-		checkWallCollision();
-		checkPaddleCollision();
-		int point = checkPoint();
-		if(point != -1){
-			awardPoint(point);
-			int winner = checkWinner();
 
-			resetBall();
-		}
-		ballLocationX = ballLocationX+ballXVelocity;
-		ballLocationY = ballLocationY+ballYVelocity;
+void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of paddles
 
-	}
+    if (ballXVelocity >= 0) {  // moving right, check collision with right paddle
+        // check for collision with top of paddle
+        // check if right side of ball has passed the face of the paddle
+        if (ballLocationX + BALL_DIAMETER > (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH)) {
+            // if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
+            if (ballYVelocity > 0 && (rightPaddleLocation - (ballLocationY + BALL_DIAMETER)) < (ballYVelocity - rightPaddleVelocity) && ballLocationY + BALL_DIAMETER <= rightPaddleLocation) {
+                ballYVelocity = ballYVelocity * (-1);
+            }
+            // moving up and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
+            else if (ballYVelocity < 0 && (rightPaddleLocation + PADDLE_HEIGHT - ballLocationY) < (ballYVelocity * (-1) + rightPaddleVelocity) && ballLocationY <= rightPaddleLocation + PADDLE_HEIGHT) {
+                ballYVelocity = ballYVelocity * (-1);
+            }
+            // ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle
+        } else if (ballXVelocity >= (SCREEN_WIDTH - PADDLE_WIDTH - PADDLE_GAP_FROM_EDGE - (ballLocationX + BALL_DIAMETER))) {
+            // xil_printf("passing return threshold\r\n");
+            if ((ballLocationY + BALL_DIAMETER > rightPaddleLocation) && (ballLocationY < rightPaddleLocation + PADDLE_HEIGHT)) {
+                // xil_printf("returning ball\r\n");
+                ballXVelocity = (ballXVelocity + 2) * (-1);
+                // when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
+                //(with the paddle simulating a convex surface), as well as the current velocity of the ball and the speed of the paddle.
+                ballYVelocity += ((rightPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (rightPaddleLocation + (PADDLE_HEIGHT / 2))) / 5);
+                // TODO:set flag to play sound for collision
+            }
+        }
+        // ball moving left, check for collision with left paddle
+    } else {
+        if (ballLocationX < (PADDLE_GAP_FROM_EDGE + PADDLE_WIDTH)) {
+            xil_printf("past first if left side \r\n");
+            // if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
+            if (ballYVelocity > 0 && (leftPaddleLocation - (ballLocationY + BALL_DIAMETER)) < (ballYVelocity - leftPaddleVelocity) && ballLocationY + BALL_DIAMETER <= leftPaddleLocation) {
+                ballYVelocity = ballYVelocity * (-1);
+            }
+            // moving up and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
+            else if (ballYVelocity < 0 && (leftPaddleLocation + PADDLE_HEIGHT - ballLocationY) < (ballYVelocity * (-1) + leftPaddleVelocity) && ballLocationY <= leftPaddleLocation + PADDLE_HEIGHT) {
+                ballYVelocity = ballYVelocity * (-1);
+            }
+            // ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle
+        } else if (ballXVelocity * (-1) >= (ballLocationX - (PADDLE_WIDTH + PADDLE_GAP_FROM_EDGE))) {  // ball velocity is higher than distance to paddle i.e. will contact in next frame
+            xil_printf("collision left next frame\r\n");
+            if (ballLocationY > (leftPaddleLocation - BALL_DIAMETER) && ballLocationY < leftPaddleLocation + PADDLE_HEIGHT) {
+                ballXVelocity = (ballXVelocity - 2) * (-1);  // increase x velocity and invert direction
+                ballYVelocity += ((leftPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (leftPaddleLocation + (PADDLE_HEIGHT / 2))) / 5);
+                // TODO:set flag to play sound for collision
+            }
+        }
+    }
+}
+
+void Game::updateGameState() {
+    checkWallCollision();
+    checkPaddleCollision();
+    int point = checkPoint();
+    if (point != -1) {
+        awardPoint(point);
+        int winner = checkWinner();
+
+        resetBall();
+    }
+    ballLocationX = ballLocationX + ballXVelocity;
+    ballLocationY = ballLocationY + ballYVelocity;
+}
+
+void Game::movePaddle(int player, int velocity) {
+    if (player == 0) {
+        leftPaddleVelocity = velocity;
+        leftPaddleLocation = leftPaddleLocation + velocity;
+    } else {
+        rightPaddleVelocity = velocity;
+        rightPaddleLocation = rightPaddleLocation + velocity;
+    }
+}
+
+void Game::paddleMovementHandler() {
+    if (PLAYER_1_MOVEMENT != 0) {
+        movePaddle(0, 1);
+    }
+    if (PLAYER_2_MOVEMENT != 0) {
+        movePaddle(1, 1);
+    }
+}
