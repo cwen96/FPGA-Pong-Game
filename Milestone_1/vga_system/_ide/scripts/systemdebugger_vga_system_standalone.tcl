@@ -13,7 +13,7 @@ connect -url tcp:127.0.0.1:3121
 targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
-targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469787" && level==0 && jtag_device_ctx=="jsn-Zed-210248469787-03727093-0"}
 fpga -file C:/Users/cjw18/Desktop/ensc-452/Milestone_1/vga/_ide/bitstream/ip_design_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
 loadhw -hw C:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs

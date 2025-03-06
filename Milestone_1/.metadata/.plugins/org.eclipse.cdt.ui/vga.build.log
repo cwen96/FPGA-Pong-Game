@@ -1,9 +1,22 @@
-14:12:07 **** Incremental Build of configuration Debug for project vga ****
+15:06:59 **** Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
+'Building file: ../src/game.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.cpp"
+../src/game.cpp: In member function 'int Game::checkWinner()':
+../src/game.cpp:26:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   26 | }
+      | ^
+../src/game.cpp: In member function 'void Game::updateGameState()':
+../src/game.cpp:124:13: warning: unused variable 'winner' [-Wunused-variable]
+  124 |         int winner = checkWinner();
+      |             ^~~~~~
+'Finished building: ../src/game.cpp'
+' '
 'Building file: ../src/main.cc'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
@@ -21,5 +34,5 @@ arm-none-eabi-size vga.elf  |tee "vga.elf.size"
 'Finished building: vga.elf.size'
 ' '
 
-14:12:08 Build Finished (took 1s.439ms)
+15:07:01 Build Finished (took 2s.209ms)
 

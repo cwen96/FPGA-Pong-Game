@@ -77,3 +77,40 @@ platform clean
 platform generate
 platform active {MulticorePlatform}
 platform generate -domains 
+platform generate
+platform active {MulticorePlatform}
+bsp reload
+bsp reload
+domain active {ps7_cortex9_1}
+bsp reload
+bsp setlib -name xilffs -ver 4.4
+bsp write
+bsp reload
+catch {bsp regenerate}
+bsp setlib -name xilffs -ver 4.4
+bsp write
+domain active {standalone_domain}
+bsp reload
+bsp setlib -name xilffs -ver 4.4
+bsp setlib -name xilrsa -ver 1.6
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {zynq_fsbl}
+bsp reload
+platform generate
+domain active {ps7_cortex9_1}
+bsp reload
+bsp reload
+platform active {MulticorePlatform}
+domain active {ps7_cortex9_1}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+bsp reload
+domain active {standalone_domain}
+bsp reload
+domain active {ps7_cortex9_1}
+bsp reload

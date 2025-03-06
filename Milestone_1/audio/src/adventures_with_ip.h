@@ -37,6 +37,7 @@ unsigned char gpio_init();
 int lab_test();
 void recordAudio();
 void playAudio();
+void load_audio();
 //unsigned char* load_audio_file(const char *fileName);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*

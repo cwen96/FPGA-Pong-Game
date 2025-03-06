@@ -1,24 +1,38 @@
 Nothing to build in platform 'MulticorePlatform'
 
-14:12:07 **** Incremental Build of configuration Debug for project vga ****
+15:39:14 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-'Finished building: ../src/main.cc'
+'Building file: ../src/ip_functions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
+../src/ip_functions.c: In function 'playWavFile':
+../src/ip_functions.c:70:13: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+   70 |     FRESULT res = f_open(&file, filename, FA_READ);
+      |             ^~~
+../src/ip_functions.c: In function 'load_audio':
+../src/ip_functions.c:384:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+  384 |     cleanup_platform();
+      |     ^~~~~~~~~~~~~~~~
+../src/ip_functions.c:385:12: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  385 |     return 0;
+      |            ^
+../src/ip_functions.c:287:6: note: declared here
+  287 | void load_audio() {
+      |      ^~~~~~~~~~
+'Finished building: ../src/ip_functions.c'
 ' '
-'Building target: vga.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bsplib/lib -o "vga.elf"  ./src/game.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: vga.elf'
+'Building target: audio.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cjw18/Desktop/ensc-452/Milestone_1/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bsplib/lib -o "audio.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: audio.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size vga.elf  |tee "vga.elf.size"
+arm-none-eabi-size audio.elf  |tee "audio.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  48420	   3008	  22752	  74180	  121c4	vga.elf
-'Finished building: vga.elf.size'
+  93596	   2636	400010400	400106632	17d92488	audio.elf
+'Finished building: audio.elf.size'
 ' '

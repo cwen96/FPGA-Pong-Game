@@ -5,6 +5,140 @@
  */
 
 #include "adventures_with_ip.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "xil_printf.h"
+
+#include "xil_types.h"
+#include "xstatus.h"
+#include "xscugic.h"
+#include "ff.h"
+#include "xparameters.h"
+
+// Size of the buffer which holds the DMA Buffer Descriptors (BDs)
+#define DMA_BDUFFERSIZE 4000
+
+FATFS FS_instance;
+
+// This holds the memory allocated for the wav file currently played.
+u8 *theBuffer = NULL;
+size_t theBufferSize = 0;
+int theVolume = 2;
+
+typedef struct {
+	char riff[4];
+	u32 riffSize;
+	char wave[4];
+} headerWave_t;
+
+typedef struct {
+	char ckId[4];
+	u32 cksize;
+} genericChunk_t;
+
+typedef struct {
+	u16 wFormatTag;
+	u16 nChannels;
+	u32 nSamplesPerSec;
+	u32 nAvgBytesPerSec;
+	u16 nBlockAlign;
+	u16 wBitsPerSample;
+	u16 cbSize;
+	u16 wValidBitsPerSample;
+	u32 dwChannelMask;
+	u8 SubFormat[16];
+} fmtChunk_t;
+
+void stopWavFile() {
+    // If there was already a WAV file, free the memory
+    if (theBuffer){
+    	free(theBuffer);
+    	theBuffer = NULL;
+    	theBufferSize = 0;
+    }
+}
+
+void playWavFile(const char *filename) {
+    headerWave_t headerWave;
+    fmtChunk_t fmtChunk;
+    FIL file;
+    UINT nBytesRead=0;
+
+    stopWavFile();
+
+    FRESULT res = f_open(&file, filename, FA_READ);
+    printf("Loading %s\r\n",filename);
+
+    // Read the RIFF header and do some basic sanity checks
+    res = f_read(&file,(void*)&headerWave,sizeof(headerWave),&nBytesRead);
+
+	// Walk through the chunks and interpret them
+	for(;;) {
+		// read chunk header
+		genericChunk_t genericChunk;
+		res = f_read(&file,(void*)&genericChunk,sizeof(genericChunk),&nBytesRead);
+		if (nBytesRead!=sizeof(genericChunk)) {
+			break; // probably EOF
+		}
+
+		// The "fmt " is compulsory and contains information about the sample format
+		if (memcmp(genericChunk.ckId,"fmt ",4)==0) {
+			res = f_read(&file,(void*)&fmtChunk,genericChunk.cksize,&nBytesRead);
+		}
+		// the "data" chunk contains the audio samples
+		else if (memcmp(genericChunk.ckId,"data",4)==0) {
+		    theBuffer = malloc(genericChunk.cksize);
+		    theBufferSize = genericChunk.cksize;
+		    res = f_read(&file,(void*)theBuffer,theBufferSize,&nBytesRead);
+		}
+		// Unknown chunk: Just skip it
+		else {
+			DWORD fp = f_tell(&file);
+			f_lseek(&file,fp + genericChunk.cksize);
+		}
+	}
+
+	// If we have data to play
+    if (theBuffer) {
+        printf("Playing %s\r\n",filename);
+
+        // Crude in-place down-sampling: Basically taking every n'th of a sample
+        // Jerobeam Fenderson's WAV files use a sampling rate of 192kHz (https://oscilloscopemusic.com)
+        // Our sampling rate is actually 39.0625, so a 44.1kHz file will play a at 88.5% the speed (and lower in pitch).
+    	double subSample = (double)fmtChunk.nSamplesPerSec/44100;
+    	if (subSample>1.6) {
+    		int skip = (int)(subSample+0.5);
+    		u32 nNewTotal = theBufferSize/4/skip;
+    		u32 *pSource = (u32*) theBuffer;
+    		u32 *pDest = (u32*) theBuffer;
+    		for(u32 i=0;i<nNewTotal;++i,pSource+=skip,pDest++) {
+    			*pDest = *pSource;
+    		}
+    		theBufferSize = nNewTotal*4;
+    	}
+
+    	// Changing the volume and swap left/right channel and polarity
+    	{
+    		u32 *pSource = (u32*) theBuffer;
+    		for(u32 i=0;i<theBufferSize/4;++i) {
+    			short left  = (short) ((pSource[i]>>16) & 0xFFFF);
+    			short right = (short) ((pSource[i]>> 0) & 0xFFFF);
+    			int left_i  = -(int)left * theVolume / 4;
+    			int right_i = -(int)right * theVolume / 4;
+    			if (left>32767) left = 32767;
+    			if (left<-32767) left = -32767;
+    			if (right>32767) right = 32767;
+    			if (right<-32767) right = -32767;
+    			left = (short)left_i;
+    			right = (short)right_i;
+    			pSource[i] = ((u32)right<<16) + (u32)left;
+    		}
+    	}
+    }
+
+    f_close(&file);
+}
 
 /* ---------------------------------------------------------------------------- *
  * 								audio_stream()									*
@@ -53,6 +187,9 @@ unsigned char gpio_init() {
     // Set all buttons direction to inputs
     XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
 
+    // Load audio from SD card
+    load_audio();
+
     return XST_SUCCESS;
 }
 
@@ -86,9 +223,6 @@ int lab_test() {
     int print_standby_status = 0;
     int i = 0;
     COMM_VAL = 0;
-
-
-    //buffer = load_audio_file("beep.mp3");
 
     /* If input from the terminal is 'q', then return to menu.
      * Else, continue. */
@@ -149,27 +283,106 @@ int lab_test() {
     }
     return XST_SUCCESS;
 }
-/*
-unsigned char* load_audio_file(const char *fileName) {
-	FILE *file = fopen(fileName, "rb");
-	if (!file) {
-		perror("Error opening file");
-		return NULL;
-	}
 
-	fseek(file, 0, SEEK_END);
-	rewind(file);
+void load_audio() {
+    setvbuf(stdin, NULL, _IONBF, 0);
+    print("WAV File Player\n\r");
 
-	unsigned char *buffer = (unsigned char*)malloc(1000);
-	if (!buffer) {
-		perror("Malloc failed");
-		fclose(file);
-		return NULL;
-	}
+    for(;;) {
+        print("Mounting SD Card\n\r");
+		FRESULT result = f_mount(&FS_instance,"0:/", 1);
+		if (result != 0) {
+			print("Couldn't mount SD Card. Press RETURN to try again\r\n");
+			getchar();
+			continue;
+		}
+		print("Successfully mounted SD Card.");
 
-	fread(buffer, 1, 1000, file);
-	fclose(file);
+		#define maxFiles 32
+		char files[maxFiles][32] = {0};
+		int filesNum = 0;
 
-	return buffer;
+		// Look for *.wav files and copy file names to files[]
+		DIR dir;
+		FRESULT res = f_opendir(&dir, "0:/");
+		if (res != FR_OK) {
+			print("Couldn't read root directory. Press RETURN to try again\r\n");
+			getchar();
+			continue;
+		}
+		for (;;) {
+			FILINFO fno;
+			res = f_readdir(&dir, &fno);
+			if (res != FR_OK || fno.fname[0] == 0) {
+				break;
+			}
+			if (fno.fattrib & AM_DIR) {                 // It's a directory
+			}
+			else if (strstr(fno.fname,".wav")!=NULL || strstr(fno.fname,".WAV")!=NULL) { // It's a WAV file
+				strcpy(files[filesNum++],fno.fname);
+			}
+			else {										// It's a normal file
+			}
+		}
+		f_closedir(&dir);
+
+		if (filesNum == 0) {
+			print("No WAV files found. Press RETURN to try again\r\n");
+			getchar();
+			continue;
+		}
+
+		// Rudimentary user interface
+		int currentFile = 0;
+		for(;;) {
+			printf("\033[2J\033[H");
+			printf("[ VOL = %d%% ]\r\n",theVolume*100/4);
+			for(int i=0;i<filesNum;++i) {
+				printf("%c%s\r\n",i==currentFile ? '*' : ' ',files[i]);
+			}
+			printf("UP    : Previous file       LEFT:  Volume -\r\n");
+			printf("DOWN  : Next file           RIGHT: Volume +\r\n");
+			printf("RETURN: Play\r\n");
+			printf("SPACE : New SD Card\r\n");
+
+			int c = getchar();
+			//printf("%02X\r\n",c);
+			if (c==32) {
+				stopWavFile();
+				break;
+			}
+			switch(c) {
+			case 13: 	playWavFile(files[currentFile]);
+						break;
+			case 0x5B:	c = getchar();
+						//printf("D%02X\r\n",c);
+						if (c==0x42) {
+							if (currentFile+1<filesNum) {
+								++currentFile;
+							}
+						}
+						else if (c==0x41) {
+							if (currentFile>0) {
+								--currentFile;
+							}
+						}
+						else if (c==0x44) {
+							if (theVolume>1) {
+								theVolume--;
+							}
+						}
+						else if (c==0x43) {
+							if (theVolume<16) {
+								theVolume++;
+							}
+						}
+			}
+		}
+    }
+
+	print("Good bye\n\r");
+
+    cleanup_platform();
+    return 0;
 }
-*/
+
