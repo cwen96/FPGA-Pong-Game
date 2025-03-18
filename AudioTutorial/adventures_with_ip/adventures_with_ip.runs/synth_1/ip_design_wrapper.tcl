@@ -83,7 +83,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_repo_paths c:/Users/cryst/Documents/ensc-452/AudioTutorial/ip_repo [current_project]
+set_property ip_repo_paths {
+  c:/Users/cryst/Documents/ensc-452/AudioTutorial/ip_repo/lfsr_1.0
+  c:/Users/cryst/Documents/ensc-452/AudioTutorial/ip_repo
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/cryst/Documents/ensc-452/AudioTutorial/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

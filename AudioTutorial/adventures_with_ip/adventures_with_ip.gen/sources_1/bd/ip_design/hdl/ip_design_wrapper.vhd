@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Feb  3 16:54:47 2025
+--Date        : Mon Mar 17 21:20:08 2025
 --Host        : DESKTOP-NJF4991 running 64-bit major release  (build 9200)
 --Command     : generate_target ip_design_wrapper.bd
 --Design      : ip_design_wrapper
@@ -51,6 +51,23 @@ end ip_design_wrapper;
 architecture STRUCTURE of ip_design_wrapper is
   component ip_design is
   port (
+    LEDs_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    SDATA_I : in STD_LOGIC;
+    BCLK : out STD_LOGIC;
+    LRCLK : out STD_LOGIC;
+    SDATA_O : out STD_LOGIC;
+    FCLK_CLK1 : out STD_LOGIC;
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    IIC_0_sda_i : in STD_LOGIC;
+    IIC_0_sda_o : out STD_LOGIC;
+    IIC_0_sda_t : out STD_LOGIC;
+    IIC_0_scl_i : in STD_LOGIC;
+    IIC_0_scl_o : out STD_LOGIC;
+    IIC_0_scl_t : out STD_LOGIC;
+    GPIO_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    GPIO_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    GPIO_tri_t : out STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -71,24 +88,7 @@ architecture STRUCTURE of ip_design_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    LEDs_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    SDATA_I : in STD_LOGIC;
-    BCLK : out STD_LOGIC;
-    LRCLK : out STD_LOGIC;
-    SDATA_O : out STD_LOGIC;
-    IIC_0_sda_i : in STD_LOGIC;
-    IIC_0_sda_o : out STD_LOGIC;
-    IIC_0_sda_t : out STD_LOGIC;
-    IIC_0_scl_i : in STD_LOGIC;
-    IIC_0_scl_o : out STD_LOGIC;
-    IIC_0_scl_t : out STD_LOGIC;
-    FCLK_CLK1 : out STD_LOGIC;
-    GPIO_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPIO_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPIO_tri_t : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component ip_design;
   component IOBUF is

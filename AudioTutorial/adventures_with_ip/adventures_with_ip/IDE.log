@@ -1,0 +1,13 @@
+20:05:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\cryst\Documents\ensc-452\AudioTutorial\adventures_with_ip\adventures_with_ip\temp_xsdb_launch_script.tcl
+20:05:29 INFO  : Registering command handlers for Vitis TCF services
+20:05:33 INFO  : XSCT server has started successfully.
+20:05:35 INFO  : Platform repository initialization has completed.
+20:05:40 INFO  : plnx-install-location is set to ''
+20:05:40 INFO  : Successfully done setting XSCT server connection channel  
+20:05:40 INFO  : Successfully done query RDI_DATADIR 
+20:05:40 INFO  : Successfully done setting workspace for the tool. 
+20:55:15 INFO  : Platform 'ip_design_wrapper' is added to custom repositories.
+20:55:15 ERROR : The following application project(s) included in the system project 'adventures_with_ip_system' are missing from the workspace.
+Please import the applications using 'File -> Import -> Existing Projects into Workspace' option or delete the application project entries from the system project settings editor.
+
+ 1. adventures_with_ip
