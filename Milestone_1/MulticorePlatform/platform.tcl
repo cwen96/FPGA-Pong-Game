@@ -114,3 +114,4 @@ domain active {standalone_domain}
 bsp reload
 domain active {ps7_cortex9_1}
 bsp reload
+platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 

@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Mar 17 21:20:08 2025
---Host        : DESKTOP-NJF4991 running 64-bit major release  (build 9200)
+--Date        : Tue Mar 18 13:57:07 2025
+--Host        : ensc-pit-w16 running 64-bit major release  (build 9200)
 --Command     : generate_target ip_design.bd
 --Design      : ip_design
 --Purpose     : IP block netlist
@@ -1851,7 +1851,7 @@ entity ip_design is
     sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of ip_design : entity is "ip_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ip_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=2,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of ip_design : entity is "ip_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ip_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=11,da_board_cnt=2,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of ip_design : entity is "ip_design.hwdef";
 end ip_design;
@@ -2056,9 +2056,8 @@ architecture STRUCTURE of ip_design is
     gpio2_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component ip_design_axi_gpio_1_0;
-  component ip_design_lfsr_0_0 is
+  component ip_design_lfsr_0_1 is
   port (
-    rand32_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2081,7 +2080,7 @@ architecture STRUCTURE of ip_design is
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  end component ip_design_lfsr_0_0;
+  end component ip_design_lfsr_0_1;
   signal SDATA_I_0_1 : STD_LOGIC;
   signal axi_gpio_0_GPIO_TRI_I : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2090,7 +2089,6 @@ architecture STRUCTURE of ip_design is
   signal axi_gpio_1_GPIO_TRI_I : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal axi_gpio_1_ip2intc_irpt : STD_LOGIC;
   signal led_controller_0_LEDs_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal lfsr_0_rand32_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -2153,6 +2151,7 @@ architecture STRUCTURE of ip_design is
   signal processing_system7_0_M_AXI_GP0_RREADY : STD_LOGIC;
   signal processing_system7_0_M_AXI_GP0_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal processing_system7_0_M_AXI_GP0_RVALID : STD_LOGIC;
+  signal processing_system7_0_M_AXI_GP0_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_M_AXI_GP0_WID : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal processing_system7_0_M_AXI_GP0_WLAST : STD_LOGIC;
   signal processing_system7_0_M_AXI_GP0_WREADY : STD_LOGIC;
@@ -2255,7 +2254,6 @@ architecture STRUCTURE of ip_design is
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
-  signal NLW_processing_system7_0_M_AXI_GP0_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2392,9 +2390,8 @@ led_controller_0: component ip_design_led_controller_0_0
       s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID(0)
     );
-lfsr_0: component ip_design_lfsr_0_0
+lfsr_0: component ip_design_lfsr_0_1
      port map (
-      rand32_out(31 downto 0) => lfsr_0_rand32_out(31 downto 0),
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => ps7_0_axi_periph_M04_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -2480,7 +2477,7 @@ processing_system7_0: component ip_design_processing_system7_0_0
       M_AXI_GP0_RREADY => processing_system7_0_M_AXI_GP0_RREADY,
       M_AXI_GP0_RRESP(1 downto 0) => processing_system7_0_M_AXI_GP0_RRESP(1 downto 0),
       M_AXI_GP0_RVALID => processing_system7_0_M_AXI_GP0_RVALID,
-      M_AXI_GP0_WDATA(31 downto 0) => NLW_processing_system7_0_M_AXI_GP0_WDATA_UNCONNECTED(31 downto 0),
+      M_AXI_GP0_WDATA(31 downto 0) => processing_system7_0_M_AXI_GP0_WDATA(31 downto 0),
       M_AXI_GP0_WID(11 downto 0) => processing_system7_0_M_AXI_GP0_WID(11 downto 0),
       M_AXI_GP0_WLAST => processing_system7_0_M_AXI_GP0_WLAST,
       M_AXI_GP0_WREADY => processing_system7_0_M_AXI_GP0_WREADY,
@@ -2633,7 +2630,7 @@ ps7_0_axi_periph: entity work.ip_design_ps7_0_axi_periph_0
       S00_AXI_rready => processing_system7_0_M_AXI_GP0_RREADY,
       S00_AXI_rresp(1 downto 0) => processing_system7_0_M_AXI_GP0_RRESP(1 downto 0),
       S00_AXI_rvalid => processing_system7_0_M_AXI_GP0_RVALID,
-      S00_AXI_wdata(31 downto 0) => lfsr_0_rand32_out(31 downto 0),
+      S00_AXI_wdata(31 downto 0) => processing_system7_0_M_AXI_GP0_WDATA(31 downto 0),
       S00_AXI_wid(11 downto 0) => processing_system7_0_M_AXI_GP0_WID(11 downto 0),
       S00_AXI_wlast => processing_system7_0_M_AXI_GP0_WLAST,
       S00_AXI_wready => processing_system7_0_M_AXI_GP0_WREADY,
