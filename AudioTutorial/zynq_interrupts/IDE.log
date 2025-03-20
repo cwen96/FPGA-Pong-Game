@@ -122,3 +122,15 @@ con
 
 14:40:43 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\AudioTutorial\zynq_interrupts\interrupt_counter_system\_ide\scripts\debugger_interrupt_counter-default.tcl'
 15:53:38 INFO  : Disconnected from the channel tcfchan#1.
+15:48:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dumpherv\Desktop\452Project\ensc-452\AudioTutorial\zynq_interrupts\temp_xsdb_launch_script.tcl
+15:48:33 INFO  : XSCT server has started successfully.
+15:48:33 INFO  : Successfully done setting XSCT server connection channel  
+15:48:33 INFO  : plnx-install-location is set to ''
+15:48:33 INFO  : Successfully done setting workspace for the tool. 
+15:48:35 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+15:48:35 INFO  : Platform repository initialization has completed.
+15:48:37 INFO  : Successfully done query RDI_DATADIR 
+15:48:37 INFO  : Registering command handlers for Vitis TCF services

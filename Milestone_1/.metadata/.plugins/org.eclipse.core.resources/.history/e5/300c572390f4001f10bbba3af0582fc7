@@ -1,7 +1,0 @@
-#include "game.h"
-
-Game::Game(mode){
-	score[2]= {0,0};
-
-}
-

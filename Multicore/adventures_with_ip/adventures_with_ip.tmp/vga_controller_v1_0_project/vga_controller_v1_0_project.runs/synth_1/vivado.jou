@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Mar 12 17:11:45 2025
+# Process ID: 31236
+# Current directory: c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/vga_controller_v1_0_project/vga_controller_v1_0_project.runs/synth_1
+# Command line: vivado.exe -log vga_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_controller.tcl
+# Log file: c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/vga_controller_v1_0_project/vga_controller_v1_0_project.runs/synth_1/vga_controller.vds
+# Journal file: c:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/vga_controller_v1_0_project/vga_controller_v1_0_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source vga_controller.tcl -notrace

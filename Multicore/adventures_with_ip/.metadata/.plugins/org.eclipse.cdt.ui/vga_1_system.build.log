@@ -1,0 +1,10 @@
+16:00:53 **** Build of configuration Debug for project vga_1_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 1194 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_1_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_1_system/Debug/system.bif --bitstream C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_1/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_1/Debug/vga_1.elf,ps7_cortexa9_0
+ELF does not exist: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_1/Debug/vga_1.elf
+make: *** [makefile:39: package] Error 1
+
+16:00:56 Build Finished (took 3s.231ms)
+

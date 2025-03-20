@@ -1,0 +1,40 @@
+Nothing to build in platform 'MulticorePlatform'
+
+17:51:27 **** Incremental Build of configuration Debug for project audio ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+17:51:27 **** Incremental Build of configuration Debug for project vga ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc:53:13: warning: 'void TMR_Intr_Handler(void*)' declared 'static' but never defined [-Wunused-function]
+   53 | static void TMR_Intr_Handler(void *baseaddr_p);
+      |             ^~~~~~~~~~~~~~~~
+../src/main.cc:53:13: warning: 'void TMR_Intr_Handler(void*)' used but never defined
+'Finished building: ../src/main.cc'
+' '
+'Building target: vga.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bsplib/lib -o "vga.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ./src/main.o: in function `IntcInitFunction(unsigned short, XTmrCtr*, XGpio*)':
+C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\vga\Debug/../src/main.cc:260: undefined reference to `TMR_Intr_Handler(void*)'
+c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\vga\Debug/../src/main.cc:260: undefined reference to `TMR_Intr_Handler(void*)'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:55: vga.elf] Error 1
+make: *** [makefile:46: all] Error 2
+17:51:29 **** Incremental Build of configuration Debug for project vga_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 39602 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm --sys_config MulticorePlatform --bif C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif --bitstream C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit --elf C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf,ps7_cortexa9_0 --elf C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf,ps7_cortexa9_1
+ELF does not exist: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf
+make: *** [makefile:39: package] Error 1

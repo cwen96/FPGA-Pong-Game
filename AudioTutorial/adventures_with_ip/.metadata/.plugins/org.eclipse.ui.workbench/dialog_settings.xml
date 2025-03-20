@@ -4,8 +4,6 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
-			<item value="C:\Users\cjw18\Desktop\GitHub\ensc-452\AudioTutorial\adventures_with_ip\lfsr2\src"/>
-			<item value="C:\Users\cjw18\Desktop\GitHub\ensc-452\AudioTutorial\adventures_with_ip\adventures_with_ip\src"/>
 			<item value="C:\Users\cryst\OneDrive\桌面"/>
 		</list>
 	</section>
