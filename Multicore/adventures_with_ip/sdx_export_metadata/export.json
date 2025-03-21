@@ -1,0 +1,37 @@
+{
+  "version": "2020.2",
+  "applications": [],
+  "platforms": [
+    {
+      "name": "MulticorePlatform"
+    }
+  ],
+  "systems": [
+    {
+      "name": "vga_system",
+      "platform": "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm",
+      "sysConfig": "MulticorePlatform",
+      "buildConfig": "Debug",
+      "applications": [
+        {
+          "name": "vga",
+          "platform": "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm",
+          "platformPath": "C:\\Users\\dumpherv\\Desktop\\452_Milestone_2\\ensc-452\\Milestone_1\\MulticorePlatform\\export\\MulticorePlatform",
+          "sysConfig": "MulticorePlatform",
+          "domain": "standalone_domain",
+          "system": "vga_system"
+        },
+        {
+          "name": "audio",
+          "platform": "C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm",
+          "platformPath": "C:\\Users\\dumpherv\\Desktop\\452_Milestone_2\\ensc-452\\Milestone_1\\MulticorePlatform\\export\\MulticorePlatform",
+          "sysConfig": "MulticorePlatform",
+          "domain": "ps7_cortex9_1",
+          "system": "vga_system"
+        }
+      ],
+      "platformPath": "C:\\Users\\dumpherv\\Desktop\\452_Milestone_2\\ensc-452\\Milestone_1\\MulticorePlatform\\export\\MulticorePlatform"
+    }
+  ],
+  "others": []
+}

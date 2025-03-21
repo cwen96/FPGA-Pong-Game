@@ -35,11 +35,9 @@ void menu();
 void audio_stream();
 unsigned char gpio_init();
 int lab_test();
-int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
-void BTN_Intr_Handler(void *InstancePtr);
 void recordAudio();
 void playAudio();
-int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+//unsigned char* load_audio_file(const char *fileName);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
@@ -65,14 +63,12 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
  * 							Global Variables									*
  * ---------------------------------------------------------------------------- */
 #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
-#define BUFFER_SIZE 1
+#define BUFFER_SIZE 100
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 XIicPs Iic;
 XGpio Gpio;        // Gpio instance for buttons and switches
-XScuGic INTCInst;  // Interrupt Controller instance
 int recordStatus;
-int prevStatus;
 int btn_value;
-int interruptInit;
 
 #define BTN_INT XGPIO_IR_CH1_MASK
 

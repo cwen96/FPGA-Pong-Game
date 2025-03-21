@@ -1,27 +1,30 @@
-17:51:27 **** Incremental Build of configuration Debug for project vga ****
+14:03:03 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
+'Building file: ../src/game.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.cpp"
+'Finished building: ../src/game.cpp'
+' '
 'Building file: ../src/main.cc'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc:53:13: warning: 'void TMR_Intr_Handler(void*)' declared 'static' but never defined [-Wunused-function]
-   53 | static void TMR_Intr_Handler(void *baseaddr_p);
-      |             ^~~~~~~~~~~~~~~~
-../src/main.cc:53:13: warning: 'void TMR_Intr_Handler(void*)' used but never defined
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 'Finished building: ../src/main.cc'
 ' '
 'Building target: vga.elf'
 'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bsplib/lib -o "vga.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ./src/main.o: in function `IntcInitFunction(unsigned short, XTmrCtr*, XGpio*)':
-C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\vga\Debug/../src/main.cc:260: undefined reference to `TMR_Intr_Handler(void*)'
-c:/xilinx/vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\dumpherv\Desktop\452Project\ensc-452\Multicore\adventures_with_ip\vga\Debug/../src/main.cc:260: undefined reference to `TMR_Intr_Handler(void*)'
-collect2.exe: error: ld returned 1 exit status
-make[1]: *** [makefile:55: vga.elf] Error 1
-make: *** [makefile:46: all] Error 2
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bsplib/lib -o "vga.elf"  ./src/game.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: vga.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga.elf  |tee "vga.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  51944	   3072	  22752	  77768	  12fc8	vga.elf
+'Finished building: vga.elf.size'
+' '
 
-17:51:28 Build Finished (took 1s.77ms)
+14:03:05 Build Finished (took 2s.206ms)
 

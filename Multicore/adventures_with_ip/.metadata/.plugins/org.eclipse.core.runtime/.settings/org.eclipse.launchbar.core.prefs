@@ -17,4 +17,4 @@ org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_audio10_system
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_audio10_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_audio11_system/activeLaunchMode=systemdebug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_vga10_system/activeLaunchMode=debug
-org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_vga_system/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_vga_system/activeLaunchMode=run

@@ -47,3 +47,119 @@ platform active {MulticorePlatform}
 platform generate
 platform active {MulticorePlatform}
 platform generate -domains 
+platform generate
+platform clean
+platform generate
+platform clean
+platform generate
+platform generate
+platform active {MulticorePlatform}
+domain active {zynq_fsbl}
+bsp reload
+bsp reload
+platform generate -domains 
+domain active {ps7_cortex9_1}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp reload
+platform clean
+platform generate
+platform active {MulticorePlatform}
+domain active {ps7_cortex9_1}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform generate -domains 
+platform clean
+platform generate
+platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 
+platform clean
+platform generate
+platform active {MulticorePlatform}
+platform generate -domains 
+platform generate
+platform clean
+platform generate
+platform active {MulticorePlatform}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform active {MulticorePlatform}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate
+platform clean
+platform clean
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform active {MulticorePlatform}
+platform generate
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform active {MulticorePlatform}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform active {MulticorePlatform}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate
+platform clean
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform write
+platform active {MulticorePlatform}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform clean
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+catch {platform remove ip_design_wrapper}
+domain active {ps7_cortex9_1}
+bsp reload
+bsp reload
+platform active {MulticorePlatform}
+platform generate
+platform config -updatehw {C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform generate
+platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 

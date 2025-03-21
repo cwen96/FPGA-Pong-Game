@@ -58,6 +58,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver DISPLAY_GAME_OBJECTS */
+#define XPAR_DISPLAY_GAME_OBJECTS_NUM_INSTANCES 1
+
+/* Definitions for peripheral DISPLAY_GAME_OBJECTS_0 */
+#define XPAR_DISPLAY_GAME_OBJECTS_0_DEVICE_ID 0
+#define XPAR_DISPLAY_GAME_OBJECTS_0_S00_AXI_BASEADDR 0x43C20000
+#define XPAR_DISPLAY_GAME_OBJECTS_0_S00_AXI_HIGHADDR 0x43C2FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver DMAPS */
 #define XPAR_XDMAPS_NUM_INSTANCES 2
 
@@ -315,6 +326,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver LFSR */
+#define XPAR_LFSR_NUM_INSTANCES 1
+
+/* Definitions for peripheral LFSR_0 */
+#define XPAR_LFSR_0_DEVICE_ID 0
+#define XPAR_LFSR_0_S00_AXI_BASEADDR 0x43C30000
+#define XPAR_LFSR_0_S00_AXI_HIGHADDR 0x43C3FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver QSPIPS */
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 
@@ -451,7 +473,7 @@
 #define XPAR_AXI_TIMER_0_DEVICE_ID 0U
 #define XPAR_AXI_TIMER_0_BASEADDR 0x42800000U
 #define XPAR_AXI_TIMER_0_HIGHADDR 0x4280FFFFU
-#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 125000000U
+#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ  125000000U
 
 
 /******************************************************************/

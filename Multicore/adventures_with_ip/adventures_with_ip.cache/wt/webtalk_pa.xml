@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Mar 19 18:41:55 2025">
+<application name="pa" timeStamp="Fri Mar 21 13:28:13 2025">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="2c8b0f7e64d34987a0d34aa385454ab7" type="ProjectID"/>
 <property name="ProjectIteration" value="57" type="ProjectIteration"/>
@@ -31,7 +31,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditPaste" value="5" type="JavaHandler"/>
 <property name="EditProperties" value="2" type="JavaHandler"/>
 <property name="EditUndo" value="14" type="JavaHandler"/>
-<property name="ExitApp" value="8" type="JavaHandler"/>
+<property name="ExitApp" value="9" type="JavaHandler"/>
 <property name="ExportRSBTclScript" value="2" type="JavaHandler"/>
 <property name="IPPackagerHandler" value="5" type="JavaHandler"/>
 <property name="IPPackagerWizardHandler" value="1" type="JavaHandler"/>
@@ -39,7 +39,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LaunchVitis" value="7" type="JavaHandler"/>
 <property name="NewExportHardware" value="32" type="JavaHandler"/>
 <property name="NewProject" value="4" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="9" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="10" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="3" type="JavaHandler"/>
 <property name="OpenProject" value="8" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="3" type="JavaHandler"/>
@@ -93,7 +93,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ExportRSBTclScriptDialog_SPECIFY_FILE" value="2" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="192" type="GuiHandlerData"/>
 <property name="FileSetPanel_MESSAGES" value="1" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="63" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="64" type="GuiHandlerData"/>
 <property name="GICTreeTablePanel_GIC_TREE_TABLE" value="18" type="GuiHandlerData"/>
 <property name="GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE" value="51" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
@@ -169,7 +169,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PAViews_CODE" value="3" type="GuiHandlerData"/>
 <property name="PAViews_DEVICE" value="2" type="GuiHandlerData"/>
 <property name="PAViews_IP_CATALOG" value="1" type="GuiHandlerData"/>
-<property name="PAViews_PROJECT_SUMMARY" value="20" type="GuiHandlerData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="21" type="GuiHandlerData"/>
 <property name="PackagerStepsPanel_PACKAGER_STEPS_LIST" value="7" type="GuiHandlerData"/>
 <property name="PlanAheadTab_REFRESH_CHANGED_MODULES" value="8" type="GuiHandlerData"/>
 <property name="PlanAheadTab_REFRESH_IP_CATALOG" value="14" type="GuiHandlerData"/>
@@ -221,9 +221,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="TouchpointSurveyDialog_NO" value="1" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="23" type="GuiMode"/>
+<property name="GuiMode" value="31" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="11" type="TclMode"/>
+<property name="TclMode" value="18" type="TclMode"/>
 </item>
 </section>
 </application>
