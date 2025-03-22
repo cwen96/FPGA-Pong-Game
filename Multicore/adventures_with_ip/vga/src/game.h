@@ -23,7 +23,8 @@ class Game {
 	int* paddleWidthReg=(int *)0x43C20018;
 	int* paddleLeftXLocation=(int *)0x43C2001C;
 	int* paddleRightXLocation=(int *)0x43C20020;
-
+	int INITIAL_X_VELOCITY[3] = {5,7,10};
+	int MAX_X_VELOCITY[3] = {10, 15, 20};
     int ballLocationX;
     int ballLocationY;
     int leftPaddleLocation;
@@ -33,6 +34,8 @@ class Game {
     int ballYVelocity;
     int rightPaddleVelocity;
     int leftPaddleVelocity;
+    int difficulty;
+    int mode;
     int checkPoint();
     void awardPoint(int player);
     void resetBall();
@@ -42,8 +45,9 @@ class Game {
     int checkWinner();
     void computerPlayer(int difficulty);
 
+
    public:
-    Game(int mode);
+    Game(int mode, int difficulty);
 
     int getBallLocationX() const { return ballLocationX; }
 
@@ -52,6 +56,10 @@ class Game {
     int getLeftPaddleLocation() { return leftPaddleLocation; }
 
     int getRightPaddleLocation() { return rightPaddleLocation; }
+
+    void resetScore();
+
+    void setMode(int mode);
 
     int updateGameState();
 

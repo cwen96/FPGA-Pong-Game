@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="c:/users/dumpherv/desktop/452project/ensc-452/multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project/display_game_objects_v1_0_project.xpr">
+<Project Version="7" Minor="54" Path="c:/users/dumpherv/desktop/ensc-452/multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project/display_game_objects_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="5f7c6d816ce64917aa701661f0f18cfc"/>
+    <Option Name="Id" Val="ba0b3dd62575445c95b5157e26a27587"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -36,11 +36,12 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo/display_game_objects_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo/game_objects_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/lfsr_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/game_objects_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo"/>
     <Option Name="IPRepoPath" Val="u:/ENSC 452/VGA_tutorial/vga_tutorial_students/vga_controller_ip"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -80,27 +81,27 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo/display_game_objects_1.0/hdl/display_game_objects_v1_0_S00_AXI.vhd">
+      <File Path="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0/hdl/display_game_objects_v1_0_S00_AXI.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo/display_game_objects_1.0/hdl/display_game_objects_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0/hdl/display_game_objects_v1_0.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo/display_game_objects_1.0/component.xml">
+      <File Path="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="display_game_objects_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../../Users/dumpherv/Desktop/452Project/ensc-452/Multicore/ip_repo/display_game_objects_1.0/hdl/display_game_objects_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0/hdl/display_game_objects_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -150,13 +151,14 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>

@@ -604,6 +604,9 @@ begin
 	--slv_reg6 paddle width
 	--slv_reg7 = left paddle x location
 	--slv_reg8 = right paddle x location
+	--slv_reg9 = paddle colour
+	--slv_reg10 = ball colour
+	--slv_reg11 = menu state
     write_screen: process(PIXEL_CLOCK)
       variable xCount: integer := 0;
       variable yCount: integer := 0 ;
@@ -624,26 +627,27 @@ begin
             
             --if on object, print the object colour, otherwise, allow vga core to display background image
             --ball
-            if (((xCount-250) > to_integer(signed(slv_reg0))) AND ((xCount-250) < (to_integer(signed(slv_reg0)))+(to_integer(signed(slv_reg2))))) AND (yCount-30 > to_integer(signed(slv_reg1))) AND ((yCount-30) < (to_integer(signed(slv_reg1))+to_integer(signed(slv_reg2)))) then
-                VGA_R_OUT <= "0000";
-                VGA_B_OUT <= "1111";
-                VGA_G_OUT <= "0000";
+            if ((slv_reg11(0) = '0') AND ((xCount-250) > to_integer(signed(slv_reg0))) AND ((xCount-250) < (to_integer(signed(slv_reg0)))+(to_integer(signed(slv_reg2))))) AND (yCount-30 > to_integer(signed(slv_reg1))) AND ((yCount-30) < (to_integer(signed(slv_reg1))+to_integer(signed(slv_reg2)))) then
+                VGA_R_OUT <= slv_reg10(7 downto 4);
+                VGA_G_OUT <= slv_reg10(15 downto 12);
+                VGA_B_OUT <= slv_reg10(23 downto 20);
+                
             --drawing left paddle location
-            elsif (((xCount-250) > to_integer(signed(slv_reg7))) AND ((xCount-250) < to_integer(signed(slv_reg7))+(to_integer(signed(slv_reg6))))) AND (yCount-30 > to_integer(signed(slv_reg3))) AND ((yCount-30) < (to_integer(signed(slv_reg3))+to_integer(signed(slv_reg5)))) then
-                VGA_R_OUT <= "0000";
-                VGA_B_OUT <= "1111";
-                VGA_G_OUT <= "0000";
+            elsif ((slv_reg11(0) = '0') AND ((xCount-250) > to_integer(signed(slv_reg7))) AND ((xCount-250) < to_integer(signed(slv_reg7))+(to_integer(signed(slv_reg6))))) AND (yCount-30 > to_integer(signed(slv_reg3))) AND ((yCount-30) < (to_integer(signed(slv_reg3))+to_integer(signed(slv_reg5)))) then
+                VGA_R_OUT <= slv_reg9(7 downto 4);
+                VGA_G_OUT <= slv_reg9(15 downto 12);
+                VGA_B_OUT <= slv_reg9(23 downto 20);
             --drawing right paddle location
-            elsif (((xCount-250) > to_integer(signed(slv_reg8)))AND ((xCount-250) < (to_integer(signed(slv_reg8)))+(to_integer(signed(slv_reg6))))) AND (yCount-30 > to_integer(signed(slv_reg4))) AND ((yCount-30) < (to_integer(signed(slv_reg4))+to_integer(signed(slv_reg5)))) then
-                VGA_R_OUT <= "0000";
-                VGA_B_OUT <= "1111";
-                VGA_G_OUT <= "0000";
-            else --background
+            elsif ((slv_reg11(0) = '0')AND((xCount-250) > to_integer(signed(slv_reg8)))AND ((xCount-250) < (to_integer(signed(slv_reg8)))+(to_integer(signed(slv_reg6))))) AND (yCount-30 > to_integer(signed(slv_reg4))) AND ((yCount-30) < (to_integer(signed(slv_reg4))+to_integer(signed(slv_reg5)))) then
+                VGA_R_OUT <= slv_reg9(7 downto 4);
+                VGA_G_OUT <= slv_reg9(15 downto 12);
+                VGA_B_OUT <= slv_reg9(23 downto 20);
+
+            else --pass through
                 VGA_R_OUT <= VGA_R;
                 VGA_B_OUT <= VGA_B;
                 VGA_G_OUT <= VGA_G;
             end if;
-        
         end if;
       end process;
 	-- User logic ends

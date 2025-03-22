@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Mar 19 14:00:10 2025
+| Date         : Fri Mar 21 18:05:45 2025
 | Host         : ensc-pit-w18 running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file ip_design_wrapper_bus_skew_routed.rpt -pb ip_design_wrapper_bus_skew_routed.pb -rpx ip_design_wrapper_bus_skew_routed.rpx
 | Design       : ip_design_wrapper
@@ -45,7 +45,7 @@ Id  Position  From                            To                              Co
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow              8.000       1.282      6.718
+                                                                              Slow              8.000       1.206      6.794
 2   20        [get_cells [list {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]} \
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
@@ -70,10 +70,10 @@ Id  Position  From                            To                              Co
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]}]]
-                                                                              Slow              8.000       1.188      6.812
+                                                                              Slow              8.000       1.400      6.600
 3   22        [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[2]}]]
                                               [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[2]}]]
-                                                                              Slow             24.000       0.825     23.175
+                                                                              Slow             24.000       0.745     23.255
 4   24        [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[0]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[10]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[11]} \
@@ -138,10 +138,10 @@ Id  Position  From                            To                              Co
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[3]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[4]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[5]}]]
-                                                                              Slow             24.000       1.589     22.411
+                                                                              Slow             24.000       1.243     22.757
 5   26        [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[0]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[1]}]]
                                               [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]}]]
-                                                                              Slow             30.000       0.980     29.020
+                                                                              Slow             30.000       0.779     29.221
 6   28        [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[0]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[10]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[11]} \
@@ -210,10 +210,10 @@ Id  Position  From                            To                              Co
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[7]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[8]} \
           {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[9]}]]
-                                                                              Slow             30.000       1.316     28.684
+                                                                              Slow             30.000       1.307     28.693
 7   30        [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[3]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[4]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[2]}]]
                                               [get_cells [list {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[4]} {ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[2]}]]
-                                                                              Slow             24.000       0.743     23.257
+                                                                              Slow             24.000       0.789     23.211
 
 
 2. Bus Skew Report Per Constraint
@@ -249,27 +249,27 @@ Endpoints: 12
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_fpga_2            clk_out1_ip_design_clk_wiz_0_0
-                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-                                                                                                            Slow         1.282      6.718
+                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         1.206      6.794
 
 
-Slack (MET) :             6.718ns  (requirement - actual skew)
-  Endpoint Source:        ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+Slack (MET) :             6.794ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Endpoint Destination:   ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  Endpoint Destination:   ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
-  Reference Source:       ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  Reference Source:       ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Reference Destination:  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  Reference Destination:  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            8.000ns
-  Endpoint Relative Delay:    2.780ns
-  Reference Relative Delay:   1.551ns
-  Relative CRPR:              0.344ns
+  Endpoint Relative Delay:    2.677ns
+  Reference Relative Delay:   1.487ns
+  Relative CRPR:              0.381ns
   Uncertainty:                0.397ns
-  Actual Bus Skew:            1.282ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.206ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -279,12 +279,12 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.753     3.047    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X20Y40         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=614, routed)         1.747     3.041    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X24Y40         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y40         FDRE (Prop_fdre_C_Q)         0.478     3.525 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.619     4.144    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
-    SLICE_X20Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X24Y40         FDRE (Prop_fdre_C_Q)         0.456     3.497 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.710     4.207    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[6]
+    SLICE_X20Y40         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_ip_design_clk_wiz_0_0 rise edge)
@@ -295,15 +295,15 @@ Endpoint path:
                                                      -3.425    -1.813 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.725    -0.088    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=261, routed)         1.575     1.578    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X20Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.000     1.578    
-    SLICE_X20Y41         FDRE (Setup_fdre_C_D)       -0.214     1.364    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=261, routed)         1.574     1.577    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X20Y40         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     1.577    
+    SLICE_X20Y40         FDRE (Setup_fdre_C_D)       -0.047     1.530    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                           4.144    
-                         clock arrival                          1.364    
+                         data arrival                           4.207    
+                         clock arrival                          1.530    
   -------------------------------------------------------------------
-                         relative delay                         2.780    
+                         relative delay                         2.677    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -313,12 +313,12 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.578     2.757    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X23Y45         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/C
+                         net (fo=614, routed)         1.568     2.747    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X24Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X23Y45         FDRE (Prop_fdre_C_Q)         0.367     3.124 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.410     3.535    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[8]
-    SLICE_X22Y45         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+    SLICE_X24Y37         FDRE (Prop_fdre_C_Q)         0.367     3.115 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.351     3.466    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[4]
+    SLICE_X22Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_ip_design_clk_wiz_0_0 rise edge)
@@ -329,15 +329,15 @@ Reference path:
                                                      -3.793    -1.987 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.889    -0.098    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=261, routed)         1.750     1.753    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X22Y45         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism              0.000     1.753    
-    SLICE_X22Y45         FDRE (Hold_fdre_C_D)         0.231     1.984    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+                         net (fo=261, routed)         1.746     1.749    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X22Y37         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism              0.000     1.749    
+    SLICE_X22Y37         FDRE (Hold_fdre_C_D)         0.230     1.979    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
   -------------------------------------------------------------------
-                         data arrival                           3.535    
-                         clock arrival                          1.984    
+                         data arrival                           3.466    
+                         clock arrival                          1.979    
   -------------------------------------------------------------------
-                         relative delay                         1.551    
+                         relative delay                         1.487    
 
 
 
@@ -371,27 +371,27 @@ Endpoints: 12
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_ip_design_clk_wiz_0_0
-                      clk_fpga_2            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-                                                                                                            Slow         1.188      6.812
+                      clk_fpga_2            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                                                                            ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         1.400      6.600
 
 
-Slack (MET) :             6.812ns  (requirement - actual skew)
-  Endpoint Source:        ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+Slack (MET) :             6.600ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
-  Endpoint Destination:   ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Endpoint Destination:   ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Reference Source:       ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  Reference Source:       ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_ip_design_clk_wiz_0_0)
-  Reference Destination:  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  Reference Destination:  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            8.000ns
-  Endpoint Relative Delay:    0.365ns
-  Reference Relative Delay:  -0.770ns
+  Endpoint Relative Delay:    0.382ns
+  Reference Relative Delay:  -0.965ns
   Relative CRPR:              0.344ns
   Uncertainty:                0.397ns
-  Actual Bus Skew:            1.188ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.400ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -404,12 +404,12 @@ Endpoint path:
                                                      -3.793    -1.987 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.889    -0.098    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=261, routed)         1.742     1.745    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X30Y40         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=261, routed)         1.744     1.747    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X26Y40         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X30Y40         FDRE (Prop_fdre_C_Q)         0.518     2.263 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.756     3.019    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[2]
-    SLICE_X29Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X26Y40         FDRE (Prop_fdre_C_Q)         0.478     2.225 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/Q
+                         net (fo=1, routed)           0.638     2.863    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[9]
+    SLICE_X27Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -417,15 +417,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.570     2.749    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X29Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     2.749    
-    SLICE_X29Y41         FDRE (Setup_fdre_C_D)       -0.095     2.654    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=614, routed)         1.571     2.750    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X27Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
+                         clock pessimism              0.000     2.750    
+    SLICE_X27Y41         FDRE (Setup_fdre_C_D)       -0.270     2.480    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
   -------------------------------------------------------------------
-                         data arrival                           3.019    
-                         clock arrival                          2.655    
+                         data arrival                           2.863    
+                         clock arrival                          2.480    
   -------------------------------------------------------------------
-                         relative delay                         0.365    
+                         relative delay                         0.382    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -438,12 +438,12 @@ Reference path:
                                                      -3.425    -1.813 r  ip_design_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.725    -0.088    ip_design_i/clk_wiz_0/inst/clk_out1_ip_design_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  ip_design_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=261, routed)         1.569     1.572    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X26Y43         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+                         net (fo=261, routed)         1.567     1.570    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X29Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X26Y43         FDRE (Prop_fdre_C_Q)         0.418     1.990 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.512     2.503    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[8]
-    SLICE_X26Y44         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+    SLICE_X29Y41         FDRE (Prop_fdre_C_Q)         0.367     1.937 r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.368     2.305    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
+    SLICE_X30Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -451,15 +451,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.749     3.043    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X26Y44         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism              0.000     3.043    
-    SLICE_X26Y44         FDRE (Hold_fdre_C_D)         0.230     3.273    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+                         net (fo=614, routed)         1.746     3.040    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X30Y41         FDRE                                         r  ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     3.040    
+    SLICE_X30Y41         FDRE (Hold_fdre_C_D)         0.230     3.270    ip_design_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           2.503    
-                         clock arrival                          3.273    
+                         data arrival                           2.305    
+                         clock arrival                          3.270    
   -------------------------------------------------------------------
-                         relative delay                        -0.770    
+                         relative delay                        -0.965    
 
 
 
@@ -470,27 +470,27 @@ Endpoints: 3
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clk_fpga_0            clk_fpga_2            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/D
-                                                                            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/D
-                                                                                                            Slow         0.825     23.175
+clk_fpga_0            clk_fpga_2            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/D
+                                                                            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/D
+                                                                                                            Slow         0.745     23.255
 
 
-Slack (MET) :             23.175ns  (requirement - actual skew)
-  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]/C
+Slack (MET) :             23.255ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/D
+  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]/C
+  Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Reference Destination:  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/D
+  Reference Destination:  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            24.000ns
-  Endpoint Relative Delay:    1.453ns
-  Reference Relative Delay:   0.248ns
-  Relative CRPR:              0.574ns
+  Endpoint Relative Delay:    1.452ns
+  Reference Relative Delay:   0.295ns
+  Relative CRPR:              0.608ns
   Uncertainty:                0.195ns
-  Actual Bus Skew:            0.825ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.745ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -500,12 +500,12 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.640     2.934    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_clk
-    SLICE_X44Y81         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]/C
+                         net (fo=2476, routed)        1.836     3.130    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_clk
+    SLICE_X41Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y81         FDRE (Prop_fdre_C_Q)         0.456     3.390 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]/Q
-                         net (fo=1, routed)           0.664     4.054    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff[3]
-    SLICE_X46Y81         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/D
+    SLICE_X41Y115        FDRE (Prop_fdre_C_Q)         0.456     3.586 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]/Q
+                         net (fo=1, routed)           0.631     4.217    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff[4]
+    SLICE_X43Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -513,15 +513,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.468     2.647    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_clk
-    SLICE_X46Y81         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/C
-                         clock pessimism              0.000     2.647    
-    SLICE_X46Y81         FDRE (Setup_fdre_C_D)       -0.045     2.602    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]
+                         net (fo=614, routed)         1.647     2.826    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_clk
+    SLICE_X43Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/C
+                         clock pessimism              0.000     2.826    
+    SLICE_X43Y115        FDRE (Setup_fdre_C_D)       -0.061     2.765    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]
   -------------------------------------------------------------------
-                         data arrival                           4.054    
-                         clock arrival                          2.602    
+                         data arrival                           4.217    
+                         clock arrival                          2.765    
   -------------------------------------------------------------------
-                         relative delay                         1.453    
+                         relative delay                         1.452    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -531,12 +531,12 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.468     2.647    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_clk
-    SLICE_X44Y81         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]/C
+                         net (fo=2476, routed)        1.647     2.826    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_clk
+    SLICE_X41Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y81         FDRE (Prop_fdre_C_Q)         0.367     3.014 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[4]/Q
-                         net (fo=1, routed)           0.415     3.428    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff[4]
-    SLICE_X46Y81         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/D
+    SLICE_X41Y115        FDRE (Prop_fdre_C_Q)         0.367     3.193 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff_reg[3]/Q
+                         net (fo=1, routed)           0.412     3.605    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/src_hsdata_ff[3]
+    SLICE_X43Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -544,15 +544,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.640     2.934    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_clk
-    SLICE_X46Y81         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]/C
-                         clock pessimism              0.000     2.934    
-    SLICE_X46Y81         FDRE (Hold_fdre_C_D)         0.246     3.180    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[4]
+                         net (fo=614, routed)         1.836     3.130    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_clk
+    SLICE_X43Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]/C
+                         clock pessimism              0.000     3.130    
+    SLICE_X43Y115        FDRE (Hold_fdre_C_D)         0.180     3.310    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/dest_hsdata_ff_reg[3]
   -------------------------------------------------------------------
-                         data arrival                           3.428    
-                         clock arrival                          3.180    
+                         data arrival                           3.605    
+                         clock arrival                          3.310    
   -------------------------------------------------------------------
-                         relative delay                         0.248    
+                         relative delay                         0.295    
 
 
 
@@ -625,27 +625,27 @@ Endpoints: 32
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clk_fpga_0            clk_fpga_2            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[25]/D
-                                                                            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[18]/D
-                                                                                                            Slow         1.589     22.411
+clk_fpga_0            clk_fpga_2            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[27]/D
+                                                                            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[10]/D
+                                                                                                            Slow         1.243     22.757
 
 
-Slack (MET) :             22.411ns  (requirement - actual skew)
-  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[25]/C
+Slack (MET) :             22.757ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[27]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[25]/D
+  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[27]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[18]/C
+  Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Reference Destination:  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[18]/D
+  Reference Destination:  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[10]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            24.000ns
-  Endpoint Relative Delay:    2.109ns
-  Reference Relative Delay:   0.356ns
-  Relative CRPR:              0.358ns
+  Endpoint Relative Delay:    1.822ns
+  Reference Relative Delay:   0.246ns
+  Relative CRPR:              0.529ns
   Uncertainty:                0.195ns
-  Actual Bus Skew:            1.589ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.243ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -655,12 +655,12 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.711     3.005    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_clk
-    SLICE_X62Y88         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[25]/C
+                         net (fo=2476, routed)        1.895     3.189    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_clk
+    SLICE_X59Y117        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[27]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X62Y88         FDRE (Prop_fdre_C_Q)         0.478     3.483 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[25]/Q
-                         net (fo=1, routed)           1.098     4.581    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff[25]
-    SLICE_X58Y88         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[25]/D
+    SLICE_X59Y117        FDRE (Prop_fdre_C_Q)         0.456     3.645 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[27]/Q
+                         net (fo=1, routed)           0.961     4.606    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff[27]
+    SLICE_X60Y117        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -668,15 +668,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.534     2.713    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_clk
-    SLICE_X58Y88         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[25]/C
-                         clock pessimism              0.000     2.713    
-    SLICE_X58Y88         FDRE (Setup_fdre_C_D)       -0.240     2.473    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[25]
+                         net (fo=614, routed)         1.706     2.885    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_clk
+    SLICE_X60Y117        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[27]/C
+                         clock pessimism              0.000     2.885    
+    SLICE_X60Y117        FDRE (Setup_fdre_C_D)       -0.101     2.784    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[27]
   -------------------------------------------------------------------
-                         data arrival                           4.581    
-                         clock arrival                          2.473    
+                         data arrival                           4.606    
+                         clock arrival                          2.784    
   -------------------------------------------------------------------
-                         relative delay                         2.109    
+                         relative delay                         1.822    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -686,12 +686,12 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.475     2.654    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_clk
-    SLICE_X49Y89         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[18]/C
+                         net (fo=2476, routed)        1.712     2.891    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_clk
+    SLICE_X63Y110        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y89         FDRE (Prop_fdre_C_Q)         0.367     3.021 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[18]/Q
-                         net (fo=1, routed)           0.510     3.530    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff[18]
-    SLICE_X50Y89         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[18]/D
+    SLICE_X63Y110        FDRE (Prop_fdre_C_Q)         0.367     3.258 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff_reg[10]/Q
+                         net (fo=1, routed)           0.415     3.674    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/src_hsdata_ff[10]
+    SLICE_X62Y110        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -699,15 +699,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.637     2.931    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_clk
-    SLICE_X50Y89         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[18]/C
-                         clock pessimism              0.000     2.931    
-    SLICE_X50Y89         FDRE (Hold_fdre_C_D)         0.243     3.174    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[18]
+                         net (fo=614, routed)         1.904     3.198    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_clk
+    SLICE_X62Y110        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[10]/C
+                         clock pessimism              0.000     3.198    
+    SLICE_X62Y110        FDRE (Hold_fdre_C_D)         0.230     3.428    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/dest_hsdata_ff_reg[10]
   -------------------------------------------------------------------
-                         data arrival                           3.530    
-                         clock arrival                          3.174    
+                         data arrival                           3.674    
+                         clock arrival                          3.428    
   -------------------------------------------------------------------
-                         relative delay                         0.356    
+                         relative delay                         0.246    
 
 
 
@@ -720,10 +720,10 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_fpga_2            clk_fpga_0            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]/D
                                                                             ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]/D
-                                                                                                            Slow         0.980     29.020
+                                                                                                            Slow         0.779     29.221
 
 
-Slack (MET) :             29.020ns  (requirement - actual skew)
+Slack (MET) :             29.221ns  (requirement - actual skew)
   Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
   Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]/D
@@ -734,11 +734,11 @@ Slack (MET) :             29.020ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            30.000ns
-  Endpoint Relative Delay:    1.670ns
-  Reference Relative Delay:   0.310ns
-  Relative CRPR:              0.575ns
+  Endpoint Relative Delay:    1.613ns
+  Reference Relative Delay:   0.416ns
+  Relative CRPR:              0.614ns
   Uncertainty:                0.195ns
-  Actual Bus Skew:            0.980ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.779ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -748,12 +748,12 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.645     2.939    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_clk
-    SLICE_X32Y84         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[1]/C
+                         net (fo=614, routed)         1.885     3.179    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_clk
+    SLICE_X27Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y84         FDRE (Prop_fdre_C_Q)         0.478     3.417 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[1]/Q
-                         net (fo=2, routed)           0.690     4.107    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff[1]
-    SLICE_X32Y85         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]/D
+    SLICE_X27Y109        FDRE (Prop_fdre_C_Q)         0.419     3.598 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[1]/Q
+                         net (fo=2, routed)           0.635     4.233    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff[1]
+    SLICE_X28Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -761,15 +761,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.474     2.653    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_clk
-    SLICE_X32Y85         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]/C
-                         clock pessimism              0.000     2.653    
-    SLICE_X32Y85         FDRE (Setup_fdre_C_D)       -0.216     2.437    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]
+                         net (fo=2476, routed)        1.697     2.876    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_clk
+    SLICE_X28Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]/C
+                         clock pessimism              0.000     2.876    
+    SLICE_X28Y109        FDRE (Setup_fdre_C_D)       -0.256     2.620    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[1]
   -------------------------------------------------------------------
-                         data arrival                           4.107    
-                         clock arrival                          2.437    
+                         data arrival                           4.233    
+                         clock arrival                          2.620    
   -------------------------------------------------------------------
-                         relative delay                         1.670    
+                         relative delay                         1.613    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -779,12 +779,12 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.473     2.652    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_clk
-    SLICE_X32Y84         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[0]/C
+                         net (fo=614, routed)         1.693     2.872    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_clk
+    SLICE_X27Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y84         FDRE (Prop_fdre_C_Q)         0.418     3.070 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[0]/Q
-                         net (fo=2, routed)           0.424     3.494    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff[0]
-    SLICE_X32Y85         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]/D
+    SLICE_X27Y109        FDRE (Prop_fdre_C_Q)         0.367     3.239 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff_reg[0]/Q
+                         net (fo=2, routed)           0.552     3.791    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/src_hsdata_ff[0]
+    SLICE_X28Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -792,15 +792,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.647     2.941    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_clk
-    SLICE_X32Y85         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]/C
-                         clock pessimism              0.000     2.941    
-    SLICE_X32Y85         FDRE (Hold_fdre_C_D)         0.243     3.184    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]
+                         net (fo=2476, routed)        1.889     3.183    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_clk
+    SLICE_X28Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]/C
+                         clock pessimism              0.000     3.183    
+    SLICE_X28Y109        FDRE (Hold_fdre_C_D)         0.192     3.375    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/dest_hsdata_ff_reg[0]
   -------------------------------------------------------------------
-                         data arrival                           3.494    
-                         clock arrival                          3.184    
+                         data arrival                           3.791    
+                         clock arrival                          3.375    
   -------------------------------------------------------------------
-                         relative delay                         0.310    
+                         relative delay                         0.416    
 
 
 
@@ -877,27 +877,27 @@ Endpoints: 34
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clk_fpga_2            clk_fpga_0            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[30]/D
-                                                                            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[9]/D
-                                                                                                            Slow         1.316     28.684
+clk_fpga_2            clk_fpga_0            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[32]/D
+                                                                            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[16]/D
+                                                                                                            Slow         1.307     28.693
 
 
-Slack (MET) :             28.684ns  (requirement - actual skew)
-  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[30]/C
+Slack (MET) :             28.693ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[32]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[30]/D
+  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[32]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[9]/C
+  Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[16]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
-  Reference Destination:  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[9]/D
+  Reference Destination:  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            30.000ns
-  Endpoint Relative Delay:    1.608ns
-  Reference Relative Delay:   0.230ns
-  Relative CRPR:              0.258ns
+  Endpoint Relative Delay:    1.622ns
+  Reference Relative Delay:   0.216ns
+  Relative CRPR:              0.293ns
   Uncertainty:                0.195ns
-  Actual Bus Skew:            1.316ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.307ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -907,12 +907,12 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.647     2.941    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_clk
-    SLICE_X49Y88         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[30]/C
+                         net (fo=614, routed)         1.889     3.183    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_clk
+    SLICE_X31Y110        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[32]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X49Y88         FDRE (Prop_fdre_C_Q)         0.419     3.360 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[30]/Q
-                         net (fo=1, routed)           0.666     4.026    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff[30]
-    SLICE_X44Y88         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[30]/D
+    SLICE_X31Y110        FDRE (Prop_fdre_C_Q)         0.456     3.639 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[32]/Q
+                         net (fo=1, routed)           0.792     4.431    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff[32]
+    SLICE_X31Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[32]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -920,15 +920,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.475     2.654    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_clk
-    SLICE_X44Y88         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[30]/C
-                         clock pessimism              0.000     2.654    
-    SLICE_X44Y88         FDRE (Setup_fdre_C_D)       -0.236     2.418    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[30]
+                         net (fo=2476, routed)        1.697     2.876    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_clk
+    SLICE_X31Y109        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[32]/C
+                         clock pessimism              0.000     2.876    
+    SLICE_X31Y109        FDRE (Setup_fdre_C_D)       -0.067     2.809    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[32]
   -------------------------------------------------------------------
-                         data arrival                           4.026    
-                         clock arrival                          2.418    
+                         data arrival                           4.431    
+                         clock arrival                          2.809    
   -------------------------------------------------------------------
-                         relative delay                         1.608    
+                         relative delay                         1.622    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -938,12 +938,12 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.460     2.639    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_clk
-    SLICE_X51Y84         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[9]/C
+                         net (fo=614, routed)         1.635     2.814    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_clk
+    SLICE_X51Y113        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[16]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X51Y84         FDRE (Prop_fdre_C_Q)         0.367     3.006 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[9]/Q
-                         net (fo=1, routed)           0.395     3.401    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff[9]
-    SLICE_X50Y83         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[9]/D
+    SLICE_X51Y113        FDRE (Prop_fdre_C_Q)         0.367     3.181 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff_reg[16]/Q
+                         net (fo=1, routed)           0.399     3.580    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/src_hsdata_ff[16]
+    SLICE_X50Y112        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -951,15 +951,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.631     2.925    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_clk
-    SLICE_X50Y83         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[9]/C
-                         clock pessimism              0.000     2.925    
-    SLICE_X50Y83         FDRE (Hold_fdre_C_D)         0.246     3.171    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[9]
+                         net (fo=2476, routed)        1.827     3.121    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_clk
+    SLICE_X50Y112        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[16]/C
+                         clock pessimism              0.000     3.121    
+    SLICE_X50Y112        FDRE (Hold_fdre_C_D)         0.243     3.364    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/dest_hsdata_ff_reg[16]
   -------------------------------------------------------------------
-                         data arrival                           3.401    
-                         clock arrival                          3.171    
+                         data arrival                           3.580    
+                         clock arrival                          3.364    
   -------------------------------------------------------------------
-                         relative delay                         0.230    
+                         relative delay                         0.216    
 
 
 
@@ -970,15 +970,15 @@ Endpoints: 3
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clk_fpga_0            clk_fpga_2            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[4]/D
+clk_fpga_0            clk_fpga_2            ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[2]/D
                                                                             ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]/D
-                                                                                                            Slow         0.743     23.257
+                                                                                                            Slow         0.789     23.211
 
 
-Slack (MET) :             23.257ns  (requirement - actual skew)
-  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[4]/C
+Slack (MET) :             23.211ns  (requirement - actual skew)
+  Endpoint Source:        ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[4]/D
+  Endpoint Destination:   ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
   Reference Source:       ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
@@ -986,11 +986,11 @@ Slack (MET) :             23.257ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_fpga_2)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            24.000ns
-  Endpoint Relative Delay:    1.420ns
-  Reference Relative Delay:   0.298ns
-  Relative CRPR:              0.574ns
+  Endpoint Relative Delay:    1.485ns
+  Reference Relative Delay:   0.283ns
+  Relative CRPR:              0.608ns
   Uncertainty:                0.195ns
-  Actual Bus Skew:            0.743ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.789ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1000,12 +1000,12 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.642     2.936    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_clk
-    SLICE_X44Y82         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[4]/C
+                         net (fo=2476, routed)        1.836     3.130    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_clk
+    SLICE_X40Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y82         FDRE (Prop_fdre_C_Q)         0.456     3.392 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[4]/Q
-                         net (fo=1, routed)           0.617     4.009    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff[4]
-    SLICE_X45Y83         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[4]/D
+    SLICE_X40Y115        FDRE (Prop_fdre_C_Q)         0.456     3.586 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[2]/Q
+                         net (fo=1, routed)           0.657     4.243    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff[2]
+    SLICE_X41Y116        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -1013,15 +1013,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.471     2.650    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_clk
-    SLICE_X45Y83         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[4]/C
-                         clock pessimism              0.000     2.650    
-    SLICE_X45Y83         FDRE (Setup_fdre_C_D)       -0.061     2.589    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[4]
+                         net (fo=614, routed)         1.646     2.825    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_clk
+    SLICE_X41Y116        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[2]/C
+                         clock pessimism              0.000     2.825    
+    SLICE_X41Y116        FDRE (Setup_fdre_C_D)       -0.067     2.758    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[2]
   -------------------------------------------------------------------
-                         data arrival                           4.009    
-                         clock arrival                          2.589    
+                         data arrival                           4.243    
+                         clock arrival                          2.758    
   -------------------------------------------------------------------
-                         relative delay                         1.420    
+                         relative delay                         1.485    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1031,12 +1031,12 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=2475, routed)        1.470     2.649    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_clk
-    SLICE_X44Y82         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[3]/C
+                         net (fo=2476, routed)        1.647     2.826    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_clk
+    SLICE_X40Y115        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X44Y82         FDRE (Prop_fdre_C_Q)         0.367     3.016 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[3]/Q
-                         net (fo=1, routed)           0.399     3.415    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff[3]
-    SLICE_X45Y83         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]/D
+    SLICE_X40Y115        FDRE (Prop_fdre_C_Q)         0.367     3.193 r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff_reg[3]/Q
+                         net (fo=1, routed)           0.399     3.592    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/src_hsdata_ff[3]
+    SLICE_X41Y116        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_2 rise edge)
@@ -1044,15 +1044,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  ip_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]
                          net (fo=1, routed)           1.193     1.193    ip_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  ip_design_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O
-                         net (fo=614, routed)         1.643     2.937    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_clk
-    SLICE_X45Y83         FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]/C
-                         clock pessimism              0.000     2.937    
-    SLICE_X45Y83         FDRE (Hold_fdre_C_D)         0.180     3.117    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]
+                         net (fo=614, routed)         1.835     3.129    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_clk
+    SLICE_X41Y116        FDRE                                         r  ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]/C
+                         clock pessimism              0.000     3.129    
+    SLICE_X41Y116        FDRE (Hold_fdre_C_D)         0.180     3.309    ip_design_i/ps7_0_axi_periph/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/dest_hsdata_ff_reg[3]
   -------------------------------------------------------------------
-                         data arrival                           3.415    
-                         clock arrival                          3.117    
+                         data arrival                           3.592    
+                         clock arrival                          3.309    
   -------------------------------------------------------------------
-                         relative delay                         0.298    
+                         relative delay                         0.283    
 
 
 

@@ -1,39 +1,10 @@
-14:03:00 **** Incremental Build of configuration Debug for project audio ****
+18:43:37 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/adventures_with_ip.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
-../src/adventures_with_ip.c: In function 'main':
-../src/adventures_with_ip.c:17:2: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
-   17 |  Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
-      |  ^~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/adventures_with_ip.c'
-' '
-'Building file: ../src/audio.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/audio.d" -MT"src/audio.o" -o "src/audio.o" "../src/audio.c"
-'Finished building: ../src/audio.c'
-' '
-'Building file: ../src/ip_functions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
-'Finished building: ../src/ip_functions.c'
-' '
-'Building target: audio.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bsplib/lib -o "audio.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: audio.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size audio.elf  |tee "audio.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  33696	   1192	 559240	 594128	  910d0	audio.elf
-'Finished building: audio.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-14:03:02 Build Finished (took 2s.400ms)
+18:43:37 Build Finished (took 437ms)
 

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Mar 19 14:00:06 2025
+| Date         : Fri Mar 21 18:05:40 2025
 | Host         : ensc-pit-w18 running 64-bit major release  (build 9200)
 | Command      : report_drc -file ip_design_wrapper_drc_routed.rpt -pb ip_design_wrapper_drc_routed.pb -rpx ip_design_wrapper_drc_routed.rpx
 | Design       : ip_design_wrapper
@@ -24,13 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 24
+             Violations found: 22
 +-----------+----------+----------------------------+------------+
 | Rule      | Severity | Description                | Violations |
 +-----------+----------+----------------------------+------------+
 | CHECK-3   | Warning  | Report rule limit reached  | 1          |
-| PDRC-62   | Warning  | SLICEM_5lutO5_B5           | 1          |
-| PDRC-63   | Warning  | SLICEM_5lutO5_A5           | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check | 20         |
 | RTSTAT-10 | Warning  | No routable loads          | 1          |
 +-----------+----------+----------------------------+------------+
@@ -40,16 +38,6 @@ Table of Contents
 CHECK-3#1 Warning
 Report rule limit reached  
 REQP-1839 rule limit reached: 20 violations have been found.
-Related violations: <none>
-
-PDRC-62#1 Warning
-SLICEM_5lutO5_B5  
-Dangling output pin O5 on site SLICE_X26Y45:B5LUT. For this programming the O5 output pin should have a signal.
-Related violations: <none>
-
-PDRC-63#1 Warning
-SLICEM_5lutO5_A5  
-Dangling output pin O5 on site SLICE_X26Y46:A5LUT. For this programming the O5 output pin should have a signal.
 Related violations: <none>
 
 REQP-1839#1 Warning

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 21 17:23:13 2025
+# Process ID: 22872
+# Current directory: c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project/display_game_objects_v1_0_project.runs/synth_1
+# Command line: vivado.exe -log display_game_objects_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_game_objects_v1_0.tcl
+# Log file: c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project/display_game_objects_v1_0_project.runs/synth_1/display_game_objects_v1_0.vds
+# Journal file: c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project/display_game_objects_v1_0_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source display_game_objects_v1_0.tcl -notrace

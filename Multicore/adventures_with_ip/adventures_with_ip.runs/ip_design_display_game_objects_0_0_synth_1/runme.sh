@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/ip_design_display_game_objects_0_0_synth_1'
+HD_PWD='C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/ip_design_display_game_objects_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

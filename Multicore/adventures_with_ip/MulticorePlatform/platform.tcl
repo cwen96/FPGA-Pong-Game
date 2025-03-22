@@ -163,3 +163,19 @@ platform generate
 platform clean
 platform generate
 platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 
+platform clean
+platform generate
+platform clean
+platform generate
+platform active {MulticorePlatform}
+platform config -updatehw {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/ip_design_wrapper.xsa}
+platform generate -domains 

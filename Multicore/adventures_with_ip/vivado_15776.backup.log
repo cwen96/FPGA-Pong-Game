@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 21 13:42:08 2025
+# Process ID: 15776
+# Current directory: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8276 C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\adventures_with_ip.xpr
+# Log file: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/vivado.log
+# Journal file: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/lfsr_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/game_objects_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'u:/ENSC 452/VGA_tutorial/vga_tutorial_students/vga_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1125.797 ; gain = 20.805
+open_bd_design {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd}
+Reading block design file <C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd>...
+Adding component instance block -- ac.uk:user:led_controller:1.0 - led_controller_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- user.org:user:vga_controller:1.0 - vga_controller_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_125M
+Adding component instance block -- sfu.ca:user:display_game_objects:1.0 - display_game_objects_0
+Adding component instance block -- sfu.ca:user:lfsr:1.0 - lfsr_0
+Successfully read diagram <ip_design> from block design file <C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd>
+open_bd_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 1198.910 ; gain = 43.547
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 21 14:08:38 2025...

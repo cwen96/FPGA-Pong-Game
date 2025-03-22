@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Mar 19 13:57:57 2025
-# Process ID: 16200
-# Current directory: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/impl_1
+# Start of session at: Fri Mar 21 18:06:37 2025
+# Process ID: 28196
+# Current directory: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/impl_1
 # Command line: vivado.exe -log ip_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ip_design_wrapper.tcl -notrace
-# Log file: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper.vdi
-# Journal file: C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/impl_1\vivado.jou
+# Log file: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/impl_1/ip_design_wrapper.vdi
+# Journal file: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source ip_design_wrapper.tcl -notrace

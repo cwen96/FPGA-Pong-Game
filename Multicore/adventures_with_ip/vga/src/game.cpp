@@ -1,6 +1,6 @@
 #include "game.h"
 #include <algorithm>
-Game::Game(int mode) {
+Game::Game(int mode, int difficulty) {
     score[0] = 0;
     score[1] = 0;
     *ballDiameterReg = BALL_DIAMETER;
@@ -11,6 +11,7 @@ Game::Game(int mode) {
     *leftPaddleLocationReg = 400;
     *rightPaddleLocationReg = 400;
 
+    difficulty = difficulty;
     ballLocationX = 1000;
     ballLocationY = 200;
     ballXVelocity = 10;
@@ -22,6 +23,14 @@ Game::Game(int mode) {
     if (mode == 1) {
         // initialize computer player
     }
+}
+void Game::setMode(int newMode){
+	mode = newMode;
+}
+
+void Game::resetScore(){
+	score[0]=0;
+	score[1]=0;
 }
 
 int Game::checkWinner() {
@@ -40,9 +49,11 @@ int Game::checkPoint() {
     if (ballLocationX > 1400) {
     	//player 0 (left )gets a point if ball passes right edge of screen
         return 0;
+        xil_printf("player 0 point\n");
     } else if (ballLocationX < -200) {
     	//player 1 (right) gets a point if ball passes left edge of screen
         return 1;
+        xil_printf("player 1 point\n");
     } else {
     	//no points
         return -1;
@@ -92,7 +103,7 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 			// check if right side of ball has passed the face of the paddle i.e. no longer returnable, bounce off top of paddle
 			if (ballLocationX + BALL_DIAMETER >= (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH) ){
 				// if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
-				xil_printf("passed paddle\n");
+				//xil_printf("passed paddle\n");
 				//if ball will touch paddle in next frame,
 				if (rightPaddleLocation - (ballLocationY + BALL_DIAMETER) <= (ballYVelocity - rightPaddleVelocity) && ballLocationY + BALL_DIAMETER <= rightPaddleLocation) {
 					ballYVelocity = std::min(ballYVelocity * (-1), leftPaddleVelocity);
@@ -144,15 +155,17 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 }
 
 int Game::updateGameState() {
-	computerPlayer(100000000);
+	if(mode == 0){
+		computerPlayer(100000000);
+	}
+
     checkWallCollision();
     checkPaddleCollision();
     int point = checkPoint();
 
-//    xil_printf("rightpaddleXLoc: %d\n", *paddleRightXLocation);
-//    xil_printf("leftpaddleXLoc: %d\n", *paddleLeftXLocation);
     if (point != -1) {
         awardPoint(point);
+        xil_printf("P1: %d P2: %d\n", score[0], score[1]);
         int winner = checkWinner();
         resetBall();
         return winner;
@@ -163,7 +176,7 @@ int Game::updateGameState() {
     *ballLocationYReg = ballLocationY;
     *ballLocationXReg = ballLocationX;
 
-    xil_printf("ball y location: %d\n",*ballLocationYReg);
+    //xil_printf("ball y location: %d\n",*ballLocationYReg);
 
     if (point != -1) {
             awardPoint(point);

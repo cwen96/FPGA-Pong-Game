@@ -1,0 +1,143 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 21 14:08:47 2025
+# Process ID: 18532
+# Current directory: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19220 C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\adventures_with_ip.xpr
+# Log file: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/vivado.log
+# Journal file: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/dumpherv/Desktop/452Project/ensc-452/Multicore/adventures_with_ip' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/lfsr_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/game_objects_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'u:/ENSC 452/VGA_tutorial/vga_tutorial_students/vga_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1253.145 ; gain = 146.980
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd}
+Reading block design file <C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd>...
+Adding component instance block -- ac.uk:user:led_controller:1.0 - led_controller_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:user:zed_audio_ctrl:1.0 - zed_audio_ctrl_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- user.org:user:vga_controller:1.0 - vga_controller_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_125M
+Adding component instance block -- sfu.ca:user:display_game_objects:1.0 - display_game_objects_0
+Adding component instance block -- sfu.ca:user:lfsr:1.0 - lfsr_0
+Successfully read diagram <ip_design> from block design file <C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd>
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1253.820 ; gain = 0.000
+ipx::edit_ip_in_project -upgrade true -name display_game_objects_v1_0_project -directory C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/dumpherv/desktop/ensc-452/multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/lfsr_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/game_objects_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'u:/ENSC 452/VGA_tutorial/vga_tutorial_students/vga_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1358.363 ; gain = 8.262
+update_compile_order -fileset sources_1
+current_project adventures_with_ip
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/lfsr_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/display_game_objects_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo/game_objects_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'u:/ENSC 452/VGA_tutorial/vga_tutorial_students/vga_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.tmp/display_game_objects_v1_0_project'.
+report_ip_status -name ip_status
+current_project display_game_objects_v1_0_project
+current_project adventures_with_ip
+upgrade_ip -vlnv sfu.ca:user:display_game_objects:1.0 [get_ips  ip_design_display_game_objects_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd'
+INFO: [IP_Flow 19-1972] Upgraded ip_design_display_game_objects_0_0 from display_game_objects_v1.0 1.0 to display_game_objects_v1.0 1.0
+Wrote  : <C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\adventures_with_ip.srcs\sources_1\bd\ip_design\ip_design.bd> 
+Wrote  : <C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ui/bd_f382a816.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips ip_design_display_game_objects_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+CRITICAL WARNING: [BD 41-1344] Reset pin /axi_timer_0/s_axi_aresetn (associated clock /axi_timer_0/s_axi_aclk) is connected to reset source /proc_sys_reset_0/interconnect_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_125M/peripheral_aresetn.
+CRITICAL WARNING: [BD 41-1344] Reset pin /vga_controller_0/rstn (associated clock /vga_controller_0/clk) is connected to reset source /proc_sys_reset_0/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_125M/peripheral_aresetn.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system7_0/S_AXI_HP0(0) and /vga_controller_0/M_AXI(5)
+WARNING: [BD 41-927] Following properties on pin /zed_audio_ctrl_0/S_AXI_ACLK have been updated from connected ip, but BD cell '/zed_audio_ctrl_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 1e+08 
+Please resolve any mismatches by directly setting properties on BD cell </zed_audio_ctrl_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 1.25e+08 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/pixel_clk have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /vga_controller_0/fifo_rst have been updated from connected ip, but BD cell '/vga_controller_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </vga_controller_0> to completely resolve these warnings.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/vga_controller_0/switch_buffer
+
+Wrote  : <C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\adventures_with_ip.srcs\sources_1\bd\ip_design\ip_design.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/synth/ip_design.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/vga_controller_0/M_AXI_AWID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_RID'(3) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/vga_controller_0/M_AXI_BID'(3) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/vga_controller_0/M_AXI_ARID'(3) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/sim/ip_design.vhd
+VHDL Output written to : c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/hdl/ip_design_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block display_game_objects_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/ip/ip_design_auto_cc_0/ip_design_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m04_couplers/auto_cc .
+Exporting to file c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/hw_handoff/ip_design.hwh
+Generated Block Design Tcl file c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/hw_handoff/ip_design_bd.tcl
+Generated Hardware Definition File c:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.gen/sources_1/bd/ip_design/synth/ip_design.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP ip_design_auto_cc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP ip_design_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP ip_design_display_game_objects_0_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ip_design_auto_cc_0, cache-ID = e188b3c01f6e20f8; cache size = 41.622 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ip_design_auto_pc_0, cache-ID = 367f1858f329648b; cache size = 41.622 MB.
+[Fri Mar 21 15:39:13 2025] Launched ip_design_display_game_objects_0_0_synth_1...
+Run output will be captured here: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/ip_design_display_game_objects_0_0_synth_1/runme.log
+[Fri Mar 21 15:39:13 2025] Launched synth_1...
+Run output will be captured here: C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/adventures_with_ip.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 1563.512 ; gain = 181.164
+current_project display_game_objects_v1_0_project
+close_project
