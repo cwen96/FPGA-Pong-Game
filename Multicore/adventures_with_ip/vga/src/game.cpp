@@ -12,8 +12,8 @@ Game::Game() {
     *rightPaddleLocationReg = 400;
     mode = 0;
     difficulty = 0;
-    ballLocationX = 1000;
-    ballLocationY = 200;
+    ballLocationX = 620;
+    ballLocationY = 492;
     ballXVelocity = INITIAL_X_VELOCITY[1];
     ballYVelocity = 0;
     leftPaddleLocation = 400;
@@ -69,7 +69,7 @@ int Game::checkPoint() {
 void Game::resetBall() {
     ballLocationX = 620;
     ballLocationY = 492;
-    //TODO: use randint to set initial direction
+
     int randInt = Xil_In32(0x43C30000);
 
     if(randInt > 0){
@@ -77,8 +77,14 @@ void Game::resetBall() {
     }else{
     	ballXVelocity = -INITIAL_X_VELOCITY[difficulty];
     }
+    int randInt2 = Xil_In32(0x43C30000);
+    ballYVelocity = randInt2/300000000;
 
-    ballYVelocity = 0;
+	//debug values
+//	  ballLocationX = 1100;
+//	  ballLocationY = 200;
+//	  ballYVelocity = 7;
+//	  ballXVelocity = 3;
 }
 
 void Game::awardPoint(int player) {
@@ -112,25 +118,28 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
     	if(ballLocationX < SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE){
 			// check if right side of ball has passed the face of the paddle i.e. no longer returnable, bounce off top of paddle
 			if (ballLocationX + BALL_DIAMETER >= (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH) ){
+				xil_printf("should contact\n");
 				// if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
 				//if ball will touch paddle in next frame,update y velocity
-				if (rightPaddleLocation - (ballLocationY + BALL_DIAMETER) <= (ballYVelocity - rightPaddleVelocity) && ballLocationY + BALL_DIAMETER <= rightPaddleLocation) {
-					ballYVelocity = std::min(ballYVelocity * (-1), leftPaddleVelocity);
+				xil_printf("vel: %d\n", rightPaddleVelocity);
+				if  ((rightPaddleLocation - (ballLocationY + BALL_DIAMETER)) <= (ballYVelocity - rightPaddleVelocity) && ballLocationY + BALL_DIAMETER <= rightPaddleLocation) {
+					xil_printf(" contact\n");
+					ballYVelocity = std::min(ballYVelocity * (-1), -PADDLE_SPEED);
 				}
 				// below paddle and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
 				else if( ((ballLocationY - (rightPaddleLocation + PADDLE_HEIGHT) ) < (ballYVelocity * (-1) - rightPaddleVelocity)) && (ballLocationY >= rightPaddleLocation + PADDLE_HEIGHT)) {
-					ballYVelocity = std::max(ballYVelocity * (-1), leftPaddleVelocity);
+					ballYVelocity = std::max(ballYVelocity * (-1), PADDLE_SPEED);
 				}
 			//if ball hasn't already passed the paddle face, check for a collision
 			// ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle
 			} else if (ballLocationX < (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH) && ballXVelocity >= (SCREEN_WIDTH - PADDLE_WIDTH - PADDLE_GAP_FROM_EDGE - (ballLocationX + BALL_DIAMETER))) {
-
-				if ((ballLocationY + BALL_DIAMETER > rightPaddleLocation) && (ballLocationY < rightPaddleLocation + PADDLE_HEIGHT)) {
+				////check if next frame the ball will hit paddle, taking into account y velocity
+				if ((ballLocationY + BALL_DIAMETER + ballYVelocity >= rightPaddleLocation) && (ballLocationY+ballYVelocity <= rightPaddleLocation + PADDLE_HEIGHT)) {
 					// xil_printf("returning ball\r\n");
 					ballXVelocity = std::min((ballXVelocity + 1), MAX_X_VELOCITY[difficulty]) * (-1);
 					// when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
 					//(with the paddle simulating a convex surface), as well as the current velocity of the ball and the speed of the paddle.
-					ballYVelocity += ((rightPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (rightPaddleLocation + (PADDLE_HEIGHT / 2))) / 10);
+					ballYVelocity += ((rightPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (rightPaddleLocation + (PADDLE_HEIGHT / 2))) / 15);
 					// TODO:set flag to play sound for collision
 				}
 			}
@@ -139,23 +148,23 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
     } else {
     	//only check collisions if ball not already passed paddle completely
     	if(ballLocationX + BALL_DIAMETER > PADDLE_GAP_FROM_EDGE){
-    		//if right side of ball is still not passed paddle
+    		//if left side of ball passed paddle face, check top and bottom collisions
     		if (ballLocationX + BALL_DIAMETER < (PADDLE_GAP_FROM_EDGE + PADDLE_WIDTH)) {
 				// if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
     			//top paddle collision
 				if ((leftPaddleLocation - (ballLocationY + BALL_DIAMETER)) <= (ballYVelocity - leftPaddleVelocity) && ballLocationY + BALL_DIAMETER <= leftPaddleLocation) {
-					ballYVelocity = std::min(ballYVelocity * (-1), leftPaddleVelocity);
+					ballYVelocity = std::min(ballYVelocity * (-1), -PADDLE_SPEED);
 				}
 				// moving up and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
 				else if (ballYVelocity <= 0 && (leftPaddleLocation + PADDLE_HEIGHT - ballLocationY) <= (ballYVelocity * (-1) + leftPaddleVelocity) && ballLocationY <= leftPaddleLocation + PADDLE_HEIGHT) {
-					ballYVelocity = std::max(ballYVelocity * (-1), leftPaddleVelocity);
+					ballYVelocity = std::max(ballYVelocity * (-1), PADDLE_SPEED);
 				}
-			// ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle
+			// ball velocity greater than distance to paddle means that in the next frame the ball will contact the paddle on it's face
 			} else if (ballXVelocity * (-1) >= (ballLocationX - (PADDLE_WIDTH + PADDLE_GAP_FROM_EDGE))) {  // ball velocity is higher than distance to paddle i.e. will contact in next frame
-
-				if (ballLocationY > (leftPaddleLocation - BALL_DIAMETER) && ballLocationY < leftPaddleLocation + PADDLE_HEIGHT) {
+				//check if next frame the ball will hit paddle
+				if (ballLocationY + ballYVelocity > (leftPaddleLocation - BALL_DIAMETER) && ballLocationY < leftPaddleLocation + PADDLE_HEIGHT) {
 					ballXVelocity = std::max((ballXVelocity - 1), -MAX_X_VELOCITY[difficulty]) * (-1);  // increase x velocity and invert direction
-					ballYVelocity += ((leftPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (leftPaddleLocation + (PADDLE_HEIGHT / 2))) / 6);
+					ballYVelocity += ((leftPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (leftPaddleLocation + (PADDLE_HEIGHT / 2))) / 15);
 					// TODO:set flag to play sound for collision
 				}
 			}
