@@ -1,6 +1,6 @@
 #include "game.h"
 #include <algorithm>
-Game::Game(int mode, int difficulty) {
+Game::Game() {
     score[0] = 0;
     score[1] = 0;
     *ballDiameterReg = BALL_DIAMETER;
@@ -10,24 +10,26 @@ Game::Game(int mode, int difficulty) {
     *paddleRightXLocation= (SCREEN_WIDTH-PADDLE_GAP_FROM_EDGE-PADDLE_WIDTH);
     *leftPaddleLocationReg = 400;
     *rightPaddleLocationReg = 400;
-
-    difficulty = difficulty;
+    mode = 0;
+    difficulty = 0;
     ballLocationX = 1000;
     ballLocationY = 200;
-    ballXVelocity = 10;
-    ballYVelocity = -3;
+    ballXVelocity = INITIAL_X_VELOCITY[1];
+    ballYVelocity = 0;
     leftPaddleLocation = 400;
     rightPaddleLocation = 400;
     rightPaddleVelocity = 0;
     leftPaddleVelocity = 0;
-    if (mode == 1) {
-        // initialize computer player
-    }
+
 }
 void Game::setMode(int newMode){
 	mode = newMode;
 }
 
+void Game::setDifficulty(int level){
+	difficulty = level;
+	ballXVelocity = INITIAL_X_VELOCITY[difficulty];
+}
 void Game::resetScore(){
 	score[0]=0;
 	score[1]=0;
@@ -41,10 +43,15 @@ int Game::checkWinner() {
         xil_printf("player 2 wins!\n\r");
         return 2;
     }
-    // TODO:end the game
     return 0;
 }
+int Game::getPlayerOneScore(){
+	return score[0];
+}
 
+int Game::getPlayerTwoScore(){
+	return score[1];
+}
 int Game::checkPoint() {
     if (ballLocationX > 1400) {
     	//player 0 (left )gets a point if ball passes right edge of screen
@@ -60,15 +67,18 @@ int Game::checkPoint() {
     }
 }
 void Game::resetBall() {
-//    ballLocationX = 620;
-//    ballLocationY = 492;
-//    ballXVelocity = 10;
-//    ballYVelocity = 0;
+    ballLocationX = 620;
+    ballLocationY = 492;
+    //TODO: use randint to set initial direction
+    int randInt = Xil_In32(0x43C30000);
 
-    ballLocationX = 1000;
-    ballLocationY = 800;
-    ballXVelocity = 6;
-    ballYVelocity = -5;
+    if(randInt > 0){
+    	ballXVelocity = INITIAL_X_VELOCITY[difficulty];
+    }else{
+    	ballXVelocity = -INITIAL_X_VELOCITY[difficulty];
+    }
+
+    ballYVelocity = 0;
 }
 
 void Game::awardPoint(int player) {
@@ -103,8 +113,7 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 			// check if right side of ball has passed the face of the paddle i.e. no longer returnable, bounce off top of paddle
 			if (ballLocationX + BALL_DIAMETER >= (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH) ){
 				// if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
-				//xil_printf("passed paddle\n");
-				//if ball will touch paddle in next frame,
+				//if ball will touch paddle in next frame,update y velocity
 				if (rightPaddleLocation - (ballLocationY + BALL_DIAMETER) <= (ballYVelocity - rightPaddleVelocity) && ballLocationY + BALL_DIAMETER <= rightPaddleLocation) {
 					ballYVelocity = std::min(ballYVelocity * (-1), leftPaddleVelocity);
 				}
@@ -118,7 +127,7 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 
 				if ((ballLocationY + BALL_DIAMETER > rightPaddleLocation) && (ballLocationY < rightPaddleLocation + PADDLE_HEIGHT)) {
 					// xil_printf("returning ball\r\n");
-					ballXVelocity = (ballXVelocity + 2) * (-1);
+					ballXVelocity = std::min((ballXVelocity + 1), MAX_X_VELOCITY[difficulty]) * (-1);
 					// when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
 					//(with the paddle simulating a convex surface), as well as the current velocity of the ball and the speed of the paddle.
 					ballYVelocity += ((rightPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (rightPaddleLocation + (PADDLE_HEIGHT / 2))) / 10);
@@ -128,9 +137,10 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 		}
     //ball moving left, check left paddle
     } else {
+    	//only check collisions if ball not already passed paddle completely
     	if(ballLocationX + BALL_DIAMETER > PADDLE_GAP_FROM_EDGE){
+    		//if right side of ball is still not passed paddle
     		if (ballLocationX + BALL_DIAMETER < (PADDLE_GAP_FROM_EDGE + PADDLE_WIDTH)) {
-
 				// if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
     			//top paddle collision
 				if ((leftPaddleLocation - (ballLocationY + BALL_DIAMETER)) <= (ballYVelocity - leftPaddleVelocity) && ballLocationY + BALL_DIAMETER <= leftPaddleLocation) {
@@ -144,7 +154,7 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 			} else if (ballXVelocity * (-1) >= (ballLocationX - (PADDLE_WIDTH + PADDLE_GAP_FROM_EDGE))) {  // ball velocity is higher than distance to paddle i.e. will contact in next frame
 
 				if (ballLocationY > (leftPaddleLocation - BALL_DIAMETER) && ballLocationY < leftPaddleLocation + PADDLE_HEIGHT) {
-					ballXVelocity = (ballXVelocity - 2) * (-1);  // increase x velocity and invert direction
+					ballXVelocity = std::max((ballXVelocity - 1), -MAX_X_VELOCITY[difficulty]) * (-1);  // increase x velocity and invert direction
 					ballYVelocity += ((leftPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (leftPaddleLocation + (PADDLE_HEIGHT / 2))) / 6);
 					// TODO:set flag to play sound for collision
 				}
@@ -155,7 +165,7 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 }
 
 int Game::updateGameState() {
-	if(mode == 0){
+	if(mode == 1){
 		computerPlayer(100000000);
 	}
 

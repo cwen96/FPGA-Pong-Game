@@ -130,26 +130,6 @@ void displayColourBlock(int *baseAddr, int xloc, int yloc, int diam, int colour)
     }
 }
 
-//void writeBarsToScreen(int loopNum, int *baseAddr) {
-//    int COLOURS[] = {BLACK, WHITE, RED, GREEN, BLUE};
-//    for (int i = 0; i < SCREEN_HEIGHT; i++) {
-//        for (int j = 0; j < SCREEN_WIDTH; j++) {
-//            if (j < 256) {
-//                baseAddr[i * SCREEN_WIDTH + j] = COLOURS[loopNum % 5];
-//            } else if (j < 512) {
-//                baseAddr[i * SCREEN_WIDTH + j] = COLOURS[(loopNum + 1) % 5];
-//            } else if (j < 768) {
-//                baseAddr[i * SCREEN_WIDTH + j] = COLOURS[(loopNum + 2) % 5];
-//            } else if (j < 1024) {
-//                baseAddr[i * SCREEN_WIDTH + j] = COLOURS[(loopNum + 3) % 5];
-//            } else {
-//                baseAddr[i * SCREEN_WIDTH + j] = COLOURS[(loopNum + 4) % 5];
-//            }
-//        }
-//    }
-//}
-//
-
 int main(){
     xil_printf("Entering Main in core 0\r\n");
     int status;
@@ -163,15 +143,8 @@ int main(){
     //----------------------------------------------------
     // Initialise Push Buttons
     status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
-    //	xil_printf("before return\r\n");
     if (status != XST_SUCCESS) return XST_FAILURE;
-    //	xil_printf("after return\r\n");
-    // Set LEDs direction to outputs
-    //	XGpio_SetDataDirection(&LEDInst, 1, 0x00);
-    // Set all buttons direction to inputs
-    //	xil_printf("before setting the direction\r\n");
     XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
-    //	xil_printf("fater the gpio setup\r\n");
 
     //----------------------------------------------------
     // SETUP THE TIMER
@@ -193,18 +166,16 @@ int main(){
     int *image_buffer_pointer = (int *)0x00900000;
     int selectedBallColour = 0;
     int selectedPaddleColour =  0;
-
-
-    //menu flag, while menu is true, do menu stuff, while false, do game stuff
-
+    int selectedSide= -1 ;
 
     int winner = 0;
-
+    //menu flag, while menu is true, do menu stuff, while false, do game stuff
     *isMenu = 1;
     int state = 0;
     int volume = 1;
-    int gameHistory[9][2]={{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}};
-    Game currentGame(0,0);
+    int gameHistoryArr[6][2]={{11,11},{0,0},{0,0},{0,0},{0,0},{0,0}};
+    int historyWriteback = 0;
+    Game currentGame;
     while (1) {
         while (TIMER_INTR_FLG == false) {
             Xil_DCacheFlush();
@@ -221,7 +192,7 @@ int main(){
         			}else if(BUTTON_U_FLG){
         				state = 4;
         			}else if(BUTTON_R_FLG){
-        				state = 5;
+        				state = 15;
         				currentGame.setMode(0);
         			}
         		    break;
@@ -266,9 +237,9 @@ int main(){
         		    }else if(BUTTON_R_FLG){
 
         				memcpy(image_buffer_pointer, gameHistory, NUM_BYTES_BUFFER);
-						for(int i = 0; i<9 ; i++){
-							draw_score_20x20(gameHistory[i][0], 500, 20*i, WHITE);
-							draw_score_20x20(gameHistory[i][1], 600, 20*i, WHITE);
+						for(int i = 0; i<6 ; i++){
+							draw_score_100x100(gameHistoryArr[i][0], 550,300 + 120*i, WHITE);
+							draw_score_100x100(gameHistoryArr[i][1], 850,300 + 120*i, WHITE);
 						}
 						state = (12);
         			}
@@ -298,9 +269,9 @@ int main(){
 					}else if(BUTTON_R_FLG){
 						//start game easy
 						memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
+						currentGame.setDifficulty(0);
+						*isMenu = 0;
 
-						*isMenu = false;
-						state = 0;
 					}else if (BUTTON_L_FLG){
 						state = 0;
 					}
@@ -314,8 +285,9 @@ int main(){
 					}else if(BUTTON_R_FLG){
 						//start game medium
 						memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
+						currentGame.setDifficulty(1);
 						*isMenu = false;
-						state = 0;
+
 					}else if (BUTTON_L_FLG){
 						state = 0;
 					}
@@ -329,7 +301,7 @@ int main(){
 					}else if(BUTTON_R_FLG){
 						//start game hard
 						memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
-						state = 0;
+						currentGame.setDifficulty(2);
 						*isMenu = false;
 					}else if (BUTTON_L_FLG){
 						state = 0;
@@ -340,6 +312,7 @@ int main(){
         			if(BUTTON_C_FLG){
         				state = 9;
         				volume = 2;
+        				//TODO:ADJUST VOLUME AND PLAY SOUND
         			}else if (BUTTON_L_FLG){
         				state=2;
         			}
@@ -349,6 +322,7 @@ int main(){
 					if(BUTTON_C_FLG){
 						state = 10;
 						volume = 3;
+						//TODO:ADJUST VOLUME AND PLAY SOUND
 					}else if (BUTTON_L_FLG){
 						state=2;
 					}
@@ -358,6 +332,7 @@ int main(){
 					if(BUTTON_C_FLG){
 						state=11;
 						volume = 4;
+						//TODO:ADJUST VOLUME AND PLAY SOUND
 					}else if (BUTTON_L_FLG){
 						state=2;
 					}
@@ -367,24 +342,18 @@ int main(){
 					if(BUTTON_C_FLG){
 						state=8;
 						volume = 1;
+						//TODO:ADJUST VOLUME AND PLAY SOUND
 					}else if (BUTTON_L_FLG){
 						state=2;
 					}
         			break;
         		case(12)://game history
-					memcpy(image_buffer_pointer, gameHistory, NUM_BYTES_BUFFER);
-//        			for(int i = 0; i<9 ; i++){
-//        				draw_score_20x20(gameHistory[i][0], 500, 20*i, WHITE);
-//        				draw_score_20x20(gameHistory[i][1], 600, 20*i, WHITE);
-//        			}
+
 					if(BUTTON_L_FLG){
 						state=3;
 					}
-					//TODO: print game history to screen
 					break;
         		case(13)://select ball colour
-
-
 					if(BUTTON_C_FLG){
 						selectedBallColour++;
 						displayColourBlock(image_buffer_pointer,700, 300 , 200, colours[selectedBallColour%5]);
@@ -417,6 +386,34 @@ int main(){
 							displayColourBlock(image_buffer_pointer,700, 550 , 200, colours[selectedPaddleColour%5]);
 						}
 						break;
+        		case(15)://play as left side
+
+						memcpy(image_buffer_pointer, selectLeft, NUM_BYTES_BUFFER);
+        				if(BUTTON_R_FLG){
+        					selectedSide = 0;
+        					state = 5;
+        				}else if (BUTTON_L_FLG){
+        					state = 0;
+        				}else if (BUTTON_D_FLG ||BUTTON_U_FLG){
+							state = 16;
+						}
+						break;
+        		case(16)://play as right side
+						memcpy(image_buffer_pointer, selectRight, NUM_BYTES_BUFFER);
+						if(BUTTON_R_FLG){
+							selectedSide = 1;
+							state = 5;
+						}else if (BUTTON_L_FLG){
+							state = 0;
+						}else if (BUTTON_D_FLG ||BUTTON_U_FLG){
+							state = 15;
+						}
+        				break;
+        		case(17):
+        				if(BUTTON_C_FLG){
+        					state = 0;
+        				}
+        				break;
         		default:
         			break;
 
@@ -433,43 +430,27 @@ int main(){
         	if(winner != 0){
         		*isMenu = 1;
         		//todo: save game result
+        		gameHistoryArr[historyWriteback%6][0]=currentGame.getPlayerOneScore();
+        		gameHistoryArr[historyWriteback%6][1]=currentGame.getPlayerTwoScore();
+
+        		if(currentGame.getPlayerOneScore()>currentGame.getPlayerTwoScore()){
+        			memcpy(image_buffer_pointer, playerOneWin, NUM_BYTES_BUFFER);
+        			draw_score_100x100(gameHistoryArr[historyWriteback][0], 350,600, WHITE);
+          			draw_score_100x100(gameHistoryArr[historyWriteback][1], 675,600 , WHITE);
+        		}else{
+        			memcpy(image_buffer_pointer, playerTwoWin, NUM_BYTES_BUFFER);
+        			draw_score_100x100(gameHistoryArr[historyWriteback][0], 350,600, WHITE);
+        			draw_score_100x100(gameHistoryArr[historyWriteback][1], 675,600 , WHITE);
+        		}
+        		state = 17;
         		currentGame.resetScore();
+        		historyWriteback++;
+
         	}
         }
         //		xil_printf("in the original while loop\n");
         TIMER_INTR_FLG = false;
 
-
-
-        //memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
-
-        // Process paddle movement from buttons
-
-        //writeGameScreen(image1_pointer, currentGame.getLeftPaddleLocation(), currentGame.getRightPaddleLocation(), currentGame.getBallLocationX(), currentGame.getBallLocationY());
-
-        //		if(loop == 0){
-        //
-        //			writeGameScreen(image1_pointer, 50, 400, 200, 600);
-        //			memcpy(image_buffer_pointer, image1_pointer, NUM_BYTES_BUFFER);
-        //		}
-        //		else if(loop==1){
-        //			writeGameScreen(image2_pointer, 300, 500, 0, 0);
-        //			memcpy(image_buffer_pointer, image2_pointer, NUM_BYTES_BUFFER);
-        //		}
-        //		else if(loop==2){
-        //			writeGameScreen(image3_pointer, 250, 550, 1200, 950);
-        //			memcpy(image_buffer_pointer, image3_pointer, NUM_BYTES_BUFFER);
-        //		}
-        //		else if(loop==3){
-        //			writeGameScreen(image4_pointer, 200, 600, 240, 300);
-        //			memcpy(image_buffer_pointer, image4_pointer, NUM_BYTES_BUFFER);
-        //		}
-        //		else if(loop==4){
-        //			writeGameScreen(image5_pointer, 600, 650, 500, 600);
-        //			memcpy(image_buffer_pointer, image5_pointer, NUM_BYTES_BUFFER);
-        //		}
-        //		loop++;
-        //		loop = loop % 5;
     }
     return 0;
 }

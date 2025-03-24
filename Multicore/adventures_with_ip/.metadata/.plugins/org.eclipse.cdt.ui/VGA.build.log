@@ -1,4 +1,4 @@
-18:43:37 **** Incremental Build of configuration Debug for project vga ****
+13:34:36 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -7,6 +7,10 @@ make --no-print-directory main-build
 'Building file: ../src/main.cc'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:196:9: warning: unused variable 'selectedSide' [-Wunused-variable]
+  196 |     int selectedSide= -1 ;
+      |         ^~~~~~~~~~~~
 'Finished building: ../src/main.cc'
 ' '
 'Building target: vga.elf'
@@ -17,9 +21,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size vga.elf  |tee "vga.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  77080	   3452	  22760	 103292	  1937c	vga.elf
+  78360	   3468	  22760	 104588	  1988c	vga.elf
 'Finished building: vga.elf.size'
 ' '
 
-18:43:39 Build Finished (took 1s.754ms)
+13:34:38 Build Finished (took 1s.705ms)
 

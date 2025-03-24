@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="menu"/>
+		<item key="selection" value="(12)"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="menu"/>
-			<item value="selectedPaddle"/>
-			<item value="ballColour"/>
-			<item value="TIMER"/>
-			<item value="TMR_Int"/>
-			<item value="void TMR_Intr"/>
-			<item value="TMRInst"/>
-			<item value="XPAR"/>
-			<item value="GPIO"/>
-			<item value="vol"/>
-			<item value="volatile"/>
-			<item value="SetUpIn"/>
-			<item value="61"/>
-			<item value="led"/>
-			<item value="LED"/>
+			<item value="(12)"/>
+			<item value="gameHistory"/>
+			<item value=" 12"/>
+			<item value="state = 12;"/>
+			<item value="image"/>
+			<item value="isMenu"/>
+			<item value="pressed"/>
+			<item value="vgaPaddleColour"/>
+			<item value="resetScore"/>
+			<item value="resetSc"/>
+			<item value="reset"/>
+			<item value="updateGame"/>
+			<item value="update"/>
+			<item value="passed paddle"/>
+			<item value="ball y location"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1362"/>
-		<item key="DIALOG_Y_ORIGIN" value="535"/>
-		<item key="DIALOG_WIDTH" value="284"/>
-		<item key="DIALOG_HEIGHT" value="396"/>
+		<item key="DIALOG_X_ORIGIN" value="1282"/>
+		<item key="DIALOG_Y_ORIGIN" value="136"/>
+		<item key="DIALOG_WIDTH" value="584"/>
+		<item key="DIALOG_HEIGHT" value="749"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
