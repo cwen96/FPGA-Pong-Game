@@ -185,3 +185,4 @@ platform clean
 platform generate
 platform clean
 platform generate -domains standalone_domain,ps7_cortex9_1,zynq_fsbl 
+platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 

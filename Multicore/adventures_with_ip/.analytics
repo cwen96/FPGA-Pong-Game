@@ -668,3 +668,49 @@ timestamp=[2025-03-26 14:13:50], mode=BUILD, duration=0:00:10.395, duration_ms=1
 timestamp=[2025-03-26 14:16:24], mode=BUILD, duration=0:00:00.538, duration_ms=538, data={name=audio, configuration=Debug, clean_build=false}
 timestamp=[2025-03-26 14:16:25], mode=BUILD, duration=0:00:00.565, duration_ms=565, data={name=vga, configuration=Debug, clean_build=false}
 timestamp=[2025-03-26 14:16:36], mode=BUILD, duration=0:00:10.359, duration_ms=10359, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 14:30:35], mode=WORKBENCH_START, duration=0:00:10.332, duration_ms=10332, data={}
+timestamp=[2025-03-26 14:30:36], mode=WORKBENCH_UI_INIT, duration=0:00:00.840, duration_ms=840, data={editors_count=7, platform_editors_count=0, projects_count=5, platform_projects_count=1, active_platform_editor=false, projects=MulticorePlatform,RemoteSystemsTempFiles,audio,vga,vga_system}
+timestamp=[2025-03-26 14:30:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.057, duration_ms=57, data={}
+timestamp=[2025-03-26 14:31:18], mode=PLATFORM_GENERATION, duration=0:00:31.703, duration_ms=31703, data={name=MulticorePlatform}
+timestamp=[2025-03-26 14:31:24], mode=BUILD, duration=0:00:03.808, duration_ms=3808, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 14:31:27], mode=BUILD, duration=0:00:02.735, duration_ms=2735, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 14:31:36], mode=BUILD, duration=0:00:08.562, duration_ms=8562, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:14:24], mode=BUILD, duration=0:00:00.464, duration_ms=464, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:14:25], mode=BUILD, duration=0:00:00.794, duration_ms=794, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:14:34], mode=BUILD, duration=0:00:08.606, duration_ms=8606, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:16:06], mode=BUILD, duration=0:00:00.450, duration_ms=450, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:16:07], mode=BUILD, duration=0:00:00.772, duration_ms=772, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:16:16], mode=BUILD, duration=0:00:08.541, duration_ms=8541, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:17:03], mode=BUILD, duration=0:00:00.451, duration_ms=451, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:17:04], mode=BUILD, duration=0:00:01.323, duration_ms=1323, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:17:13], mode=BUILD, duration=0:00:08.515, duration_ms=8515, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:17:58], mode=BUILD, duration=0:00:00.447, duration_ms=447, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:18:00], mode=BUILD, duration=0:00:01.754, duration_ms=1754, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:18:03], mode=BUILD, duration=0:00:02.512, duration_ms=2512, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:26:40], mode=BUILD, duration=0:00:00.453, duration_ms=453, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:26:42], mode=BUILD, duration=0:00:01.267, duration_ms=1267, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:26:44], mode=BUILD, duration=0:00:02.502, duration_ms=2502, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:27:08], mode=BUILD, duration=0:00:00.453, duration_ms=453, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:27:10], mode=BUILD, duration=0:00:01.313, duration_ms=1313, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:27:12], mode=BUILD, duration=0:00:02.496, duration_ms=2496, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:27:52], mode=BUILD, duration=0:00:00.438, duration_ms=438, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:27:54], mode=BUILD, duration=0:00:01.767, duration_ms=1767, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:28:03], mode=BUILD, duration=0:00:08.456, duration_ms=8456, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:29:24], mode=BUILD, duration=0:00:00.454, duration_ms=454, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:29:26], mode=BUILD, duration=0:00:01.706, duration_ms=1706, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:29:35], mode=BUILD, duration=0:00:08.458, duration_ms=8458, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:30:54], mode=BUILD, duration=0:00:00.454, duration_ms=454, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:30:56], mode=BUILD, duration=0:00:01.758, duration_ms=1758, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:31:05], mode=BUILD, duration=0:00:08.465, duration_ms=8465, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:36:46], mode=BUILD, duration=0:00:00.453, duration_ms=453, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:36:48], mode=BUILD, duration=0:00:00.828, duration_ms=828, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:36:56], mode=BUILD, duration=0:00:08.456, duration_ms=8456, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:37:06], mode=BUILD, duration=0:00:00.454, duration_ms=454, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:37:08], mode=BUILD, duration=0:00:01.704, duration_ms=1704, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:37:17], mode=BUILD, duration=0:00:08.455, duration_ms=8455, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:37:59], mode=BUILD, duration=0:00:00.448, duration_ms=448, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:38:01], mode=BUILD, duration=0:00:01.787, duration_ms=1787, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:38:10], mode=BUILD, duration=0:00:08.467, duration_ms=8467, data={name=vga_system, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:38:58], mode=BUILD, duration=0:00:00.467, duration_ms=467, data={name=audio, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:39:01], mode=BUILD, duration=0:00:01.771, duration_ms=1771, data={name=vga, configuration=Debug, clean_build=false}
+timestamp=[2025-03-26 15:39:09], mode=BUILD, duration=0:00:08.489, duration_ms=8489, data={name=vga_system, configuration=Debug, clean_build=false}

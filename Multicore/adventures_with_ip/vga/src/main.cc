@@ -29,6 +29,8 @@
 #define ARM1_STARTADR 0xFFFFFFF0
 #define ARM1_BASEADDR 0x10080000
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+#define DEBOUNCE_TICKS 18
+volatile unsigned int ticks = 0;
 
 // Parameter definitions
 #define BTNS_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
@@ -80,6 +82,26 @@ void BTN_Intr_Handler(void *InstancePtr) {
         BTN_INT) {
         return;
     }
+
+    // Disable GPIO interrupts
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+
+	// Check if the interrupt came from our button
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT) {
+		return;
+	}
+
+	// Store the last time a press was accepted
+	static unsigned int lastButtonTick = 0;
+	if ((ticks - lastButtonTick) < DEBOUNCE_TICKS) {
+		// If the time since the last accepted press is less than our debounce interval, ignore this interrupt.
+		(void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+		XGpio_InterruptEnable(&BTNInst, BTN_INT);
+		return;
+	}
+	lastButtonTick = ticks;
+
+	// Read button value
     btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 
     // Update paddle movement based on button value:
@@ -113,6 +135,7 @@ void BTN_Intr_Handler(void *InstancePtr) {
 }
 
 void TMR_Intr_Handler(void *data) {
+	ticks++;
 	TIMER_INTR_FLG = true;
 	XTmrCtr_Reset(&TMRInst, 0);
 	XTmrCtr_Start(&TMRInst, 0);
