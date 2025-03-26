@@ -1,4 +1,4 @@
-14:52:27 **** Incremental Build of configuration Debug for project vga ****
+12:55:41 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,6 +9,15 @@ make --no-print-directory main-build
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.cpp"
 'Finished building: ../src/game.cpp'
 ' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:169:9: warning: variable 'selectedSide' set but not used [-Wunused-but-set-variable]
+  169 |     int selectedSide= -1 ;
+      |         ^~~~~~~~~~~~
+'Finished building: ../src/main.cc'
+' '
 'Building target: vga.elf'
 'Invoking: ARM v7 g++ linker'
 arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bsplib/lib -o "vga.elf"  ./src/drawings.o ./src/game.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
@@ -17,9 +26,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size vga.elf  |tee "vga.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  78612	   3468	  22752	 104832	  19980	vga.elf
+  87196	   3468	  22752	 113416	  1bb08	vga.elf
 'Finished building: vga.elf.size'
 ' '
 
-14:52:28 Build Finished (took 1s.702ms)
+12:55:43 Build Finished (took 2s.237ms)
 

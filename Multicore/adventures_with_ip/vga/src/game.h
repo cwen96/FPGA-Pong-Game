@@ -25,6 +25,7 @@ class Game {
 	int* paddleRightXLocation=(int *)0x43C20020;
 	const int INITIAL_X_VELOCITY[3] = {5,7,10};
 	const int MAX_X_VELOCITY[3] = {10, 15, 20};
+	const int COMPUTER_PLAYER_SPEED[3]={60,40,20};
     int ballLocationX;
     int ballLocationY;
     int leftPaddleLocation;
@@ -43,7 +44,7 @@ class Game {
     void checkPaddleCollision();
     bool checkScoreCondition();
     int checkWinner();
-    void computerPlayer(int difficulty);
+    void computerPlayer();
 
    public:
     Game();

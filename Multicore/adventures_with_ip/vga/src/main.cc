@@ -173,7 +173,7 @@ int main(){
     *isMenu = 1;
     int state = 0;
     int volume = 1;
-    int gameHistoryArr[6][2]={{11,11},{0,0},{0,0},{0,0},{0,0},{0,0}};
+    int gameHistoryArr[6][2]={{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}};
     int historyWriteback = 0;
     Game currentGame;
     while (1) {

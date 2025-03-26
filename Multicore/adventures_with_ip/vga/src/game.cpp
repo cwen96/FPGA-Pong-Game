@@ -1,5 +1,6 @@
 #include "game.h"
 #include <algorithm>
+#include <math.h>
 Game::Game() {
     score[0] = 0;
     score[1] = 0;
@@ -175,7 +176,7 @@ void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of
 
 int Game::updateGameState() {
 	if(mode == 1){
-		computerPlayer(100000000);
+		computerPlayer();
 	}
 
     checkWallCollision();
@@ -242,9 +243,9 @@ void Game::paddleMovementHandler() {
     }
 }
 
-void Game::computerPlayer(int difficulty){
-	int randInt = Xil_In32(0x43C30000);
-	if(randInt > abs(difficulty)){
+void Game::computerPlayer(){
+	int randVal = 100*abs(Xil_In32(0x43C30000)/pow(2,32));
+	if(randVal > COMPUTER_PLAYER_SPEED[difficulty]){
 		if(ballLocationY < (rightPaddleLocation +PADDLE_HEIGHT/2)){
 			movePaddle(1, -PADDLE_SPEED);
 		}else if (ballLocationY > (rightPaddleLocation + PADDLE_HEIGHT/2)){
