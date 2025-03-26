@@ -90,7 +90,6 @@ void BTN_Intr_Handler(void *InstancePtr) {
     if ((btn_value & 4) == 4) {
         PLAYER_1_VELOCITY = -PADDLE_SPEED;  // move player 1 up
         BUTTON_L_FLG = true;
-
     } else if ((btn_value & 2) == 2) {
         PLAYER_1_VELOCITY = PADDLE_SPEED;  // move player 1 down
         BUTTON_D_FLG = true;
@@ -100,7 +99,6 @@ void BTN_Intr_Handler(void *InstancePtr) {
     } else if ((btn_value & 16) == 16) {
         PLAYER_2_VELOCITY = -PADDLE_SPEED;  // move player 2 down
         BUTTON_U_FLG = true;
-
     }else if ((btn_value & 1) == 1) {
     	BUTTON_C_FLG=true;
     }else {
@@ -429,12 +427,12 @@ int main(){
         	winner = currentGame.updateGameState();
         	if(winner != 0){
         		*isMenu = 1;
-        		//todo: save game result
         		gameHistoryArr[historyWriteback%6][0]=currentGame.getPlayerOneScore();
         		gameHistoryArr[historyWriteback%6][1]=currentGame.getPlayerTwoScore();
 
         		if(currentGame.getPlayerOneScore()>currentGame.getPlayerTwoScore()){
         			memcpy(image_buffer_pointer, playerOneWin, NUM_BYTES_BUFFER);
+
         			draw_score_100x100(gameHistoryArr[historyWriteback][0], 350,600, WHITE);
           			draw_score_100x100(gameHistoryArr[historyWriteback][1], 675,600 , WHITE);
         		}else{

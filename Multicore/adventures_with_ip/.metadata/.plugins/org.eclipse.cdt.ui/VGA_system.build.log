@@ -1,4 +1,4 @@
-12:47:55 **** Incremental Build of configuration Debug for project vga_system ****
+14:16:25 **** Incremental Build of configuration Debug for project vga_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 34465 C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif
@@ -6,5 +6,5 @@ sdcard_gen --xpfm C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_i
 creating BOOT.BIN using C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
 Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-12:48:04 Build Finished (took 8s.479ms)
+14:16:36 Build Finished (took 10s.346ms)
 

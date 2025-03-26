@@ -7665,3 +7665,243 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-5: Launch
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 12:56:01.549
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:44.883
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:44.888
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:44.889
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:44.892
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:11:44.892
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:44.893
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:44.895
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:45.890
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:45.894
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:45.894
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:45.898
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:11:45.899
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:45.901
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:11:45.906
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:31.544
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:31.560
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:31.560
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:31.560
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:12:31.560
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:31.560
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:31.560
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:32.654
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:32.660
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:32.660
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:32.664
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:12:32.664
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:32.666
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:32.667
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:44.563
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:44.568
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:44.568
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:44.572
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:12:44.572
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:44.573
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:44.574
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:45.529
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:45.533
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:45.534
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:45.537
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:12:45.537
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:45.538
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:12:45.540
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-29: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:34.858
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:34.863
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:34.863
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:34.867
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:13:34.867
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:34.869
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:34.871
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:35.893
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:35.897
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:35.897
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:35.900
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:13:35.900
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:35.902
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:13:35.903
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:23.817
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:23.820
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:23.821
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:23.823
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:16:23.824
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:23.825
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:23.826
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:24.840
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:24.844
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:24.844
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:24.847
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-26 14:16:24.848
+!MESSAGE Generating MD5 hash for file: C:\Users\dumpherv\Desktop\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:24.849
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-30: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-26 14:16:24.851
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/dumpherv/Desktop/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-30: Build Project

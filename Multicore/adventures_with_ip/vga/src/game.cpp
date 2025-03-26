@@ -111,8 +111,11 @@ void Game::checkWallCollision() {  // check if on next frame ball will contact w
         }
     }
 }
-
-void Game::checkPaddleCollision() {  // TODO:fix collision for top and bottom of paddles
+//LEFT SIDE OF BALL: ballXLocation
+//RIGHT SIDE OF BALL: ballXLocation+BALL_DIAMETER
+//TOP OF BALL: ballYLocation
+//BOTTOM OF BALL: ballYLocation+BALL_DIAMETER
+void Game::checkPaddleCollision() {
 	 //moving right, check collision with right paddle
     if (ballXVelocity >= 0) {
     	//preliminary check to see if ball has already fully passed paddle, in which case stop checking for collision

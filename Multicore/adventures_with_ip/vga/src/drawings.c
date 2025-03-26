@@ -301,13 +301,13 @@ void draw_score_100x100(int scoreVal, int x, int y, int colour) {
 }
 
 
-// used to "erase" things, such as if a scores is being continuously updated and you need to erase it each time
-//void restore_rect_from_background(int dst_x, int dst_y, int w, int h) {
-//	for (int row = 0; row < h; row++) {
-//		memcpy(
-//			image_buffer_pointer + (dst_y + row) * FRAME_WIDTH + dst_x,
-//			background_pointer   + (dst_y + row) * FRAME_WIDTH + dst_x,
-//			w * 4
-//		);
-//	}
-//}
+//used to "erase" things, such as if a scores is being continuously updated and you need to erase it each time
+void restore_rect_from_background(int dst_x, int dst_y, int w, int h, int* image_buffer_pointer, int* background_pointer) {
+	for (int row = 0; row < h; row++) {
+		memcpy(
+			image_buffer_pointer + (dst_y + row) * FRAME_WIDTH + dst_x,
+			background_pointer   + (dst_y + row) * FRAME_WIDTH + dst_x,
+			w * 4
+		);
+	}
+}
