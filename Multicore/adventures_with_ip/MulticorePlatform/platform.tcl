@@ -186,3 +186,74 @@ platform generate
 platform clean
 platform generate -domains standalone_domain,ps7_cortex9_1,zynq_fsbl 
 platform generate -domains standalone_domain,Audio,ps7_cortex9_1,zynq_fsbl 
+platform active {MulticorePlatform}
+domain active {ps7_cortex9_1}
+bsp reload
+bsp setlib -name xilffs -ver 4.4
+bsp setlib -name xilrsa -ver 1.6
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform active {MulticorePlatform}
+bsp reload
+bsp reload
+bsp reload
+platform generate
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp write
+platform generate -domains 
+platform clean
+platform generate
+domain active {zynq_fsbl}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+platform generate -domains Audio 
+platform clean
+platform generate
+platform clean
+platform generate
+bsp setlib -name xilffs -ver 4.4
+bsp setlib -name xilrsa -ver 1.6
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {zynq_fsbl}
+bsp write
+platform generate
+domain active {ps7_cortex9_1}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+bsp reload
+platform active {MulticorePlatform}
+bsp reload
+platform active {MulticorePlatform}
+domain active {ps7_cortex9_1}
+bsp reload
+bsp write
+bsp write
+platform generate
+bsp reload
+platform clean
+platform generate
+platform active {MulticorePlatform}
+bsp reload
+bsp reload
+platform generate -domains 
+bsp reload
+platform clean
+platform generate
+platform clean
+platform generate
+bsp reload
+domain active {standalone_domain}
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform generate -domains 
+platform clean
+platform generate
+domain active {ps7_cortex9_1}
+bsp reload

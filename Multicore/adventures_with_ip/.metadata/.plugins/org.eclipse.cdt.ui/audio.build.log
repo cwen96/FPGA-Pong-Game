@@ -1,10 +1,29 @@
-15:38:58 **** Incremental Build of configuration Debug for project audio ****
+18:46:05 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/adventures_with_ip.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
+../src/adventures_with_ip.c: In function 'main':
+../src/adventures_with_ip.c:20:2: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+   20 |  Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
+      |  ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/adventures_with_ip.c'
+' '
+'Building target: audio.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bsplib/lib -o "audio.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/audioSD.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: audio.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size audio.elf  |tee "audio.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71912	   2272	8777952	8852136	 8712a8	audio.elf
+'Finished building: audio.elf.size'
+' '
 
-15:38:58 Build Finished (took 445ms)
+18:46:06 Build Finished (took 1s.630ms)
 

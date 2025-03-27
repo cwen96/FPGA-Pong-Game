@@ -1,0 +1,8 @@
+17:15:39 **** Clean-only build of configuration Debug for project lfsr3_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
+
+17:15:40 Build Finished (took 200ms)
+

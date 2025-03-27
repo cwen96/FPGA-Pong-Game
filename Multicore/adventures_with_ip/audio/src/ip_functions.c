@@ -5,6 +5,7 @@
  */
 
 #include "adventures_with_ip.h"
+#include "audioSD.h"
 
 /* ---------------------------------------------------------------------------- *
  * 								audio_stream()									*
@@ -28,11 +29,15 @@ void audio_stream() {
     }
 
     /* If input from the terminal is 'q', then return to menu.
-     * Else, continue streaming. */
+     * Else, continue streaming.
+     */
     if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q')
         menu();
     else
         audio_stream();
+
+
+
 }  // audio_stream()
 
 /* ---------------------------------------------------------------------------- *
@@ -52,6 +57,8 @@ unsigned char gpio_init() {
 
     // Set all buttons direction to inputs
     XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
+
+    audioSD();
 
     return XST_SUCCESS;
 }
@@ -86,9 +93,6 @@ int lab_test() {
     int print_standby_status = 0;
     int i = 0;
     COMM_VAL = 0;
-
-
-    //buffer = load_audio_file("beep.mp3");
 
     /* If input from the terminal is 'q', then return to menu.
      * Else, continue. */
@@ -149,27 +153,3 @@ int lab_test() {
     }
     return XST_SUCCESS;
 }
-/*
-unsigned char* load_audio_file(const char *fileName) {
-	FILE *file = fopen(fileName, "rb");
-	if (!file) {
-		perror("Error opening file");
-		return NULL;
-	}
-
-	fseek(file, 0, SEEK_END);
-	rewind(file);
-
-	unsigned char *buffer = (unsigned char*)malloc(1000);
-	if (!buffer) {
-		perror("Malloc failed");
-		fclose(file);
-		return NULL;
-	}
-
-	fread(buffer, 1, 1000, file);
-	fclose(file);
-
-	return buffer;
-}
-*/

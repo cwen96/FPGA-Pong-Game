@@ -101,13 +101,13 @@ void Game::checkWallCollision() {  // check if on next frame ball will contact w
         // If the velocity of the ball is greater than the distance from the bottom of the ball to the bottom of the screen, collision next frame
         if (SCREEN_HEIGHT - BALL_DIAMETER - ballLocationY < ballYVelocity) {
             ballYVelocity = ballYVelocity * (-1);
-            // TODO:write collision flag to shared memory for sound to play
+            PLAY_COLLISION_SOUND = 1;
         }
     } else {
         // ball velocity is negative. If |ball velocity| > distance of ball to wall, collision next frame
         if ((-1) * ballYVelocity > ballLocationY) {
             ballYVelocity = ballYVelocity * (-1);
-            // TODO:write collision flag to shared memory for sound to play
+            PLAY_COLLISION_SOUND = 1;
         }
     }
 }
@@ -122,12 +122,12 @@ void Game::checkPaddleCollision() {
     	if(ballLocationX < SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE){
 			// check if right side of ball has passed the face of the paddle i.e. no longer returnable, bounce off top of paddle
 			if (ballLocationX + BALL_DIAMETER >= (SCREEN_WIDTH - PADDLE_GAP_FROM_EDGE - PADDLE_WIDTH) ){
-				xil_printf("should contact\n");
+				//xil_printf("should contact\n");
 				// if moving down while above paddle and the space between the bottom of the ball and top of paddle is less than y velocity, invert y velocity
 				//if ball will touch paddle in next frame,update y velocity
-				xil_printf("vel: %d\n", rightPaddleVelocity);
+				//xil_printf("vel: %d\n", rightPaddleVelocity);
 				if  ((rightPaddleLocation - (ballLocationY + BALL_DIAMETER)) <= (ballYVelocity - rightPaddleVelocity) && ballLocationY + BALL_DIAMETER <= rightPaddleLocation) {
-					xil_printf(" contact\n");
+					//xil_printf(" contact\n");
 					ballYVelocity = std::min(ballYVelocity * (-1), -PADDLE_SPEED);
 				}
 				// below paddle and space between top of ball and bottom of paddle less than -ve y velocity, invert y velocity
@@ -144,7 +144,7 @@ void Game::checkPaddleCollision() {
 					// when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
 					//(with the paddle simulating a convex surface), as well as the current velocity of the ball and the speed of the paddle.
 					ballYVelocity += ((rightPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (rightPaddleLocation + (PADDLE_HEIGHT / 2))) / 15);
-					// TODO:set flag to play sound for collision
+					PLAY_COLLISION_SOUND = 1;
 				}
 			}
 		}
@@ -170,6 +170,7 @@ void Game::checkPaddleCollision() {
 					ballXVelocity = std::max((ballXVelocity - 1), -MAX_X_VELOCITY[difficulty]) * (-1);  // increase x velocity and invert direction
 					ballYVelocity += ((leftPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (leftPaddleLocation + (PADDLE_HEIGHT / 2))) / 15);
 					// TODO:set flag to play sound for collision
+					PLAY_COLLISION_SOUND = 1;
 				}
 			}
     	}

@@ -4,6 +4,8 @@
  * Main source file. Contains main() and menu() functions.
  */
 #include "adventures_with_ip.h"
+#include <xil_cache.h>
+
 
 /* ---------------------------------------------------------------------------- *
  * 									main()										*
@@ -12,6 +14,7 @@
  * peripherals, before calling the interactive menu system.
  * ---------------------------------------------------------------------------- */
 int main(void) {
+	//Xil_DCacheDisable();
 
 	xil_printf("Entering Main\r\n");
 	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);

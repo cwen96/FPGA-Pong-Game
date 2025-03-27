@@ -77,15 +77,6 @@ static int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioIn
 void BTN_Intr_Handler(void *InstancePtr) {
     // Disable GPIO interrupts
     XGpio_InterruptDisable(&BTNInst, BTN_INT);
-    // Ignore additional button presses
-    if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=
-        BTN_INT) {
-        return;
-    }
-
-    // Disable GPIO interrupts
-	XGpio_InterruptDisable(&BTNInst, BTN_INT);
-
 	// Check if the interrupt came from our button
 	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT) {
 		return;
@@ -152,6 +143,7 @@ void displayColourBlock(int *baseAddr, int xloc, int yloc, int diam, int colour)
 }
 
 int main(){
+	Xil_DCacheDisable();
     xil_printf("Entering Main in core 0\r\n");
     int status;
     Xil_SetTlbAttributes(0x10080000, 0x14de2);
@@ -202,12 +194,10 @@ int main(){
             Xil_DCacheFlush();
         }
         if (*isMenu == 1){
-        	xil_printf("state: %d\n", state);
         	switch(state){
         		case(0)://main menu single player highlighted
         			//setup buttons to switch state??
 					memcpy(image_buffer_pointer, mainMenuSinglePlayer, NUM_BYTES_BUFFER);
-        			//xil_printf("state %d\n", state);
         			if(BUTTON_D_FLG){
         				state = 1;
         			}else if(BUTTON_U_FLG){

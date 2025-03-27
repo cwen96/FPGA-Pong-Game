@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.audio\:.bss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.data=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.data1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.fixup=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.rodata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.rodata1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.sbss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.sbss2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.sdata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.sdata2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:.text=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:heap=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:heap-size=400000000
+com.xilinx.sdk.linkgen.prefs.audio\:stack=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.audio\:stack-size=1024
+eclipse.preferences.version=1
