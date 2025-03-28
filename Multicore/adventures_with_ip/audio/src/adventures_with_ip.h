@@ -16,12 +16,52 @@
 #include <xil_printf.h>
 #include <xparameters.h>
 
-#include "stdlib.h"
 #include "xgpio.h"
 #include "xiicps.h"
 #include "xil_exception.h"
 #include "xscugic.h"
 #include "xuartps.h"
+
+#include <stdlib.h>
+#include <math.h>
+#include "xil_types.h"
+#include "xstatus.h"
+#include "ff.h"
+
+
+
+#define fatalError(msg) throwFatalError(__PRETTY_FUNCTION__,msg)
+#define DMA_BDUFFERSIZE 4000
+
+typedef struct {
+	char riff[4];
+	u32 riffSize;
+	char wave[4];
+} headerWave_t;
+
+typedef struct {
+	char ckId[4];
+	u32 cksize;
+} genericChunk_t;
+
+typedef struct {
+	u16 wFormatTag;
+	u16 nChannels;
+	u32 nSamplesPerSec;
+	u32 nAvgBytesPerSec;
+	u16 nBlockAlign;
+	u16 wBitsPerSample;
+	u16 cbSize;
+	u16 wValidBitsPerSample;
+	u32 dwChannelMask;
+	u8 SubFormat[16];
+} fmtChunk_t;
+
+
+void playWavFile(const char *filename);
+void stopWavFile();
+void loadAudioSD();
+
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*
@@ -32,7 +72,7 @@
  * 							Prototype Functions									*
  * ---------------------------------------------------------------------------- */
 void menu();
-void audio_stream();
+void audio_stream(int streamIndex);
 unsigned char gpio_init();
 int lab_test();
 void recordAudio();
@@ -69,6 +109,7 @@ XIicPs Iic;
 XGpio Gpio;        // Gpio instance for buttons and switches
 int recordStatus;
 int btn_value;
+int soundIndex;
 
 #define BTN_INT XGPIO_IR_CH1_MASK
 

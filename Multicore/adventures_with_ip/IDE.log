@@ -11479,3 +11479,321 @@ con
 
 18:46:33 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
 18:50:19 INFO  : Disconnected from the channel tcfchan#38.
+13:00:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\temp_xsdb_launch_script.tcl
+13:00:23 INFO  : XSCT server has started successfully.
+13:00:23 INFO  : plnx-install-location is set to ''
+13:00:23 INFO  : Successfully done setting XSCT server connection channel  
+13:00:23 INFO  : Successfully done setting workspace for the tool. 
+13:00:27 INFO  : Platform repository initialization has completed.
+13:00:27 INFO  : Successfully done query RDI_DATADIR 
+13:00:27 INFO  : Registering command handlers for Vitis TCF services
+13:23:25 ERROR : (XSDB Server)Invalid target. Use "connect" command to connect to hw_server/TCF agent
+
+13:24:14 ERROR : (XSDB Server)Invalid target. Use "connect" command to connect to hw_server/TCF agent
+
+13:26:18 ERROR : (XSDB Server)Memory write error at 0x900000. Cannot access DDR: the controller is held in reset
+
+13:26:38 ERROR : (XSDB Server)Memory write error at 0x900000. Cannot access DDR: the controller is held in reset
+
+13:26:59 INFO  : Result from executing command 'getProjects': MulticorePlatform
+13:26:59 INFO  : Result from executing command 'getPlatforms': MulticorePlatform|C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm;ip_design_wrapper|C:/Users/cjw18/Desktop/GitHub/ensc-452/AudioTutorial/adventures_with_ip/ip_design_wrapper/export/ip_design_wrapper/ip_design_wrapper.xpfm
+13:27:00 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:27:03 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:28:12 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:28:13 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:32:24 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:32:26 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:40:52 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:40:53 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:41:23 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:41:24 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:41:37 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:41:39 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:42:36 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:42:37 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:43:11 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:43:12 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:43:50 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:43:51 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:44:22 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:44:25 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:47:46 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:47:47 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:50:31 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+13:50:34 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+13:50:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:51 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+13:50:51 INFO  : 'jtag frequency' command is executed.
+13:50:51 INFO  : Context for 'APU' is selected.
+13:50:51 INFO  : System reset is completed.
+13:50:54 INFO  : 'after 3000' command is executed.
+13:50:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+13:50:56 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit"
+13:50:56 INFO  : Context for 'APU' is selected.
+13:50:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+13:50:57 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:57 INFO  : Context for 'APU' is selected.
+13:50:57 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl' is done.
+13:50:57 INFO  : 'ps7_init' command is executed.
+13:50:57 INFO  : 'ps7_post_config' command is executed.
+13:50:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:57 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:50:57 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:50:57 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+13:50:58 INFO  : 'configparams force-mem-access 0' command is executed.
+13:50:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:50:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:58 INFO  : 'con' command is executed.
+13:50:58 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+13:50:58 INFO  : 'con' command is executed.
+13:50:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+13:50:58 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+14:23:27 INFO  : Disconnected from the channel tcfchan#1.
+14:23:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:23:51 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+14:23:51 INFO  : 'jtag frequency' command is executed.
+14:23:51 INFO  : Context for 'APU' is selected.
+14:23:51 INFO  : System reset is completed.
+14:23:54 INFO  : 'after 3000' command is executed.
+14:23:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+14:23:57 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit"
+14:23:57 INFO  : Context for 'APU' is selected.
+14:23:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+14:23:57 INFO  : 'configparams force-mem-access 1' command is executed.
+14:23:57 INFO  : Context for 'APU' is selected.
+14:23:57 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl' is done.
+14:23:57 INFO  : 'ps7_init' command is executed.
+14:23:57 INFO  : 'ps7_post_config' command is executed.
+14:23:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:23:57 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:23:57 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:23:58 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+14:23:58 INFO  : 'configparams force-mem-access 0' command is executed.
+14:23:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:23:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:23:58 INFO  : 'con' command is executed.
+14:23:58 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:23:58 INFO  : 'con' command is executed.
+14:23:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+14:23:58 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+14:26:42 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+14:26:43 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+14:27:23 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+14:27:25 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+14:27:42 INFO  : Disconnected from the channel tcfchan#15.
+14:27:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:27:42 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+14:27:42 INFO  : 'jtag frequency' command is executed.
+14:27:42 INFO  : Context for 'APU' is selected.
+14:27:42 INFO  : System reset is completed.
+14:27:45 INFO  : 'after 3000' command is executed.
+14:27:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+14:27:48 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit"
+14:27:48 INFO  : Context for 'APU' is selected.
+14:27:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+14:27:48 INFO  : 'configparams force-mem-access 1' command is executed.
+14:27:48 INFO  : Context for 'APU' is selected.
+14:27:48 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl' is done.
+14:27:48 INFO  : 'ps7_init' command is executed.
+14:27:48 INFO  : 'ps7_post_config' command is executed.
+14:27:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:27:48 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:27:48 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:27:48 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+14:27:49 INFO  : 'configparams force-mem-access 0' command is executed.
+14:27:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:27:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:27:49 INFO  : 'con' command is executed.
+14:27:49 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:27:49 INFO  : 'con' command is executed.
+14:27:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+14:27:49 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+14:29:04 INFO  : Disconnected from the channel tcfchan#18.
+14:29:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:29:07 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+14:29:07 INFO  : 'jtag frequency' command is executed.
+14:29:07 INFO  : Context for 'APU' is selected.
+14:29:07 INFO  : System reset is completed.
+14:29:10 INFO  : 'after 3000' command is executed.
+14:29:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+14:29:12 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit"
+14:29:13 INFO  : Context for 'APU' is selected.
+14:29:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+14:29:13 INFO  : 'configparams force-mem-access 1' command is executed.
+14:29:13 INFO  : Context for 'APU' is selected.
+14:29:13 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl' is done.
+14:29:13 INFO  : 'ps7_init' command is executed.
+14:29:13 INFO  : 'ps7_post_config' command is executed.
+14:29:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:29:13 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:29:13 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:29:13 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+14:29:13 INFO  : 'configparams force-mem-access 0' command is executed.
+14:29:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:29:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:29:14 INFO  : 'con' command is executed.
+14:29:14 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:29:14 INFO  : 'con' command is executed.
+14:29:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+14:29:14 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+14:31:20 INFO  : Checking for BSP changes to sync application flags for project 'audio'...
+14:31:22 INFO  : Checking for BSP changes to sync application flags for project 'vga'...
+14:31:37 INFO  : Disconnected from the channel tcfchan#19.
+14:31:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:31:37 INFO  : Jtag cable 'Digilent Zed 210248469719' is selected.
+14:31:37 INFO  : 'jtag frequency' command is executed.
+14:31:37 INFO  : Context for 'APU' is selected.
+14:31:37 INFO  : System reset is completed.
+14:31:40 INFO  : 'after 3000' command is executed.
+14:31:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}' command is executed.
+14:31:42 INFO  : Device configured successfully with "C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit"
+14:31:42 INFO  : Context for 'APU' is selected.
+14:31:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa'.
+14:31:42 INFO  : 'configparams force-mem-access 1' command is executed.
+14:31:42 INFO  : Context for 'APU' is selected.
+14:31:42 INFO  : Sourcing of 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl' is done.
+14:31:43 INFO  : 'ps7_init' command is executed.
+14:31:43 INFO  : 'ps7_post_config' command is executed.
+14:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:43 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:31:43 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:31:43 INFO  : The application 'C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf' is downloaded to processor 'ps7_cortexa9_1'.
+14:31:43 INFO  : 'configparams force-mem-access 0' command is executed.
+14:31:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}
+fpga -file C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:43 INFO  : 'con' command is executed.
+14:31:43 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+14:31:44 INFO  : 'con' command is executed.
+14:31:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+14:31:44 INFO  : Launch script is exported to file 'C:\Users\cjw18\Desktop\GitHub\ensc-452\Multicore\adventures_with_ip\vga_system\_ide\scripts\systemdebugger_vga_system_standalone.tcl'
+14:32:40 INFO  : Disconnected from the channel tcfchan#21.

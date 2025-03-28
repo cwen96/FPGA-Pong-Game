@@ -10,10 +10,7 @@
 #define PADDLE_GAP_FROM_EDGE 50
 #define PLAYER_1_VELOCITY (*(volatile unsigned long *)(0xFFFF1000))
 #define PLAYER_2_VELOCITY (*(volatile unsigned long *)(0xFFFF2000))
-#define PLAY_COLLISION_SOUND (*(volatile unsigned long *)(0xFFFF3000))
-#define PLAY_END_ROUND_SOUND (*(volatile unsigned long *)(0xFFFF4000))
-#define PLAY_GAME_OVER_SOUND (*(volatile unsigned long *)(0xFFFF5000))
-#define PLAY_BGM_SOUND (*(volatile unsigned long *)(0xFFFF6000))
+#define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
 
 #define PADDLE_SPEED 10
 

@@ -257,3 +257,5 @@ platform clean
 platform generate
 domain active {ps7_cortex9_1}
 bsp reload
+platform active {MulticorePlatform}
+platform generate -domains 

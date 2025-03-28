@@ -6,7 +6,6 @@
 #include "adventures_with_ip.h"
 #include <xil_cache.h>
 
-
 /* ---------------------------------------------------------------------------- *
  * 									main()										*
  * ---------------------------------------------------------------------------- *
@@ -36,6 +35,10 @@ int main(void) {
 
     xil_printf("GPIO configured\r\n");
 
+    loadAudioSD();
+
+    xil_printf("Audio from SD card configured\r\n");
+
     /* Display interactive menu interface via terminal */
     menu();
     return 1;
@@ -63,11 +66,19 @@ void menu() {
                      ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
                       XUARTPS_CR_TX_EN | XUARTPS_CR_RX_EN));
 
-    xil_printf("\r\n\r\n");
-    xil_printf("ENSC 452 Lab Test\r\n");
-    xil_printf("Enter 's' to stream pure audio or 'x' to start lab test\r\n");
+    xil_printf("\r\nCore 1 Audio Core\r\n");
     xil_printf("----------------------------------------\r\n");
+    soundIndex = Xil_In32(0xFFFF3000);
+    if (soundIndex > -1) {
+    	audio_stream(soundIndex);
+    	soundIndex = -1;
+    }
 
+    menu();
+
+
+
+    /*
     // Wait for input from UART via the terminal
     while (!XUartPs_IsReceiveData(UART_BASEADDR));
     inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
@@ -87,4 +98,5 @@ void menu() {
             menu();
             break;
     }  // switch
+    */
 }  // menu()
