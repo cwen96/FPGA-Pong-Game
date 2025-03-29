@@ -40,7 +40,7 @@ int main(void) {
     xil_printf("Audio from SD card configured\r\n");
 
     /* Display interactive menu interface via terminal */
-    menu();
+    play_audio();
     return 1;
 }
 
@@ -53,50 +53,34 @@ int main(void) {
  * 		'x' - 	Start Lab Test
  * 	This menu is shown upon exiting from any of the above options.
  * ---------------------------------------------------------------------------- */
-void menu() {
-    u8 inp = 0x00;
-    u32 CntrlRegister;
+void play_audio() {
+	while (1) {
+	    soundIndex = Xil_In32(0xFFFF3000);
 
-    /* Turn off all LEDs */
-    Xil_Out32(LED_BASE, 0);
+	    if (soundIndex == 0) {
+	    	playEndRoundSound();
+	    } else if (soundIndex == 1) {
+	    	playBGMSound();
+	    }  else if (soundIndex == 2) {
+	    	playGameOverSound();
+	    } else if (soundIndex == 3) {
+	    	playCollisionSound();
+	    }
+	}
+}
 
-    CntrlRegister = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_CR_OFFSET);
+void playEndRoundSound() {
+	play_sound_index(0);
+}
 
-    XUartPs_WriteReg(UART_BASEADDR, XUARTPS_CR_OFFSET,
-                     ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
-                      XUARTPS_CR_TX_EN | XUARTPS_CR_RX_EN));
+void playBGMSound() {
+	play_sound_index(1);
+}
 
-    xil_printf("\r\nCore 1 Audio Core\r\n");
-    xil_printf("----------------------------------------\r\n");
-    soundIndex = Xil_In32(0xFFFF3000);
-    if (soundIndex > -1) {
-    	audio_stream(soundIndex);
-    	soundIndex = -1;
-    }
+void playGameOverSound() {
+	play_sound_index(2);
+}
 
-    menu();
-
-
-
-    /*
-    // Wait for input from UART via the terminal
-    while (!XUartPs_IsReceiveData(UART_BASEADDR));
-    inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-    // Select function based on UART input
-    switch (inp) {
-        case 's':
-            xil_printf("STREAMING AUDIO\r\n");
-            xil_printf("Press 'q' to return to the main menu\r\n");
-            audio_stream();
-            break;
-        case 'x':
-            xil_printf("STARTING LAB TEST\r\n");
-            xil_printf("Press 'q' to return to the main menu\r\n");
-            lab_test();
-            break;
-        default:
-            menu();
-            break;
-    }  // switch
-    */
-}  // menu()
+void playCollisionSound() {
+	play_sound_index(3);
+}

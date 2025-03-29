@@ -1,0 +1,116 @@
+/*
+ * adventures_with_ip.h
+ *
+ * Main header file.
+ */
+
+#ifndef ADVENTURES_WITH_IP_H_
+#define ADVENTURES_WITH_IP_H_
+
+/* ---------------------------------------------------------------------------- *
+ * 								Header Files									*
+ * ---------------------------------------------------------------------------- */
+#include <sleep.h>
+#include <stdio.h>
+#include <xil_io.h>
+#include <xil_printf.h>
+#include <xparameters.h>
+
+#include "xgpio.h"
+#include "xiicps.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include "xuartps.h"
+
+#include <stdlib.h>
+#include <math.h>
+#include "xil_types.h"
+#include "xstatus.h"
+#include "ff.h"
+
+
+
+#define fatalError(msg) throwFatalError(__PRETTY_FUNCTION__,msg)
+#define DMA_BDUFFERSIZE 4000
+#define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
+
+typedef struct {
+	char riff[4];
+	u32 riffSize;
+	char wave[4];
+} headerWave_t;
+
+typedef struct {
+	char ckId[4];
+	u32 cksize;
+} genericChunk_t;
+
+typedef struct {
+	u16 wFormatTag;
+	u16 nChannels;
+	u32 nSamplesPerSec;
+	u32 nAvgBytesPerSec;
+	u16 nBlockAlign;
+	u16 wBitsPerSample;
+	u16 cbSize;
+	u16 wValidBitsPerSample;
+	u32 dwChannelMask;
+	u8 SubFormat[16];
+} fmtChunk_t;
+
+
+void playWavFile(const char *filename);
+void stopWavFile();
+void loadAudioSD();
+
+
+/* ---------------------------------------------------------------------------- *
+ * 							Custom IP Header Files								*
+ * ---------------------------------------------------------------------------- */
+#include "audio.h"
+
+/* ---------------------------------------------------------------------------- *
+ * 							Prototype Functions									*
+ * ---------------------------------------------------------------------------- */
+void menu();
+void audio_stream(int soundIndex);
+unsigned char gpio_init();
+int lab_test();
+void recordAudio();
+void playAudio();
+/* ---------------------------------------------------------------------------- *
+ * 						Redefinitions from xparameters.h 						*
+ * ---------------------------------------------------------------------------- */
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+#define BUTTON_SWITCH_BASE XPAR_GPIO_1_BASEADDR
+#define LED_BASE XPAR_LED_CONTROLLER_0_S00_AXI_BASEADDR
+#define BUTTON_SWITCH_ID XPAR_GPIO_1_DEVICE_ID
+#define INTC_DEVICE_ID XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+/* ---------------------------------------------------------------------------- *
+ * 							Define GPIO Channels								*
+ * ---------------------------------------------------------------------------- */
+#define BUTTON_CHANNEL 1
+#define SWITCH_CHANNEL 2
+
+/* ---------------------------------------------------------------------------- *
+ * 							Audio Scaling Factor								*
+ * ---------------------------------------------------------------------------- */
+#define SCALE 6
+
+/* ---------------------------------------------------------------------------- *
+ * 							Global Variables									*
+ * ---------------------------------------------------------------------------- */
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define BUFFER_SIZE 100
+#define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
+XIicPs Iic;
+XGpio Gpio;        // Gpio instance for buttons and switches
+int recordStatus;
+int btn_value;
+int soundIndex;
+
+#define BTN_INT XGPIO_IR_CH1_MASK
+
+#endif /* ADVENTURES_WITH_IP_H_ */

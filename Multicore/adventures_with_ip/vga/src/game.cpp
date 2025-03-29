@@ -101,13 +101,13 @@ void Game::checkWallCollision() {  // check if on next frame ball will contact w
         // If the velocity of the ball is greater than the distance from the bottom of the ball to the bottom of the screen, collision next frame
         if (SCREEN_HEIGHT - BALL_DIAMETER - ballLocationY < ballYVelocity) {
             ballYVelocity = ballYVelocity * (-1);
-            PLAY_SOUND = 0;
+            PLAY_SOUND = 3;
         }
     } else {
         // ball velocity is negative. If |ball velocity| > distance of ball to wall, collision next frame
         if ((-1) * ballYVelocity > ballLocationY) {
             ballYVelocity = ballYVelocity * (-1);
-            PLAY_SOUND = 0;
+            PLAY_SOUND = 3;
         }
     }
 }
@@ -144,7 +144,7 @@ void Game::checkPaddleCollision() {
 					// when contacting paddle, new ball velocity should be set to a function of how far the center of the ball is from the center of the paddle
 					//(with the paddle simulating a convex surface), as well as the current velocity of the ball and the speed of the paddle.
 					ballYVelocity += ((rightPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (rightPaddleLocation + (PADDLE_HEIGHT / 2))) / 15);
-					PLAY_SOUND = 0;
+					PLAY_SOUND = 3;
 				}
 			}
 		}
@@ -170,7 +170,7 @@ void Game::checkPaddleCollision() {
 					ballXVelocity = std::max((ballXVelocity - 1), -MAX_X_VELOCITY[difficulty]) * (-1);  // increase x velocity and invert direction
 					ballYVelocity += ((leftPaddleVelocity / 4) + (ballLocationY + (BALL_DIAMETER / 2) - (leftPaddleLocation + (PADDLE_HEIGHT / 2))) / 15);
 					// TODO:set flag to play sound for collision
-					PLAY_SOUND = 0;
+					PLAY_SOUND = 3;
 				}
 			}
     	}
@@ -179,6 +179,7 @@ void Game::checkPaddleCollision() {
 }
 
 int Game::updateGameState() {
+	paddleMovementHandler();
 	if(mode == 1){
 		computerPlayer();
 	}
@@ -239,12 +240,8 @@ void Game::movePaddle(int player, int velocity) {
 }
 
 void Game::paddleMovementHandler() {
-    if (PLAYER_1_VELOCITY != 0) {
         movePaddle(0, PLAYER_1_VELOCITY);
-    }
-    if (PLAYER_2_VELOCITY != 0) {
         movePaddle(1, PLAYER_2_VELOCITY);
-    }
 }
 
 void Game::computerPlayer(){

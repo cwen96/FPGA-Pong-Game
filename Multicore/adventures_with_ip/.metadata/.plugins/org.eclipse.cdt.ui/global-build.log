@@ -1,14 +1,40 @@
 Nothing to build in platform 'MulticorePlatform'
 
-14:31:21 **** Incremental Build of configuration Debug for project audio ****
+18:55:38 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
+'Building file: ../src/adventures_with_ip.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
+../src/adventures_with_ip.c: In function 'main':
+../src/adventures_with_ip.c:19:2: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
+   19 |  Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
+      |  ^~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/adventures_with_ip.c'
+' '
 'Building file: ../src/ip_functions.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
+../src/ip_functions.c: In function 'play_sound_index':
+../src/ip_functions.c:35:20: warning: passing argument 1 of 'playWavFile' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |   playWavFile(files[soundIndex]);
+      |               ~~~~~^~~~~~~~~~~~
+      |                    |
+      |                    int *
+In file included from ../src/ip_functions.c:7:
+../src/adventures_with_ip.h:62:30: note: expected 'const char *' but argument is of type 'int *'
+   62 | void playWavFile(const char *filename);
+      |                  ~~~~~~~~~~~~^~~~~~~~
+../src/ip_functions.c: At top level:
+../src/ip_functions.c:95:5: warning: "/*" within comment [-Wcomment]
+   95 |     /* If input from the terminal is 'q', then return to menu.
+      |      
+../src/ip_functions.c:145:5: warning: "/*" within comment [-Wcomment]
+  145 |     /* If input from the terminal is 'q', then return to menu.
+      |      
 ../src/ip_functions.c: In function 'loadAudioSD':
 ../src/ip_functions.c:356:16: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
   356 |    strcpy(files[filesNum++], fno.fname);
@@ -33,20 +59,20 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size audio.elf  |tee "audio.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  70848	   2272	8777952	8851072	 870e80	audio.elf
+  69900	   2272	8781024	8853196	 8716cc	audio.elf
 'Finished building: audio.elf.size'
 ' '
-14:31:22 **** Incremental Build of configuration Debug for project vga ****
+18:55:40 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
-14:31:23 **** Incremental Build of configuration Debug for project vga_system ****
+18:55:41 **** Incremental Build of configuration Debug for project vga_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 59188 C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif
+generate_system_bif.bat 61766 C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif
 sdcard_gen --xpfm C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm --sys_config MulticorePlatform --bif C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif --bitstream C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit --elf C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf,ps7_cortexa9_0 --elf C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf,ps7_cortexa9_1
 creating BOOT.BIN using C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit
 Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

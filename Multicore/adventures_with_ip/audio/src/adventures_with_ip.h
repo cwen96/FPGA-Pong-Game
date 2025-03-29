@@ -32,6 +32,7 @@
 
 #define fatalError(msg) throwFatalError(__PRETTY_FUNCTION__,msg)
 #define DMA_BDUFFERSIZE 4000
+#define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
 
 typedef struct {
 	char riff[4];
@@ -61,7 +62,10 @@ typedef struct {
 void playWavFile(const char *filename);
 void stopWavFile();
 void loadAudioSD();
-
+void playCollisionSound();
+void playBGMSound();
+void playGameOverSound();
+void playEndRoundSound();
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*
@@ -71,13 +75,11 @@ void loadAudioSD();
 /* ---------------------------------------------------------------------------- *
  * 							Prototype Functions									*
  * ---------------------------------------------------------------------------- */
-void menu();
-void audio_stream(int streamIndex);
+void play_audio();
+void audio_stream(int soundIndex);
 unsigned char gpio_init();
 int lab_test();
-void recordAudio();
-void playAudio();
-//unsigned char* load_audio_file(const char *fileName);
+void play_sound_index();
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */

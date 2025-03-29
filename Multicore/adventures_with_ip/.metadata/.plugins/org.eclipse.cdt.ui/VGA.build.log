@@ -1,4 +1,4 @@
-14:31:22 **** Incremental Build of configuration Debug for project vga ****
+18:55:40 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-14:31:23 Build Finished (took 440ms)
+18:55:41 Build Finished (took 453ms)
 

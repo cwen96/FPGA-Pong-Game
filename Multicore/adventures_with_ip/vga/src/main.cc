@@ -67,6 +67,7 @@ static void BTN_Intr_Handler(void *baseaddr_p);
 static void TMR_Intr_Handler(void *baseaddr_p);
 static int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 static int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+void pollButtonState();
 
 //----------------------------------------------------
 // INTERRUPT HANDLER FUNCTIONS
@@ -95,29 +96,16 @@ void BTN_Intr_Handler(void *InstancePtr) {
 	// Read button value
     btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 
-    // Update paddle movement based on button value:
-    // Left button (val == 4): move left paddle (player 1) up (-1)
-    // Bottom button (val == 2): move left paddle (player 1) down (+1)
-    // Top button (val == 8): move right paddle (player 2) up (-1)
-    // Right button (val == 16): move right paddle (player 2) down (+1)
-    if ((btn_value & 4) == 4) {
-        PLAYER_1_VELOCITY = -PADDLE_SPEED;  // move player 1 up
+    if (btn_value == 4) {
         BUTTON_L_FLG = true;
-    } else if ((btn_value & 2) == 2) {
-        PLAYER_1_VELOCITY = PADDLE_SPEED;  // move player 1 down
+    } else if (btn_value == 2) {
         BUTTON_D_FLG = true;
-    } else if ((btn_value & 8) == 8) {
-        PLAYER_2_VELOCITY = PADDLE_SPEED;  // move player 2 up
+    } else if (btn_value== 8) {
         BUTTON_R_FLG = true;
-    } else if ((btn_value & 16) == 16) {
-        PLAYER_2_VELOCITY = -PADDLE_SPEED;  // move player 2 down
+    } else if (btn_value == 16) {
         BUTTON_U_FLG = true;
-    }else if ((btn_value & 1) == 1) {
+    }else if (btn_value == 1) {
     	BUTTON_C_FLG=true;
-    }else {
-        // If none of these buttons are pressed, stop paddle movement.
-        PLAYER_1_VELOCITY = 0;
-        PLAYER_2_VELOCITY = 0;
     }
 
     (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
@@ -127,6 +115,7 @@ void BTN_Intr_Handler(void *InstancePtr) {
 
 void TMR_Intr_Handler(void *data) {
 	ticks++;
+	pollButtonState();
 	TIMER_INTR_FLG = true;
 	XTmrCtr_Reset(&TMRInst, 0);
 	XTmrCtr_Start(&TMRInst, 0);
@@ -520,4 +509,29 @@ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstanceP
     XScuGic_Enable(&INTCInst, INTC_TMR_INTERRUPT_ID);
 
     return XST_SUCCESS;
+}
+
+void pollButtonState() {
+    // Update paddle movement based on button value:
+    // Left button (val == 4): move left paddle (player 1) up (-1)
+    // Bottom button (val == 2): move left paddle (player 1) down (+1)
+    // Top button (val == 8): move right paddle (player 2) up (-1)
+    // Right button (val == 16): move right paddle (player 2) down (+1)
+
+    int btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+    if (btn_value & 4) {
+        PLAYER_1_VELOCITY = -PADDLE_SPEED;
+    } else if (btn_value & 2) {
+        PLAYER_1_VELOCITY = PADDLE_SPEED;
+    } else {
+        PLAYER_1_VELOCITY = 0;
+    }
+
+    if (btn_value & 8) {
+        PLAYER_2_VELOCITY = PADDLE_SPEED;
+    } else if (btn_value & 16) {
+        PLAYER_2_VELOCITY = -PADDLE_SPEED;
+    } else {
+        PLAYER_2_VELOCITY = 0;
+    }
 }
