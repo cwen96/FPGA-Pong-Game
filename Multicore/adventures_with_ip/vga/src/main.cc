@@ -33,6 +33,7 @@
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 #define DEBOUNCE_TICKS 18
 volatile unsigned int ticks = 0;
+int computer_side = 1;
 
 // Parameter definitions
 #define BTNS_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
@@ -390,7 +391,7 @@ int main() {
 
                     memcpy(image_buffer_pointer, selectLeft, NUM_BYTES_BUFFER);
                     if (BUTTON_R_FLG) {
-                        COMPUTER_SIDE = 1;
+                        currentGame.setComputerSide(1);
                         state = 5;
                     } else if (BUTTON_L_FLG) {
                         state = 0;
@@ -401,7 +402,7 @@ int main() {
                 case (16):  // play as right side
                     memcpy(image_buffer_pointer, selectRight, NUM_BYTES_BUFFER);
                     if (BUTTON_R_FLG) {
-                        COMPUTER_SIDE = 0;
+                        currentGame.setComputerSide(0);
                         state = 5;
                     } else if (BUTTON_L_FLG) {
                         state = 0;

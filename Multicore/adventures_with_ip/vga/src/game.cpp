@@ -14,6 +14,7 @@ Game::Game() {
     *leftPaddleLocationReg = 400;
     *rightPaddleLocationReg = 400;
     mode = 0;
+    computerSide = 1;
     difficulty = 0;
     ballLocationX = 620;
     ballLocationY = 492;
@@ -35,6 +36,10 @@ void Game::setDifficulty(int level) {
 void Game::resetScore() {
     score[0] = 0;
     score[1] = 0;
+}
+
+void Game::setComputerSide(int side) {
+	computerSide = side;
 }
 
 int Game::checkWinner() {
@@ -181,7 +186,7 @@ void Game::checkPaddleCollision() {
 int Game::updateGameState() {
     paddleMovementHandler();
     if (mode == 1) {
-        computerPlayer(COMPUTER_SIDE);
+        computerPlayer(computerSide);
     }
 
     checkWallCollision();
@@ -262,3 +267,5 @@ void Game::computerPlayer(int computerSide) {
                 movePaddle(0, PADDLE_SPEED);
             }
         }
+    }
+}

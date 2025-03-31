@@ -11,7 +11,6 @@
 #define PLAYER_1_VELOCITY (*(volatile unsigned long *)(0xFFFF1000))
 #define PLAYER_2_VELOCITY (*(volatile unsigned long *)(0xFFFF2000))
 #define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
-#define COMPUTER_SIDE 1
 #define PADDLE_SPEED 10
 
 class Game {
@@ -39,6 +38,7 @@ class Game {
     int leftPaddleVelocity;
     int difficulty;
     int mode;
+    int computerSide;
     int checkPoint();
     void awardPoint(int player);
     void resetBall();
@@ -46,7 +46,7 @@ class Game {
     void checkPaddleCollision();
     bool checkScoreCondition();
     int checkWinner();
-    void computerPlayer();
+    void computerPlayer(int computerSide);
 
    public:
     Game();
@@ -68,6 +68,8 @@ class Game {
     void setMode(int mode);
 
     void setDifficulty(int difficulty);
+
+    void setComputerSide(int side);
 
     int updateGameState();
 

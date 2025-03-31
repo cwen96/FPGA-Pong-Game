@@ -1,65 +1,10 @@
-18:55:38 **** Incremental Build of configuration Debug for project audio ****
+16:19:42 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/adventures_with_ip.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
-../src/adventures_with_ip.c: In function 'main':
-../src/adventures_with_ip.c:19:2: warning: implicit declaration of function 'Xil_SetTlbAttributes' [-Wimplicit-function-declaration]
-   19 |  Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
-      |  ^~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/adventures_with_ip.c'
-' '
-'Building file: ../src/ip_functions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
-../src/ip_functions.c: In function 'play_sound_index':
-../src/ip_functions.c:35:20: warning: passing argument 1 of 'playWavFile' from incompatible pointer type [-Wincompatible-pointer-types]
-   35 |   playWavFile(files[soundIndex]);
-      |               ~~~~~^~~~~~~~~~~~
-      |                    |
-      |                    int *
-In file included from ../src/ip_functions.c:7:
-../src/adventures_with_ip.h:62:30: note: expected 'const char *' but argument is of type 'int *'
-   62 | void playWavFile(const char *filename);
-      |                  ~~~~~~~~~~~~^~~~~~~~
-../src/ip_functions.c: At top level:
-../src/ip_functions.c:95:5: warning: "/*" within comment [-Wcomment]
-   95 |     /* If input from the terminal is 'q', then return to menu.
-      |      
-../src/ip_functions.c:145:5: warning: "/*" within comment [-Wcomment]
-  145 |     /* If input from the terminal is 'q', then return to menu.
-      |      
-../src/ip_functions.c: In function 'loadAudioSD':
-../src/ip_functions.c:356:16: warning: passing argument 1 of 'strcpy' from incompatible pointer type [-Wincompatible-pointer-types]
-  356 |    strcpy(files[filesNum++], fno.fname);
-      |           ~~~~~^~~~~~~~~~~~
-      |                |
-      |                int *
-In file included from C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include/xil_printf.h:13,
-                 from C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include/xil_io.h:46,
-                 from C:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bspinclude/include/sleep.h:30,
-                 from ../src/adventures_with_ip.h:13,
-                 from ../src/ip_functions.c:7:
-c:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\string.h:38:8: note: expected 'char * restrict' but argument is of type 'int *'
-   38 | char  *strcpy (char *__restrict, const char *__restrict);
-      |        ^~~~~~
-'Finished building: ../src/ip_functions.c'
-' '
-'Building target: audio.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cjw18/Desktop/GitHub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/bsplib/lib -o "audio.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
-'Finished building target: audio.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size audio.elf  |tee "audio.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  69900	   2272	8781024	8853196	 8716cc	audio.elf
-'Finished building: audio.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-18:55:40 Build Finished (took 2s.18ms)
+16:19:42 Build Finished (took 446ms)
 

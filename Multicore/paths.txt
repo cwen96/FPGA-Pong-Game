@@ -1,0 +1,22 @@
+connect
+targets 2
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\Main_menu_single_player.data 0x018D2008
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\Main_menu_multi_player.data 0x020BB00C
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\Main_menu_volume.data 0x028A4010
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\Main_menu_game_history.data 0x0308D014
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\Main_menu_colour_select.data 0x03876018
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\DIFFICULTY_EASY.data 0x0405F01C
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\DIFFICULTY_MEDIUM.data 0x04848020
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\DIFFICULTY_HARD.data 0x05031024
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\VOLUME_1.data 0x0581A028
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\VOLUME_2.data 0x0600302C
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\VOLUME_3.data 0x067EC030
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\VOLUME_4.data 0x06FD5034
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\GAME_HISTORY.data 0x077BE038
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\BALL_COLOUR.data 0x07FA703C
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\PADDLE_COLOUR.data 0x08790040
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\newBG.data 0x08F79044
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\PLAYER1WIN.data 0x09762048
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\PLAYER2WIN.data 0x09F4B04C
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\SELECT_RIGHT.data 0x0A734050
+dow -data C:\\Users\\cryst\\Desktop\\dabaogithub\\ensc-452\\MENU_IMAGES\\SELECT_LEFT.data 0x0AF1D054
