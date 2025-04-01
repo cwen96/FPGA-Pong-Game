@@ -1,4 +1,4 @@
-17:01:09 **** Incremental Build of configuration Debug for project vga ****
+17:42:48 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,15 +9,6 @@ make --no-print-directory main-build
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.cpp"
 'Finished building: ../src/game.cpp'
 ' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:175:9: warning: unused variable 'selectedSide' [-Wunused-variable]
-  175 |     int selectedSide = -1;
-      |         ^~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
 'Building target: vga.elf'
 'Invoking: ARM v7 g++ linker'
 arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bsplib/lib -o "vga.elf"  ./src/drawings.o ./src/game.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
@@ -26,9 +17,9 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size vga.elf  |tee "vga.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  87908	   3476	  22768	 114152	  1bde8	vga.elf
+  88036	   3476	  22768	 114280	  1be68	vga.elf
 'Finished building: vga.elf.size'
 ' '
 
-17:01:11 Build Finished (took 1s.691ms)
+17:42:49 Build Finished (took 1s.190ms)
 

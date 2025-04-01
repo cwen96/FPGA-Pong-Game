@@ -277,8 +277,8 @@ void playWavFile(const char *filename, int theVolume) {
     		for(u32 i=0;i<theBufferSize/4;++i) {
     			short left  = (short) ((pSource[i]>>16) & 0xFFFF);
     			short right = (short) ((pSource[i]>> 0) & 0xFFFF);
-    			int left_i  = -(int)left * theVolume / 8;
-    			int right_i = -(int)right * theVolume / 8;
+    			int left_i  = -(int)left * theVolume / 16;
+    			int right_i = -(int)right * theVolume / 16;
     			if (left>32767) left = 32767;
     			if (left<-32767) left = -32767;
     			if (right>32767) right = 32767;

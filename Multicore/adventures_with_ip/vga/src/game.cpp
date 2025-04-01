@@ -66,10 +66,12 @@ int Game::getPlayerTwoScore() {
 int Game::checkPoint() {
     if (ballLocationX > 1400) {
         // player 0 (left )gets a point if ball passes right edge of screen
+    	PLAY_SOUND = 2;
         return 0;
         xil_printf("player 0 point\n");
     } else if (ballLocationX < -200) {
         // player 1 (right) gets a point if ball passes left edge of screen
+    	PLAY_SOUND = 2;
         return 1;
         xil_printf("player 1 point\n");
     } else {

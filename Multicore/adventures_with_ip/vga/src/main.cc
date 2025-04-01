@@ -160,7 +160,6 @@ int main() {
     XTmrCtr_SetHandler(&TMRInst, (XTmrCtr_Handler)TMR_Intr_Handler, &TMRInst);
     XTmrCtr_SetResetValue(&TMRInst, 0, TMR_LOAD);
     XTmrCtr_SetOptions(&TMRInst, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
-    //	xil_printf("After the timer setup\r\n");
 
     // Initialize interrupt controller
     status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
@@ -168,7 +167,6 @@ int main() {
 
     XTmrCtr_Start(&TMRInst, 0);
 
-    // int loop = 0;
     int *image_buffer_pointer = (int *)0x00900000;
     int selectedBallColour = 0;
     int selectedPaddleColour = 0;
@@ -181,12 +179,15 @@ int main() {
     int volume = 1;
     int gameHistoryArr[6][2] = {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}};
     int historyWriteback = 0;
+    int playedGameOverSound = 0;
     Game currentGame;
+    currentGame.setVolume(volume);
     while (1) {
         while (TIMER_INTR_FLG == false) {
             Xil_DCacheFlush();
         }
         if (*isMenu == 1) {
+
             switch (state) {
                 case (0):  // main menu single player highlighted
                            // setup buttons to switch state??
@@ -199,10 +200,10 @@ int main() {
                         state = 15;
                         currentGame.setMode(1);
                     }
+                    playedGameOverSound = 0;
                     break;
                 case (1):  // main menu multi player highlighted
                     memcpy(image_buffer_pointer, mainMenuMultiPlayer, NUM_BYTES_BUFFER);
-                    // xil_printf("state %d\n", state);
                     if (BUTTON_D_FLG) {
                         state = 2;
                     } else if (BUTTON_U_FLG) {
@@ -214,7 +215,6 @@ int main() {
                     break;
                 case (2):  // main menu volume highlighted
                     memcpy(image_buffer_pointer, mainMenuVolume, NUM_BYTES_BUFFER);
-                    // xil_printf("state %d\n", state);
                     if (BUTTON_D_FLG) {
                         state = 3;
                     } else if (BUTTON_U_FLG) {
@@ -233,7 +233,6 @@ int main() {
                     break;
                 case (3):  // main menu game history highlighted
                     memcpy(image_buffer_pointer, mainMenuGameHistory, NUM_BYTES_BUFFER);
-                    // xil_printf("state %d\n", state);
                     if (BUTTON_D_FLG) {
                         state = 4;
                     } else if (BUTTON_U_FLG) {
@@ -419,6 +418,10 @@ int main() {
                     if (BUTTON_C_FLG) {
                         state = 0;
                     }
+                	if (playedGameOverSound == 0) {
+                		PLAY_SOUND = 0;
+                		playedGameOverSound = 1;
+                	}
                     break;
                 default:
                     break;
@@ -452,7 +455,6 @@ int main() {
                 historyWriteback++;
             }
         }
-        //		xil_printf("in the original while loop\n");
         TIMER_INTR_FLG = false;
     }
     return 0;
