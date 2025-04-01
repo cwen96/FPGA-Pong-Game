@@ -33,6 +33,7 @@
 #define fatalError(msg) throwFatalError(__PRETTY_FUNCTION__,msg)
 #define DMA_BDUFFERSIZE 4000
 #define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
+#define VOLUME (*(volatile unsigned long *)(0xFFFF4000))
 
 typedef struct {
 	char riff[4];
@@ -59,13 +60,13 @@ typedef struct {
 } fmtChunk_t;
 
 
-void playWavFile(const char *filename);
+void playWavFile(const char *filename, int theVolume);
 void stopWavFile();
 void loadAudioSD();
-void playCollisionSound();
-void playBGMSound();
-void playGameOverSound();
-void playEndRoundSound();
+void playCollisionSound(int volume);
+void playBGMSound(int volume);
+void playGameOverSound(int volume);
+void playEndRoundSound(int volume);
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*
@@ -79,7 +80,7 @@ void play_audio();
 void audio_stream(int soundIndex);
 unsigned char gpio_init();
 int lab_test();
-void play_sound_index();
+void play_sound_index(int soundIndex, int volume);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
  * ---------------------------------------------------------------------------- */
@@ -112,6 +113,7 @@ XGpio Gpio;        // Gpio instance for buttons and switches
 int recordStatus;
 int btn_value;
 int soundIndex;
+int volume;
 
 #define BTN_INT XGPIO_IR_CH1_MASK
 

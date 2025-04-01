@@ -56,31 +56,32 @@ int main(void) {
 void play_audio() {
 	while (1) {
 	    soundIndex = Xil_In32(0xFFFF3000);
+	    volume = Xil_In32(0xFFFF4000);
 
 	    if (soundIndex == 0) {
-	    	playEndRoundSound();
+	    	playEndRoundSound(volume);
 	    } else if (soundIndex == 1) {
-	    	playBGMSound();
+	    	playBGMSound(volume);
 	    }  else if (soundIndex == 2) {
-	    	playGameOverSound();
+	    	playGameOverSound(volume);
 	    } else if (soundIndex == 3) {
-	    	playCollisionSound();
+	    	playCollisionSound(volume);
 	    }
 	}
 }
 
-void playEndRoundSound() {
-	play_sound_index(0);
+void playEndRoundSound(int volume) {
+	play_sound_index(0, volume);
 }
 
-void playBGMSound() {
-	play_sound_index(1);
+void playBGMSound(int volume) {
+	play_sound_index(1, volume);
 }
 
-void playGameOverSound() {
-	play_sound_index(2);
+void playGameOverSound(int volume) {
+	play_sound_index(2, volume);
 }
 
-void playCollisionSound() {
-	play_sound_index(3);
+void playCollisionSound(int volume) {
+	play_sound_index(3, volume);
 }

@@ -42,6 +42,10 @@ void Game::setComputerSide(int side) {
 	computerSide = side;
 }
 
+void Game::setVolume(int volume) {
+	VOLUME = volume;
+}
+
 int Game::checkWinner() {
     if (score[0] == 11) {
         xil_printf("player 1 wins!\n\r");

@@ -12795,3 +12795,1161 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-31: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:20:03.754
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:45.703
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:45.710
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:45.710
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:45.715
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:41:45.715
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:45.717
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:45.719
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:47.725
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:47.731
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:47.732
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:47.736
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:41:47.737
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:47.738
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:41:47.741
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:10.475
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:10.482
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:10.482
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:10.487
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:46:10.488
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:10.489
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:10.491
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:11.399
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:11.404
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:11.405
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:11.409
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:46:11.409
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:11.411
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:11.414
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:44.359
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:44.367
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:44.367
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:44.373
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:46:44.373
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:44.375
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:44.377
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:45.205
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:45.210
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:45.211
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:45.216
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:46:45.217
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:45.218
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:46:45.220
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:02.348
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:02.356
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:02.357
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:02.360
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:47:02.361
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:02.362
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:02.365
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:04.252
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:04.258
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:04.258
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:04.262
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:47:04.263
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:04.264
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:04.267
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-21: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.696
+!MESSAGE XSCT Command: [disconnect tcfchan#10], Thread: Thread-678
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.701
+!MESSAGE XSCT command with result: [disconnect tcfchan#10], Result: [null, ]. Thread: Thread-678
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.891
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.906
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#15]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.907
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.920
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.921
+!MESSAGE XSCT Command: [version -server], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.923
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.924
+!MESSAGE XSCT Command: [version], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.925
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.926
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.934
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.935
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.968
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.968
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.977
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:18.978
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.001
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.002
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.012
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.012
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.041
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.041
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.049
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.050
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.072
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.073
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.080
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.081
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.102
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.103
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.110
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.111
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.135
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.135
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.143
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.143
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.167
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.168
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.191
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.192
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.193
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.194
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.208
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.208
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.280
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:19.281
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.290
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.308
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.316
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.316
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.339
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.340
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.384
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:22.385
+!MESSAGE XSCT Command: [fpga -file C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.720
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.746
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.762
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.763
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.783
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, ip_design_wrapper_0]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.784
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.786
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.786
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.798
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.798
+!MESSAGE XSCT Command: [source C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.801
+!MESSAGE XSCT command with result: [source C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:24.801
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.124
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.125
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.132
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.133
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.144
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.144
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.552
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.553
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.628
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:25.628
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.061
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.062
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.093
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.177
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.189
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.190
+!MESSAGE XSCT Command: [con], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.242
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.243
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.265
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.266
+!MESSAGE XSCT Command: [con], Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:47:26.317
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-40: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:41.793
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:41.798
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:41.799
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:41.803
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:55:41.804
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:41.806
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:41.809
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:43.685
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:43.690
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:43.691
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:43.695
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:55:43.696
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:43.697
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:55:43.700
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:44.368
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:44.375
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:44.376
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:44.381
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:56:44.382
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:44.383
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:44.386
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:45.076
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:45.081
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:45.082
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:45.086
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 16:56:45.086
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:45.088
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:56:45.090
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.513
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-871
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.518
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-871
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.710
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.715
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.716
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.728
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.728
+!MESSAGE XSCT Command: [version -server], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.730
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.730
+!MESSAGE XSCT Command: [version], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.731
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.732
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.741
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.741
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.766
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.767
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.776
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.776
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.799
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.800
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.808
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.809
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.832
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.833
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.840
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.841
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.863
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.864
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.871
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.872
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.903
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.904
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.916
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.916
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.940
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.941
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.949
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.950
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.977
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:06.977
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.000
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.001
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.002
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.002
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.017
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.018
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.102
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:07.103
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.113
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.132
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.139
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.140
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.162
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.163
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.222
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:10.223
+!MESSAGE XSCT Command: [fpga -file C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.551
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.577
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.590
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.591
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.612
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, ip_design_wrapper_0]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.613
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.615
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.615
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.625
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.626
+!MESSAGE XSCT Command: [source C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.629
+!MESSAGE XSCT command with result: [source C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.630
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:12.999
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.000
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.007
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.007
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.018
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.019
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.439
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.439
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.514
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.514
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.940
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.941
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:13.985
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.055
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.080
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.080
+!MESSAGE XSCT Command: [con], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.134
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.135
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.146
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.147
+!MESSAGE XSCT Command: [con], Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 16:57:14.196
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:08.704
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:08.709
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss ], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:08.710
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:08.715
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 17:01:08.716
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\ps7_cortex9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:08.718
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:08.720
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/ps7_cortex9_1/system.mss], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:09.393
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:09.399
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:09.400
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:09.405
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-31 17:01:09.405
+!MESSAGE Generating MD5 hash for file: C:\Users\cryst\Desktop\dabaogithub\ensc-452\Multicore\adventures_with_ip\MulticorePlatform\export\MulticorePlatform\sw\MulticorePlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:09.406
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:09.409
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.720
+!MESSAGE XSCT Command: [disconnect tcfchan#18], Thread: Thread-944
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.725
+!MESSAGE XSCT command with result: [disconnect tcfchan#18], Result: [null, ]. Thread: Thread-944
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.916
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.922
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#20]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.922
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.936
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.937
+!MESSAGE XSCT Command: [version -server], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.938
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.939
+!MESSAGE XSCT Command: [version], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.939
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.940
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.947
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.947
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.978
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.979
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.991
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:24.992
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.014
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.015
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.024
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.024
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.052
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.053
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.061
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.061
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.087
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.088
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.095
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.096
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.121
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.121
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.130
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.131
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.154
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.155
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.163
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.163
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.185
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.186
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.209
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248469719" && level == 0}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.210
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.211
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.212
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.228
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.229
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.303
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:25.303
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.320
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.339
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.346
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248469719]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.346
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.369
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.370
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.415
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469719" && level==0 && jtag_device_ctx=="jsn-Zed-210248469719-03727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:28.416
+!MESSAGE XSCT Command: [fpga -file C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.766
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/bitstream/ip_design_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.791
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.803
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.804
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.820
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/hw/ip_design_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, ip_design_wrapper_0]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.821
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.836
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.837
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.847
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.848
+!MESSAGE XSCT Command: [source C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.851
+!MESSAGE XSCT command with result: [source C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:30.851
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.178
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.179
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.199
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.200
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.211
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.211
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.651
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga/Debug/vga.elf], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.652
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.725
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:31.725
+!MESSAGE XSCT Command: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.161
+!MESSAGE XSCT command with result: [dow C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/audio/Debug/audio.elf], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.162
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.183
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.289
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.302
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.302
+!MESSAGE XSCT Command: [con], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.351
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.351
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.363
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.364
+!MESSAGE XSCT Command: [con], Thread: Worker-36: Launching SystemDebugger_vga_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-31 17:01:32.413
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-36: Launching SystemDebugger_vga_system

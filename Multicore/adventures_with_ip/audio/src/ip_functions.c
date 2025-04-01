@@ -15,7 +15,6 @@ FATFS FS_instance;
 // This holds the memory allocated for the wav file currently played.
 u8 *theBuffer = NULL;
 size_t theBufferSize = 0;
-int theVolume = 2;
 
 int currentFile = 0;
 int filesNum = 0;
@@ -30,9 +29,9 @@ int files[maxFiles][32] = {0};
  *
  * The main menu can be accessed by entering 'q' on the keyboard.
  * ---------------------------------------------------------------------------- */
-void play_sound_index(int soundIndex) {
+void play_sound_index(int soundIndex, int volume) {
 	if (soundIndex > -1) {
-		playWavFile(files[soundIndex]);
+		playWavFile(files[soundIndex], volume);
 	}
 	PLAY_SOUND = -1;
 }  // play_sound
@@ -153,7 +152,7 @@ int lab_test() {
 }
 */
 
-void playWavFile(const char *filename) {
+void playWavFile(const char *filename, int theVolume) {
     headerWave_t headerWave;
     fmtChunk_t fmtChunk;
     FIL file;
@@ -278,8 +277,8 @@ void playWavFile(const char *filename) {
     		for(u32 i=0;i<theBufferSize/4;++i) {
     			short left  = (short) ((pSource[i]>>16) & 0xFFFF);
     			short right = (short) ((pSource[i]>> 0) & 0xFFFF);
-    			int left_i  = -(int)left * theVolume / 4;
-    			int right_i = -(int)right * theVolume / 4;
+    			int left_i  = -(int)left * theVolume / 8;
+    			int right_i = -(int)right * theVolume / 8;
     			if (left>32767) left = 32767;
     			if (left<-32767) left = -32767;
     			if (right>32767) right = 32767;
@@ -294,8 +293,6 @@ void playWavFile(const char *filename) {
     			Xil_Out32(I2S_DATA_TX_R_REG, right*1000);
     		}
     	}
-
-    	//adau1761_dmaTransmitBLOB(&codec, (u32*)theBuffer, theBufferSize/4);
     }
 
     f_close(&file);

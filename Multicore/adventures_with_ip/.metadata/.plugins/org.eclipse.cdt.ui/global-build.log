@@ -1,13 +1,13 @@
 Nothing to build in platform 'MulticorePlatform'
 
-16:19:42 **** Incremental Build of configuration Debug for project audio ****
+17:01:08 **** Incremental Build of configuration Debug for project audio ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
-16:19:42 **** Incremental Build of configuration Debug for project vga ****
+17:01:09 **** Incremental Build of configuration Debug for project vga ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -22,8 +22,8 @@ arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/game.o" -mcpu=cort
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/sw/MulticorePlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main()':
-../src/main.cc:174:9: warning: unused variable 'selectedSide' [-Wunused-variable]
-  174 |     int selectedSide = -1;
+../src/main.cc:175:9: warning: unused variable 'selectedSide' [-Wunused-variable]
+  175 |     int selectedSide = -1;
       |         ^~~~~~~~~~~~
 'Finished building: ../src/main.cc'
 ' '
@@ -35,10 +35,10 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size vga.elf  |tee "vga.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  87716	   3476	  22768	 113960	  1bd28	vga.elf
+  87908	   3476	  22768	 114152	  1bde8	vga.elf
 'Finished building: vga.elf.size'
 ' '
-16:19:44 **** Incremental Build of configuration Debug for project vga_system ****
+17:01:11 **** Incremental Build of configuration Debug for project vga_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 50601 C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/MulticorePlatform/export/MulticorePlatform/MulticorePlatform.xpfm standalone_domain,ps7_cortex9_1 C:/Users/cryst/Desktop/dabaogithub/ensc-452/Multicore/adventures_with_ip/vga_system/Debug/system.bif

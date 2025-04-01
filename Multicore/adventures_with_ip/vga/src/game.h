@@ -11,6 +11,7 @@
 #define PLAYER_1_VELOCITY (*(volatile unsigned long *)(0xFFFF1000))
 #define PLAYER_2_VELOCITY (*(volatile unsigned long *)(0xFFFF2000))
 #define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
+#define VOLUME (*(volatile unsigned long *)(0xFFFF4000))
 #define PADDLE_SPEED 10
 
 class Game {
@@ -70,6 +71,8 @@ class Game {
     void setDifficulty(int difficulty);
 
     void setComputerSide(int side);
+
+    void setVolume(int volume);
 
     int updateGameState();
 

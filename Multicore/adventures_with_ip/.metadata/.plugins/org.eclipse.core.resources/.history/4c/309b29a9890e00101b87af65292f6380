@@ -1,0 +1,365 @@
+/*
+ * ip_functions.c
+ *
+ * Contains all functions which pertain to setup and use of IP periperals.
+ */
+
+#include "adventures_with_ip.h"
+void throwFatalError(const char *func,const char *msg) {
+	xil_printf("%s() : %s\r\n",func,msg);
+	for(;;);
+}
+
+FATFS FS_instance;
+
+// This holds the memory allocated for the wav file currently played.
+u8 *theBuffer = NULL;
+size_t theBufferSize = 0;
+
+int currentFile = 0;
+int filesNum = 0;
+#define maxFiles 32
+int files[maxFiles][32] = {0};
+/* ---------------------------------------------------------------------------- *
+ * 								audio_stream()									*
+ * ---------------------------------------------------------------------------- *
+ * This function performs audio loopback streaming by sampling the input audio
+ * from the codec and then immediately passing the sample to the output of the
+ * codec.
+ *
+ * The main menu can be accessed by entering 'q' on the keyboard.
+ * ---------------------------------------------------------------------------- */
+void play_sound_index(int soundIndex) {
+	if (soundIndex > -1) {
+		playWavFile(files[soundIndex]);
+	}
+	PLAY_SOUND = -1;
+}  // play_sound
+
+/* ---------------------------------------------------------------------------- *
+ * 								gpio_initi()									*
+ * ---------------------------------------------------------------------------- *
+ * Initialises the GPIO driver for the push buttons and switches.
+ * ---------------------------------------------------------------------------- */
+unsigned char gpio_init() {
+    int status;
+
+    // Initialise Push Buttons
+    status = XGpio_Initialize(&Gpio, BUTTON_SWITCH_ID);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    // Set all switches direction to inputs
+    XGpio_SetDataDirection(&Gpio, SWITCH_CHANNEL, 0xFF);
+
+    // Set all buttons direction to inputs
+    XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
+
+    loadAudioSD();
+
+    return XST_SUCCESS;
+}
+
+/* ---------------------------------------------------------------------------- *
+ * 								lab_test()									    *
+ * ---------------------------------------------------------------------------- *
+Audio: This task will have you build off of the audio tutorial so that you are
+able to record sounds to memory and play them back over a speaker.
+
+You should be able to start and stop a recording (up to a fixed time length) as
+well as play it back with user input (key press/push button/etc).
+
+Be prepared to answer questions on your final implementation and design choices.
+
+Note: Your user interface (push buttons/switches/key press/etc.) will need to
+use interrupts to get full marks and not polling.
+
+Remember, the use of interrupts is a requirement for your final project, so it
+would be good if at least one of you could use this as the basis of for one of your
+project milestones to help you succeed with your final project deliverables.
+ * ---------------------------------------------------------------------------- */
+/*
+int lab_test() {
+    u32 audio_buffer_left[BUFFER_SIZE*sizeof(u32)];
+    u32 audio_buffer_right[BUFFER_SIZE*sizeof(u32)];
+	//unsigned char *buffer;
+    int buffer_index = 1;
+    u32 in_left;
+    u32 in_right;
+    int print_record_status = 0;
+    int print_play_status = 0;
+    int print_standby_status = 0;
+    int i = 0;
+    COMM_VAL = 0;
+
+    /* If input from the terminal is 'q', then return to menu.
+     * Else, continue.
+    while (!XUartPs_IsReceiveData(UART_BASEADDR)) {
+        // Recording mode
+        if (COMM_VAL == 1) {
+            if (print_record_status == 0) {
+                xil_printf("Recording...\r\n");
+                print_record_status = 1;
+            }
+            // Read audio input from codec
+            in_left = Xil_In32(I2S_DATA_RX_L_REG);
+            audio_buffer_left[buffer_index] = in_left;
+            in_right = Xil_In32(I2S_DATA_RX_R_REG);
+            audio_buffer_right[buffer_index] = in_right;
+            // Write audio output to codec
+            Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[buffer_index]);
+            Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[buffer_index]);
+            buffer_index++;
+            print_play_status = 0;
+            print_standby_status = 0;
+        }
+        // Playback mode
+        else if (COMM_VAL == 2 && i < buffer_index) {
+            if (print_play_status == 0) {
+                xil_printf("Playing...\r\n");
+                print_play_status = 1;
+                print_record_status = 0;
+                print_standby_status = 0;
+            }
+            // Write audio output to codec
+            if (i % 3 == 0) {
+            	usleep(1);
+            }
+
+			Xil_Out32(I2S_DATA_TX_L_REG, audio_buffer_left[i]);
+			Xil_Out32(I2S_DATA_TX_R_REG, audio_buffer_right[i]);
+
+            i++;
+        }
+        // Standby mode
+        else if (COMM_VAL == 3) {
+            if (print_standby_status == 0) {
+                xil_printf("Standby...\r\n");
+                print_standby_status = 1;
+            }
+            print_record_status = 0;
+            print_play_status = 0;
+        }
+    }
+
+    /* If input from the terminal is 'q', then return to menu.
+     * Else, continue streaming.
+    if (XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET) == 'q') {
+        menu();
+    } else {
+        lab_test();
+    }
+    return XST_SUCCESS;
+}
+*/
+
+void playWavFile(const char *filename) {
+    headerWave_t headerWave;
+    fmtChunk_t fmtChunk;
+    FIL file;
+    UINT nBytesRead=0;
+
+    stopWavFile();
+
+    FRESULT res = f_open(&file, filename, FA_READ);
+    if (res!=0) {
+    	fatalError("File not found");
+    }
+    xil_printf("Loading %s\r\n",filename);
+
+    // Read the RIFF header and do some basic sanity checks
+    res = f_read(&file,(void*)&headerWave,sizeof(headerWave),&nBytesRead);
+    if (res!=0) {
+    	fatalError("Failed to read file");
+    }
+	if (memcmp(headerWave.riff,"RIFF",4)!=0) {
+		fatalError("Illegal file format. RIFF not found");
+	}
+	if (memcmp(headerWave.wave,"WAVE",4)!=0) {
+		fatalError("Illegal file format. WAVE not found");
+	}
+
+	// Walk through the chunks and interpret them
+	for(;;) {
+		// read chunk header
+		genericChunk_t genericChunk;
+		res = f_read(&file,(void*)&genericChunk,sizeof(genericChunk),&nBytesRead);
+		if (res!=0) {
+			fatalError("Failed to read file");
+		}
+		if (nBytesRead!=sizeof(genericChunk)) {
+			break; // probably EOF
+		}
+
+		// The "fmt " is compulsory and contains information about the sample format
+		if (memcmp(genericChunk.ckId,"fmt ",4)==0) {
+			res = f_read(&file,(void*)&fmtChunk,genericChunk.cksize,&nBytesRead);
+			if (res!=0) {
+				fatalError("Failed to read file");
+			}
+			if (nBytesRead!=genericChunk.cksize) {
+				fatalError("EOF reached");
+			}
+			if (fmtChunk.wFormatTag!=1) {
+				fatalError("Unsupported format");
+			}
+			if (fmtChunk.nChannels!=2) {
+				//fatalError("Only stereo files supported");
+				 u32 *newBuffer = malloc(theBufferSize * 2);
+				    if (!newBuffer) {
+				        fatalError("Memory allocation failed for mono conversion");
+				    }
+
+				    // Convert mono to stereo (duplicate the same sample for both channels)
+				    short *monoData = (short *)theBuffer;
+				    u32 *stereoData = (u32 *)newBuffer;
+				    u32 monoSamples = theBufferSize / 2; // Each sample is 2 bytes (16-bit PCM)
+
+				    for (u32 i = 0; i < monoSamples; i++) {
+				        short sample = monoData[i];
+				        stereoData[i] = ((u32)sample << 16) | ((u32)sample & 0xFFFF);
+				    }
+
+				    // Free old buffer and update to the new stereo buffer
+				    free(theBuffer);
+				    theBuffer = (void *)newBuffer;
+				    theBufferSize *= 2;
+			}
+			if (fmtChunk.wBitsPerSample!=16) {
+				fatalError("Only 16 bit per samples supported");
+				//continue;
+			}
+		}
+		// the "data" chunk contains the audio samples
+		else if (memcmp(genericChunk.ckId,"data",4)==0) {
+		    theBuffer = malloc(genericChunk.cksize);
+		    if (!theBuffer){
+		    	fatalError("Could not allocate memory");
+		    }
+		    theBufferSize = genericChunk.cksize;
+
+		    res = f_read(&file,(void*)theBuffer,theBufferSize,&nBytesRead);
+		    if (res!=0) {
+		    	fatalError("Failed to read file");
+		    }
+		    if (nBytesRead!=theBufferSize) {
+		    	fatalError("Didn't read the complete file");
+		    }
+		}
+		// Unknown chunk: Just skip it
+		else {
+			DWORD fp = f_tell(&file);
+			f_lseek(&file,fp + genericChunk.cksize);
+		}
+	}
+
+	// If we have data to play
+    if (theBuffer) {
+        xil_printf("Playing %s\r\n",filename);
+
+        // Crude in-place down-sampling: Basically taking every n'th of a sample
+        // Jerobeam Fenderson's WAV files use a sampling rate of 192kHz (https://oscilloscopemusic.com)
+        // Our sampling rate is actually 39.0625, so a 44.1kHz file will play a at 88.5% the speed (and lower in pitch).
+    	double subSample = (double)fmtChunk.nSamplesPerSec/44100;
+    	if (subSample>1.6) {
+    		int skip = (int)(subSample+0.5);
+    		u32 nNewTotal = theBufferSize/4/skip;
+    		u32 *pSource = (u32*) theBuffer;
+    		u32 *pDest = (u32*) theBuffer;
+    		for(u32 i=0;i<nNewTotal;++i,pSource+=skip,pDest++) {
+    			*pDest = *pSource;
+    		}
+    		theBufferSize = nNewTotal*4;
+    	}
+
+    	// Changing the volume and swap left/right channel and polarity
+    	{
+    		u32 *pSource = (u32*) theBuffer;
+    		for(u32 i=0;i<theBufferSize/4;++i) {
+    			short left  = (short) ((pSource[i]>>16) & 0xFFFF);
+    			short right = (short) ((pSource[i]>> 0) & 0xFFFF);
+    			int left_i  = -(int)left * theVolume / 4;
+    			int right_i = -(int)right * theVolume / 4;
+    			if (left>32767) left = 32767;
+    			if (left<-32767) left = -32767;
+    			if (right>32767) right = 32767;
+    			if (right<-32767) right = -32767;
+    			left = (short)left_i;
+    			right = (short)right_i;
+    			pSource[i] = ((u32)right<<16) + (u32)left;
+
+    			for(int i=0;i<1600;i++)
+    				asm("NOP");
+    			Xil_Out32(I2S_DATA_TX_L_REG, left*1000);
+    			Xil_Out32(I2S_DATA_TX_R_REG, right*1000);
+    		}
+    	}
+    }
+
+    f_close(&file);
+}
+
+
+void stopWavFile() {
+	// If there is already a WAV file playing, stop it
+	//if (adau1761_dmaBusy(&codec)) {
+	//	adau1761_dmaStop(&codec);
+	//}
+    // If there was already a WAV file, free the memory
+    if (theBuffer){
+//    	free(theBuffer);
+//    	theBuffer = NULL;
+//    	theBufferSize = 0;
+    	void *temp = theBuffer;
+    	theBuffer = NULL;
+    	theBufferSize = 0;
+    	free(temp);
+    }
+}
+
+void loadAudioSD() {
+	setvbuf(stdin, NULL, _IONBF, 0);
+	xil_printf("WAV File Player\n\r");
+	xil_printf("Mounting SD Card\n\r");
+	FRESULT result = f_mount(&FS_instance,"0:/", 1);
+	if (result != 0) {
+		xil_printf("Couldn't mount SD Card. Press RETURN to try again\r\n");
+		getchar();
+		return;
+	}
+
+	filesNum = 0;
+
+	// Look for *.wav files and copy file names to files[]
+	DIR dir;
+	FRESULT res = f_opendir(&dir, "0:/");
+	if (res != FR_OK) {
+		xil_printf("Couldn't read root directory. Press RETURN to try again\r\n");
+		getchar();
+		return;
+	}
+
+	for (;;) {
+		FILINFO fno;
+		res = f_readdir(&dir, &fno);
+		if (res != FR_OK || fno.fname[0] == 0) {
+			break;  // End of directory
+		}
+
+		if (fno.fattrib & AM_DIR) {
+			// It's a directory, ignore it
+		}
+		else if ((strstr(fno.fname, ".wav") != NULL || strstr(fno.fname, ".WAV") != NULL)
+				 && fno.fname[0] != '_') {  // Ignore invalid filenames starting with '_'
+			strcpy(files[filesNum++], fno.fname);
+		}
+	}
+
+
+	f_closedir(&dir);
+
+	if (filesNum == 0) {
+		xil_printf("No WAV files found. Press RETURN to try again\r\n");
+		getchar();
+		return;
+	}
+}

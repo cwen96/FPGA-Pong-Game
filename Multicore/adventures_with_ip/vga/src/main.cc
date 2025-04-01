@@ -34,6 +34,7 @@
 #define DEBOUNCE_TICKS 18
 volatile unsigned int ticks = 0;
 int computer_side = 1;
+int volume = 2;
 
 // Parameter definitions
 #define BTNS_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
@@ -313,7 +314,8 @@ int main() {
                     if (BUTTON_C_FLG) {
                         state = 9;
                         volume = 2;
-                        // TODO:ADJUST VOLUME AND PLAY SOUND
+                        currentGame.setVolume(volume);
+                        PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
                         state = 2;
                     }
@@ -323,7 +325,8 @@ int main() {
                     if (BUTTON_C_FLG) {
                         state = 10;
                         volume = 3;
-                        // TODO:ADJUST VOLUME AND PLAY SOUND
+                        currentGame.setVolume(volume);
+                        PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
                         state = 2;
                     }
@@ -333,7 +336,8 @@ int main() {
                     if (BUTTON_C_FLG) {
                         state = 11;
                         volume = 4;
-                        // TODO:ADJUST VOLUME AND PLAY SOUND
+                        currentGame.setVolume(volume);
+                        PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
                         state = 2;
                     }
@@ -343,7 +347,8 @@ int main() {
                     if (BUTTON_C_FLG) {
                         state = 8;
                         volume = 1;
-                        // TODO:ADJUST VOLUME AND PLAY SOUND
+                        currentGame.setVolume(volume);
+                        PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
                         state = 2;
                     }
