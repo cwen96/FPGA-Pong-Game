@@ -1,4 +1,6 @@
 #include "game.h"
+#include "drawings.h"
+
 
 #include <math.h>
 
@@ -68,12 +70,16 @@ int Game::getPlayerTwoScore() {
 int Game::checkPoint() {
     if (ballLocationX > 1400) {
         // player 0 (left )gets a point if ball passes right edge of screen
-    	PLAY_SOUND = 2;
+    	if (score[0] < 10) {
+        	PLAY_SOUND = 2;
+    	}
         return 0;
         xil_printf("player 0 point\n");
     } else if (ballLocationX < -200) {
         // player 1 (right) gets a point if ball passes left edge of screen
-    	PLAY_SOUND = 2;
+    	if (score[1] < 10) {
+        	PLAY_SOUND = 2;
+    	}
         return 1;
         xil_printf("player 1 point\n");
     } else {
@@ -104,6 +110,10 @@ void Game::resetBall() {
 
 void Game::awardPoint(int player) {
     score[player]++;
+    restore_rect_from_background(350, 600, 100, 100);
+    restore_rect_from_background(675, 600, 100, 100);
+    draw_score_100x100(score[0], 350, 600, WHITE);
+    draw_score_100x100(score[1], 675, 600, WHITE);
     // check victory condition
     if (score[player] == 11) {
         // display Player x wins to screen, record and end game
@@ -213,8 +223,6 @@ int Game::updateGameState() {
     ballLocationY = ballLocationY + ballYVelocity;
     *ballLocationYReg = ballLocationY;
     *ballLocationXReg = ballLocationX;
-
-    // xil_printf("ball y location: %d\n",*ballLocationYReg);
 
     if (point != -1) {
         awardPoint(point);

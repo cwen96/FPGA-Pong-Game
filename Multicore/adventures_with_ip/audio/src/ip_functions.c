@@ -54,6 +54,7 @@ unsigned char gpio_init() {
     // Set all buttons direction to inputs
     XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, 0xFF);
 
+    PLAY_SOUND = -1;
     loadAudioSD();
 
     return XST_SUCCESS;

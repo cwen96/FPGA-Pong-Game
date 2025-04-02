@@ -14,6 +14,7 @@
 #define VOLUME (*(volatile unsigned long *)(0xFFFF4000))
 #define PAUSE (*(volatile unsigned long *)(0xFFFF5000))
 #define PADDLE_SPEED 10
+#define WHITE 0xF0F0F0
 
 class Game {
    private:

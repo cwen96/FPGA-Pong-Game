@@ -1,6 +1,7 @@
 #include "drawings.h"
 
 int *image_buffer_pointer = (int *)0x00900000;
+int *background_pointer = (int *)0x08F79044;
 const uint8_t font20x20[10][20][20] = {
 	{
 	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},  // row 0
@@ -302,7 +303,7 @@ void draw_score_100x100(int scoreVal, int x, int y, int colour) {
 
 
 //used to "erase" things, such as if a scores is being continuously updated and you need to erase it each time
-void restore_rect_from_background(int dst_x, int dst_y, int w, int h, int* image_buffer_pointer, int* background_pointer) {
+void restore_rect_from_background(int dst_x, int dst_y, int w, int h) {
 	for (int row = 0; row < h; row++) {
 		memcpy(
 			image_buffer_pointer + (dst_y + row) * FRAME_WIDTH + dst_x,
