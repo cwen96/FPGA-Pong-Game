@@ -63,6 +63,8 @@ int Game::getPlayerOneScore() {
 int Game::getPlayerTwoScore() {
     return score[1];
 }
+
+
 int Game::checkPoint() {
     if (ballLocationX > 1400) {
         // player 0 (left )gets a point if ball passes right edge of screen

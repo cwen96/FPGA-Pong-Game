@@ -1,0 +1,83 @@
+#ifndef GAME_H
+#define GAME_H
+#include "xil_io.h"
+#include "xil_printf.h"
+#define SCREEN_HEIGHT 1024
+#define SCREEN_WIDTH 1280
+#define BALL_DIAMETER 40
+#define PADDLE_WIDTH 40
+#define PADDLE_HEIGHT 250
+#define PADDLE_GAP_FROM_EDGE 50
+#define PLAYER_1_VELOCITY (*(volatile unsigned long *)(0xFFFF1000))
+#define PLAYER_2_VELOCITY (*(volatile unsigned long *)(0xFFFF2000))
+#define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
+#define VOLUME (*(volatile unsigned long *)(0xFFFF4000))
+#define PADDLE_SPEED 10
+
+class Game {
+   private:
+    int *ballLocationXReg = (int *)0x43C20000;
+    int *ballLocationYReg = (int *)0x43C20004;
+    int *ballDiameterReg = (int *)0x43C20008;
+    int *leftPaddleLocationReg = (int *)0x43C2000C;
+    int *rightPaddleLocationReg = (int *)0x43C20010;
+    int *paddleHeightReg = (int *)0x43C20014;
+    int *paddleWidthReg = (int *)0x43C20018;
+    int *paddleLeftXLocation = (int *)0x43C2001C;
+    int *paddleRightXLocation = (int *)0x43C20020;
+    const int INITIAL_X_VELOCITY[3] = {5, 7, 10};
+    const int MAX_X_VELOCITY[3] = {10, 15, 20};
+    const int COMPUTER_PLAYER_SPEED[3] = {60, 40, 20};
+    int ballLocationX;
+    int ballLocationY;
+    int leftPaddleLocation;
+    int rightPaddleLocation;
+    int score[2];
+    int ballXVelocity;
+    int ballYVelocity;
+    int rightPaddleVelocity;
+    int leftPaddleVelocity;
+    int difficulty;
+    int mode;
+    int computerSide;
+    int checkPoint();
+    void awardPoint(int player);
+    void resetBall();
+    void checkWallCollision();
+    void checkPaddleCollision();
+    bool checkScoreCondition();
+    int checkWinner();
+    void computerPlayer(int computerSide);
+
+   public:
+    Game();
+
+    int getBallLocationX() const { return ballLocationX; }
+
+    int getBallLocationY() { return ballLocationY; }
+
+    int getLeftPaddleLocation() { return leftPaddleLocation; }
+
+    int getRightPaddleLocation() { return rightPaddleLocation; }
+
+    void resetScore();
+
+    int getPlayerOneScore();
+
+    int getPlayerTwoScore();
+
+    void setMode(int mode);
+
+    void setDifficulty(int difficulty);
+
+    void setComputerSide(int side);
+
+    void setVolume(int volume);
+
+    int updateGameState();
+
+    void movePaddle(int player, int velocity);
+
+    void paddleMovementHandler();
+};
+#endif

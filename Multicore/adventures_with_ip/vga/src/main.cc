@@ -109,6 +109,11 @@ void BTN_Intr_Handler(void *InstancePtr) {
     } else if (btn_value == 16) {
         BUTTON_U_FLG = true;
     } else if (btn_value == 1) {
+    	if (Xil_In32(0xFFFF5000) == 0) {
+    		PAUSE = 1;
+    	} else if (Xil_In32(0xFFFF5000) == 1) {
+    		PAUSE = 0;
+    	}
         BUTTON_C_FLG = true;
     }
 
@@ -433,6 +438,9 @@ int main() {
             BUTTON_C_FLG = false;
         }
         if (*isMenu == 0) {
+            while (Xil_In32(0xFFFF5000) == 1) {
+
+            }
             currentGame.paddleMovementHandler();
             winner = currentGame.updateGameState();
             if (winner != 0) {

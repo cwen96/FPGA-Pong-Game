@@ -260,3 +260,4 @@ bsp reload
 platform active {MulticorePlatform}
 platform generate -domains 
 platform generate
+platform generate -domains standalone_domain,ps7_cortex9_1,zynq_fsbl 
