@@ -21,11 +21,11 @@ int *playerOneWin = (int *) 0x09762048;
 int *playerTwoWin = (int *) 0x09F4B04C;
 int *selectRight = (int *) 0x0A734050;
 int *selectLeft = (int *) 0x0AF1D054;
+int *pause = (int *) 0xB706058;
 
+// Don't need to be loaded into memory
 int *vgaPaddleColour = (int *)0x043C20024;
 int *vgaBallColour = (int *)0x043C20028;
 int *isMenu = (int *)0x43C2002C;
-
-
 
 #endif

@@ -1,21 +1,17 @@
 /*
  * adventures_with_ip.c
  *
- * Main source file. Contains main() and menu() functions.
+ * Main source file. Contains main() and play_audio() functions.
  */
 #include "adventures_with_ip.h"
-#include <xil_cache.h>
 
 /* ---------------------------------------------------------------------------- *
  * 									main()										*
  * ---------------------------------------------------------------------------- *
  * Runs all initial setup functions to initialise the audio codec and IP
- * peripherals, before calling the interactive menu system.
+ * peripherals, before calling play_audio.
  * ---------------------------------------------------------------------------- */
 int main(void) {
-	//Xil_DCacheDisable();
-
-	xil_printf("Entering Main\r\n");
 	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
     // Configure the IIC data structure
     IicConfig(XPAR_XIICPS_0_DEVICE_ID);
@@ -28,30 +24,33 @@ int main(void) {
     // enables the HP jack too.
     AudioConfigureJacks();
 
-    xil_printf("ADAU1761 configured\n\r");
+    xil_printf("Core 1 : ADAU1761 configured\n\r");
 
     /* Initialise GPIO peripherals */
     gpio_init();
 
-    xil_printf("GPIO configured\r\n");
+    xil_printf("Core 1 : GPIO configured\r\n");
 
+    /* Initialise and load audio from the SD card */
+    PLAY_SOUND = -1;
     loadAudioSD();
 
-    xil_printf("Audio from SD card configured\r\n");
+    xil_printf("Core 1 : Audio from SD card configured\r\n");
 
-    /* Display interactive menu interface via terminal */
+    /* Start playing audio */
     play_audio();
     return 1;
 }
 
 /* ---------------------------------------------------------------------------- *
- * 									menu()										*
+ * 									play_audio()								*
  * ---------------------------------------------------------------------------- *
- * Presented at system startup. Allows the user to select between three
- * options by pressing certain keys on the keyboard:
- * 		's' - 	Audio loopback streaming
- * 		'x' - 	Start Lab Test
- * 	This menu is shown upon exiting from any of the above options.
+ * Continuously runs on the audio core.
+ * Plays different audio files based on a value updated in core 0.
+ * 		soundIndex == 0 -> 	End round sound
+ * 		soundIndex == 1 -> 	Background sound
+ * 		soundIndex == 2 -> 	Game over sound
+ * 		soundIndex == 3 -> 	Collision sound
  * ---------------------------------------------------------------------------- */
 void play_audio() {
 	while (1) {
@@ -70,6 +69,7 @@ void play_audio() {
 	}
 }
 
+//Helper functions
 void playEndRoundSound(int volume) {
 	play_sound_index(0, volume);
 }

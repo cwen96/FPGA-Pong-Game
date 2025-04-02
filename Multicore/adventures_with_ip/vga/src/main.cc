@@ -54,6 +54,10 @@ XScuGic INTCInst;
 XTmrCtr TMRInst;
 
 static int btn_value;
+static int mode;
+static int computerSide;
+static int restoreBackground;
+static int restorePause = 0;
 
 int recordStatus;
 
@@ -109,9 +113,9 @@ void BTN_Intr_Handler(void *InstancePtr) {
     } else if (btn_value == 16) {
         BUTTON_U_FLG = true;
     } else if (btn_value == 1) {
-    	if (Xil_In32(0xFFFF5000) == 0) {
+    	if (Xil_In32(0xFFFF5000) == 0 && *isMenu != 1) {
     		PAUSE = 1;
-    	} else if (Xil_In32(0xFFFF5000) == 1) {
+    	} else if (Xil_In32(0xFFFF5000) == 1 && *isMenu != 1) {
     		PAUSE = 0;
     	}
         BUTTON_C_FLG = true;
@@ -175,7 +179,6 @@ int main() {
     int *image_buffer_pointer = (int *)0x00900000;
     int selectedBallColour = 0;
     int selectedPaddleColour = 0;
-    int selectedSide = -1;
 
     int winner = 0;
     // menu flag, while menu is true, do menu stuff, while false, do game stuff
@@ -187,44 +190,58 @@ int main() {
     int playedGameOverSound = 0;
     Game currentGame;
     currentGame.setVolume(volume);
+    int score0 = 0;
+    int score1 = 0;
     while (1) {
         while (TIMER_INTR_FLG == false) {
             Xil_DCacheFlush();
         }
+        score0 = currentGame.getPlayerOneScore();
+        score1 = currentGame.getPlayerTwoScore();
         if (*isMenu == 1) {
-
             switch (state) {
                 case (0):  // main menu single player highlighted
                            // setup buttons to switch state??
                     memcpy(image_buffer_pointer, mainMenuSinglePlayer, NUM_BYTES_BUFFER);
                     if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 1;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 4;
                     } else if (BUTTON_R_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 15;
                         currentGame.setMode(1);
+                        mode = 1;
                     }
                     playedGameOverSound = 0;
                     break;
                 case (1):  // main menu multi player highlighted
                     memcpy(image_buffer_pointer, mainMenuMultiPlayer, NUM_BYTES_BUFFER);
                     if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 2;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     } else if (BUTTON_R_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 5;
                         currentGame.setMode(0);
+                        mode = 0;
                     }
                     break;
                 case (2):  // main menu volume highlighted
                     memcpy(image_buffer_pointer, mainMenuVolume, NUM_BYTES_BUFFER);
-                    if (BUTTON_D_FLG) {
+				if (BUTTON_D_FLG) {
+						PLAY_SOUND = 3;
                         state = 3;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 1;
                     } else if (BUTTON_R_FLG) {
+                    	PLAY_SOUND = 3;
                         if (volume == 1) {
                             state = 8;
                         } else if (volume == 2) {
@@ -237,13 +254,16 @@ int main() {
                     }
                     break;
                 case (3):  // main menu game history highlighted
-                    memcpy(image_buffer_pointer, mainMenuGameHistory, NUM_BYTES_BUFFER);
-                    if (BUTTON_D_FLG) {
+					memcpy(image_buffer_pointer, mainMenuGameHistory, NUM_BYTES_BUFFER);
+                	if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 4;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 2;
                     } else if (BUTTON_R_FLG) {
                         memcpy(image_buffer_pointer, gameHistory, NUM_BYTES_BUFFER);
+                        PLAY_SOUND = 3;
                         for (int i = 0; i < 6; i++) {
                             draw_score_100x100(gameHistoryArr[i][0], 550, 300 + 120 * i, WHITE);
                             draw_score_100x100(gameHistoryArr[i][1], 850, 300 + 120 * i, WHITE);
@@ -253,13 +273,15 @@ int main() {
                     break;
                 case (4):  // main menu colour select highlighted
                     memcpy(image_buffer_pointer, mainMenuColourSelect, NUM_BYTES_BUFFER);
-                    // xil_printf("state %d\n", state);
                     if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 3;
 
                     } else if (BUTTON_R_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 13;
                         memcpy(image_buffer_pointer, ballColour, NUM_BYTES_BUFFER);
                         displayColourBlock(image_buffer_pointer, 700, 300, 200, colours[selectedBallColour % 5]);
@@ -269,47 +291,58 @@ int main() {
                 case (5):  // select difficulty easy(both for single and multiplayer)
                     memcpy(image_buffer_pointer, difficultyEasy, NUM_BYTES_BUFFER);
                     if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 6;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 7;
                     } else if (BUTTON_R_FLG) {
                         // start game easy
                         memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
+                        PLAY_SOUND = 3;
                         currentGame.setDifficulty(0);
                         *isMenu = 0;
-
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     }
                     break;
                 case (6):  // select difficulty medium
                     memcpy(image_buffer_pointer, difficultyMedium, NUM_BYTES_BUFFER);
                     if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 7;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 5;
                     } else if (BUTTON_R_FLG) {
                         // start game medium
                         memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
+                        PLAY_SOUND = 3;
                         currentGame.setDifficulty(1);
                         *isMenu = false;
 
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     }
                     break;
                 case (7):  // select difficulty hard
                     memcpy(image_buffer_pointer, difficultyHard, NUM_BYTES_BUFFER);
                     if (BUTTON_D_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 5;
                     } else if (BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 6;
                     } else if (BUTTON_R_FLG) {
                         // start game hard
                         memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
+                        PLAY_SOUND = 3;
                         currentGame.setDifficulty(2);
                         *isMenu = false;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     }
                     break;
@@ -321,6 +354,7 @@ int main() {
                         currentGame.setVolume(volume);
                         PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 2;
                     }
                     break;
@@ -332,6 +366,7 @@ int main() {
                         currentGame.setVolume(volume);
                         PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 2;
                     }
                     break;
@@ -343,6 +378,7 @@ int main() {
                         currentGame.setVolume(volume);
                         PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 2;
                     }
                     break;
@@ -354,12 +390,13 @@ int main() {
                         currentGame.setVolume(volume);
                         PLAY_SOUND = 3;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 2;
                     }
                     break;
                 case (12):  // game history
-
                     if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 3;
                     }
                     break;
@@ -367,12 +404,15 @@ int main() {
                     if (BUTTON_C_FLG) {
                         selectedBallColour++;
                         displayColourBlock(image_buffer_pointer, 700, 300, 200, colours[selectedBallColour % 5]);
+                        PLAY_SOUND = 3;
                         // cycle ball colour and save choice in register
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 4;
                         *vgaPaddleColour = colours[selectedPaddleColour % 5];
                         *vgaBallColour = colours[selectedBallColour % 5];
                     } else if (BUTTON_D_FLG || BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 14;
                         memcpy(image_buffer_pointer, paddleColour, NUM_BYTES_BUFFER);
                         displayColourBlock(image_buffer_pointer, 700, 300, 200, colours[selectedBallColour % 5]);
@@ -380,42 +420,51 @@ int main() {
                     }
                     break;
                 case (14):  // select paddle colour
-
                     if (BUTTON_C_FLG) {
+                    	PLAY_SOUND = 3;
                         selectedPaddleColour++;
                         displayColourBlock(image_buffer_pointer, 700, 550, 200, colours[selectedPaddleColour % 5]);
                         // cycle paddle colour and store choice in register
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 4;
                         *vgaPaddleColour = colours[selectedPaddleColour % 5];
                         *vgaBallColour = colours[selectedBallColour % 5];
                     } else if (BUTTON_D_FLG || BUTTON_U_FLG) {
                         state = 13;
                         memcpy(image_buffer_pointer, ballColour, NUM_BYTES_BUFFER);
+                        PLAY_SOUND = 3;
                         displayColourBlock(image_buffer_pointer, 700, 300, 200, colours[selectedBallColour % 5]);
                         displayColourBlock(image_buffer_pointer, 700, 550, 200, colours[selectedPaddleColour % 5]);
                     }
                     break;
                 case (15):  // play as left side
-
                     memcpy(image_buffer_pointer, selectLeft, NUM_BYTES_BUFFER);
                     if (BUTTON_R_FLG) {
+                    	PLAY_SOUND = 3;
                         currentGame.setComputerSide(1);
+                        computerSide = 1;
                         state = 5;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     } else if (BUTTON_D_FLG || BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 16;
                     }
                     break;
                 case (16):  // play as right side
                     memcpy(image_buffer_pointer, selectRight, NUM_BYTES_BUFFER);
                     if (BUTTON_R_FLG) {
+                    	PLAY_SOUND = 3;
                         currentGame.setComputerSide(0);
+                        computerSide = 0;
                         state = 5;
                     } else if (BUTTON_L_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 0;
                     } else if (BUTTON_D_FLG || BUTTON_U_FLG) {
+                    	PLAY_SOUND = 3;
                         state = 15;
                     }
                     break;
@@ -438,9 +487,29 @@ int main() {
             BUTTON_C_FLG = false;
         }
         if (*isMenu == 0) {
+        	if (Xil_In32(0xFFFF5000) == 1) {
+        		if (restorePause == 0) {
+        			memcpy(image_buffer_pointer, pause, NUM_BYTES_BUFFER);
+        			restorePause = 1;
+        		}
+                restore_rect_from_background(410, 100, 100, 100);
+                restore_rect_from_background(735, 100, 100, 100);
+                draw_score_100x100(score0, 410, 100, WHITE);
+                draw_score_100x100(score1, 735, 100, WHITE);
+            	restoreBackground = 1;
+        	} else if (restoreBackground == 1) {
+        		memcpy(image_buffer_pointer, background, NUM_BYTES_BUFFER);
+                restore_rect_from_background(410, 100, 100, 100);
+                restore_rect_from_background(735, 100, 100, 100);
+                draw_score_100x100(score0, 410, 100, WHITE);
+                draw_score_100x100(score1, 735, 100, WHITE);
+        		restoreBackground = 0;
+        		restorePause = 0;
+        	}
             while (Xil_In32(0xFFFF5000) == 1) {
 
             }
+
             BUTTON_C_FLG = false;
             currentGame.paddleMovementHandler();
             winner = currentGame.updateGameState();
@@ -534,17 +603,35 @@ void pollButtonState() {
 
     int btn_value = XGpio_DiscreteRead(&BTNInst, 1);
     if (btn_value & 4) {
-        PLAYER_1_VELOCITY = -PADDLE_SPEED;
+    	// Computer player is player 0, don't move the paddle
+    	if (mode == 1 && computerSide == 0) {
+
+    	} else {
+    		PLAYER_1_VELOCITY = -PADDLE_SPEED;
+    	}
     } else if (btn_value & 2) {
-        PLAYER_1_VELOCITY = PADDLE_SPEED;
+    	// Computer player is player 0, don't move the paddle
+    	if (mode == 1 && computerSide == 0) {
+
+    	} else {
+    		PLAYER_1_VELOCITY = PADDLE_SPEED;
+    	}
     } else {
         PLAYER_1_VELOCITY = 0;
     }
 
     if (btn_value & 8) {
-        PLAYER_2_VELOCITY = PADDLE_SPEED;
+    	if (mode == 1 && computerSide == 1) {
+
+    	} else {
+    		PLAYER_2_VELOCITY = PADDLE_SPEED;
+    	}
     } else if (btn_value & 16) {
-        PLAYER_2_VELOCITY = -PADDLE_SPEED;
+    	if (mode == 1 && computerSide == 1) {
+
+    	} else {
+            PLAYER_2_VELOCITY = -PADDLE_SPEED;
+    	}
     } else {
         PLAYER_2_VELOCITY = 0;
     }

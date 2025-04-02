@@ -1,10 +1,15 @@
+/*
+ * drawings.c
+ * Thank you to Manraj Rai for the implementation: https://piazza.com/class/m5n4mfujtm3pb/post/131
+ */
+
 #include "drawings.h"
 
 int *image_buffer_pointer = (int *)0x00900000;
 int *background_pointer = (int *)0x08F79044;
 const uint8_t font20x20[10][20][20] = {
 	{
-	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},  // row 0
+	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,}, // row 0
 	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},  // row 1
 	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},  // row 2
 	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},  // row 3
@@ -240,6 +245,7 @@ void draw_pixel(int x, int y, int colour) {
 		image_buffer_pointer[y * FRAME_WIDTH + x] = colour;
 	}
 }
+
 // Checks the array for the "shape" of the digit, and then will colour in the
 // pixels which are 'on' with 1s
 void draw_digit_20x20(int digit, int x, int y, int colour) {

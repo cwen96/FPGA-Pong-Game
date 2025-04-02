@@ -1,10 +1,10 @@
 #include "game.h"
 #include "drawings.h"
-
-
 #include <math.h>
-
 #include <algorithm>
+
+int scoreInit = 0;
+
 Game::Game() {
     score[0] = 0;
     score[1] = 0;
@@ -66,7 +66,6 @@ int Game::getPlayerTwoScore() {
     return score[1];
 }
 
-
 int Game::checkPoint() {
     if (ballLocationX > 1400) {
         // player 0 (left )gets a point if ball passes right edge of screen
@@ -88,6 +87,7 @@ int Game::checkPoint() {
     }
 }
 void Game::resetBall() {
+
     ballLocationX = 620;
     ballLocationY = 492;
 
@@ -100,24 +100,14 @@ void Game::resetBall() {
     }
     int randInt2 = Xil_In32(0x43C30000);
     ballYVelocity = randInt2 / 300000000;
-
-    // debug values
-    //	  ballLocationX = 1100;
-    //	  ballLocationY = 200;
-    //	  ballYVelocity = 7;
-    //	  ballXVelocity = 3;
 }
 
 void Game::awardPoint(int player) {
     score[player]++;
-    restore_rect_from_background(350, 600, 100, 100);
-    restore_rect_from_background(675, 600, 100, 100);
-    draw_score_100x100(score[0], 350, 600, WHITE);
-    draw_score_100x100(score[1], 675, 600, WHITE);
-    // check victory condition
-    if (score[player] == 11) {
-        // display Player x wins to screen, record and end game
-    }
+    restore_rect_from_background(410, 100, 100, 100);
+    restore_rect_from_background(735, 100, 100, 100);
+    draw_score_100x100(score[0], 410, 100, WHITE);
+    draw_score_100x100(score[1], 735, 100, WHITE);
 }
 
 void Game::checkWallCollision() {  // check if on next frame ball will contact wall, then handle if so
@@ -207,6 +197,14 @@ int Game::updateGameState() {
         computerPlayer(computerSide);
     }
 
+    if (scoreInit == 0) {
+        restore_rect_from_background(410, 100, 100, 100);
+        restore_rect_from_background(735, 100, 100, 100);
+        draw_score_100x100(0, 410, 100, WHITE);
+        draw_score_100x100(0, 735, 100, WHITE);
+        scoreInit = 1;
+    }
+
     checkWallCollision();
     checkPaddleCollision();
     int point = checkPoint();
@@ -235,9 +233,8 @@ int Game::updateGameState() {
 
 void Game::movePaddle(int player, int velocity) {
     if (player == 0) {
-        if (leftPaddleLocation > SCREEN_HEIGHT - PADDLE_HEIGHT - 10 && velocity > 0) {
+    	if (leftPaddleLocation > SCREEN_HEIGHT - PADDLE_HEIGHT - 10 && velocity > 0) {
             leftPaddleVelocity = 0;
-
         } else if (leftPaddleLocation < 10 && velocity < 0) {
             leftPaddleVelocity = 0;
         } else {

@@ -62,6 +62,10 @@ class Game {
 
     int getRightPaddleLocation() { return rightPaddleLocation; }
 
+    int getMode() { return mode; }
+
+    int getComputerSide() { return computerSide; }
+
     void resetScore();
 
     int getPlayerOneScore();
