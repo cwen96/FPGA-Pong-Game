@@ -2,12 +2,14 @@
  * ip_functions.c
  *
  * Contains all functions which pertain to setup and use of IP periperals.
+ * Credit to Harald Rosenfeldt for the original code and Rohit Bhardwaj for
+ * help with the initial setup to read audio from the SD card.
  */
 
 #include "adventures_with_ip.h"
-void throwFatalError(const char *func,const char *msg) {
-	xil_printf("%s() : %s\r\n",func,msg);
-	for(;;);
+void throwFatalError(const char *func, const char *msg) {
+    xil_printf("%s() : %s\r\n", func, msg);
+    for (;;);
 }
 
 FATFS FS_instance;
@@ -21,19 +23,22 @@ int filesNum = 0;
 #define maxFiles 32
 int files[maxFiles][32] = {0};
 /* ---------------------------------------------------------------------------- *
- * 								audio_stream()									*
+ * 								play_sound_index()									*
  * ---------------------------------------------------------------------------- *
- * This function performs audio loopback streaming by sampling the input audio
- * from the codec and then immediately passing the sample to the output of the
- * codec.
- *
- * The main menu can be accessed by entering 'q' on the keyboard.
+ * This function plays audio sounds from the SD card.
+ * Inputs takes the index of the sound to be played and the volume (1, 2, 3, etc).
+ * 		soundIndex == 0 -> 	End round sound
+ * 		soundIndex == 1 -> 	Background sound
+ * 		soundIndex == 2 -> 	Game over sound
+ * 		soundIndex == 3 -> 	Collision sound
+ * The sound is played using playWavFile and the sound index is set to -1
+ * after the sound is played to prevent it from being continuously played.
  * ---------------------------------------------------------------------------- */
 void play_sound_index(int soundIndex, int volume) {
-	if (soundIndex > -1) {
-		playWavFile(files[soundIndex], volume);
-	}
-	PLAY_SOUND = -1;
+    if (soundIndex > -1) {
+        playWavFile(files[soundIndex], volume);
+    }
+    PLAY_SOUND = -1;
 }
 
 /* ---------------------------------------------------------------------------- *
@@ -61,210 +66,198 @@ void playWavFile(const char *filename, int theVolume) {
     headerWave_t headerWave;
     fmtChunk_t fmtChunk;
     FIL file;
-    UINT nBytesRead=0;
+    UINT nBytesRead = 0;
 
     stopWavFile();
 
     FRESULT res = f_open(&file, filename, FA_READ);
-    if (res!=0) {
-    	fatalError("File not found");
+    if (res != 0) {
+        fatalError("File not found");
     }
-    xil_printf("Loading %s\r\n",filename);
+    xil_printf("Loading %s\r\n", filename);
 
     // Read the RIFF header and do some basic sanity checks
-    res = f_read(&file,(void*)&headerWave,sizeof(headerWave),&nBytesRead);
-    if (res!=0) {
-    	fatalError("Failed to read file");
+    res = f_read(&file, (void *)&headerWave, sizeof(headerWave), &nBytesRead);
+    if (res != 0) {
+        fatalError("Failed to read file");
     }
-	if (memcmp(headerWave.riff,"RIFF",4)!=0) {
-		fatalError("Illegal file format. RIFF not found");
-	}
-	if (memcmp(headerWave.wave,"WAVE",4)!=0) {
-		fatalError("Illegal file format. WAVE not found");
-	}
+    if (memcmp(headerWave.riff, "RIFF", 4) != 0) {
+        fatalError("Illegal file format. RIFF not found");
+    }
+    if (memcmp(headerWave.wave, "WAVE", 4) != 0) {
+        fatalError("Illegal file format. WAVE not found");
+    }
 
-	// Walk through the chunks and interpret them
-	for(;;) {
-		// read chunk header
-		genericChunk_t genericChunk;
-		res = f_read(&file,(void*)&genericChunk,sizeof(genericChunk),&nBytesRead);
-		if (res!=0) {
-			fatalError("Failed to read file");
-		}
-		if (nBytesRead!=sizeof(genericChunk)) {
-			break; // probably EOF
-		}
+    // Walk through the chunks and interpret them
+    for (;;) {
+        // read chunk header
+        genericChunk_t genericChunk;
+        res = f_read(&file, (void *)&genericChunk, sizeof(genericChunk), &nBytesRead);
+        if (res != 0) {
+            fatalError("Failed to read file");
+        }
+        if (nBytesRead != sizeof(genericChunk)) {
+            break;  // probably EOF
+        }
 
-		// The "fmt " is compulsory and contains information about the sample format
-		if (memcmp(genericChunk.ckId,"fmt ",4)==0) {
-			res = f_read(&file,(void*)&fmtChunk,genericChunk.cksize,&nBytesRead);
-			if (res!=0) {
-				fatalError("Failed to read file");
-			}
-			if (nBytesRead!=genericChunk.cksize) {
-				fatalError("EOF reached");
-			}
-			if (fmtChunk.wFormatTag!=1) {
-				fatalError("Unsupported format");
-			}
-			if (fmtChunk.nChannels!=2) {
-				//fatalError("Only stereo files supported");
-				 u32 *newBuffer = malloc(theBufferSize * 2);
-				    if (!newBuffer) {
-				        fatalError("Memory allocation failed for mono conversion");
-				    }
+        // The "fmt " is compulsory and contains information about the sample format
+        if (memcmp(genericChunk.ckId, "fmt ", 4) == 0) {
+            res = f_read(&file, (void *)&fmtChunk, genericChunk.cksize, &nBytesRead);
+            if (res != 0) {
+                fatalError("Failed to read file");
+            }
+            if (nBytesRead != genericChunk.cksize) {
+                fatalError("EOF reached");
+            }
+            if (fmtChunk.wFormatTag != 1) {
+                fatalError("Unsupported format");
+            }
+            if (fmtChunk.nChannels != 2) {
+                u32 *newBuffer = malloc(theBufferSize * 2);
+                if (!newBuffer) {
+                    fatalError("Memory allocation failed for mono conversion");
+                }
 
-				    // Convert mono to stereo (duplicate the same sample for both channels)
-				    short *monoData = (short *)theBuffer;
-				    u32 *stereoData = (u32 *)newBuffer;
-				    u32 monoSamples = theBufferSize / 2; // Each sample is 2 bytes (16-bit PCM)
+                // Convert mono to stereo (duplicate the same sample for both channels)
+                short *monoData = (short *)theBuffer;
+                u32 *stereoData = (u32 *)newBuffer;
+                u32 monoSamples = theBufferSize / 2;  // Each sample is 2 bytes (16-bit PCM)
 
-				    for (u32 i = 0; i < monoSamples; i++) {
-				        short sample = monoData[i];
-				        stereoData[i] = ((u32)sample << 16) | ((u32)sample & 0xFFFF);
-				    }
+                for (u32 i = 0; i < monoSamples; i++) {
+                    short sample = monoData[i];
+                    stereoData[i] = ((u32)sample << 16) | ((u32)sample & 0xFFFF);
+                }
 
-				    // Free old buffer and update to the new stereo buffer
-				    free(theBuffer);
-				    theBuffer = (void *)newBuffer;
-				    theBufferSize *= 2;
-			}
-			if (fmtChunk.wBitsPerSample!=16) {
-				fatalError("Only 16 bit per samples supported");
-				//continue;
-			}
-		}
-		// the "data" chunk contains the audio samples
-		else if (memcmp(genericChunk.ckId,"data",4)==0) {
-		    theBuffer = malloc(genericChunk.cksize);
-		    if (!theBuffer){
-		    	fatalError("Could not allocate memory");
-		    }
-		    theBufferSize = genericChunk.cksize;
+                // Free old buffer and update to the new stereo buffer
+                free(theBuffer);
+                theBuffer = (void *)newBuffer;
+                theBufferSize *= 2;
+            }
+            if (fmtChunk.wBitsPerSample != 16) {
+                fatalError("Only 16 bit per samples supported");
+                // continue;
+            }
+        }
+        // the "data" chunk contains the audio samples
+        else if (memcmp(genericChunk.ckId, "data", 4) == 0) {
+            theBuffer = malloc(genericChunk.cksize);
+            if (!theBuffer) {
+                fatalError("Could not allocate memory");
+            }
+            theBufferSize = genericChunk.cksize;
 
-		    res = f_read(&file,(void*)theBuffer,theBufferSize,&nBytesRead);
-		    if (res!=0) {
-		    	fatalError("Failed to read file");
-		    }
-		    if (nBytesRead!=theBufferSize) {
-		    	fatalError("Didn't read the complete file");
-		    }
-		}
-		// Unknown chunk: Just skip it
-		else {
-			DWORD fp = f_tell(&file);
-			f_lseek(&file,fp + genericChunk.cksize);
-		}
-	}
+            res = f_read(&file, (void *)theBuffer, theBufferSize, &nBytesRead);
+            if (res != 0) {
+                fatalError("Failed to read file");
+            }
+            if (nBytesRead != theBufferSize) {
+                fatalError("Didn't read the complete file");
+            }
+        }
+        // Unknown chunk: Just skip it
+        else {
+            DWORD fp = f_tell(&file);
+            f_lseek(&file, fp + genericChunk.cksize);
+        }
+    }
 
-	// If we have data to play
+    // If we have data to play
     if (theBuffer) {
-        xil_printf("Playing %s\r\n",filename);
+        xil_printf("Playing %s\r\n", filename);
 
         // Crude in-place down-sampling: Basically taking every n'th of a sample
         // Jerobeam Fenderson's WAV files use a sampling rate of 192kHz (https://oscilloscopemusic.com)
         // Our sampling rate is actually 39.0625, so a 44.1kHz file will play a at 88.5% the speed (and lower in pitch).
-    	double subSample = (double)fmtChunk.nSamplesPerSec/44100;
-    	if (subSample>1.6) {
-    		int skip = (int)(subSample+0.5);
-    		u32 nNewTotal = theBufferSize/4/skip;
-    		u32 *pSource = (u32*) theBuffer;
-    		u32 *pDest = (u32*) theBuffer;
-    		for(u32 i=0;i<nNewTotal;++i,pSource+=skip,pDest++) {
-    			*pDest = *pSource;
-    		}
-    		theBufferSize = nNewTotal*4;
-    	}
+        double subSample = (double)fmtChunk.nSamplesPerSec / 44100;
+        if (subSample > 1.6) {
+            int skip = (int)(subSample + 0.5);
+            u32 nNewTotal = theBufferSize / 4 / skip;
+            u32 *pSource = (u32 *)theBuffer;
+            u32 *pDest = (u32 *)theBuffer;
+            for (u32 i = 0; i < nNewTotal; ++i, pSource += skip, pDest++) {
+                *pDest = *pSource;
+            }
+            theBufferSize = nNewTotal * 4;
+        }
 
-    	// Changing the volume and swap left/right channel and polarity
-    	{
-    		u32 *pSource = (u32*) theBuffer;
-    		for(u32 i=0;i<theBufferSize/4;++i) {
-    			short left  = (short) ((pSource[i]>>16) & 0xFFFF);
-    			short right = (short) ((pSource[i]>> 0) & 0xFFFF);
-    			int left_i  = -(int)left * theVolume / 16;
-    			int right_i = -(int)right * theVolume / 16;
-    			if (left>32767) left = 32767;
-    			if (left<-32767) left = -32767;
-    			if (right>32767) right = 32767;
-    			if (right<-32767) right = -32767;
-    			left = (short)left_i;
-    			right = (short)right_i;
-    			pSource[i] = ((u32)right<<16) + (u32)left;
+        // Changing the volume and swap left/right channel and polarity
+        {
+            u32 *pSource = (u32 *)theBuffer;
+            for (u32 i = 0; i < theBufferSize / 4; ++i) {
+                short left = (short)((pSource[i] >> 16) & 0xFFFF);
+                short right = (short)((pSource[i] >> 0) & 0xFFFF);
+                int left_i = -(int)left * theVolume / 16;
+                int right_i = -(int)right * theVolume / 16;
+                if (left > 32767) left = 32767;
+                if (left < -32767) left = -32767;
+                if (right > 32767) right = 32767;
+                if (right < -32767) right = -32767;
+                left = (short)left_i;
+                right = (short)right_i;
+                pSource[i] = ((u32)right << 16) + (u32)left;
 
-    			for(int i=0;i<1600;i++)
-    				asm("NOP");
-    			Xil_Out32(I2S_DATA_TX_L_REG, left*1000);
-    			Xil_Out32(I2S_DATA_TX_R_REG, right*1000);
-    		}
-    	}
+                for (int i = 0; i < 1600; i++)
+                    asm("NOP");
+                Xil_Out32(I2S_DATA_TX_L_REG, left * 1000);
+                Xil_Out32(I2S_DATA_TX_R_REG, right * 1000);
+            }
+        }
     }
 
     f_close(&file);
 }
 
-
 void stopWavFile() {
-	// If there is already a WAV file playing, stop it
-	//if (adau1761_dmaBusy(&codec)) {
-	//	adau1761_dmaStop(&codec);
-	//}
     // If there was already a WAV file, free the memory
-    if (theBuffer){
-//    	free(theBuffer);
-//    	theBuffer = NULL;
-//    	theBufferSize = 0;
-    	void *temp = theBuffer;
-    	theBuffer = NULL;
-    	theBufferSize = 0;
-    	free(temp);
+    if (theBuffer) {
+        void *temp = theBuffer;
+        theBuffer = NULL;
+        theBufferSize = 0;
+        free(temp);
     }
 }
 
 void loadAudioSD() {
-	setvbuf(stdin, NULL, _IONBF, 0);
-	xil_printf("WAV File Player\n\r");
-	xil_printf("Mounting SD Card\n\r");
-	FRESULT result = f_mount(&FS_instance,"0:/", 1);
-	if (result != 0) {
-		xil_printf("Couldn't mount SD Card. Press RETURN to try again\r\n");
-		getchar();
-		return;
-	}
+    setvbuf(stdin, NULL, _IONBF, 0);
+    xil_printf("WAV File Player\n\r");
+    xil_printf("Mounting SD Card\n\r");
+    FRESULT result = f_mount(&FS_instance, "0:/", 1);
+    if (result != 0) {
+        xil_printf("Couldn't mount SD Card. Press RETURN to try again\r\n");
+        getchar();
+        return;
+    }
 
-	filesNum = 0;
+    filesNum = 0;
 
-	// Look for *.wav files and copy file names to files[]
-	DIR dir;
-	FRESULT res = f_opendir(&dir, "0:/");
-	if (res != FR_OK) {
-		xil_printf("Couldn't read root directory. Press RETURN to try again\r\n");
-		getchar();
-		return;
-	}
+    // Look for *.wav files and copy file names to files[]
+    DIR dir;
+    FRESULT res = f_opendir(&dir, "0:/");
+    if (res != FR_OK) {
+        xil_printf("Couldn't read root directory. Press RETURN to try again\r\n");
+        getchar();
+        return;
+    }
 
-	for (;;) {
-		FILINFO fno;
-		res = f_readdir(&dir, &fno);
-		if (res != FR_OK || fno.fname[0] == 0) {
-			break;  // End of directory
-		}
+    for (;;) {
+        FILINFO fno;
+        res = f_readdir(&dir, &fno);
+        if (res != FR_OK || fno.fname[0] == 0) {
+            break;  // End of directory
+        }
 
-		if (fno.fattrib & AM_DIR) {
-			// It's a directory, ignore it
-		}
-		else if ((strstr(fno.fname, ".wav") != NULL || strstr(fno.fname, ".WAV") != NULL)
-				 && fno.fname[0] != '_') {  // Ignore invalid filenames starting with '_'
-			strcpy(files[filesNum++], fno.fname);
-		}
-	}
+        if (fno.fattrib & AM_DIR) {
+            // It's a directory, ignore it
+        } else if ((strstr(fno.fname, ".wav") != NULL || strstr(fno.fname, ".WAV") != NULL) && fno.fname[0] != '_') {  // Ignore invalid filenames starting with '_'
+            strcpy(files[filesNum++], fno.fname);
+        }
+    }
 
+    f_closedir(&dir);
 
-	f_closedir(&dir);
-
-	if (filesNum == 0) {
-		xil_printf("No WAV files found. Press RETURN to try again\r\n");
-		getchar();
-		return;
-	}
+    if (filesNum == 0) {
+        xil_printf("No WAV files found. Press RETURN to try again\r\n");
+        getchar();
+        return;
+    }
 }

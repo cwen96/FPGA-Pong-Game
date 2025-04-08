@@ -10,63 +10,51 @@
 /* ---------------------------------------------------------------------------- *
  * 								Header Files									*
  * ---------------------------------------------------------------------------- */
+#include <math.h>
 #include <sleep.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <xil_io.h>
 #include <xil_printf.h>
 #include <xparameters.h>
 
+#include "ff.h"
 #include "xgpio.h"
 #include "xiicps.h"
 #include "xil_exception.h"
+#include "xil_types.h"
 #include "xscugic.h"
+#include "xstatus.h"
 #include "xuartps.h"
 
-#include <stdlib.h>
-#include <math.h>
-#include "xil_types.h"
-#include "xstatus.h"
-#include "ff.h"
-
-
-
-#define fatalError(msg) throwFatalError(__PRETTY_FUNCTION__,msg)
+#define fatalError(msg) throwFatalError(__PRETTY_FUNCTION__, msg)
 #define DMA_BDUFFERSIZE 4000
 #define PLAY_SOUND (*(volatile unsigned long *)(0xFFFF3000))
 #define VOLUME (*(volatile unsigned long *)(0xFFFF4000))
 
 typedef struct {
-	char riff[4];
-	u32 riffSize;
-	char wave[4];
+    char riff[4];
+    u32 riffSize;
+    char wave[4];
 } headerWave_t;
 
 typedef struct {
-	char ckId[4];
-	u32 cksize;
+    char ckId[4];
+    u32 cksize;
 } genericChunk_t;
 
 typedef struct {
-	u16 wFormatTag;
-	u16 nChannels;
-	u32 nSamplesPerSec;
-	u32 nAvgBytesPerSec;
-	u16 nBlockAlign;
-	u16 wBitsPerSample;
-	u16 cbSize;
-	u16 wValidBitsPerSample;
-	u32 dwChannelMask;
-	u8 SubFormat[16];
+    u16 wFormatTag;
+    u16 nChannels;
+    u32 nSamplesPerSec;
+    u32 nAvgBytesPerSec;
+    u16 nBlockAlign;
+    u16 wBitsPerSample;
+    u16 cbSize;
+    u16 wValidBitsPerSample;
+    u32 dwChannelMask;
+    u8 SubFormat[16];
 } fmtChunk_t;
-
-
-void playWavFile(const char *filename, int theVolume);
-void stopWavFile();
-void loadAudioSD();
-void playCollisionSound(int volume);
-void playBGMSound(int volume);
-void playGameOverSound(int volume);
-void playEndRoundSound(int volume);
 
 /* ---------------------------------------------------------------------------- *
  * 							Custom IP Header Files								*
@@ -76,10 +64,15 @@ void playEndRoundSound(int volume);
 /* ---------------------------------------------------------------------------- *
  * 							Prototype Functions									*
  * ---------------------------------------------------------------------------- */
+void playWavFile(const char *filename, int theVolume);
+void stopWavFile();
+void loadAudioSD();
+void playCollisionSound(int volume);
+void playBGMSound(int volume);
+void playGameOverSound(int volume);
+void playEndRoundSound(int volume);
 void play_audio();
-void audio_stream(int soundIndex);
 unsigned char gpio_init();
-int lab_test();
 void play_sound_index(int soundIndex, int volume);
 /* ---------------------------------------------------------------------------- *
  * 						Redefinitions from xparameters.h 						*
@@ -109,7 +102,7 @@ void play_sound_index(int soundIndex, int volume);
 #define BUFFER_SIZE 100
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 XIicPs Iic;
-XGpio Gpio;        // Gpio instance for buttons and switches
+XGpio Gpio;  // Gpio instance for buttons and switches
 int recordStatus;
 int btn_value;
 int soundIndex;

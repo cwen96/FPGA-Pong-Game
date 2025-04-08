@@ -9,10 +9,10 @@
  * 									main()										*
  * ---------------------------------------------------------------------------- *
  * Runs all initial setup functions to initialise the audio codec and IP
- * peripherals, before calling play_audio.
+ * peripherals, before calling play_audio
  * ---------------------------------------------------------------------------- */
 int main(void) {
-	Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
+    Xil_SetTlbAttributes(0xFFFF0000, 0x14de2);
     // Configure the IIC data structure
     IicConfig(XPAR_XIICPS_0_DEVICE_ID);
 
@@ -53,35 +53,35 @@ int main(void) {
  * 		soundIndex == 3 -> 	Collision sound
  * ---------------------------------------------------------------------------- */
 void play_audio() {
-	while (1) {
-	    soundIndex = Xil_In32(0xFFFF3000);
-	    volume = Xil_In32(0xFFFF4000);
+    while (1) {
+        soundIndex = Xil_In32(0xFFFF3000);
+        volume = Xil_In32(0xFFFF4000);
 
-	    if (soundIndex == 0) {
-	    	playEndRoundSound(volume);
-	    } else if (soundIndex == 1) {
-	    	playBGMSound(volume);
-	    }  else if (soundIndex == 2) {
-	    	playGameOverSound(volume);
-	    } else if (soundIndex == 3) {
-	    	playCollisionSound(volume);
-	    }
-	}
+        if (soundIndex == 0) {
+            playEndRoundSound(volume);
+        } else if (soundIndex == 1) {
+            playBGMSound(volume);
+        } else if (soundIndex == 2) {
+            playGameOverSound(volume);
+        } else if (soundIndex == 3) {
+            playCollisionSound(volume);
+        }
+    }
 }
 
-//Helper functions
+// Helper functions
 void playEndRoundSound(int volume) {
-	play_sound_index(0, volume);
+    play_sound_index(0, volume);
 }
 
 void playBGMSound(int volume) {
-	play_sound_index(1, volume);
+    play_sound_index(1, volume);
 }
 
 void playGameOverSound(int volume) {
-	play_sound_index(2, volume);
+    play_sound_index(2, volume);
 }
 
 void playCollisionSound(int volume) {
-	play_sound_index(3, volume);
+    play_sound_index(3, volume);
 }

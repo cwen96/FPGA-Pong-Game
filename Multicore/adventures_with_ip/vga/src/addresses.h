@@ -17,11 +17,11 @@ int *gameHistory = (int *)0x077BE038;
 int *ballColour = (int *)0x07FA703C;
 int *paddleColour = (int *)0x08790040;
 int *background = (int *)0x08F79044;
-int *playerOneWin = (int *) 0x09762048;
-int *playerTwoWin = (int *) 0x09F4B04C;
-int *selectRight = (int *) 0x0A734050;
-int *selectLeft = (int *) 0x0AF1D054;
-int *pause = (int *) 0xB706058;
+int *playerOneWin = (int *)0x09762048;
+int *playerTwoWin = (int *)0x09F4B04C;
+int *selectRight = (int *)0x0A734050;
+int *selectLeft = (int *)0x0AF1D054;
+int *pause = (int *)0xB706058;
 
 // Don't need to be loaded into memory
 int *vgaPaddleColour = (int *)0x043C20024;
